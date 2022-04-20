@@ -15,36 +15,36 @@ int main(){
     dict dictionary[100];
 
     int i = 0;
-    int count = 0;
-    int flag = 0;
+    int c = 0;
+    int f = 0;
 
     for(;;){
-        scanf("%s", str1[i]);
+        scanf("%s", str1[c]);
+        if(!strcmp(str1[c], "ugabuga")) break;
 
-        if(!strcmp(str1[i], "ugabuga"))
-            break;
+        scanf("%s", str2[c]);
 
-        scanf("%s", str2[i]);
+        for(int y = 0; y < i; ++y){
+            if(strcmp(str1[c], dictionary[y].word) == 0){
+                dictionary[y].trans = str2[c];
 
-        for(int j = 0; j < i; ++j) {
-            if (!strcmp(dictionary[j].word, str1[count])) {
-                dictionary[j].trans = str2[count];
+                f = 1;
+                i--;
+                c++;
 
-                flag = 1;
-                count++;
-                --i;
                 break;
             }
         }
 
-        if(flag == 0) {
-            dictionary[i].word = str1[count];
-            dictionary[i].trans = str2[count];
+
+        if(f == 0) {
+            dictionary[i].word = str1[c];
+            dictionary[i].trans = str2[c];
         }
 
-        flag = 0;
+        f = 0;
         i++;
-        count++;
+        c++;
 
     }
 
@@ -80,6 +80,11 @@ int main(){
         flag1 = 0;
         token = strtok(NULL, " \n");
     }
+    /*puts("");
+    for(int p = 0; p < i; ++p){
+
+        printf("%s---%s\n", dictionary[p].word, dictionary[p].trans);
+    } */
 
 
     return 0;
