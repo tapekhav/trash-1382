@@ -1,52 +1,51 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 typedef struct{
     char *word;
-    char *translate;
+    char *trans;
 }dict;
 
 
-int main() {
+int main(){
+
     char str1[100][300];
     char str2[100][300];
 
-    dict arr[300];
+    dict dictionary[100];
 
     int i = 0;
-    int c = 0;
-    int f = 0;
+    int count = 0;
+    int flag = 0;
 
     for(;;){
-        scanf("%s", str1[c]);
-        if(!strcmp(str1[c], "ugabuga")) break;
+        scanf("%s", str1[i]);
 
-        scanf("%s", str2[c]);
+        if(!strcmp(str1[i], "ugabuga"))
+            break;
 
-        for(int y = 0; y < i; ++y){
-            if(strcmp(str1[c], arr[y].word) == 0){
-                arr[y].translate = str2[c];
+        scanf("%s", str2[i]);
 
-                f = 1;
-                i--;
-                c++;
+        for(int j = 0; j < i; ++j) {
+            if (!strcmp(dictionary[j].word, str1[count])) {
+                dictionary[j].trans = str2[count];
 
+                flag = 1;
+                count++;
+                --i;
                 break;
             }
-
         }
 
-        if(f == 0) {
-            arr[i].word = str1[c];
-            arr[i].translate = str2[c];
+        if(flag == 0) {
+            dictionary[i].word = str1[count];
+            dictionary[i].trans = str2[count];
         }
 
-
-        f = 0;
+        flag = 0;
         i++;
+        count++;
 
-        c++;
     }
 
     getchar();
@@ -55,48 +54,33 @@ int main() {
     fgets(str, 1000, stdin);
 
 
-    char *token;
-    char *array[1000];
+    char* token;
+    int flag1 = 0;
 
-    token = strtok(str, " ");
+    int start = 0;
 
-    int k = 0;
+    token = strtok(str, " \n");
 
     while(token != NULL){
-        array[k] = malloc(100);
-        array[k] = token;
 
-        token = strtok(NULL, " \n");
-        k++;
-    }
+        if(start > 0) printf(" ");
+        start++;
 
-    int flag = 0;
+        for(int x = 0; x < i; ++x){
+            if(!strcasecmp(token, dictionary[x].word)){
+                printf("%s", dictionary[x].trans);
 
-    for(int p = 0; p < k; p++){
-        for(int n = 0; n < i; n++){
-            if(!strcasecmp(array[p], arr[n].word)) {
-                array[p] = arr[n].translate;
-                flag = 1;
+                flag1 = 1;
                 break;
             }
         }
-        if(flag == 0){
-            array[p] = "<unknown>";
-        }
 
-        flag = 0;
+        if(flag1 == 0) printf("<unknown>");
+
+        flag1 = 0;
+        token = strtok(NULL, " \n");
     }
 
-    int l;
-
-    for(l = 0; l < k - 1; ++l){
-        printf("%s ", array[l]);
-    }
-    printf("%s", array[l]);
-
-    /* for(int j = 0; j < i; ++j){
-         printf("%s---%s\n", arr[j].word, arr[j].translate);
-     } */
 
     return 0;
 }
