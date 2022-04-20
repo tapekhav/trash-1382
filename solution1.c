@@ -38,10 +38,10 @@ int count_if(void *arr, int size, int k, int (*func)(const void *a)){
  
  
 int main(){
-    int flag;
-    scanf("%d", &flag);
+    int size;
+    scanf("%d", &size);
  
-    if(flag == 0) {
+    if(size == 4) {
         int arr[20];
         int count = 0;
         char c;
