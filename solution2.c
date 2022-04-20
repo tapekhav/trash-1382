@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -32,11 +33,15 @@ public:
     }
 
     void extend(int n){
-        i += n;
+        mData = (int*)realloc(mData, (i + n) * sizeof(int));
+        //i += n;
     }
 
+    void free(){
+        delete mData;
+    }
 private:
-    int mData[100];
+    int* mData = (int*)(malloc(20 * sizeof(int)));
     int i;
 };
 
@@ -57,12 +62,11 @@ int main() {
     Stack.extend(5);
     cout << Stack.empty() << endl;
 
-    Stack.extend(-5);
-
     cout << Stack.top() << endl;
     Stack.pop();
     cout << Stack.top() << endl;
 
+    Stack.free();
 
     return 0;
 }
