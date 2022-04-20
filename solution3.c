@@ -19,10 +19,10 @@ int main() {
     int f = 0;
  
     for(;;){
-        fscanf(stdin, "%s", str1[c]);
+        scanf("%s", str1[c]);
         if(!strcmp(str1[c], "ugabuga")) break;
  
-        fscanf(stdin, "%s", str2[c]);
+        scanf("%s", str2[c]);
  
         for(int y = 0; y < i; ++y){
             if(strcmp(str1[c], arr[y].word) == 0){
@@ -52,16 +52,11 @@ int main() {
     getchar();
  
     char str[1000];
-    //int x;
     fgets(str, 1000, stdin);
  
  
     char *token;
-    char **array = malloc(i*sizeof(char*));
- 
-    for(int l = 0; l < i; ++l){
-        array[l] = malloc(100);
-    }
+    char **array = malloc(1000*sizeof(char*));
  
     token = strtok(str, " ");
  
@@ -99,11 +94,11 @@ int main() {
     }
     printf("%s", array[l]);
     
-    for(int j = 0; j < i; ++j){
+   /* for(int j = 0; j < i; ++j){
         printf("%s---%s\n", arr[j].word, arr[j].translate);
-    }
- 
- 
+    } */
+    
+    free(array);
  
     return 0;
 }
