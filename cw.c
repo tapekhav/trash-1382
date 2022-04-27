@@ -171,23 +171,26 @@ void swapPixels(RGB *pix1, RGB *pix2){
     *pix2 = temp;
 }
 
+//TODO clear trash
 void reflectArea(BMP* image, char* axis, unsigned int x0, unsigned int y0,
                  unsigned int x_end, unsigned int y_end){
 
+    //TODO recheck the check y
     if(x0 < 0 || x0 > x_end || x_end > image->info.width ||
     y0 > image->info.height || y0 < 0 || y0 < y_end){
         puts("Wrong coordinates.");
         return;
     }
-
+    y0 = image->info.height - y0;
+    y_end = image->info.height - y_end;
 
     unsigned int widthOfArea = x_end - x0;
-    unsigned int heightOfArea = y0 - y_end;
+    unsigned int heightOfArea = y_end - y0;
 
     if(!strcmp(axis, "horizontal")){
         for (int y = 0; y < heightOfArea; ++y) {
             for (int x = 0; x < widthOfArea / 2; ++x) {
-                swapPixels(&image->pixels[y0 - y][x0 + x], &image->pixels[y0 - y][x_end - x]);
+                swapPixels(&image->pixels[y_end - y][x0 + x], &image->pixels[y_end - y][x_end - x]);
             }
         }
     }
@@ -195,7 +198,7 @@ void reflectArea(BMP* image, char* axis, unsigned int x0, unsigned int y0,
     if(!strcmp(axis, "vertical")) {
         for (int y = 0; y < heightOfArea / 2; ++y) {
             for (int x = 0; x < widthOfArea; ++x) {
-                swapPixels(&image->pixels[y0 - y][x0 + x], &image->pixels[y_end + y][x0 + x]);
+                swapPixels(&image->pixels[y_end - y][x0 + x], &image->pixels[y0 + y][x0 + x]);
             }
         }
     }
@@ -205,6 +208,8 @@ void reflectArea(BMP* image, char* axis, unsigned int x0, unsigned int y0,
     }
 }
 
+//TODO clear trash
+//TODO rename variables
 void copyImage(BMP* image, unsigned int x_source_left_top, unsigned int y_source_left_top,
                unsigned int x_source_right_bottom, unsigned int y_source_right_bottom,
                unsigned int x_dest_left_top, unsigned int y_dest_left_top){
@@ -212,10 +217,7 @@ void copyImage(BMP* image, unsigned int x_source_left_top, unsigned int y_source
     unsigned int height = image->info.height;
     unsigned int width = image->info.width;
 
-    int flagOfWidth = 0;
-    int flagOfHeight = 0;
-
-
+    //TODO recheck the check y
     if(x_source_right_bottom < 0 || y_source_right_bottom < 0
     || x_source_right_bottom > width || y_source_left_top > height
     || x_source_left_top > x_source_right_bottom || y_source_left_top < y_source_right_bottom){
@@ -228,23 +230,21 @@ void copyImage(BMP* image, unsigned int x_source_left_top, unsigned int y_source
         return;
     }
 
+    y_dest_left_top = image->info.height - y_dest_left_top;
+    y_source_right_bottom = image->info.height - y_source_right_bottom;
+    y_source_left_top = image->info.height - y_source_left_top;
+
+    printf("y_dest_left_top - %d\ny_source_right_bottom - %d\ny_source_left_top - %d\n", y_dest_left_top, y_source_right_bottom, y_source_left_top);
+
     BMP newImage;
 
-    newImage.info.height = y_source_left_top - y_source_right_bottom + 1;
+    //newImage.info.height = y_source_left_top - y_source_right_bottom + 1;
+    newImage.info.height = y_source_right_bottom - y_source_left_top + 1;
     newImage.info.width = x_source_right_bottom - x_source_left_top + 1;
 
-    int diff = x_dest_left_top + newImage.info.width - 1 > width;
+    printf("newImage.info.height - %d\n", newImage.info.height);
 
-    if(diff > width){
-        flagOfWidth = 1;
-    }
 
-    diff = y_dest_left_top - newImage.info.height - 1;
-
-    if(diff < 0){
-        newImage.info.height = newImage.info.height + diff;
-        flagOfHeight = 1;
-    }
 
     newImage.pixels = malloc(newImage.info.height * sizeof(RGB*));
 
@@ -254,8 +254,9 @@ void copyImage(BMP* image, unsigned int x_source_left_top, unsigned int y_source
 
     unsigned int x;
     unsigned int y = 0;
-
-    for(int i = y_source_right_bottom; i < y_source_left_top + 1; ++i){
+    y_source_right_bottom;
+    y_source_left_top;
+    for(int i = y_source_left_top; i < y_source_right_bottom + 1; ++i){
         x = 0;
         for(int j = x_source_left_top; j < x_source_right_bottom + 1; ++j){
             newImage.pixels[y][x] = image->pixels[i][j];
@@ -267,14 +268,31 @@ void copyImage(BMP* image, unsigned int x_source_left_top, unsigned int y_source
     y = 0;
     x = 0;
 
-    unsigned int y_dest_right_bottom = y_dest_left_top - newImage.info.height;
-    unsigned int x_dest_right_bottom = x_dest_left_top + newImage.info.width;
+    //TODO think about free
+    unsigned int y_dest_right_bottom;
+    if(newImage.info.height + y_dest_left_top <= image->info.height) {
+        y_dest_right_bottom = newImage.info.height + y_dest_left_top;
+    } else{
+        printf("wrong coordinate of new image height\n");
+        return;
+    }
+    unsigned int x_dest_right_bottom;
+
+    if(newImage.info.width + x_dest_left_top > image->info.width){
+        printf("wrong coordinates of image width\n");
+        return;
+    } else{
+        x_dest_right_bottom = x_dest_left_top + newImage.info.width;
+    }
+
+    printf("y_dest_right_bottom - %d\n", y_dest_right_bottom);
 
     /*if (flagOfWidth) x_dest_right_bottom = image->info.width;
     if (flagOfHeight) y_dest_right_bottom = 0; */
 
-
-    for(int i = y_dest_right_bottom + 1; i < y_dest_left_top; ++i){
+    /*y_dest_right_bottom;
+    y_dest_left_top; */
+    for(int i = y_dest_left_top; i < y_dest_right_bottom; ++i){
         for(int j = x_dest_left_top; j < x_dest_right_bottom; ++j){
             image->pixels[i][j] = newImage.pixels[y][x];
             ++x;
@@ -317,16 +335,17 @@ void rgbFilter(BMP* image, unsigned char value, char* component){
     }
 }
 
+//TODO getopt
+
 int main(int argc, char* argv[]){
     BMP image;
     readImage(&image, "simpsonsvr.bmp");
     //printImageInfo(image);
-    //rgbFilter(&image, 255, "red");
+    rgbFilter(&image, 255, "red");
     //printf("%d", image.info.colorsInColorTable);
-    //changeColor(&image, 255, 0, 255, 0, 255, 0);
-
-    copyImage(&image, 215, 562, 376, 123, 130, 350);
-    //reflectArea(&image, "vertical", 215, 461, 576, 123);
+    changeColor(&image, 255, 0, 255, 0, 255, 0);
+    copyImage(&image, 215,  502, 376, 223, 130, 350);
+    reflectArea(&image, "vertical", 215, 461, 576, 123);
     writeImage(&image, "out.bmp");
 
     /*struct Configs config = {0, 0, 0};
