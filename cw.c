@@ -45,15 +45,15 @@ typedef struct
 
 #pragma pack(pop)
 
-struct Configs{
-    int final;
-    int reverse; // 0 - false
-    int verbose; // 0 - false
-};
 
 int IsImageOk(BMP image){
-    if(image.header.signature != 0x4d42){
-        puts("The file does not conform to the BMP format. Please, change your file.");
+    if(image.info.headerSize != 40){
+        puts("This version of the BMP file is not supported. Please, change your file.");
+        return 0;
+    }
+
+    if(image.info.planes != 1){
+        puts("Unsupported quantity of planes. Please, change your file.");
         return 0;
     }
 
@@ -67,8 +67,8 @@ int IsImageOk(BMP image){
         return 0;
     }
 
-    if(image.info.colorsInColorTable != 0){
-        puts("This file uses a color table.");
+    if(image.info.colorsInColorTable != 0 || image.info.importantColorCount != 0){
+        puts("This file uses a color table. Please, change your file.");
         return 0;
     }
 
@@ -76,37 +76,65 @@ int IsImageOk(BMP image){
 }
 
 void printHelp(){
-    printf("getopt ex");
-    printf("-f <value> - final value\n");
-    printf("-r - reverse\n");
-    printf("-v --verbose - verbose\n");
-    printf("-h -? - help\n");
+    puts("This program supports CLI and only works with version 3 BMP files.");
+    puts("BMP files with color table are not supported.");
+    puts("The program only supports files with a depth of 24 pixels per bit.");
+    puts("The photo must not be compressed.");
+    puts("Format of input: ./bmp [name of input file]");
 }
 
-void readImage(BMP *image, char* path){
+int readImage(BMP *image, char* path){
     FILE *f = fopen(path, "rb");
+
     fread(&image->header,1,sizeof(BitmapFileHeader),f);
+
+    /*if(image->header.signature != 0x4d42){
+        puts("The file does not conform to the BMP format. Please, change your file.");
+        return 0;
+    } */
+
     fread(&image->info,1,sizeof(BitmapInfoHeader),f);
+
+    if(!IsImageOk(*image)){
+        return 0;
+    }
 
     unsigned int H = image->info.height;
     unsigned int W = image->info.width;
     unsigned int offset = (W*3)%4;
 
 
-    image->pixels = malloc(H*sizeof(RGB*));
+    image->pixels = malloc(H * sizeof(RGB*));
+    if(!image->pixels){
+        puts("Memory is not available.");
+        return 0;
+    }
+
     for(int i=0; i<H; i++){
         image->pixels[i] = malloc(W * sizeof(RGB) + offset);
+        if(!image->pixels[i]){
+            puts("Memory is not available.");
+            return 0;
+        }
+
         fread(image->pixels[i], 1,W * sizeof(RGB) + offset,f);
     }
 
     fclose(f);
+
+    return 1;
 }
 
-void writeImage(BMP *image, char* path){
+int writeImage(BMP *image, char* path){
     unsigned int H = image->info.height;
     unsigned int W = image->info.width;
     unsigned int offset = (W*3)%4;
 
+    if(path[strlen(path) - 1] != 'p' || path[strlen(path) - 2] != 'm'
+    || path[strlen(path) - 3] != 'b' || path[strlen(path) - 4] != '.'){
+        puts("Wrong format of output file.");
+        return 0;
+    }
     FILE *fout = fopen(path, "wb");
 
 
@@ -119,6 +147,13 @@ void writeImage(BMP *image, char* path){
     }
     fclose(fout);
 
+    for(unsigned int i = 0; i < H; ++i){
+        free(image->pixels[i]);
+    }
+    free(image->pixels);
+
+
+    return 1;
 }
 
 void printImageInfo(BMP image){
@@ -172,8 +207,8 @@ void swapPixels(RGB *pix1, RGB *pix2){
 }
 
 
-void reflectArea(BMP* image, char* axis, unsigned int x_left, unsigned int y_top,
-                 unsigned int x_right, unsigned int y_bottom){
+void reflectArea(BMP* image, char* axis, int x_left, int y_top,
+                 int x_right, int y_bottom){
 
     if(x_left < 0 || x_left > x_right || x_right > image->info.width
     || y_bottom > image->info.height || y_top < 0 || y_top > y_bottom){
@@ -187,8 +222,8 @@ void reflectArea(BMP* image, char* axis, unsigned int x_left, unsigned int y_top
     unsigned int width_of_area = x_right - x_left;
     unsigned int height_of_area = y_bottom - y_top;
 
-    y_bottom = image->info.height - y_bottom;
-    y_top = image->info.height - y_top;
+    y_bottom = (int)image->info.height - y_bottom;
+    y_top = (int)image->info.height - y_top;
     //printf("widthOfArea - %d\n heightOfArea - %d\n", width_of_area, height_of_area);
 
     if(!strcmp(axis, "horizontal")){
@@ -207,17 +242,17 @@ void reflectArea(BMP* image, char* axis, unsigned int x_left, unsigned int y_top
         }
     }
 
-    if(strcmp(axis, "vertical") && strcmp(axis, "horizontal")){
+    if(strcmp(axis, "vertical") != 0 && strcmp(axis, "horizontal") != 0){
         puts("Wrong axis selected.");
     }
 }
 
-void copyImage(BMP* image, unsigned int x_src_left, unsigned int y_src_top,
-               unsigned int x_src_right, unsigned int y_src_bottom,
-               unsigned int x_dest_left, unsigned int y_dest_top){
+void copyImage(BMP* image, int x_src_left, int y_src_top,
+               int x_src_right, int y_src_bottom,
+               int x_dest_left, int y_dest_top){
 
-    unsigned int height = image->info.height;
-    unsigned int width = image->info.width;
+    int height = (int)image->info.height;
+    int width = (int)image->info.width;
 
 
     if(x_src_left < 0 || y_src_top < 0
@@ -237,27 +272,17 @@ void copyImage(BMP* image, unsigned int x_src_left, unsigned int y_src_top,
     y_src_top = height - y_src_top;
     y_src_bottom = height - y_src_bottom;
 
-    //printf("y_dest_top - %d\ny_src_top - %d\ny_src_bottom - %d\n", y_dest_top, y_src_top, y_src_bottom);
-
 
     BMP newImage;
 
     newImage.info.height = y_src_top - y_src_bottom;
     newImage.info.width = x_src_right - x_src_left;
-    //printf("newImage.info.height - %d\n", newImage.info.height);
 
     unsigned int y_dest_bottom = y_dest_top - newImage.info.height;
     unsigned int x_dest_right = x_dest_left + newImage.info.width;
 
-    if(y_dest_bottom > height){
+    if(y_dest_bottom > height || x_dest_right > width){
         puts("Wrong destination area coordinates.");
-        printf("%d %d %d %d\n", y_dest_bottom, y_dest_top, newImage.info.height, image->info.height);
-        return;
-    }
-
-    if(x_dest_right > width){
-        puts("Wrong destination area coordinates.");
-        puts("-");
         return;
     }
 
@@ -271,9 +296,9 @@ void copyImage(BMP* image, unsigned int x_src_left, unsigned int y_src_top,
     unsigned int x;
     unsigned int y = 0;
 
-    for(int i = y_src_bottom; i < y_src_top; ++i){
+    for(unsigned int i = y_src_bottom; i < y_src_top; ++i){
         x = 0;
-        for(int j = x_src_left; j < x_src_right; ++j){
+        for(unsigned int j = x_src_left; j < x_src_right; ++j){
             newImage.pixels[y][x] = image->pixels[i][j];
             ++x;
         }
@@ -284,8 +309,8 @@ void copyImage(BMP* image, unsigned int x_src_left, unsigned int y_src_top,
     x = 0;
 
 
-    for(int i = y_dest_bottom; i < y_dest_top; ++i){
-        for(int j = x_dest_left; j < x_dest_right; ++j){
+    for(unsigned int i = y_dest_bottom; i < y_dest_top; ++i){
+        for(unsigned int j = x_dest_left; j < x_dest_right; ++j){
             image->pixels[i][j] = newImage.pixels[y][x];
             ++x;
         }
@@ -305,57 +330,217 @@ void rgbFilter(BMP* image, unsigned char value, char* component){
         return;
     }
 
-    if(strcmp(component, "red") && strcmp(component, "green") && strcmp(component, "blue")){
+    if(strcmp(component, "red") != 0 && strcmp(component, "green") != 0 && strcmp(component, "blue") != 0){
         printf("Wrong component name.");
         return;
     }
 
     for(int i = 0; i < image->info.height; ++i){
         for(int j = 0; j < image->info.width; ++j){
-            if(!strcmp(component, "red")){
+            if(!strcmp(component, "red"))
                 image->pixels[i][j].r = value;
-            }
 
-            if(!strcmp(component, "green")){
+            if(!strcmp(component, "green"))
                 image->pixels[i][j].g = value;
-            }
 
-            if(!strcmp(component, "blue")){
+            if(!strcmp(component, "blue"))
                 image->pixels[i][j].b = value;
-            }
         }
     }
 }
 
+//7 вариант на 4 ------------------------------------------------------------------------------------------------------
+BMP collage(BMP image, int count_x, int count_y){
+    BMP new_image;
+
+    new_image.info = image.info;
+    new_image.header = image.header;
+
+    new_image.info.height = image.info.height * count_y;
+    new_image.info.width = image.info.width * count_x;
+    unsigned int offset = (new_image.info.width*3)%4;
+
+
+    new_image.pixels = malloc(new_image.info.height * sizeof(RGB*));
+    for(int i = 0; i < new_image.info.height; ++i){
+        new_image.pixels[i] = malloc(new_image.info.width * sizeof(RGB) + offset);
+    }
+
+
+    for(int i = 0; i < count_y; ++i){
+        for(int j = 0; j < count_x; ++j){
+            for(int p = 0; p < image.info.height; ++p){
+                for(int q = 0; q < image.info.width; ++q){
+                    new_image.pixels[p + (i * image.info.height)][q + (j * image.info.width)] = image.pixels[p][q];
+                }
+            }
+        }
+    }
+
+
+    return new_image;
+}
+
+//-------------------------------------------------------------------------------------------------------------
 //TODO getopt
 
 int main(int argc, char* argv[]){
     BMP image;
-    readImage(&image, "simpsonsvr.bmp");
+    //BMP img;
+    //readImage(&image, "simpsonsvr.bmp");
     //printImageInfo(image);
     //rgbFilter(&image, 255, "red");
     //printf("%d", image.info.colorsInColorTable);
     //changeColor(&image, 255, 0, 255, 0, 255, 0);
-    //copyImage(&image, 100,  100, 200, 200, 200, 200);
-    //reflectArea(&image, "vertical", 215, 23, 576, 361);
-    writeImage(&image, "out.bmp");
+    //copyImage(&image, 100,  50, 200, 200, 200, 200);
+    //reflectArea(&image, "vertical", 215, 123, 576, 361);
+    //img = collage(image, 2, 8);
+    //writeImage(&image, "out.bmp");
 
-    /*struct Configs config = {0, 0, 0};
-    char *opts = "f:rvh?";
+    char *opts = "r:c:f:C:ih";
+
     struct option longOpts[]={
-            {"verbose", no_argument, NULL, 'v'},
-            {"longlong", no_argument, NULL, 0},
-            {"long", no_argument, NULL, 0},
-            { NULL, 0, NULL, 0}
+            {"reflect", required_argument, NULL, 'r'},
+            {"copy", required_argument, NULL, 'c'},
+            {"filter", required_argument, NULL, 'f'},
+            { "changeColor", required_argument, NULL, 'C'},
+            { "info", no_argument, NULL, 'i'},
+            { "help", no_argument, NULL, 'h'},
+            {NULL, 0, NULL, 0}
     };
     int opt;
     int longIndex;
     opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
-    while(opt!=-1){
+
+    /*if(argc <= 3) {
+        if(argc > 1 && (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-?") || !strcmp(argv[1], "-h"))){
+            printHelp();
+
+            return 0;
+        }
+
+        puts("Too few arguments was got by program!");
+        puts("Try again!");
+        printHelp();
+
+        return 0;
+    } */
+        readImage(&image, "simpsonsvr.bmp");
+
+
+        if(opt == -1){
+            printHelp();
+            return 0;
+        }
+
+        while (opt != -1) {
+
+            switch(opt){
+                case 'h': {
+                    printHelp();
+                    break;
+                }
+
+                case 'i': {
+                    printImageInfo(image);
+                    break;
+                }
+
+                case 'r': {
+                    char string[50];
+                    int x_left, x_right, y_top, y_bottom;
+
+                    int count = sscanf(optarg, "%s %d %d %d %d", string, &x_left, &x_right, &y_top, &y_bottom);
+
+                    if(count < 5){
+                        puts("Too few arguments to do this function (-r/--reflect).");
+                        break;
+                    }
+
+                    reflectArea(&image, string, x_left, y_top, x_right, y_bottom);
+                    writeImage(&image, "out.bmp");
+                    break;
+                }
+
+                case 'c': {
+                    int x_src_left, x_src_right, y_src_top, y_src_bottom, x_dest_left, y_dest_top;
+
+                    int count = sscanf(optarg, "%d %d %d %d %d %d", &x_src_left, &x_src_right, &y_src_top,
+                                       &y_src_bottom, &x_dest_left, &y_dest_top);
+
+                    if(count < 6){
+                        puts("Too few arguments to do this function (-c/--copy).");
+                        break;
+                    }
+
+                    copyImage(&image, x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top);
+                    writeImage(&image, "out.bmp");
+                    break;
+                }
+
+                case 'C':{
+                    int r1, g1, b1, r2, g2, b2;
+
+                    int count = sscanf(optarg, "%d %d %d %d %d %d", &r1, &g1, &b1,
+                                       &r2, &g2, &b2);
+
+                    if(count < 6){
+                        puts("Too few arguments to do this function (-c/--copy).");
+                        break;
+                    }
+
+                    copyImage(&image, r1, g1, b1,
+                              r2, g2, b2);
+                    writeImage(&image, "out.bmp");
+                    break;
+                }
+
+                case 'f': {
+                    int value;
+                    char str[50];
+
+                    sscanf(optarg, "%s %d", str, &value);
+
+                    /*if(count < 2){
+                        puts("Too few arguments to do this function (-f/--filter).");
+                        break;
+                    } */
+
+                    rgbFilter(&image, value, "red");
+                    writeImage(&image, "out.bmp");
+                    break;
+                }
+
+                default:{
+                    puts("No such key.");
+                    break;
+                }
+
+            }
+            opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+        }
+
+    /*if(!writeImage(&image, argv[2]))
+        return 0; */
+
+
+    /*struct Configs config = {0, 0, 0};
+    char *opts = "f:rvh?";
+    struct option longOpts[]={
+            {"reflect_area", required_argument, NULL, 'r'},
+            {"copy_area", required_argument, NULL, 'a'},
+            {"long", required_argument, NULL, 0},
+            { NULL, 0, NULL, 0},
+            { NULL, 0, NULL, 0}
+    };
+    int opt;
+    int longIndex;
+    opt = getopt_long(argc, argv, opts, longOpts, &longIndex); */
+    /*while(opt!=-1){
         switch(opt){
             case 'f':
 //				printf("get f with value: %d\n", atoi(optarg));
-                config.final = atoi(optarg);
+//              config.final = atoi(optarg);
                 break;
             case 'r':
                 config.reverse = 1;
@@ -369,7 +554,7 @@ int main(int argc, char* argv[]){
             case '?':
                 printHelp();
                 return 0;
-            case 0:
+            default:
                 printf("->%s\n",longOpts[longIndex].name);
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
@@ -381,7 +566,6 @@ int main(int argc, char* argv[]){
     printf("reverse = %d\n", config.reverse);
     for(int i=0; i<argc; i++)
         printf(">>%s\n", argv[i]);
-    return 0; */
-
+*/
     return 0;
 }
