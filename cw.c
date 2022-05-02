@@ -217,14 +217,11 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
     }
 
 
-    //printf("y0 - %d\ny_end - %d\n", y_top, y_bottom);
-
     unsigned int width_of_area = x_right - x_left;
     unsigned int height_of_area = y_bottom - y_top;
 
     y_bottom = (int)image->info.height - y_bottom;
     y_top = (int)image->info.height - y_top;
-    //printf("widthOfArea - %d\n heightOfArea - %d\n", width_of_area, height_of_area);
 
     if(!strcmp(axis, "horizontal")){
         for (int y = 0; y < height_of_area; ++y) {
@@ -358,7 +355,7 @@ BMP collage(BMP image, int count_x, int count_y){
 
     new_image.info.height = image.info.height * count_y;
     new_image.info.width = image.info.width * count_x;
-    unsigned int offset = (new_image.info.width*3)%4;
+    unsigned int offset = (new_image.info.width * 3) % 4;
 
 
     new_image.pixels = malloc(new_image.info.height * sizeof(RGB*));
@@ -381,6 +378,86 @@ BMP collage(BMP image, int count_x, int count_y){
     return new_image;
 }
 
+
+void colorize(BMP* image, int r, int b, int g, int x, int y){
+    image->pixels[y][x].r = r;
+    image->pixels[y][x].g = g;
+    image->pixels[y][x].b = b;
+}
+
+//void fill(BMP* image, )
+
+void drawLine(BMP* image, int x1, int y1, int x2, int y2, int r, int g, int b, int thick) {
+    int deltaX = abs(x2 - x1);
+    int deltaY = abs(y2 - y1);
+
+    int signX;
+    if(x1 < x2){
+        signX = 1;
+    } else {
+        signX = -1;
+    }
+
+    int signY;
+    if(y1 < y2){
+        signY = 1;
+    } else{
+        signY = -1;
+    }
+
+    int error = deltaX - deltaY;
+
+    if(y1 != y2) {
+        for (int i = 0; i < thick; ++i) {
+            colorize(image, r, g, b, x2 + i, y2);
+            colorize(image, r, g, b, x2 - i, y2);
+        }
+    } else {
+        for (int i = 0; i < thick; ++i) {
+            colorize(image, r, g, b, x2, y2 + i);
+            colorize(image, r, g, b, x2, y2 - i);
+        }
+    }
+
+
+    while(x1 != x2 || y1 != y2) {
+
+        if(y1 != y2) {
+            for (int i = 0; i < thick; ++i) {
+                colorize(image, r, g, b, x1 + i, y1);
+                colorize(image, r, g, b, x1 - i, y1);
+            }
+        } else {
+            for (int i = 0; i < thick; ++i) {
+                colorize(image, r, g, b, x1, y1 + i);
+                colorize(image, r, g, b, x1, y1 - i);
+            }
+        }
+
+        int error2 = error * 2;
+
+        if(error2 > -deltaY)
+        {
+            error -= deltaY;
+            x1 += signX;
+        }
+
+        if(error2 < deltaX)
+        {
+            error += deltaX;
+            y1 += signY;
+        }
+    }
+
+}
+
+void triangle(BMP* image, int Ax, int Ay, int Bx, int By, int Cx, int Cy, int r, int g, int b, int thick){
+    drawLine(image, Ax, Ay, Bx, By, r, g, b, thick);
+    drawLine(image, Bx, By, Cx, Cy, r, g, b, thick);
+    drawLine(image, Cx, Cy, Ax, Ay, r, g, b, thick);
+}
+
+
 //-------------------------------------------------------------------------------------------------------------
 //TODO getopt
 
@@ -388,6 +465,8 @@ int main(int argc, char* argv[]){
     BMP image;
     //BMP img;
     //readImage(&image, "simpsonsvr.bmp");
+    //drawLine(&image, 100, 100, 200, 200, 0, 0, 0, 3);
+    //triangle(&image, 50, 50, 75, 100, 100, 50, 0, 0, 0, 4);
     //printImageInfo(image);
     //rgbFilter(&image, 255, "red");
     //printf("%d", image.info.colorsInColorTable);
@@ -403,10 +482,16 @@ int main(int argc, char* argv[]){
             {"reflect", required_argument, NULL, 'r'},
             {"copy", required_argument, NULL, 'c'},
             {"filter", required_argument, NULL, 'f'},
-            { "changeColor", required_argument, NULL, 'C'},
-            { "info", no_argument, NULL, 'i'},
-            { "help", no_argument, NULL, 'h'},
-            {NULL, 0, NULL, 0}
+            {"changeColor", required_argument, NULL, 'C'},
+            {"info", no_argument, NULL, 'i'},
+            {"help", no_argument, NULL, 'h'}
+            //{"src_coordinates", required_argument, NULL, 's'},
+            //{"dest_coordinates", required_argument, NULL, 'd'},
+            //{"color1", required_argument, NULL, '1'},
+            //{"color2", required_argument, NULL, '2'},
+            //{"color_rgb", required_argument, NULL, 'l'},
+            //{"coordinates", required_argument, NULL, 'k'},
+            //{"coordinates_for_reflect", required_argument, NULL, 'p'}
     };
     int opt;
     int longIndex;
@@ -441,17 +526,71 @@ int main(int argc, char* argv[]){
 
             case 'r': {
                 char string[50];
+                int count1, count2, count3;
                 int x_left, x_right, y_top, y_bottom;
 
-                int count = sscanf(optarg, "%d,%d,%d,%d,%s", &y_bottom, &x_left, &x_right, &y_top, string);
+                //int count = sscanf(optarg, "%d,%d,%d,%d,%s", &y_bottom, &x_left, &x_right, &y_top, string);
+                char* opts1 = "l:r:a:";
+                int opt1;
+                int longIndex1;
+                struct option longOpts1[]={
+                        {"coordinates_left_top", required_argument, NULL, 'l'},
+                        {"coordinates_right_bottom", required_argument, NULL, 'r'},
+                        {"axis", required_argument, NULL, 'a'}
+                };
+
+                while(opt1 != -1){
+
+                    switch (opt1) {
+                        case 'l':{
+                            count1 = sscanf(optarg, "%d,%d", &x_left, &y_top);
+
+                            if(count1 < 2){
+                                puts("Too few arguments to do this function (-r/--reflect).");
+                                break;
+                            }
+
+                            break;
+                        }
+
+                        case 'r':{
+                            count2 = sscanf(optarg, "%d,%d", &x_right, &y_bottom);
+
+                            if(count2 < 2){
+                                puts("Too few arguments to do this function (-r/--reflect).");
+                                break;
+                            }
+
+                            break;
+                        }
+
+                        case 'a':{
+                            count3 = sscanf(optarg, "%s", string);
+
+                            if(count3 < 1){
+                                puts("Too few arguments to do this function (-r/--reflect).");
+                                break;
+                            }
+
+                            break;
+                        }
+
+                        default: {
+                            puts("No such key.");
+
+                            break;
+                        }
+                    }
+                    opt1 = getopt_long(argc, argv, opts1, longOpts1, &longIndex1);
+                }
+                int count = count1 + count2 + count3;
 
                 if(count < 5){
-                    puts("Too few arguments to do this function (-r/--reflect).");
+                    //puts("Too few arguments to do this function (-r/--reflect).");
                     break;
                 }
 
                 reflectArea(&image, string, x_left, y_top, x_right, y_bottom);
-                writeImage(&image, out_file);
                 break;
             }
 
@@ -462,29 +601,30 @@ int main(int argc, char* argv[]){
                                    &y_src_bottom, &x_dest_left, &y_dest_top);
 
                 if(count < 6){
+                    printf("%d\n", count);
                     puts("Too few arguments to do this function (-c/--copy).");
                     break;
                 }
 
                 copyImage(&image, x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top);
-                writeImage(&image, out_file);
                 break;
             }
 
             case 'C':{
                 int r1, g1, b1, r2, g2, b2;
 
-                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &r1, &g1, &b1,
-                                   &r2, &g2, &b2);
+                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &r1, &r2, &b1,
+                                   &b2, &g1, &g2);
 
                 if(count < 6){
-                    puts("Too few arguments to do this function (-c/--copy).");
+                    puts("Too few arguments to do this function (-C/--changeColor).");
                     break;
                 }
 
-                copyImage(&image, r1, g1, b1,
+                printf("%d %d %d %d %d %d", r1, r2, g1, g2, g1, g2);
+
+                changeColor(&image, r1, g1, b1,
                           r2, g2, b2);
-                writeImage(&image, out_file);
                 break;
             }
 
@@ -500,7 +640,6 @@ int main(int argc, char* argv[]){
                 }
 
                 rgbFilter(&image, value, str);
-                writeImage(&image, out_file);
                 break;
             }
 
@@ -511,6 +650,14 @@ int main(int argc, char* argv[]){
 
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+    }
+
+    //puts(argv[1]);
+    if(!writeImage(&image, out_file)){
+        for(unsigned int i = 0; i < image.info.height; ++i){
+            free(image.pixels[i]);
+        }
+        free(image.pixels);
     }
 
 
