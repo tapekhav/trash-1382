@@ -88,10 +88,10 @@ int readImage(BMP *image, char* path){
 
     fread(&image->header,1,sizeof(BitmapFileHeader),f);
 
-    /*if(image->header.signature != 0x4d42){
+    if(image->header.signature != 0x4d42){
         puts("The file does not conform to the BMP format. Please, change your file.");
         return 0;
-    } */
+    }
 
     fread(&image->info,1,sizeof(BitmapInfoHeader),f);
 
@@ -412,160 +412,107 @@ int main(int argc, char* argv[]){
     int longIndex;
     opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
 
-    /*if(argc <= 3) {
-        if(argc > 1 && (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-?") || !strcmp(argv[1], "-h"))){
-            printHelp();
+    char filename[50];
+    strcpy(filename, argv[1]);
 
-            return 0;
-        }
+    char out_file[50];
+    strcpy(out_file, argv[argc - 1]);
 
-        puts("Too few arguments was got by program!");
-        puts("Try again!");
+    if(!readImage(&image, filename)) return 0;
+
+
+    if(opt == -1){
         printHelp();
-
         return 0;
-    } */
-        readImage(&image, "simpsonsvr.bmp");
+    }
 
+    while (opt != -1) {
 
-        if(opt == -1){
-            printHelp();
-            return 0;
-        }
-
-        while (opt != -1) {
-
-            switch(opt){
-                case 'h': {
-                    printHelp();
-                    break;
-                }
-
-                case 'i': {
-                    printImageInfo(image);
-                    break;
-                }
-
-                case 'r': {
-                    char string[50];
-                    int x_left, x_right, y_top, y_bottom;
-
-                    int count = sscanf(optarg, "%s %d %d %d %d", string, &x_left, &x_right, &y_top, &y_bottom);
-
-                    if(count < 5){
-                        puts("Too few arguments to do this function (-r/--reflect).");
-                        break;
-                    }
-
-                    reflectArea(&image, string, x_left, y_top, x_right, y_bottom);
-                    writeImage(&image, "out.bmp");
-                    break;
-                }
-
-                case 'c': {
-                    int x_src_left, x_src_right, y_src_top, y_src_bottom, x_dest_left, y_dest_top;
-
-                    int count = sscanf(optarg, "%d %d %d %d %d %d", &x_src_left, &x_src_right, &y_src_top,
-                                       &y_src_bottom, &x_dest_left, &y_dest_top);
-
-                    if(count < 6){
-                        puts("Too few arguments to do this function (-c/--copy).");
-                        break;
-                    }
-
-                    copyImage(&image, x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top);
-                    writeImage(&image, "out.bmp");
-                    break;
-                }
-
-                case 'C':{
-                    int r1, g1, b1, r2, g2, b2;
-
-                    int count = sscanf(optarg, "%d %d %d %d %d %d", &r1, &g1, &b1,
-                                       &r2, &g2, &b2);
-
-                    if(count < 6){
-                        puts("Too few arguments to do this function (-c/--copy).");
-                        break;
-                    }
-
-                    copyImage(&image, r1, g1, b1,
-                              r2, g2, b2);
-                    writeImage(&image, "out.bmp");
-                    break;
-                }
-
-                case 'f': {
-                    int value;
-                    char str[50];
-
-                    sscanf(optarg, "%s %d", str, &value);
-
-                    /*if(count < 2){
-                        puts("Too few arguments to do this function (-f/--filter).");
-                        break;
-                    } */
-
-                    rgbFilter(&image, value, "red");
-                    writeImage(&image, "out.bmp");
-                    break;
-                }
-
-                default:{
-                    puts("No such key.");
-                    break;
-                }
-
-            }
-            opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
-        }
-
-    /*if(!writeImage(&image, argv[2]))
-        return 0; */
-
-
-    /*struct Configs config = {0, 0, 0};
-    char *opts = "f:rvh?";
-    struct option longOpts[]={
-            {"reflect_area", required_argument, NULL, 'r'},
-            {"copy_area", required_argument, NULL, 'a'},
-            {"long", required_argument, NULL, 0},
-            { NULL, 0, NULL, 0},
-            { NULL, 0, NULL, 0}
-    };
-    int opt;
-    int longIndex;
-    opt = getopt_long(argc, argv, opts, longOpts, &longIndex); */
-    /*while(opt!=-1){
         switch(opt){
-            case 'f':
-//				printf("get f with value: %d\n", atoi(optarg));
-//              config.final = atoi(optarg);
-                break;
-            case 'r':
-                config.reverse = 1;
-                //printf("get r\n");
-                break;
-            case 'v':
-                //printf("get v\n");
-                config.verbose = 1;
-                break;
-            case 'h':
-            case '?':
+            case 'h': {
                 printHelp();
-                return 0;
-            default:
-                printf("->%s\n",longOpts[longIndex].name);
+                break;
+            }
+
+            case 'i': {
+                printImageInfo(image);
+                break;
+            }
+
+            case 'r': {
+                char string[50];
+                int x_left, x_right, y_top, y_bottom;
+
+                int count = sscanf(optarg, "%d,%d,%d,%d,%s", &y_bottom, &x_left, &x_right, &y_top, string);
+
+                if(count < 5){
+                    puts("Too few arguments to do this function (-r/--reflect).");
+                    break;
+                }
+
+                reflectArea(&image, string, x_left, y_top, x_right, y_bottom);
+                writeImage(&image, out_file);
+                break;
+            }
+
+            case 'c': {
+                int x_src_left, x_src_right, y_src_top, y_src_bottom, x_dest_left, y_dest_top;
+
+                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &x_src_left, &x_src_right, &y_src_top,
+                                   &y_src_bottom, &x_dest_left, &y_dest_top);
+
+                if(count < 6){
+                    puts("Too few arguments to do this function (-c/--copy).");
+                    break;
+                }
+
+                copyImage(&image, x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top);
+                writeImage(&image, out_file);
+                break;
+            }
+
+            case 'C':{
+                int r1, g1, b1, r2, g2, b2;
+
+                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &r1, &g1, &b1,
+                                   &r2, &g2, &b2);
+
+                if(count < 6){
+                    puts("Too few arguments to do this function (-c/--copy).");
+                    break;
+                }
+
+                copyImage(&image, r1, g1, b1,
+                          r2, g2, b2);
+                writeImage(&image, out_file);
+                break;
+            }
+
+            case 'f': {
+                int value;
+                char str[50];
+
+                int count = sscanf(optarg, "%d,%s", &value, str);
+
+                if(count < 2){
+                    puts("Too few arguments to do this function (-f/--filter).");
+                    break;
+                }
+
+                rgbFilter(&image, value, str);
+                writeImage(&image, out_file);
+                break;
+            }
+
+            default: {
+                puts("No such key.");
+                break;
+            }
+
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
     }
-    argc -= optind;
-    argv += optind;
-    printf("final = %d\n", config.final);
-    printf("verbose = %d\n", config.verbose);
-    printf("reverse = %d\n", config.reverse);
-    for(int i=0; i<argc; i++)
-        printf(">>%s\n", argv[i]);
-*/
+
+
     return 0;
 }
