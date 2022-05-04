@@ -89,7 +89,7 @@ int readImage(BMP *image, char* path){
     fread(&image->header,1,sizeof(BitmapFileHeader),f);
 
     if(image->header.signature != 0x4d42){
-        puts("The file does not conform to the BMP format. Please, change your file.");
+        puts("Input file does not conform to the BMP format. Please, change your file.");
         return 0;
     }
 
@@ -175,8 +175,7 @@ void printImageInfo(BMP image){
     printf("importantColorCount:\t%x (%u)\n",image.info.importantColorCount, image.info.importantColorCount);
 }
 
-void changeColor(BMP* image, unsigned char r1, unsigned char r2, unsigned char g1, unsigned char g2,
-                 unsigned char b1, unsigned char b2){
+void changeColor(BMP* image, int r1, int r2, int g1, int g2, int b1, int b2){
     int checkPresenceColor = 0;
     if(r1 < 0 || r2 < 0 || g1 < 0 || g2 < 0|| b1 < 0 || b2 < 0 || r1 > 255 || r2 > 255 || g1 > 255 ||
             g2 > 255 || b1 > 255 || b2 > 255){
@@ -321,7 +320,7 @@ void copyImage(BMP* image, int x_src_left, int y_src_top,
     free(newImage.pixels);
 }
 
-void rgbFilter(BMP* image, unsigned char value, char* component){
+void rgbFilter(BMP* image, int value, char* component){
     if(value < 0 || value > 255){
         puts("Invalid component value.");
         return;
@@ -463,43 +462,6 @@ void triangle(BMP* image, int Ax, int Ay, int Bx, int By, int Cx, int Cy, int r,
 
 int main(int argc, char* argv[]){
     BMP image;
-    //BMP img;
-    //readImage(&image, "simpsonsvr.bmp");
-    //drawLine(&image, 100, 100, 200, 200, 0, 0, 0, 3);
-    //triangle(&image, 50, 50, 75, 100, 100, 50, 0, 0, 0, 4);
-    //printImageInfo(image);
-    //rgbFilter(&image, 255, "red");
-    //printf("%d", image.info.colorsInColorTable);
-    //changeColor(&image, 255, 0, 255, 0, 255, 0);
-    //copyImage(&image, 100,  50, 200, 200, 200, 200);
-    //reflectArea(&image, "vertical", 215, 123, 576, 361);
-    //img = collage(image, 2, 8);
-    //writeImage(&image, "out.bmp");
-
-    /*
-    char *opts = "r:c:f:C:ih";
-
-    struct option longOpts[]={
-            {"reflect", required_argument, NULL, 'r'},
-            {"copy", required_argument, NULL, 'c'},
-            {"filter", required_argument, NULL, 'f'},
-            {"changeColor", required_argument, NULL, 'C'},
-            {"info", no_argument, NULL, 'i'},
-            {"help", no_argument, NULL, 'h'},
-            {"src_coordinates", required_argument, NULL, 's'},
-            {"dest_coordinates", required_argument, NULL, 'd'},
-            {"color1", required_argument, NULL, '1'},
-            {"color2", required_argument, NULL, '2'},
-            {"color_rgb", required_argument, NULL, 'l'},
-            {"coordinates", required_argument, NULL, 'k'},
-            {"coordinates_for_reflect", required_argument, NULL, 'p'}
-    };
-    int opt;
-    int longIndex;
-    opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
-    */
-
-
 
     if(argc < 3){
         if(argc > 1 && (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-h"))) {
@@ -538,8 +500,12 @@ int main(int argc, char* argv[]){
             free(image.pixels);
         }
     } else {
+        char filename[50];
+        strcpy(filename, argv[1]);
+        if(!readImage(&image, filename)) return 0;
+
         if (!strcmp(argv[2], "-f") || !strcmp(argv[2], "--filter")) {
-            char *opts = "r:c:";
+            char *opts = "fv:c:";
 
             struct option longOpts[] = {
                     {"value",required_argument, NULL, 'v'},
@@ -561,6 +527,8 @@ int main(int argc, char* argv[]){
                             puts("Too few arguments to do this function (-f/--filter).");
                             break;
                         }
+
+                        break;
                     }
 
                     case 'c':{
@@ -570,7 +538,12 @@ int main(int argc, char* argv[]){
                             puts("Too few arguments to do this function (-f/--filter).");
                             break;
                         }
+
+                        break;
                     }
+
+                    case 'f':
+                        break;
 
                     default: {
                         puts("No such key.");
@@ -580,8 +553,57 @@ int main(int argc, char* argv[]){
                 }
                 opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
             }
-
             rgbFilter(&image, value, s);
+        }
+        else if(!strcmp(argv[2], "-C") || !strcmp(argv[2], "--changeColor")){
+            char *opts = "C1:2:";
+
+            struct option longOpts[] = {
+                    {"color1",required_argument, NULL, '1'},
+                    {"color2",required_argument, NULL, '2'}
+            };
+            int opt;
+            int longIndex;
+            int r1, g1, b1, r2, g2, b2;
+            opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+
+            while (opt != -1) {
+
+                switch (opt) {
+                    case '1':{
+                        int count = sscanf(optarg, "%d.%d.%d", &r1, &g1, &b1);
+
+                        if(count < 3){
+                            puts("Too few arguments to do this function (-f/--filter).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case '2':{
+                        int count = sscanf(optarg, "%d.%d.%d", &r2, &g2, &b2);
+
+                        if(count < 3){
+                            puts("Too few arguments to do this function (-f/--filter).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case 'C':
+                        break;
+
+                    default: {
+                        puts("No such key.");
+                        break;
+                    }
+
+                }
+                opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+            }
+            changeColor(&image, r1, r2, g1, g2, b1, b2);
         }
         char out_file[50];
         strcpy(out_file, argv[argc - 1]);
