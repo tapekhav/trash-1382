@@ -554,8 +554,7 @@ int main(int argc, char* argv[]){
                 opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
             }
             rgbFilter(&image, value, s);
-        }
-        else if(!strcmp(argv[2], "-C") || !strcmp(argv[2], "--changeColor")){
+        } else if(!strcmp(argv[2], "-C") || !strcmp(argv[2], "--changeColor")){
             char *opts = "C1:2:";
 
             struct option longOpts[] = {
@@ -574,7 +573,7 @@ int main(int argc, char* argv[]){
                         int count = sscanf(optarg, "%d.%d.%d", &r1, &g1, &b1);
 
                         if(count < 3){
-                            puts("Too few arguments to do this function (-f/--filter).");
+                            puts("Too few arguments to do this function (-C/--changeColor).");
                             break;
                         }
 
@@ -585,7 +584,7 @@ int main(int argc, char* argv[]){
                         int count = sscanf(optarg, "%d.%d.%d", &r2, &g2, &b2);
 
                         if(count < 3){
-                            puts("Too few arguments to do this function (-f/--filter).");
+                            puts("Too few arguments to do this function (-c/--changeColor).");
                             break;
                         }
 
@@ -604,7 +603,109 @@ int main(int argc, char* argv[]){
                 opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
             }
             changeColor(&image, r1, r2, g1, g2, b1, b2);
-        }
+        } else if(!strcmp(argv[2], "-c") || !strcmp(argv[2], "--copyArea")){
+            char *opts = "cs:d:";
+
+            struct option longOpts[] = {
+                    {"src_coordinates",required_argument, NULL, 's'},
+                    {"dest_coordinates",required_argument, NULL, 'd'}
+            };
+            int opt;
+            int longIndex;
+            int x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top;
+            opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+
+            while (opt != -1) {
+
+                switch (opt) {
+                    case 's':{
+                        int count = sscanf(optarg, "%d,%d,%d,%d", &x_src_left, &y_src_top, &x_src_right, &y_src_bottom);
+
+                        if(count < 4){
+                            puts("Too few arguments to do this function (-c/--copyArea).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case 'd':{
+                        int count = sscanf(optarg, "%d,%d", &x_dest_left, &y_dest_top);
+
+                        if(count < 2){
+                            puts("Too few arguments to do this function (-c/--copyArea).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case 'c':
+                        break;
+
+                    default: {
+                        puts("No such key.");
+                        break;
+                    }
+
+                }
+                opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+            }
+            copyImage(&image, x_src_left, y_src_top, x_src_right,
+                        y_src_bottom, x_dest_left, y_dest_top);
+        } else if(!strcmp(argv[2], "-r") || !strcmp(argv[2], "--reflectArea")){
+            char *opts = "rc:a:";
+
+            struct option longOpts[] = {
+                    {"coordinates",required_argument, NULL, 'c'},
+                    {"axis",required_argument, NULL, 'a'}
+            };
+            int opt;
+            int longIndex;
+            int x_src_left, y_src_top, x_src_right, y_src_bottom;
+            char str[50];
+            opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+
+            while (opt != -1) {
+
+                switch (opt) {
+                    case 'c':{
+                        int count = sscanf(optarg, "%d,%d,%d,%d", &x_src_left, &y_src_top, &x_src_right, &y_src_bottom);
+
+                        if(count < 4){
+                            puts("Too few arguments to do this function (-r/--reflectArea).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case 'a':{
+                        int count = sscanf(optarg, "%s", str);
+
+                        if(count < 1){
+                            puts("Too few arguments to do this function (-r/--reflectArea).");
+                            break;
+                        }
+
+                        break;
+                    }
+
+                    case 'r':
+                        break;
+
+                    default: {
+                        puts("No such key.");
+                        break;
+                    }
+
+                }
+                opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+            }
+            reflectArea(&image, str, x_src_left, y_src_top,
+                        x_src_right, y_src_bottom);
+        } else puts("No such key.");
+
         char out_file[50];
         strcpy(out_file, argv[argc - 1]);
 
