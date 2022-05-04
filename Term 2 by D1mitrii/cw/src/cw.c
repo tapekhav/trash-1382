@@ -255,14 +255,14 @@ void rotate(IMAGE* picture, Options* opt){
 		case 180:
 
 			for (int y = 0; y < height; y++) {
-            	for (int x = 0; x < (width / 2) ; x++) {
+            	for (int x = 0; x < (width / 2); x++) {
 
 					RGB temp_pixel = arr[y1 - y][x1 + x];
                 	arr[y1 - y][x1 + x] = arr[y1 - y][x2 - x];
 					arr[y1 - y][x2 - x] = temp_pixel;
             	}
        		}
-        	for (int y = 0; y < (height / 2) ; y++) {
+        	for (int y = 0; y < (height / 2); y++) {
             	for (int x = 0; x < width; x++) {
 					RGB temp_pixel = arr[y2 + y][x1 + x];
                 	arr[y2 + y][x1 + x] =  arr[y1 - y][x1 + x];
@@ -285,10 +285,11 @@ int main(int argc, char** argv){
 
 	IMAGE picture;
 	Read_Image(&picture, "simpsonsvr.bmp");
-	Options cc = {0, 0, 1, 20, 180, 100, 200, 300, 100};
+	Options cc = {0, 0, 1, 100, 180, -1, 562, 780, 0};
+	//printInfoHeader(picture.bmif);
 	//Filter_RGB(&picture, "r", 255);
-	//rotate(&picture, &cc);
-	Draw_Square(&picture, &cc);
+	rotate(&picture, &cc);
+	//Draw_Square(&picture, &cc);
 	//Draw_Circle(&picture, &cc);
 	Write_Image(&picture, "new.bmp");
 
