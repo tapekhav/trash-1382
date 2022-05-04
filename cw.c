@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <wchar.h>
 #include <getopt.h>
 #include <string.h>
 
@@ -74,7 +73,7 @@ int IsImageOk(BMP image){
 
     return 1;
 }
-
+//TODO printhelp
 void printHelp(){
     puts("This program supports CLI and only works with version 3 BMP files.");
     puts("BMP files with color table are not supported.");
@@ -216,8 +215,8 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
     }
 
 
-    unsigned int width_of_area = x_right - x_left;
-    unsigned int height_of_area = y_bottom - y_top;
+    unsigned int width_of_area = x_right - x_left + 1;
+    unsigned int height_of_area = y_bottom - y_top + 1;
 
     y_bottom = (int)image->info.height - y_bottom;
     y_top = (int)image->info.height - y_top;
