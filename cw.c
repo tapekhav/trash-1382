@@ -219,8 +219,7 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
     unsigned int height_of_area = y_bottom - y_top + 1;
 
     y_bottom = (int)image->info.height - y_bottom;
-    y_top = (int)image->info.height - y_top;
-
+    y_top = (int)image->info.height - y_top - 1;
     if(!strcmp(axis, "horizontal")){
         for (int y = 0; y < height_of_area; ++y) {
             for (int x = 0; x < width_of_area / 2; ++x) {
@@ -347,7 +346,10 @@ void rgbFilter(BMP* image, int value, char* component){
 
 int main(int argc, char* argv[]){
     BMP image;
-
+    readImage(&image, "simpsonsvr.bmp");
+    reflectArea(&image, "vertical", 0, 0, 780, 563);
+    writeImage(&image, "out.bmp");
+    /*
     if(argc < 3){
         if(argc > 1 && (!strcmp(argv[1], "--help") || !strcmp(argv[1], "-h"))) {
             printHelp();
@@ -601,7 +603,7 @@ int main(int argc, char* argv[]){
             free(image.pixels);
         }
     }
-
+    */
 
     return 0;
 }
