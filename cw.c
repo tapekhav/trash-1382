@@ -51,38 +51,38 @@ void printHelp(){
     puts("The program only supports files with a depth of 24 pixels per bit.");
     puts("The photo must not be compressed.");
     puts("In the copy area and reflect area functions, the top left pixel is considered the origin (0, 0).");
-    puts("Format of input: ./bmp [name of input file] [name of key] [argument 1],[argument 2],...,[argument N]"
+    puts("Format of input: ./a.out [name of input file] [name of key] [argument 1],[argument 2],...,[argument N]"
          " [name of output file]");
     puts("All keys:");
     puts("\t-h(--help):\n\t\tShows instructions for the program. "
          "Takes no arguments. Written in place of the file name.");
-    puts("\t\tExample: ./bmp --help");
+    puts("\t\tExample: ./a.out --help");
     puts("\t-i(--info):\n\t\t Takes no arguments. You do not need to write the name of the output file.");
-    puts("\t\tExample: ./bmp simpsonsvr.bmp -i");
+    puts("\t\tExample: ./a.out simpsonsvr.bmp -i");
     puts("\t\t-i(--info):\n\t\t Information of input file. Takes no arguments. "
          "You do not need to write the name of the output file.");
     puts("\t-r(--reflectArea):");
     puts("\t\tReflects a photo along a certain axis at the specified coordinates.");
     puts("\t\tArguments are entered in this way:");
     puts("\t\t-r [left x coordinate],[top y coordinate],[right x coordinate],[bottom y coordinate],[axis]");
-    puts("\t\tExample: ./bmp simpsonsvr.bmp -r 100,100,400,400,vertical out.bmp");
+    puts("\t\tExample: ./a.out simpsonsvr.bmp -r 100,100,400,400,vertical out.bmp");
     puts("\t-c(--copyArea):");
     puts("\t\tCopy area in picture and inserts it in certain place.");
     puts("\t\tArguments are entered in this way:");
     puts("\t\t-c [x source left],[y source top],[x source right],[y source bottom],"
          "[x destination left],[y destination top]");
-    puts("\t\tExample: ./bmp simpsonsvr.bmp -c 100,100,200,200,200,200 out.bmp");
+    puts("\t\tExample: ./a.out simpsonsvr.bmp -c 100,100,200,200,200,200 out.bmp");
     puts("\t-С(--changeColor):");
     puts("\t\tChange color based on RGB components.");
     puts("\t\tArguments are entered in this way:");
     puts("\t\t-C [value of red component 1],[value of green component 1],[value of blue component 1],\n"
          "\t\t[value of red component 2],[value of green component 2],[value of blue component 2]");
-    puts("\t\tExample: ./bmp simpsonsvr.bmp -C 255,255,255,0,0,0 out.bmp");
+    puts("\t\tExample: ./a.out simpsonsvr.bmp -C 255,255,255,0,0,0 out.bmp");
     puts("\t-f(--filter):");
     puts("\t\tChanges the value of one of the components.");
     puts("\t\tArguments are entered in this way:");
     puts("\t\t-f [value of the component],[name of the component]");
-    puts("\t\tExample: ./bmp simpsonsvr.bmp -f 255,red out.bmp");
+    puts("\t\tExample: ./a.out simpsonsvr.bmp -f 255,red out.bmp");
 }
 
 void printImageInfo(BMP image){
@@ -217,15 +217,17 @@ int writeImage(BMP *image, char* path){
 
 void changeColor(BMP* image, int r1, int r2, int g1, int g2, int b1, int b2){
     int checkPresenceColor = 0;
-    if(r1 < 0 || r2 < 0 || g1 < 0 || g2 < 0 || b1 < 0 || b2 < 0 || r1 > 255 || r2 > 255 || g1 > 255 ||
-            g2 > 255 || b1 > 255 || b2 > 255){
+    if(r1 < 0 || r2 < 0 || g1 < 0 || g2 < 0 || b1 < 0 || b2 < 0
+            || r1 > 255 || r2 > 255 || g1 > 255
+            || g2 > 255 || b1 > 255 || b2 > 255){
         puts("One of the component is incorrectly set.");
         return;
     }
 
     for(int i = 0; i < image->info.height; ++i){
         for(int j = 0; j < image->info.width; ++j){
-            if(image->pixels[i][j].r == r1 && image->pixels[i][j].g == g1 && image->pixels[i][j].b == b1){
+            if(image->pixels[i][j].r == r1 && image->pixels[i][j].g == g1
+            && image->pixels[i][j].b == b1){
                 checkPresenceColor = 1;
                 image->pixels[i][j].r = r2;
                 image->pixels[i][j].g = g2;
@@ -293,7 +295,6 @@ void copyImage(BMP* image, int x_src_left, int y_src_top,
     if(x_src_left < 0 || y_src_top < 0
             || x_src_right > width || y_src_bottom > height
             || x_src_left > x_src_right || y_src_top > y_src_bottom){
-        printf("%d %d\n", y_src_bottom, y_src_top);
         puts("Wrong source area coordinates.");
         return;
     }
@@ -318,7 +319,6 @@ void copyImage(BMP* image, int x_src_left, int y_src_top,
     unsigned int x_dest_right = x_dest_left + newImage.info.width;
 
     if(y_dest_bottom > height || x_dest_right > width){
-        printf("%d\n", y_dest_bottom);
         puts("Wrong destination area coordinates.");
         return;
     }
@@ -364,7 +364,8 @@ void rgbFilter(BMP* image, int value, char* component){
         return;
     }
 
-    if(strcmp(component, "red") != 0 && strcmp(component, "green") != 0 && strcmp(component, "blue") != 0){
+    if(strcmp(component, "red") != 0 && strcmp(component, "green") != 0
+    && strcmp(component, "blue") != 0){
         printf("Wrong component name.");
         return;
     }
@@ -414,7 +415,7 @@ int main(int argc, char* argv[]){
 
 
     if(opt == -1){
-        printHelp();
+        puts("Invalid input format.");
         return 0;
     }
 
@@ -509,6 +510,5 @@ int main(int argc, char* argv[]){
     }
 
 
-    
     return 0;
 }
