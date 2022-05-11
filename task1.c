@@ -1,33 +1,22 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <dirent.h>
+#include <string.h>
 
-typedef struct{
+
+typedef struct
+{
     char name[300];
     char info[5000];
 } file;
 
-
-int cmp(const void* a, const void* b){
-    file aa = *(file*)a;
-    file bb = *(file*)b;
-
-    if(!strcmp(aa.name, bb.name)){
-        return strcmp(aa.info, bb.info);
-    }
-
-    return strcmp(aa.name, bb.name);
-}
-
-
-void search(char* dirname, file* arr, int* count){
+void search(char* dirname, file** arr, int* count)
+{
     DIR* dir = opendir(dirname);
-
-    struct dirent *cur = readdir(dir);
+    struct dirent* cur = readdir(dir);
 
     while(cur){
-        strcat(dirname,"/");
+        strcat(dirname, "/");
         strcat(dirname, cur->d_name);
 
         if(cur->d_type == DT_DIR && strcmp(cur->d_name, ".") != 0 && strcmp(cur->d_name, "..") != 0){
@@ -35,56 +24,56 @@ void search(char* dirname, file* arr, int* count){
         }
 
         if(cur->d_type == DT_REG){
-            file reg;
-            strcpy(reg.name, cur->d_name);
+            file* reg = malloc(sizeof(file));
 
-            FILE *f = fopen(dirname, "r");
-            fgets(reg.info, 5000, f);
+            strcpy(reg->name, cur->d_name);
+
+            FILE* f = fopen(dirname, "r");
+            fgets(reg->info, 5000, f);
             fclose(f);
 
-            arr[*count] = reg;
-            (*count)++;
+            arr[(*count)++] = reg;
         }
-        dirname[strlen(dirname) - strlen(cur->d_name) - 1] = '\0';
 
+
+        dirname[strlen(dirname) - strlen(cur->d_name) - 1] = '\0';
         cur = readdir(dir);
     }
+
     closedir(dir);
 }
 
-
-
 int main(){
-    char input[100] = "./tests";
-
-    file* arr = malloc(5000 * sizeof(file));
+    char input[300] = "./tests";
+    file** arr = malloc(5000 * sizeof(file*));
     int count = 0;
 
     search(input, arr, &count);
-    qsort(arr, count, sizeof(file), cmp);
 
     int max = 0;
-    int num = 1;
+    file* res;
 
-    file f = arr[0];
-    file res;
-
-    for(int i = 1; i < count; ++i){
-        if(!strcmp(f.name, arr[i].name) && !strcmp(f.info, arr[i].info)){
-            num++;
-        }
-        else{
-            if(max < num){
-                max = num;
-                res = f;
+    for(int j = 0; j < count; j++) {
+        int k = 0;
+        file* f = arr[j];
+        for (int i = 0; i < count; i++) {
+            if(!strcmp(f->name, arr[i]->name) && !strcmp(f->info, arr[i]->info)){
+                k++;
             }
-            num = 1;
-            f = arr[i];
+        }
+
+        if(k > max){
+            max = k;
+            res = f;
         }
     }
 
-    printf("%d; %s\n", max, res.name);
 
+    printf("%d; %s\n", max, res->name);
+
+    for(int i = 0; i < 5000; i++){
+        free(arr[i]);
+    }
     free(arr);
 
 
