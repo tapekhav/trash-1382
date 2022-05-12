@@ -44,6 +44,18 @@ typedef struct
 
 #pragma pack(pop)
 
+typedef struct
+{
+    int x_src_left, y_src_top, x_src_right, y_src_bottom;
+    int x_dest_left, y_dest_top;
+    char* axis;
+    int r1, g1, b1;
+    int r2, g2, b2;
+    char* component;
+    int value_of_component;
+    int help, info;
+} configs;
+
 
 void printHelp(){
     puts("This program supports CLI and only works with version 3 BMP files.");
@@ -51,38 +63,49 @@ void printHelp(){
     puts("The program only supports files with a depth of 24 pixels per bit.");
     puts("The photo must not be compressed.");
     puts("In the copy area and reflect area functions, the top left pixel is considered the origin (0, 0).");
-    puts("Format of input: ./a.out [name of input file] [name of key] [argument 1],[argument 2],...,[argument N]"
-         " [name of output file]");
-    puts("All keys:");
-    puts("\t-h(--help):\n\t\tShows instructions for the program. "
-         "Takes no arguments. Written in place of the file name.");
-    puts("\t\tExample: ./a.out --help");
-    puts("\t-i(--info):\n\t\t Takes no arguments. You do not need to write the name of the output file.");
-    puts("\t\tExample: ./a.out simpsonsvr.bmp -i");
-    puts("\t\t-i(--info):\n\t\t Information of input file. Takes no arguments. "
-         "You do not need to write the name of the output file.");
-    puts("\t-r(--reflectArea):");
+    puts("Format of input: ./a.out [name of input file] [name of function] [key 1] [argument 1],...,[argument N] ...\n"
+         " [key N] [argument 1],...,[argument N] [name of output file]\n");
+
+    puts("All functions:");
+    puts("\treflectArea:");
     puts("\t\tReflects a photo along a certain axis at the specified coordinates.");
-    puts("\t\tArguments are entered in this way:");
-    puts("\t\t-r [left x coordinate],[top y coordinate],[right x coordinate],[bottom y coordinate],[axis]");
-    puts("\t\tExample: ./a.out simpsonsvr.bmp -r 100,100,400,400,vertical out.bmp");
-    puts("\t-c(--copyArea):");
+    puts("\t\tThis function needs -a(--axis), -l(--src_coordinates_left_top) "
+         "and -r(--src_coordinates_right_bottom) keys.");
+    puts("\tcopyArea:");
     puts("\t\tCopy area in picture and inserts it in certain place.");
-    puts("\t\tArguments are entered in this way:");
-    puts("\t\t-c [x source left],[y source top],[x source right],[y source bottom],"
-         "[x destination left],[y destination top]");
-    puts("\t\tExample: ./a.out simpsonsvr.bmp -c 100,100,200,200,200,200 out.bmp");
-    puts("\t-С(--changeColor):");
+    puts("\t\tThis function needs -l(--src_coordinates_left_top), -r(--src_coordinates_right_bottom) "
+         "and -d(dest_coordinates_left_top) keys.");
+    puts("\tchangeColor:");
     puts("\t\tChange color based on RGB components.");
-    puts("\t\tArguments are entered in this way:");
-    puts("\t\t-C [value of red component 1],[value of green component 1],[value of blue component 1],\n"
-         "\t\t[value of red component 2],[value of green component 2],[value of blue component 2]");
-    puts("\t\tExample: ./a.out simpsonsvr.bmp -C 255,255,255,0,0,0 out.bmp");
-    puts("\t-f(--filter):");
-    puts("\t\tChanges the value of one of the components.");
-    puts("\t\tArguments are entered in this way:");
-    puts("\t\t-f [value of the component],[name of the component]");
-    puts("\t\tExample: ./a.out simpsonsvr.bmp -f 255,red out.bmp");
+    puts("\t\tThis function needs -1(--first_color) and -2(--second_filter) keys.");
+    puts("\trgbFilter:");
+    puts("\t\tChanges the value of one of the components all over the photo.");
+    puts("\t\tThis function needs -a(--axis) and -v(--value_of_component) keys.\n");
+
+    puts("All keys:");
+    puts("\t-1(--first_color):");
+    puts("\t\tGets the components of color to be changed (3 arguments).");
+    puts("\t-2(--second_color):");
+    puts("\t\tGets the components of the color to be changed to (3 arguments).");
+    puts("\t-l(--src_coordinates_left_top):");
+    puts("\t\tGets the coordinates of the top left corner of the source (2 arguments).");
+    puts("\t-r(--src_coordinates_right_bottom):");
+    puts("\t\tGets the coordinates of the bottom right corner of the source (2 arguments).");
+    puts("\t-d(--dest_coordinates_left_top):");
+    puts("\t\tGets the coordinates of the top left corner of the destination (2 arguments).");
+    puts("\t-c(--component):");
+    puts("\t\tGets a string with the name of the component (1 argument).");
+    puts("\t-v(--value_of_component):");
+    puts("\t\tGets the value of the component (1 argument).");
+    puts("\t-a(--axis):");
+    puts("\t\tGets a string with the name of the axis (1 argument).");
+    puts("\t-h(--help):");
+    puts("\t\tPrint instruction for using the program.");
+    puts("\t-i(--info):");
+    puts("\t\tPrints information about a file.");
+    puts("\t\tPrints instruction for using the program.\n");
+    puts("An example of using the program:");
+    puts("./a.out simpsonsvr.bmp changeColor -1 255,255,255 -2 0,0,0 out.bmp");
 }
 
 void printImageInfo(BMP image){
@@ -263,7 +286,7 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
     y_bottom = (int)image->info.height - y_bottom - 1;
     y_top = (int)image->info.height - y_top;
 
-    if(!strcmp(axis, "horizontal")){
+    if(!strcmp(axis, "vertical")){
         for (int y = 0; y < height_of_area; ++y) {
             for (int x = 0; x < width_of_area / 2; ++x) {
                 swapPixels(&image->pixels[y_top - y][x_left + x], &image->pixels[y_top - y][x_right - x]);
@@ -271,7 +294,7 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
         }
     }
 
-    if(!strcmp(axis, "vertical")) {
+    if(!strcmp(axis, "horizontal")) {
         for (int y = 0; y < height_of_area / 2; ++y) {
             for (int x = 0; x < width_of_area; ++x) {
                 swapPixels(&image->pixels[y_bottom + y][x_left + x], &image->pixels[y_top - y][x_left + x]);
@@ -284,7 +307,7 @@ void reflectArea(BMP* image, char* axis, int x_left, int y_top,
     }
 }
 
-void copyImage(BMP* image, int x_src_left, int y_src_top,
+void copyArea(BMP* image, int x_src_left, int y_src_top,
                int x_src_right, int y_src_bottom,
                int x_dest_left, int y_dest_top){
 
@@ -384,11 +407,63 @@ void rgbFilter(BMP* image, int value, char* component){
     }
 }
 
+
+void choice(configs* config, int opt){
+    switch (opt) {
+        case '1':
+            sscanf(optarg, "%d,%d,%d", &config->r1, &config->g1, &config->b1);
+
+            break;
+        case '2':
+            sscanf(optarg, "%d,%d,%d", &config->r2, &config->g2, &config->b2);
+
+            break;
+        case 'c':
+            config->component = malloc(50 * sizeof(char));
+            sscanf(optarg, "%s", config->component);
+
+            break;
+        case 'v':
+            sscanf(optarg, "%d", &config->value_of_component);
+
+            break;
+        case 'l':
+            sscanf(optarg, "%d,%d", &config->x_src_left, &config->y_src_top);
+
+            break;
+        case 'r':
+            sscanf(optarg, "%d,%d", &config->x_src_right, &config->y_src_bottom);
+
+            break;
+        case 'd':
+            sscanf(optarg, "%d,%d", &config->x_dest_left, &config->y_dest_top);
+
+            break;
+        case 'a':
+            config->axis = malloc(50 * sizeof(char));
+            sscanf(optarg, "%s", config->axis);
+
+            break;
+        case 'h':
+            config->help = 1;
+            break;
+        case 'i':
+            config->info = 1;
+            break;
+        default:
+            puts("No such key.");
+            break;
+    }
+}
+
 int main(int argc, char* argv[]){
     BMP image;
 
     char filename[50];
     char out_file[50];
+    char func[50];
+
+
     strcpy(filename, argv[1]);
     strcpy(out_file, argv[argc - 1]);
 
@@ -397,19 +472,30 @@ int main(int argc, char* argv[]){
         return 0;
     }
 
-    char *opts = "r:c:f:C:ih";
+    strcpy(func, argv[2]);
+
+    char *opts = "1:2:l:r:d:c:v:a:ih";
 
     struct option longOpts[]={
-            {"reflect", required_argument, NULL, 'r'},
-            {"copy", required_argument, NULL, 'c'},
-            {"filter", required_argument, NULL, 'f'},
-            { "changeColor", required_argument, NULL, 'C'},
-            { "info", no_argument, NULL, 'i'},
-            { "help", no_argument, NULL, 'h'}
+            {"first_color", required_argument, NULL, '1'},
+            {"second_color", required_argument, NULL, '2'},
+            {"src_coordinates_left_top", required_argument, NULL, 'l'},
+            {"src_coordinates_right_bottom", required_argument, NULL, 'r'},
+            { "dest_coordinates_left_top", required_argument, NULL, 'd'},
+            { "component", required_argument, NULL, 'c'},
+            { "value_of_component", required_argument, NULL, 'v'},
+            { "axis", required_argument, NULL, 'a'},
+            { "help", no_argument, NULL, 'h'},
+            { "info", no_argument, NULL, 'i'}
     };
     int opt;
     int longIndex;
     opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
+
+    configs config = {0, 0, 0, 0, 0,
+                      0, NULL, 0, 0, 0,
+                      0, 0, 0, NULL, 0, 0, 0};
+
 
     if(!readImage(&image, filename)) return 0;
 
@@ -419,91 +505,50 @@ int main(int argc, char* argv[]){
         return 0;
     }
 
-    while (opt != -1) {
-
-        switch(opt){
-            case 'h': {
-                printHelp();
-                freeMem(&image);
-
-                return 0;
-            }
-
-            case 'i': {
-                printImageInfo(image);
-                freeMem(&image);
-
-                return 0;
-            }
-
-            case 'r': {
-                char string[50];
-                int x_left, x_right, y_top, y_bottom;
-
-                int count = sscanf(optarg, "%d,%d,%d,%d,%s", &x_left, &y_top, &x_right, &y_bottom, string);
-
-                if(count < 5){
-                    puts("Too few arguments to do this function (-r/--reflect).");
-                    break;
-                }
-
-                reflectArea(&image, string, x_left, y_top, x_right, y_bottom);
-                break;
-            }
-
-            case 'c': {
-                int x_src_left, x_src_right, y_src_top, y_src_bottom, x_dest_left, y_dest_top;
-
-                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &x_src_left, &y_src_top, &x_src_right,
-                                   &y_src_bottom, &x_dest_left, &y_dest_top);
-
-                if(count < 6){
-                    puts("Too few arguments to do this function (-c/--copy).");
-                    break;
-                }
-
-                copyImage(&image, x_src_left, y_src_top, x_src_right, y_src_bottom, x_dest_left, y_dest_top);
-                break;
-            }
-
-            case 'C':{
-                int r1, g1, b1, r2, g2, b2;
-
-                int count = sscanf(optarg, "%d,%d,%d,%d,%d,%d", &r1, &g1, &b1,
-                                   &r2, &g2, &b2);
-
-                if(count < 6){
-                    puts("Too few arguments to do this function (-C/--changeColor).");
-                    break;
-                }
-
-                changeColor(&image, r1, r2, g1, g2, b1, b2);
-                break;
-            }
-
-            case 'f': {
-                int value;
-                char str[50];
-
-                int count = sscanf(optarg, "%d,%s", &value, str);
-
-                if(count < 2){
-                    puts("Too few arguments to do this function (-f/--filter).");
-                    break;
-                }
-
-                rgbFilter(&image, value, str);
-                break;
-            }
-
-            default: {
-                puts("No such key.");
-                break;
-            }
-
-        }
+    while(opt != -1){
+        choice(&config, opt);
         opt = getopt_long(argc, argv, opts, longOpts, &longIndex);
     }
+
+    if(config.help == 1){
+        printHelp();
+
+        freeMem(&image);
+        return 0;
+    }
+    if(config.info == 1){
+        printImageInfo(image);
+
+        freeMem(&image);
+        return 0;
+    }
+
+    if(!strcmp(func, "changeColor")){
+        changeColor(&image, config.r1, config.r2, config.g1,
+                    config.g2, config.b1, config.b2);
+    }
+    if(!strcmp(func, "rgbFilter")){
+        if(config.component != NULL) {
+            rgbFilter(&image, config.value_of_component, config.component);
+            free(config.component);
+        } else {
+            puts("You did not enter a component name.");
+        }
+    }
+    if(!strcmp(func, "reflectArea")){
+        if(config.axis != NULL) {
+            reflectArea(&image, config.axis, config.x_src_left,
+                        config.y_src_top, config.x_src_right, config.y_src_bottom);
+            free(config.axis);
+        } else {
+            puts("You did not enter an axis name.");
+        }
+    }
+    if(!strcmp(func, "copyArea")){
+        copyArea(&image, config.x_src_left, config.y_src_top,config.x_src_right,
+                  config.y_src_bottom, config.x_dest_left, config.y_dest_top);
+    }
+
 
     if(!writeImage(&image, out_file)){
         freeMem(&image);
