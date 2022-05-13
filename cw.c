@@ -55,6 +55,7 @@ typedef struct
     char* component;
     int value_of_component;
     int help, info;
+    int reflectArea, copyArea, changeColor, rgbFilter;
 } configs;
 
 
@@ -67,22 +68,22 @@ void printHelp(){
     puts("The default value of all integer arguments for all keys is 0.");
     puts("The default value is NULL for arguments of type char*.");
     puts("If the required key was not entered or the key arguments were entered incorrectly,\nthen standard values are passed to the function.");
-    puts("Format of input: ./a.out [name of input file] [name of function] [key 1] [argument 1],...,[argument N] ...\n"
+    puts("Format of input: ./a.out [key of input file] [name of function] [key 1] [argument 1],...,[argument N] ...\n"
          " [key N] [argument 1],...,[argument N] [name of output file]\n");
 
     puts("All functions:");
-    puts("\treflectArea:");
+    puts("\treflectArea(--reflectArea/-R):");
     puts("\t\tReflects a photo along a certain axis at the specified coordinates.");
     puts("\t\tThis function needs -a(--axis), -l(--src_coordinates_left_top) "
          "and -r(--src_coordinates_right_bottom) keys.");
-    puts("\tcopyArea:");
+    puts("\tcopyArea(--copyArea/-C):");
     puts("\t\tCopy area in picture and inserts it in certain place.");
     puts("\t\tThis function needs -l(--src_coordinates_left_top), -r(--src_coordinates_right_bottom) "
          "and -d(dest_coordinates_left_top) keys.");
-    puts("\tchangeColor:");
+    puts("\tchangeColor(--changeColor/-c):");
     puts("\t\tChange color based on RGB components.");
     puts("\t\tThis function needs -1(--first_color) and -2(--second_filter) keys.");
-    puts("\trgbFilter:");
+    puts("\trgbFilter(--rgbFilter/-F):");
     puts("\t\tChanges the value of one of the components all over the photo.");
     puts("\t\tThis function needs -a(--axis) and -v(--value_of_component) keys.\n");
 
@@ -97,7 +98,7 @@ void printHelp(){
     puts("\t\tGets the coordinates of the bottom right corner of the source (2 arguments).");
     puts("\t-d(--dest_coordinates_left_top):");
     puts("\t\tGets the coordinates of the top left corner of the destination (2 arguments).");
-    puts("\t-c(--component):");
+    puts("\t-o(--option):");
     puts("\t\tGets a string with the name of the component (1 argument).");
     puts("\t-v(--value_of_component):");
     puts("\t\tGets the value of the component (1 argument).");
@@ -108,10 +109,10 @@ void printHelp(){
     puts("\t-i(--info):");
     puts("\t\tPrints information about a file.\n");
     puts("An example of using the program:");
-    puts("./a.out simpsonsvr.bmp changeColor -1 255,255,255 -2 0,0,0 out.bmp");
-    puts("./a.out simpsonsvr.bmp reflectArea -l 100,100 -r 400,400 -a vertical out.bmp");
-    puts("./a.out simpsonsvr.bmp copyArea -l 100,100 -r 300,300 -d 300,300 out.bmp");
-    puts("./a.out simpsonsvr.bmp rgbFilter --component red --value_of_component 255 out.bmp");
+    puts("./a.out simpsonsvr.bmp --changeColor -1 255,255,255 -2 0,0,0 out.bmp");
+    puts("./a.out simpsonsvr.bmp -R -l 100,100 -r 400,400 -a vertical out.bmp");
+    puts("./a.out simpsonsvr.bmp -C -l 100,100 -r 300,300 -d 300,300 out.bmp");
+    puts("./a.out simpsonsvr.bmp -F --option red --value_of_component 255 out.bmp");
 }
 
 void printImageInfo(BMP image){
@@ -435,7 +436,7 @@ void choice(configs* config, int opt){
             if(count < 3) puts("Some arguments were not read, so their default value did not change.");
 
             break;
-        case 'c':
+        case 'o':
             config->component = malloc(50 * sizeof(char));
             count = sscanf(optarg, "%s", config->component);
 
@@ -473,6 +474,18 @@ void choice(configs* config, int opt){
             if(count < 1) puts("Some arguments were not read, so their default value did not change.");
 
             break;
+        case 'R':
+            config->reflectArea = 1;
+            break;
+        case 'C':
+            config->copyArea = 1;
+            break;
+        case 'c':
+            config->changeColor = 1;
+            break;
+        case 'F':
+            config->rgbFilter = 1;
+            break;
         case 'h':
             config->help = 1;
             break;
@@ -490,7 +503,6 @@ int main(int argc, char* argv[]){
 
     char filename[50];
     char out_file[50];
-    char func[50];
 
     if(argc < 1){
         puts("The program received too few arguments.");
@@ -513,9 +525,8 @@ int main(int argc, char* argv[]){
     }
 
 
-    strcpy(func, argv[2]);
 
-    char *opts = "1:2:l:r:d:c:v:a:ih";
+    char *opts = "1:2:l:r:d:o:v:a:RCFcih";
 
     struct option longOpts[]={
             {"first_color", required_argument, NULL, '1'},
@@ -523,11 +534,15 @@ int main(int argc, char* argv[]){
             {"src_coordinates_left_top", required_argument, NULL, 'l'},
             {"src_coordinates_right_bottom", required_argument, NULL, 'r'},
             { "dest_coordinates_left_top", required_argument, NULL, 'd'},
-            { "component", required_argument, NULL, 'c'},
+            { "option", required_argument, NULL, 'o'},
             { "value_of_component", required_argument, NULL, 'v'},
             { "axis", required_argument, NULL, 'a'},
             { "help", no_argument, NULL, 'h'},
             { "info", no_argument, NULL, 'i'},
+            { "reflectArea", no_argument, NULL, 'R'},
+            { "copyArea", no_argument, NULL, 'C'},
+            { "rgbFilter", no_argument, NULL, 'F'},
+            { "changeColor", no_argument, NULL, 'c'},
             {NULL, no_argument, NULL, 0}
     };
     int opt;
@@ -536,7 +551,8 @@ int main(int argc, char* argv[]){
 
     configs config = {0, 0, 0, 0, 0,
                       0, NULL, 0, 0, 0,
-                      0, 0, 0, NULL, 0, 0, 0};
+                      0, 0, 0, NULL, 0,
+                      0, 0, 0, 0, 0, 0};
 
 
     if(!readImage(&image, filename)) return 0;
@@ -565,11 +581,11 @@ int main(int argc, char* argv[]){
         return 0;
     }
 
-    if(!strcmp(func, "changeColor")){
+    if(config.changeColor == 1){
         changeColor(&image, config.r1, config.r2, config.g1,
                     config.g2, config.b1, config.b2);
     }
-    if(!strcmp(func, "rgbFilter")){
+    if(config.rgbFilter == 1){
         if(config.component != NULL) {
             rgbFilter(&image, config.value_of_component, config.component);
             free(config.component);
@@ -577,7 +593,7 @@ int main(int argc, char* argv[]){
             puts("You did not enter a component name.");
         }
     }
-    if(!strcmp(func, "reflectArea")){
+    if(config.reflectArea == 1){
         if(config.axis != NULL) {
             reflectArea(&image, config.axis, config.x_src_left,
                         config.y_src_top, config.x_src_right, config.y_src_bottom);
@@ -586,7 +602,7 @@ int main(int argc, char* argv[]){
             puts("You did not enter an axis name.");
         }
     }
-    if(!strcmp(func, "copyArea")){
+    if(config.copyArea == 1){
         copyArea(&image, config.x_src_left, config.y_src_top,config.x_src_right,
                   config.y_src_bottom, config.x_dest_left, config.y_dest_top);
     }
