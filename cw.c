@@ -66,6 +66,7 @@ void printHelp(){
     puts("In the copy area and reflect area functions, the top left pixel is considered the origin (0, 0).");
     puts("The default value of all integer arguments for all keys is 0.");
     puts("The default value is NULL for arguments of type char*.");
+    puts("If the required key was not entered or the key arguments were entered incorrectly,\nthen standard values are passed to the function.");
     puts("Format of input: ./a.out [name of input file] [name of function] [key 1] [argument 1],...,[argument N] ...\n"
          " [key N] [argument 1],...,[argument N] [name of output file]\n");
 
