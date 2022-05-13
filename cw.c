@@ -4,6 +4,7 @@
 #include <string.h>
 
 #pragma pack (push, 1)
+
 typedef struct
 {
     unsigned short signature;
@@ -63,6 +64,8 @@ void printHelp(){
     puts("The program only supports files with a depth of 24 pixels per bit.");
     puts("The photo must not be compressed.");
     puts("In the copy area and reflect area functions, the top left pixel is considered the origin (0, 0).");
+    puts("The default value of all integer arguments for all keys is 0.");
+    puts("The default value is NULL for arguments of type char*.");
     puts("Format of input: ./a.out [name of input file] [name of function] [key 1] [argument 1],...,[argument N] ...\n"
          " [key N] [argument 1],...,[argument N] [name of output file]\n");
 
@@ -102,10 +105,12 @@ void printHelp(){
     puts("\t-h(--help):");
     puts("\t\tPrint instruction for using the program.");
     puts("\t-i(--info):");
-    puts("\t\tPrints information about a file.");
-    puts("\t\tPrints instruction for using the program.\n");
+    puts("\t\tPrints information about a file.\n");
     puts("An example of using the program:");
     puts("./a.out simpsonsvr.bmp changeColor -1 255,255,255 -2 0,0,0 out.bmp");
+    puts("./a.out simpsonsvr.bmp reflectArea -l 100,100 -r 400,400 -a vertical out.bmp");
+    puts("./a.out simpsonsvr.bmp copyArea -l 100,100 -r 300,300 -d 300,300 out.bmp");
+    puts("./a.out simpsonsvr.bmp rgbFilter --component red --value_of_component 255 out.bmp");
 }
 
 void printImageInfo(BMP image){
@@ -164,6 +169,11 @@ int readImage(BMP *image, char* path){
     }
 
     FILE *f = fopen(path, "rb");
+
+    if(!f){
+        puts("There is no such file in this directory.");
+        return 0;
+    }
 
     fread(&image->header,1,sizeof(BitmapFileHeader),f);
 
@@ -274,17 +284,17 @@ void swapPixels(RGB *pix1, RGB *pix2){
 void reflectArea(BMP* image, char* axis, int x_left, int y_top,
                  int x_right, int y_bottom){
 
-    if(x_left < 0 || x_left > x_right || x_right > image->info.width
-    || y_bottom > image->info.height || y_top < 0 || y_top > y_bottom){
+    if(x_left < 0 || x_left > x_right || x_right > (image->info.width - 1)
+    || y_bottom > (image->info.height - 1) || y_top < 0 || y_top > y_bottom){
         puts("Wrong coordinates.");
         return;
     }
 
-    unsigned int width_of_area = x_right - x_left;
+    unsigned int width_of_area = x_right - x_left + 1;
     unsigned int height_of_area = y_bottom - y_top;
 
     y_bottom = (int)image->info.height - y_bottom - 1;
-    y_top = (int)image->info.height - y_top;
+    y_top = (int)image->info.height - y_top - 1;
 
     if(!strcmp(axis, "vertical")){
         for (int y = 0; y < height_of_area; ++y) {
@@ -316,7 +326,7 @@ void copyArea(BMP* image, int x_src_left, int y_src_top,
 
 
     if(x_src_left < 0 || y_src_top < 0
-            || x_src_right > width || y_src_bottom > height
+            || x_src_right > (width - 1) || y_src_bottom > (height - 1)
             || x_src_left > x_src_right || y_src_top > y_src_bottom){
         puts("Wrong source area coordinates.");
         return;
@@ -409,39 +419,57 @@ void rgbFilter(BMP* image, int value, char* component){
 
 
 void choice(configs* config, int opt){
+    int count;
+
     switch (opt) {
         case '1':
-            sscanf(optarg, "%d,%d,%d", &config->r1, &config->g1, &config->b1);
+            count = sscanf(optarg, "%d,%d,%d", &config->r1, &config->g1, &config->b1);
+
+            if(count < 3) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case '2':
-            sscanf(optarg, "%d,%d,%d", &config->r2, &config->g2, &config->b2);
+            count = sscanf(optarg, "%d,%d,%d", &config->r2, &config->g2, &config->b2);
+
+            if(count < 3) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'c':
             config->component = malloc(50 * sizeof(char));
-            sscanf(optarg, "%s", config->component);
+            count = sscanf(optarg, "%s", config->component);
+
+            if(count < 1) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'v':
-            sscanf(optarg, "%d", &config->value_of_component);
+            count = sscanf(optarg, "%d", &config->value_of_component);
+
+            if(count < 1) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'l':
-            sscanf(optarg, "%d,%d", &config->x_src_left, &config->y_src_top);
+            count = sscanf(optarg, "%d,%d", &config->x_src_left, &config->y_src_top);
+
+            if(count < 2) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'r':
-            sscanf(optarg, "%d,%d", &config->x_src_right, &config->y_src_bottom);
+            count = sscanf(optarg, "%d,%d", &config->x_src_right, &config->y_src_bottom);
+
+            if(count < 2) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'd':
-            sscanf(optarg, "%d,%d", &config->x_dest_left, &config->y_dest_top);
+            count = sscanf(optarg, "%d,%d", &config->x_dest_left, &config->y_dest_top);
+
+            if(count < 2) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'a':
             config->axis = malloc(50 * sizeof(char));
-            sscanf(optarg, "%s", config->axis);
+            count = sscanf(optarg, "%s", config->axis);
+
+            if(count < 1) puts("Some arguments were not read, so their default value did not change.");
 
             break;
         case 'h':
@@ -463,6 +491,11 @@ int main(int argc, char* argv[]){
     char out_file[50];
     char func[50];
 
+    if(argc < 1){
+        puts("The program received too few arguments.");
+        puts("Enter the key -h(--help) to see the instructions for the program.");
+        return 0;
+    }
 
     strcpy(filename, argv[1]);
     strcpy(out_file, argv[argc - 1]);
@@ -471,6 +504,13 @@ int main(int argc, char* argv[]){
         printHelp();
         return 0;
     }
+
+    if(argc < 3){
+        puts("The program received too few arguments.");
+        puts("Enter the key -h(--help) to see the instructions for the program.");
+        return 0;
+    }
+
 
     strcpy(func, argv[2]);
 
@@ -486,7 +526,8 @@ int main(int argc, char* argv[]){
             { "value_of_component", required_argument, NULL, 'v'},
             { "axis", required_argument, NULL, 'a'},
             { "help", no_argument, NULL, 'h'},
-            { "info", no_argument, NULL, 'i'}
+            { "info", no_argument, NULL, 'i'},
+            {NULL, no_argument, NULL, 0}
     };
     int opt;
     int longIndex;
