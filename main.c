@@ -258,7 +258,6 @@ void lines(bmpFile* img,
             }
         }
     }
-
     saveImg(img, nameOut);
 }
 
@@ -282,14 +281,45 @@ int correctFile(bmpFile* img, char* name){
         printf("File color depth is not 24 bits per color\n");
         return 1;
     }
+    if(img->fileInfo.headerSize != 40){
+        printf("This version of the BMP file is not supported\n");
+        return 1;
+    }
+    if(img->fileInfo.colorsInColorTable != 0 || img->fileInfo.importantColorCount != 0){
+        printf("File must not use color table\n");
+        return 1;
+    }
     return 0;
+}
+
+void printImageInfo(bmpFile image){
+    printf("Signature:\t%x (%hu)\n", image.fileHeader.signature, image.fileHeader.signature);
+    printf("filesize:\t%x (%u)\n", image.fileHeader.filesize, image.fileHeader.filesize);
+    printf("reserved1:\t%x (%hu)\n", image.fileHeader.reserved1, image.fileHeader.reserved1);
+    printf("reserved2:\t%x (%hu)\n", image.fileHeader.reserved2, image.fileHeader.reserved2);
+    printf("pixelArrOffset:\t%x (%u)\n", image.fileHeader.pixelArrOffset, image.fileHeader.pixelArrOffset);
+    printf("headerSize:\t%x (%u)\n", image.fileInfo.headerSize, image.fileInfo.headerSize);
+    printf("width:     \t%x (%u)\n", image.fileInfo.width, image.fileInfo.width);
+    printf("height:    \t%x (%u)\n", image.fileInfo.height, image.fileInfo.height);
+    printf("planes:    \t%x (%hu)\n", image.fileInfo.planes, image.fileInfo.planes);
+    printf("bitsPerPixel:\t%x (%hu)\n", image.fileInfo.bitsPerPixel, image.fileInfo.bitsPerPixel);
+    printf("compression:\t%x (%u)\n", image.fileInfo.compression, image.fileInfo.compression);
+    printf("imageSize:\t%x (%u)\n", image.fileInfo.imageSize, image.fileInfo.imageSize);
+    printf("xPixelsPerMeter:\t%x (%u)\n", image.fileInfo.xPixelsPerMeter, image.fileInfo.xPixelsPerMeter);
+    printf("yPixelsPerMeter:\t%x (%u)\n", image.fileInfo.yPixelsPerMeter, image.fileInfo.yPixelsPerMeter);
+    printf("colorsInColorTable:\t%x (%u)\n", image.fileInfo.colorsInColorTable, image.fileInfo.colorsInColorTable);
+    printf("importantColorCount:\t%x (%u)\n",image.fileInfo.importantColorCount, image.fileInfo.importantColorCount);
 }
 
 void help(){
     char text[] = "\t\t\tWelcome to BMP Photo editor\n"
+                  "\t--Program supports CLI and only works with version 3 BMP files\n"
+                  "\t--BMP files with color table are not supported\n"
+                  "\t--The program only supports files with a depth of 24 pixels per bit\n"
+                  "\t--File must not be compressed\n"
                   "There is 4 option:\n\n"
                   "1 - Replace Color\n"
-                  "<Name File Input> <Name File Out> <-r/--replace> <Red From>,<Green From>,<Blue From>,<Red To>,<Green To>,<Blur To>\n"
+                  "-r/--replace \n"
                   "Example: simpsonsvr.bmp out.bmp --replace 0,0,0,125,0,255\n\n"
                   "2 - Invert Area Image\n"
                   "<Name File Input> <Name File Out> <-i/--invert> <horizontal/vertical>,<Start Width Coordinates>,<Start Height Coordinates>,<End Width Coordinates>,<End Height Coorinates>\n"
@@ -323,6 +353,7 @@ int main(int argc, char *argv[]){
             {"yLines", required_argument, NULL,'y'},
             {"xLines", required_argument, NULL,'x'},
             {"thickness", required_argument, NULL,'t'},
+            {"printInfo", required_argument, NULL, 'p'},
             {NULL, 0, NULL, 0}
     };
 
@@ -338,8 +369,8 @@ int main(int argc, char *argv[]){
 
     char inputFile[100];
     char outputFile[100];
+    strcpy(outputFile, argv[argc-1]);
     bmpFile img;
-
 
     int way;
     int x1, y1, x2, y2, dx, dy, r1, g1, b1, r2, g2, b2, xLines, yLines, thickness;
@@ -474,6 +505,10 @@ int main(int argc, char *argv[]){
                 }
                 break;
             }
+            case 'p':{
+                printImageInfo(img);
+                break;
+            }
             case 'h':{
                 help();
                 return 0;
@@ -485,7 +520,6 @@ int main(int argc, char *argv[]){
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longOpt);
     }
-
 
     switch (way) {
         case REPLACE:{
@@ -508,7 +542,6 @@ int main(int argc, char *argv[]){
             printf("You did not call any function\n");
         }
     }
-
 
     return 0;
 }
