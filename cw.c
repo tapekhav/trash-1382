@@ -504,7 +504,7 @@ int main(int argc, char* argv[]){
     char filename[50];
     char out_file[50];
 
-    if(argc < 1){
+    if(argc < 3){
         puts("The program received too few arguments.");
         puts("Enter the key -h(--help) to see the instructions for the program.");
         return 0;
@@ -517,13 +517,6 @@ int main(int argc, char* argv[]){
         printHelp();
         return 0;
     }
-
-    if(argc < 3){
-        puts("The program received too few arguments.");
-        puts("Enter the key -h(--help) to see the instructions for the program.");
-        return 0;
-    }
-
 
 
     char *opts = "1:2:l:r:d:o:v:a:RCFcih";
