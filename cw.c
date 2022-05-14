@@ -108,7 +108,7 @@ void printHelp(){
     puts("\t\tPrint instruction for using the program.");
     puts("\t-i(--info):");
     puts("\t\tPrints information about a file.\n");
-    puts("An example of using the program:");
+    puts("Examples of using the program:");
     puts("./a.out simpsonsvr.bmp --changeColor -1 255,255,255 -2 0,0,0 out.bmp");
     puts("./a.out simpsonsvr.bmp -R -l 100,100 -r 400,400 -a vertical out.bmp");
     puts("./a.out simpsonsvr.bmp -C -l 100,100 -r 300,300 -d 300,300 out.bmp");
@@ -504,7 +504,7 @@ int main(int argc, char* argv[]){
     char filename[50];
     char out_file[50];
 
-    if(argc < 3){
+    if(argc < 2){
         puts("The program received too few arguments.");
         puts("Enter the key -h(--help) to see the instructions for the program.");
         return 0;
@@ -517,6 +517,13 @@ int main(int argc, char* argv[]){
         printHelp();
         return 0;
     }
+
+    if(argc < 3){
+        puts("The program received too few arguments.");
+        puts("Enter the key -h(--help) to see the instructions for the program.");
+        return 0;
+    }
+
 
 
     char *opts = "1:2:l:r:d:o:v:a:RCFcih";
