@@ -312,38 +312,51 @@ void printImageInfo(bmpFile image){
 }
 
 void help(){
-    char text[] = "\t\t\tWelcome to BMP Photo editor\n"
+    char text[] = "\n\t\t\tWelcome to BMP Photo editor\n\n"
                   "\t--Program supports CLI and only works with version 3 BMP files\n"
                   "\t--BMP files with color table are not supported\n"
                   "\t--The program only supports files with a depth of 24 pixels per bit\n"
-                  "\t--File must not be compressed\n"
-                  "There is 4 option:\n\n"
-                  "1 - Replace Color\n"
-                  "-r/--replace \n"
-                  "Example: simpsonsvr.bmp out.bmp --replace 0,0,0,125,0,255\n\n"
-                  "2 - Invert Area Image\n"
-                  "<Name File Input> <Name File Out> <-i/--invert> <horizontal/vertical>,<Start Width Coordinates>,<Start Height Coordinates>,<End Width Coordinates>,<End Height Coorinates>\n"
-                  "Example: simpsonsvr.bmp out.bmp -i v,100,50,550,350\n\n"
-                  "3 - Copy Area Image\n"
-                  "<Name File Input> <Name File Out> <-c/--copy> <Start Width Coordinates>,<Start Height Coordinates>,<End Width Coordinates>,<End Height Coordinates>,<Destination Width>,<Destination Height\n>"
-                  "Example: simpsonsvr.bmp out.bmp --copy 200,50,450,150,350,200\n\n"
-                  "4 - Draw Line Collage\n"
-                  "<Name File Input> <Name File Out> <-l/--lines> <Numbers Lines by Height>,<Numbers Lines by Width>,<Thickness>,<Red>,<Green>,<Blue>\n"
-                  "Example: simpsonsvr.bmp out.bmp -l 5,10,4,128,0,128\n\n";
+                  "\t--File must not be compressed\n\n\n"
+
+                  "There is 4 functions:\n\n\n"
+
+                  "\t1 - Replace Color (-r/--replace)\n"
+                  "\tReplace one color to another\n\n"
+                  "\tRequired arguments -r/--replace <Name File Input.bmp> -1/--firstColor <red,green,blue> -2/--secondColor <red,green,blue> <Name File Output.bmp>\n"
+                  "\tExample: -r simpsonsvr.bmp -1 0,0,0, -2 125,0,255 out.bmp\n\n\n"
+
+                  "\t2 - Invert Area Image (-i/--invert)\n"
+                  "\tInverts vertically or horizontally the selected area\n\n"
+                  "\tRequired arguments -i/--invert <Name File Input.bmp> -o/--option <h/v> -s/--start <Start Width Coordinates>,<Start Height Coordinates> -e/--end <End Width Coordinates>,<End Height Coordinates> <Name File Output.bmp>\n"
+                  "\tExample: -i simpsonsvr.bmp -o v -s 100,50 -e 550,350 out.bmp\n\n\n"
+
+                  "\t3 - Copy Area Image (-c/--copy)\n"
+                  "\tСopy selected area to destination\n\n"
+                  "\tRequired arguments -c/--copy <Name File Out.bmp> -s/--start <Start Width Coordinates>,<Start Height Coordinates> -e/--end <End Width Coordinates>,<End Height Coordinates> -d/--destination <Destination Width>,<Destination Height> <Name File Output.bmp>\n"
+                  "\tExample: -c simpsonsvr.bmp -s 200,50 -e 450,150 -d 350,200 out.bmp\n\n\n"
+
+                  "\t4 - Draw Line Collage (-l/--lines)\n"
+                  "\tDraws lines vertically and horizontally creating a collage\n\n"
+                  "\tRequired arguments -l/--lines <Name File Input> -y/--yLines <Numbers Lines by Height> -x/--xLines <Numbers Lines by Width> -t/--thickness <Thickness> -1/--firstColor<red,green,blue> <Name File Output.bmp>\n"
+                  "\tExample: -l simpsonsvr.bmp -x 5 -y 3 -t 5 -1 128,0,128 out.bmp\n\n\n";
+    puts(text);
+}
+
+void helpV2(){
+    char text[] = "help(((\n";
     puts(text);
 }
 
 
 int main(int argc, char *argv[]){
 
-    char *opts = "1:2:s:e:o:d:y:x:t:r:i:c:l:f:h";
+    char *opts = "r:i:c:l:f:1:2:s:e:o:d:y:x:t:hp";
     struct option longOpts[]={
             {"replace", required_argument, NULL, 'r'},
             {"invert", required_argument, NULL, 'i'},
             {"copy", required_argument, NULL, 'c'},
             {"lines", required_argument, NULL, 'l'},
             {"file", required_argument, NULL, 'f'},
-            {"help", no_argument, NULL, 'h'},
             {"firstColor", required_argument, NULL, '1'},
             {"secondColor", required_argument, NULL, '2'},
             {"start", required_argument, NULL,'s'},
@@ -353,7 +366,8 @@ int main(int argc, char *argv[]){
             {"yLines", required_argument, NULL,'y'},
             {"xLines", required_argument, NULL,'x'},
             {"thickness", required_argument, NULL,'t'},
-            {"printInfo", required_argument, NULL, 'p'},
+            {"help", no_argument, NULL, 'h'},
+            {"printInfo", no_argument, NULL, 'p'},
             {NULL, 0, NULL, 0}
     };
 
@@ -367,14 +381,16 @@ int main(int argc, char *argv[]){
         return 0;
     }
 
-    char inputFile[100];
-    char outputFile[100];
+    char inputFile[256];
+    char outputFile[255];
     strcpy(outputFile, argv[argc-1]);
     bmpFile img;
 
-    int way;
-    int x1, y1, x2, y2, dx, dy, r1, g1, b1, r2, g2, b2, xLines, yLines, thickness;
-    char option;
+    int way = 0;
+    int x1, y1, x2, y2, dx, dy, r1, g1, b1, r2, g2, b2, xLines, yLines, thickness = 0;
+    int startCood, endCoord, distCoord, firstClr, secondClr, thick, xCnt, yCnt = 0;
+
+    char option = 'n';
     int countRead;
 
     while (opt != -1){
@@ -439,6 +455,12 @@ int main(int argc, char *argv[]){
                 }
                 if (strcmp(outputFile, "no") == 0){
                     strcpy(outputFile, inputFile);
+                    break;
+                }
+                int len = strlen(outputFile);
+                if (len < 5 || outputFile[len-4] != '.' || outputFile[len-3] != 'b' || outputFile[len-2] != 'm' || outputFile[len-1] != 'p'){
+                    printf("Incorrect file name\n");
+                    return 1;
                 }
                 break;
             }
@@ -446,20 +468,29 @@ int main(int argc, char *argv[]){
                 countRead = sscanf(optarg, "%d,%d", &x1, &y1);
                 if (countRead < 2){
                     printf("Too few arguments for coordinates\n");
+                    return 1;
                 }
+                startCood = 1;
                 break;
             }
             case 'e':{
                 countRead = sscanf(optarg, "%d,%d", &x2,&y2);
                 if (countRead < 2){
                     printf("Too few arguments for coordinates\n");
+                    return 1;
                 }
+                endCoord = 1;
                 break;
             }
             case 'o':{
                 countRead = sscanf(optarg, "%c", &option);
                 if (countRead < 1){
                     printf("Too few arguments for option\n");
+                    return 1;
+                }
+                if (option == 'n'){
+                    printf("Invalid value option\n");
+                    return 1;
                 }
                 break;
             }
@@ -467,7 +498,9 @@ int main(int argc, char *argv[]){
                 countRead = sscanf(optarg, "%d,%d", &dx, &dy);
                 if (countRead < 2){
                     printf("Too few arguments for coordinates\n");
+                    return 1;
                 }
+                distCoord = 1;
                 break;
             }
             case '1':{
@@ -475,47 +508,56 @@ int main(int argc, char *argv[]){
                 if (countRead < 3){
                     printf("Too few arguments for color\n");
                 }
+                firstClr = 1;
                 break;
             }
             case '2':{
                 countRead = sscanf(optarg, "%d,%d,%d", &r2, &g2, &b2);
                 if (countRead < 3){
                     printf("Too few arguments for color\n");
+                    return 1;
                 }
+                secondClr = 1;
                 break;
             }
             case 'y':{
                 countRead = sscanf(optarg, "%d", &yLines);
                 if (countRead < 1){
                     printf("Too few arguments for number lines by Y\n");
+                    return 1;
                 }
+                yCnt = 1;
                 break;
             }
             case 'x':{
                 countRead = sscanf(optarg, "%d", &xLines);
                 if (countRead < 1){
                     printf("Too few arguments for number lines by X\n");
+                    return 1;
                 }
+                xCnt = 1;
                 break;
             }
             case 't':{
                 countRead = sscanf(optarg, "%d", &thickness);
                 if (countRead < 1){
                     printf("Too few arguments fot thickness\n");
+                    return 1;
                 }
-                break;
-            }
-            case 'p':{
-                printImageInfo(img);
+                thick = 1;
                 break;
             }
             case 'h':{
                 help();
                 return 0;
             }
+            case 'p':{
+                printImageInfo(img);
+                return 0;
+            }
             default:{
                 printf("Unknown key or too low argument %c\n", opt);
-                break;
+                return 1;
             }
         }
         opt = getopt_long(argc, argv, opts, longOpts, &longOpt);
@@ -523,18 +565,33 @@ int main(int argc, char *argv[]){
 
     switch (way) {
         case REPLACE:{
-            replaceColor(&img, outputFile, r1, g1, b1, r2, g2, b2);
+            if (firstClr == 1 && secondClr == 1)
+                replaceColor(&img, outputFile, r1, g1, b1, r2, g2, b2);
+            else
+                printf("Some key(s) was not used\n");
             break;
         }
         case COPY:{
-            copy(&img, outputFile, x1, y1, x2, y2, dx, dy);
+            if (startCood == 1 && endCoord == 1 && distCoord == 1)
+                copy(&img, outputFile, x1, y1, x2, y2, dx, dy);
+            else
+                printf("Some key(s) was not used\n");
             break;
         }
         case INVERT:{
-            invert(&img, outputFile, option,x1, y1, x2, y2);
+            if (option != 'n' && startCood == 1 && endCoord == 1)
+                invert(&img, outputFile, option,x1, y1, x2, y2);
+            else
+                printf("Some key(s) was not used\n");
             break;
         }
         case LINES:{
+            if (secondClr == 1 && firstClr == 0){
+                r1 = r2;
+                g1 = g2;
+                b1 = g2;
+            }
+            if (xCnt == 1 && yCnt == 1 && thick == 1 && firstClr == 1)
             lines(&img, outputFile, yLines, xLines, thickness, (char)r1, (char)g1, (char)b1);
             break;
         }
