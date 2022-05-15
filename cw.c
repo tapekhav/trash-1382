@@ -107,12 +107,7 @@ void printHelp(){
     puts("\t-h(--help):");
     puts("\t\tPrint instruction for using the program.");
     puts("\t-i(--info):");
-    puts("\t\tPrints information about a file.\n");
-    puts("Examples of using the program:");
-    puts("./a.out simpsonsvr.bmp --changeColor -1 255,255,255 -2 0,0,0 out.bmp");
-    puts("./a.out simpsonsvr.bmp -R -l 100,100 -r 400,400 -a vertical out.bmp");
-    puts("./a.out simpsonsvr.bmp -C -l 100,100 -r 300,300 -d 300,300 out.bmp");
-    puts("./a.out simpsonsvr.bmp -F --option red --value_of_component 255 out.bmp");
+    puts("\t\tPrints information about a file.");
 }
 
 void printImageInfo(BMP image){
@@ -498,6 +493,95 @@ void choice(configs* config, int opt){
     }
 }
 
+
+//защита курсовой
+void func(BMP *image, int x_left, int y_top, int x_right, int y_bottom){
+
+    int height = y_bottom - y_top;
+    int width = x_right - x_left;
+
+    unsigned int count_x = image->info.width / width;
+    unsigned int count_y = image->info.height / height;
+    BMP newImage;
+
+    newImage.info.height = y_bottom - y_top;
+    newImage.info.width = x_right - x_left;
+
+    newImage.pixels = malloc(newImage.info.height * sizeof(RGB*));
+
+    for(int i = 0; i < newImage.info.height; ++i){
+        newImage.pixels[i] = malloc(newImage.info.width * sizeof(RGB));
+    }
+
+    unsigned int x;
+    unsigned int y = 0;
+
+
+    reflectArea(image, "horizontal", 0, 0, image->info.width - 1, image->info.height - 1);
+    for(unsigned int i = y_top; i < y_bottom; ++i){
+        x = 0;
+        for(unsigned int j = x_left; j < x_right; ++j){
+            newImage.pixels[y][x] = image->pixels[i][j];
+            ++x;
+        }
+        ++y;
+    }
+    reflectArea(image, "horizontal", 0, 0, image->info.width - 1, image->info.height - 1);
+
+
+    for(int i = 0; i < count_y; i++) {
+        for (int j = 0; j < count_x; j++) {
+            copyArea(image, x_left, y_top, x_right, y_bottom,
+                     (width * j), (height * i));
+        }
+    }
+
+    y = 0;
+    x = 0;
+
+    reflectArea(image, "horizontal", 0, 0, image->info.width - 1, image->info.height - 1);
+
+    for(int p = 0; p < count_y; p++) {
+        for (unsigned int i = (count_y - 1 - p) * height; i < (count_y - p) * height; ++i) {
+            for (unsigned int j = count_x * width; j < image->info.width; ++j) {
+                image->pixels[i][j] = newImage.pixels[y][x];
+                ++x;
+            }
+            ++y;
+            x = 0;
+        }
+        y = 0;
+    }
+
+    for(int p = 0; p < count_x; p++) {
+        for (unsigned int i = (count_y) * height; i < image->info.height; ++i) {
+            for (unsigned int j = (count_x - 1 - p) * width; j < (count_x - p) * width; ++j) {
+                image->pixels[i][j] = newImage.pixels[y][x];
+                ++x;
+            }
+            ++y;
+            x = 0;
+        }
+        y = 0;
+    }
+
+    for (unsigned int i = count_y * height; i < image->info.height; ++i) {
+        for (unsigned int j = count_x * width; j < image->info.width; ++j) {
+            image->pixels[i][j] = newImage.pixels[y][x];
+            ++x;
+        }
+        ++y;
+        x = 0;
+    }
+
+    reflectArea(image, "horizontal", 0, 0, image->info.width - 1, image->info.height - 1);
+
+
+    freeMem(&newImage);
+}
+//------------
+
+
 int main(int argc, char* argv[]){
     BMP image;
 
@@ -554,8 +638,9 @@ int main(int argc, char* argv[]){
                       0, 0, 0, NULL, 0,
                       0, 0, 0, 0, 0, 0};
 
+    if(!readImage(&image, "simpsonsvr.bmp")) return 0;
 
-    if(!readImage(&image, filename)) return 0;
+    //func(&image, 300, 200, 400, 400);
 
 
     if(opt == -1){
@@ -607,8 +692,7 @@ int main(int argc, char* argv[]){
                   config.y_src_bottom, config.x_dest_left, config.y_dest_top);
     }
 
-
-    if(!writeImage(&image, out_file)){
+    if(!writeImage(&image, "out.bmp")){
         freeMem(&image);
     }
 
