@@ -579,6 +579,67 @@ void func(BMP *image, int x_left, int y_top, int x_right, int y_bottom){
 
     freeMem(&newImage);
 }
+
+
+BMP catPictures(BMP* image1, BMP* image2){
+    BMP res;
+
+    res.header = image1->header;
+
+    if(image1->info.height > image2->info.height){
+        res.info = image1->info;
+    } else {
+        res.info = image2->info;
+    }
+
+    res.info.width = image1->info.width + image2->info.width;
+
+    res.pixels = malloc(res.info.height * sizeof(RGB*));
+
+    for(int i = 0; i < res.info.height; ++i){
+        res.pixels[i] = malloc(res.info.width * sizeof(RGB));
+    }
+
+    for(int i = 0; i < res.info.height; i++){
+        for(int j = 0; j < res.info.width; j++){
+            res.pixels[i][j].r = 255;
+            res.pixels[i][j].g = 255;
+            res.pixels[i][j].b = 255;
+        }
+    }
+
+    if(image1->info.height != res.info.height) {
+        int diff = res.info.height - image1->info.height;
+        for (int i = 0; i < image1->info.height; i++) {
+            for (int j = 0; j < image1->info.width; j++) {
+                res.pixels[diff + i][j] = image1->pixels[i][j];
+            }
+        }
+    } else {
+        for (int i = 0; i < image1->info.height; i++) {
+            for (int j = 0; j < image1->info.width; j++) {
+                res.pixels[i][j] = image1->pixels[i][j];
+            }
+        }
+    }
+
+    if(image2->info.height == res.info.height) {
+        for (int i = 0; i < image2->info.height; i++) {
+            for (int j = 0; j < image2->info.width; j++) {
+                res.pixels[i][image1->info.width + j] = image2->pixels[i][j];
+            }
+        }
+    } else {
+        int diff = res.info.height - image2->info.height;
+        for (int i = 0; i < image2->info.height; i++) {
+            for (int j = 0; j < image2->info.width; j++) {
+                res.pixels[diff + i][image1->info.width + j] = image2->pixels[i][j];
+            }
+        }
+    }
+
+    return res;
+}
 //------------
 
 
@@ -638,8 +699,10 @@ int main(int argc, char* argv[]){
                       0, 0, 0, NULL, 0,
                       0, 0, 0, 0, 0, 0};
 
-    if(!readImage(&image, "simpsonsvr.bmp")) return 0;
+    if(!readImage(&image, filename)) return 0;
+    //if(!readImage(&image2, "shrek.bmp")) return 0;
 
+    //BMP res = catPictures(&image2, &image2);
     //func(&image, 300, 200, 400, 400);
 
 
@@ -692,7 +755,7 @@ int main(int argc, char* argv[]){
                   config.y_src_bottom, config.x_dest_left, config.y_dest_top);
     }
 
-    if(!writeImage(&image, "out.bmp")){
+    if(!writeImage(&image, out_file)){
         freeMem(&image);
     }
 
