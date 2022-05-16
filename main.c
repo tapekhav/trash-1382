@@ -159,8 +159,6 @@ void copy(bmpFile* img,
             int toLeftWidth,
             int toLeftHeight){
 
-    printf("%s\n%d\t%d\n%d\t%d\n%d\t%d\n", nameOut, leftWidth, leftHeight, rightWidth, rightHeight, toLeftWidth, toLeftHeight);
-
     leftHeight = img->fileInfo.height - leftHeight - 1;
     rightHeight = img->fileInfo.height - rightHeight - 1;
     toLeftHeight = img->fileInfo.height - toLeftHeight - 1;
@@ -343,14 +341,60 @@ void help(){
 }
 
 void helpV2(){
-    char text[] = "help(((\n";
+    char text[] =  "\033[1mNAME\033[0m\n"
+                   "\t\t\tBMP Photo editor\n\n"
+                   "\033[1mDESCRIPTION\033[0m\n"
+                   "\tProgram supports CLI and only works with version 3 BMP files\n"
+                   "\tBMP files with color table are not supported\n"
+                   "\tThe program only supports files with a depth of 24 pixels per bit\n"
+                   "\tFile must not be compressed\n\n"
+                   "\033[1mFUNCTIONS\033[0m\n"
+                   "\t1 - Replace Color (-r/--replace)\n"
+                   "\tReplace one color to another\n"
+                   "\t\033[1mRequired arguments:\033[0m\n"
+                   "\t\t-r/--replace\n"
+                   "\t\t-1/--firstColor\n"
+                   "\t\t-2/--secondColor\n\n"
+                   "\t2 - Invert Area Image (-i/--invert)\n"
+                   "\tInverts vertically or horizontally the selected area\n"
+                   "\t\033[1mRequired arguments:\033[0m\n"
+                   "\t\t-i/--invert\n"
+                   "\t\t-o/--option\n"
+                   "\t\t-s/--start\n"
+                   "\t\t-e/--end\n\n"
+                   "\t3 - Copy Area Image (-c/--copy)\n"
+                   "\tCopy selected area to destination\n"
+                   "\t\033[1mRequired arguments:\033[0m\n"
+                   "\t\t-c/--copy\n"
+                   "\t\t-s/--start\n"
+                   "\t\t-e/--end\n"
+                   "\t\t-d/--destination\n\n"
+                   "\t4 - Draw Line Collage (-l/--lines)\n"
+                   "\tDraws lines vertically and horizontally creating a collage\n"
+                   "\t\033[1mRequired arguments:\033[0m\n"
+                   "\t\t-l/--line\n"
+                   "\t\t-x/--xLines\n"
+                   "\t\t-y/--yLines\n"
+                   "\t\t-t/--thickness\n"
+                   "\t\t-1/--firstColor\n\n"
+                   "\033[1mKEYS\033[0m\n"
+                   "\t-r/-i/-c/-l [Filename.bmp]\t\t\t\tcalled the entered function\n"
+                   "\t-s/--start [value width] [value height]\t\t\tsets the starting coordinates\n"
+                   "\t-e/--end [value width[ [value height]\t\t\tsets the ending coordinates\n"
+                   "\t-d/--destination [value width] [value height]\t\tsets the destination coordinates\n"
+                   "\t-1/--firstColor/-2/--secondColor [red] [green] [blue]\tsets color in RGB format\n"
+                   "\t-o/--option [h/v]\t\t\t\t\tsets option for invert:\n"
+                   "\t\t\t\t\t\t\t\th - horizontal, v - vertical\n"
+                   "\t-x/--xLines [value]\t\t\t\t\tnumber of lines in width\n"
+                   "\t-y/--yLines [value]\t\t\t\t\tnumber of lines in height\n"
+                   "\t-t/--thickness\t\t\t\t\t\tline thickness\n";
     puts(text);
 }
 
 
 int main(int argc, char *argv[]){
 
-    char *opts = "r:i:c:l:f:1:2:s:e:o:d:y:x:t:hp";
+    char *opts = "r:i:c:l:f:1:2:s:e:o:d:y:x:t:z:hp";
     struct option longOpts[]={
             {"replace", required_argument, NULL, 'r'},
             {"invert", required_argument, NULL, 'i'},
@@ -368,6 +412,7 @@ int main(int argc, char *argv[]){
             {"thickness", required_argument, NULL,'t'},
             {"help", no_argument, NULL, 'h'},
             {"printInfo", no_argument, NULL, 'p'},
+            {"zhita", required_argument, NULL, 'z'},
             {NULL, 0, NULL, 0}
     };
 
@@ -377,7 +422,8 @@ int main(int argc, char *argv[]){
 
 
     if (argc < 2){
-        printf("Error\nFor help use -h/--help\n");
+        printf("Enter the keys to use the program\n");
+        helpV2();
         return 0;
     }
 
@@ -507,6 +553,7 @@ int main(int argc, char *argv[]){
                 countRead = sscanf(optarg, "%d,%d,%d", &r1, &g1, &b1);
                 if (countRead < 3){
                     printf("Too few arguments for color\n");
+                    return 1;
                 }
                 firstClr = 1;
                 break;
@@ -592,11 +639,15 @@ int main(int argc, char *argv[]){
                 b1 = g2;
             }
             if (xCnt == 1 && yCnt == 1 && thick == 1 && firstClr == 1)
-            lines(&img, outputFile, yLines, xLines, thickness, (char)r1, (char)g1, (char)b1);
+                lines(&img, outputFile, yLines, xLines, thickness, (char)r1, (char)g1, (char)b1);
+            else
+                printf("Error\n");
+
             break;
         }
         default:{
             printf("You did not call any function\n");
+            help();
         }
     }
 
