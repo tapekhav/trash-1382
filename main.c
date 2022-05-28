@@ -144,7 +144,7 @@ void invert(bmpFile* img,
     if (leftWidth < 0) leftWidth = 0;
     if (leftHeight > (int)img->fileInfo.height -1) leftHeight = (int)img->fileInfo.height-1;
 
-    if (var == 'v') {
+    if (var == 'h') {
         for (unsigned int h = rightHeight; h <= (leftHeight+rightHeight)/2; h++){
             for (unsigned int w = leftWidth; w <= rightWidth; w++) {
                 Rgb tmp;
@@ -153,7 +153,7 @@ void invert(bmpFile* img,
                 img->rgb[leftHeight+rightHeight-h][w] = tmp;
             }
         }
-    } else if(var == 'h'){
+    } else if(var == 'v'){
         for (unsigned int h = rightHeight; h <= leftHeight; h++) {
             for (unsigned int w = leftWidth; w <= (rightWidth+leftWidth)/2; w++) {
                 Rgb tmp;
@@ -271,6 +271,7 @@ void lines(bmpFile* img,
                     nimg.rgb[h+t][w] = nimg.rgb[h][w];
             }
         }
+
         for (int h = 0; h < t; h++){
             for (int w = 0; w < nW; w++){
                 nimg.rgb[(ph*oH)/n+t*(ph-1)+1+h][w].r = r;
@@ -278,6 +279,7 @@ void lines(bmpFile* img,
                 nimg.rgb[(ph*oH)/n+t*(ph-1)+1+h][w].b = b;
             }
         }
+
     }
 
     for(int pw = 1; pw < m; pw++){
@@ -296,7 +298,66 @@ void lines(bmpFile* img,
         }
     }
 
+    for(unsigned int h = 0; h <oH; h++){
+        free(img->rgb[h]);
+    }
+
     saveImg(&nimg, nameOut);
+
+}
+
+
+void cvadrat(bmpFile* img,
+           char* nameOut,
+           int n){
+
+    printf("KVADRAT\n");
+
+    int H = (int)img->fileInfo.height;
+    int W = (int)img->fileInfo.width;
+
+    for (int h = 0; h < H; h++){
+        for(int w = 0; w < W; w++){
+            if(img->rgb[h][w].r == 255 && img->rgb[h][w].g == 255 && img->rgb[h][w].b == 255){
+                int curH = h-n/2;
+                int curW = w-n/2;
+                for (int i = curH; i <= (curH+n-1); i++){
+                    if (i >= 0 && i < H && curW >= 0 && curW < W) {
+                        img->rgb[i][curW].r = 255;
+                        img->rgb[i][curW].g = 255;
+                        img->rgb[i][curW].b = 0;
+                    }
+                }
+
+
+
+                for (int i = curH; i <= (curH+n-1); i++){
+                    if (i >= 0 && i < H && (curW+n) >= 0 && (curW+n) < W) {
+                        img->rgb[i][curW + n - 1].r = 255;
+                        img->rgb[i][curW + n - 1].g = 255;
+                        img->rgb[i][curW + n - 1].b = 0;
+                    }
+                }
+
+                for (int i = curW; i <= (curW+n-1); i++){
+                    if (i >= 0 && i < W && curH >= 0 && curH < H) {
+                        img->rgb[curH][i].r = 255;
+                        img->rgb[curH][i].g = 255;
+                        img->rgb[curH][i].b = 0;
+                    }
+                }
+
+                for (int i = curW; i <= (curW+n-1); i++){
+                    if (i >= 0 && i < W && (curH+n) >= 0 && (curH+n) < H) {
+                        img->rgb[curH + n - 1][i].r = 255;
+                        img->rgb[curH + n - 1][i].g = 255;
+                        img->rgb[curH + n - 1][i].b = 0;
+                    }
+                }
+            }
+        }
+    }
+    saveImg(img, nameOut);
 }
 
 int correctFile(bmpFile* img, char* name){
@@ -636,6 +697,9 @@ int main(int argc, char *argv[]){
                     return 1;
                 }
                 printImageInfo(&img);
+
+                cvadrat(&img, "out.bmp", 500);
+
                 return 0;
             }
             default:{
