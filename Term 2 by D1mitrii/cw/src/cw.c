@@ -80,6 +80,42 @@ void Print_Info(IMAGE img){
 	printf("importantColorCount:\t%x (%u)\n", img.bmif.importantColorCount, img.bmif.importantColorCount);
 }
 
+void Help(){
+	puts("");
+	puts("This program supports CLI and only works with version 3 BMP files.");
+	puts("BMP files with color table are not supported.");
+	puts("The program only supports files with a depth of 24 pixels per bit.");
+	puts("The program does not work with compressed photos.");
+	puts("If the required key to perform the function has not been entered, then the standard key values are 0.");
+	puts("The default value for the argument of the RGB_Filter(-F) function is 'r'.");
+	puts("If incorrect values are entered for the arguments, their value will be set to default.");
+	puts("Input format:");
+	puts("\t./a.out [input file] [key of function] [arguments if needed] [key 1] [argument 1],...,[argument N] ... [output file]");
+	puts("Functions and their keys:");
+	puts("\t--Turn (-T) <angle> - The function of rotating part of the image (the whole image).");
+	puts("\t\tThis function needs --start(-s), --end(-e) keys.");
+	puts("\t--Square(-S) <side> - The function of drawing a square.");
+	puts("\t\tThis function needs --start(-s), --thick(-t), --line_colors(-l), --fill(-f) keys.");
+	puts("\t--RGB_Filter(-F) <short name of component> - Changes the value of one of the components throughout the photo.");
+	puts("\t\tThis function needs --component_value(-c) key.");
+	puts("\t--Circle1(-1) - Draws a circle based on the coordinates of the upper-left corner and the lower-right corner of the square.");
+	puts("\t\tThis function needs --start(-s), --end(-e), --thick(-t), --line_colors(-l), --fill(-f) keys.");
+	puts("\t--Circle2(-2) <radius> - Draws a circle based on the coordinates of the center of the circle and its radius.");
+	puts("\t\tThis function needs --start(-s), --thick(-t), --line_colors(-l), --fill(-f) keys.");
+	puts("All keys:");
+	puts("\t--start(-s) <x1,y1> - Used to set the coordinates of the center of the circle or the upper-left corner of the area.");
+	puts("\t--end(-e) <x2,y2> - Used to set the coordinates of the bottom-right corner of the area.");
+	puts("\t--thick(-t) <thickness value> - Set the thickness of the lines.");
+	puts("\t--line_colors(-l) <r,g,b> - Three integer values for the line color.");
+	puts("\t--fill(-f) <r,g,b> - Three integer values for the fill.");
+	puts("\t--component_value(-c) <component value> - Integer value of the color component.");
+	puts("\t--info(-i) - Prints information about the file.");
+	puts("\t--help(-h) - Prints this help.");
+	puts("Examples:");
+	puts("\t");
+	printf("\n");
+}
+
 int Check_Image(IMAGE* picture){
 
     if(picture->bmif.headerSize != 40){
@@ -158,6 +194,7 @@ int Read_Image(IMAGE* picture, char* file_input_name){
 	unsigned int w = (picture->bmif.width) *sizeof(RGB) + offset;
 	for(int i = 0; i < height; i++){
 		picture->canvas[i] = malloc(w);
+		
 		fread(picture->canvas[i], 1,w, src_img);
 	}
 	fclose(src_img);
@@ -196,7 +233,8 @@ int Write_Image(IMAGE* picture, char* file_output_name){
 }
 
 void Filter_RGB(IMAGE* picture, Options* opt){
-	printf("%d", opt->component_value);
+	if(opt->component != NULL)
+		opt->component = "r";
 	if(strstr("rgb", opt->component) && (opt->component_value >= 0) && (opt->component_value <= 255)){
 		for(int i = 0; i < picture->bmif.height; i++){
 			for(int j = 0; j < picture->bmif.width; j++){
@@ -212,9 +250,6 @@ void Filter_RGB(IMAGE* picture, Options* opt){
 
 			}
 		}
-	}
-	else{
-		printf("ERORR!!!");
 	}
 }
 
@@ -263,15 +298,6 @@ void Draw_Square(IMAGE* picture, Options opt){
 			Write_Pixel(picture, x1 - thick - 1, i, opt.l_r, opt.l_g, opt.l_b);
 			Write_Pixel(picture, x1 + side + thick, i,  opt.l_r, opt.l_g, opt.l_b);
 		}
-		/*
-		// verticals
-		for (int i = opt->y1 - side - thick + 1; i <= opt->y1 + thick; i++){
-			Write_Pixel(picture, opt->x1 + thick, i, 0, 0, 0);
-			Write_Pixel(picture,opt->x1 + side + thick, i, 0, 0, 0);
-			//Write_Pixel(picture, opt->x1 - thick, i, 0, 0, 0);
-			//Write_Pixel(picture,opt->x1 + side - 1 - thick, i, 0, 0, 0);
-		}
-		*/
 
 	}
 
@@ -279,7 +305,6 @@ void Draw_Square(IMAGE* picture, Options opt){
 
 void Draw_Circle(IMAGE* picture, Options opt){
 
-	//printf("-%p-", opt.color_fill);
 	int y1 = opt.y1;
 	int x1 = opt.x1;
 	int radius = opt.radius;
@@ -287,8 +312,7 @@ void Draw_Circle(IMAGE* picture, Options opt){
     for(int i = y1 - radius - 1; i < y1 + radius + 1; i++){
 		for(int j = x1 - radius - 1; j < x1 + radius + 1; j++){
 			if((j - x1)*(j - x1) + (i - y1)*(i - y1) < (radius)*(radius)){
-				//printf("|%p|", opt.color_fill);
-				Write_Pixel(picture, j, i, opt.f_r, opt.f_g, opt.f_b);
+					Write_Pixel(picture, j, i, opt.f_r, opt.f_g, opt.f_b);
 				}
 			}
 		}
@@ -296,8 +320,9 @@ void Draw_Circle(IMAGE* picture, Options opt){
 
 	for(int i = y1 - radius - opt.thick; i < y1 + radius + opt.thick; i++){
 		for(int j = x1 - radius - opt.thick; j < x1 + radius + opt.thick; j++){
-			if(((j - x1)*(j - x1) + (i - y1)*(i - y1) >= (radius) * (radius)) && ((j - x1)*(j - x1) + (i - y1)*(i - y1) < (radius + opt.thick)*(radius + opt.thick)))
+			if(((j - x1)*(j - x1) + (i - y1)*(i - y1) >= (radius) * (radius)) && ((j - x1)*(j - x1) + (i - y1)*(i - y1) < (radius + opt.thick)*(radius + opt.thick))){
 				Write_Pixel(picture, j, i, opt.l_r, opt.l_g, opt.l_b);
+			}	
 		}
 	}
 }
@@ -380,10 +405,9 @@ void Rotate_Whole_Image(IMAGE* picture, Options* opt){
 
 void Rotate(IMAGE* picture, Options* opt){
 
-	if (opt->x1 <= 0 && opt->y1 <= 0 && opt->x2 >= picture->bmif.width-1 && opt->y2 >= picture->bmif.height-1)
+	if (opt->x1 <= 0 && opt->y2 <= 0 && opt->x2 >= picture->bmif.width-1 && opt->y1 >= picture->bmif.height-1)
 	{
 		Rotate_Whole_Image(picture, opt);
-		return;
 	}
 	else if(opt->angle == 90 || opt->angle == 180 || opt->angle == 270){
 	
@@ -478,20 +502,23 @@ void choice(Options* config, const char option){
         case 'T':{
             count = sscanf(optarg, "%d", &config->angle);
             if(count != 1){ puts("The angle remained at the default value (0).");}
+			if(config->angle < 0) {config->angle = 0; puts("The negative angle is set to 0.");}
 			config->action = 1;
             break;
 		}
 		case 'S':{
             count = sscanf(optarg, "%d", &config->side);
             if(count != 1){ puts("The side of square remained at the default value (0).");}
+			if(config->side < 0) {config->side = 0; puts("The negative side is set to 0.");}
 			config->action = 2;
             break;
 		}
 		case 'F':{
 			config->component = malloc(20 * sizeof(char));
             count = sscanf(optarg, "%s", config->component);
-            if(count != 1){ puts("The component remained at the default value r (Red).");
-			config->component = "r";
+            if(count != 1){
+				puts("The component remained at the default value r (Red).");
+				config->component = "r";
 			}
 			config->action = 3;
             break;
@@ -503,6 +530,10 @@ void choice(Options* config, const char option){
 		case '2':{
             count = sscanf(optarg, "%d", &config->radius);
             if(count != 1){ puts("The radius was not set, the default value is set (0).");}
+			if(config->radius < 0) {
+				config->radius = 0;
+				puts("The negative radius is replaced by 0.");
+				}
             config->action = 5;
 			break;
 		}
@@ -620,7 +651,7 @@ int main(int argc, char* argv[]){
 	
 	if(argc < 2){
         puts("The arguments are not enough for the program to work.");
-        //help();
+        Help();
         return 0;
     }
 
@@ -634,7 +665,7 @@ int main(int argc, char* argv[]){
 
 	if(argc < 3){
         puts("The arguments are not enough for the program to work.");
-        //help();
+        Help();
         return 0;
     }
 
@@ -672,9 +703,6 @@ int main(int argc, char* argv[]){
 
 	if(Read_Image(&picture, inputfile_path)) return 0;
 
-	//Read_Image(&picture, "./testfiles/1.bmp");
-	//Write_Image(&picture, "./testfile/out.bmp");
-
 	if(opt == -1){
 		puts("Incorrect input format.");
 		return 0;
@@ -700,6 +728,7 @@ int main(int argc, char* argv[]){
 		case 1:{
 			config.y1 = picture.bmif.height - config.y1 - 1;
 			config.y2 = picture.bmif.height - config.y2 - 1;
+			printf("%d - %d", config.y1, config.y2);
 			Rotate(&picture, &config);
 			if(!Write_Image(&picture, outfile_path)){
 				puts("The program has finished working.");
@@ -730,6 +759,7 @@ int main(int argc, char* argv[]){
 				config.radius = (int) (config.y1 - config.y2)/2;
 				config.y1 = config.y1 - config.radius;
 				config.x1 = config.x1 + config.radius;
+				printf("%d-%d\n", config.x1, config.y1);
 				Draw_Circle(&picture, config);
 			}
 			if(!Write_Image(&picture, outfile_path)){
