@@ -1,0 +1,1 @@
+void Filter_RGB(IMAGE* picture, Options* opt);

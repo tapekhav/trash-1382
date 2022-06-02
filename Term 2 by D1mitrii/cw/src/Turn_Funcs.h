@@ -1,0 +1,1 @@
+void Turn(IMAGE* picture, Options* opt);
