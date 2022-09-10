@@ -1,4 +1,3 @@
-#python
 def height(tree, n):
     d = dict()
 
