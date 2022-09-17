@@ -2,10 +2,11 @@
 
 
 Field::Field(int width, int height)
-    : width(width), height(height), player_location({0, 0}) {
-    field.resize(height);
+    : width(abs(width)), height(abs(height)), player_location({0, 0}) {
+
+    field.resize(this->height);
     for(size_t i = 0; i != height; ++i) {
-        field.at(i).resize(width);
+        field.at(i).resize(this->width);
         for(size_t j = 0; j != width; ++j) {
             field.at(i).at(j) = Cell();
         }
@@ -80,6 +81,8 @@ void Field::make_field() {
 }
 
 void Field::change_player_pos(STEP s) {
+    field.at(player_location.second).at(player_location.first).set_obj(STANDARD);
+
     switch(s) {
         case UP:
             player_location.second--;
@@ -94,6 +97,12 @@ void Field::change_player_pos(STEP s) {
             player_location.first++;
             break;
     }
+
+    if (player_location.first < 0) player_location.first += get_width();
+    if (player_location.second < 0) player_location.second += get_height();
+
+    player_location.first = player_location.first % get_width();
+    player_location.second = player_location.second % get_height();
 
     field.at(player_location.second).at(player_location.first).set_obj(PLAYER);
 }

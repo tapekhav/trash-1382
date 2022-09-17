@@ -8,6 +8,7 @@
 #include "CellView.h"
 #include <vector>
 #include <random>
+#include <cmath>
 
 class Field {
 public:

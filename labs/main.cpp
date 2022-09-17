@@ -8,8 +8,7 @@
 
 
 signed main() {
-    Controller a;
-    a.move(RIGHT);
+    Controller().start();
 
     return 0;
 }

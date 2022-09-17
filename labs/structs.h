@@ -19,8 +19,4 @@ enum OBJECT {
     PLAYER
 };
 
-struct Coordinates {
-    int x, y;
-} typedef Coordinates;
-
 #endif //LABS_STRUCTS_H
