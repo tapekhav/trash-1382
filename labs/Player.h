@@ -10,7 +10,6 @@ public:
     Player& operator=(const Player &other) = delete;
     Player(Player&& other) noexcept;
     Player& operator=(Player&& other) noexcept;
-    void step(STEP s);
     int get_health() const;
     int get_damage() const;
     int get_xp() const;

@@ -5,6 +5,7 @@ FieldView::FieldView(Field& other) : field(other) {}
 void FieldView::print() const {
     if(field.get_width() == 0 || field.get_height() == 0)
         return;
+    std::cout << "Текущее состояние поля:\n";
     print_border();
     for (size_t i = 0; i != field.get_height(); ++i) {
         std::cout << "|";

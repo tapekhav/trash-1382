@@ -3,12 +3,13 @@
 
 #include <iostream>
 #include "structs.h"
+#include "Event.h"
 #include <algorithm>
 
 class Cell {
 public:
-    explicit Cell();
-    Cell(const Cell& other);
+    explicit Cell(OBJECT obj = STANDARD);
+    Cell(const Cell& other) = default;
     Cell& operator=(const Cell& other);
     Cell(Cell&& other);
     Cell& operator=(Cell&& other);
@@ -18,6 +19,7 @@ public:
 private:
     void swap(Cell &other);
     OBJECT obj;
+    Event* event;
 };
 
 #endif //LABS_CELL_H

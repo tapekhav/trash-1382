@@ -1,6 +1,6 @@
 #include "Controller.h"
 
-Controller::Controller() : field(Field(20, 10)), player() {
+Controller::Controller() : field(Field(20, 10)) {
     field.make_field();
     FieldView field_view(field);
     field_view.print();

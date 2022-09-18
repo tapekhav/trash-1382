@@ -4,7 +4,8 @@
 class Event{
 public:
     Event() = default;
-    ~Event() = default;
+    virtual void execute() = 0;
+    virtual ~Event() = 0;
 };
 
 #endif //LABS_EVENT_H

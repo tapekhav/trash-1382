@@ -6,9 +6,11 @@
 
 class Mediator {
 public:
-    explicit Mediator(CommanderReader inp);
+    Mediator() = default;
+
 private:
     CommanderReader input;
+    Controller game;
 };
 
 #endif //LABS_MEDIATOR_H

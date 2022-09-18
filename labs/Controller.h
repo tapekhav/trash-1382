@@ -13,7 +13,6 @@ public:
     void start();
 
 private:
-    Player player;
     Field field;
 };
 

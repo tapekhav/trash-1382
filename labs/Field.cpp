@@ -14,7 +14,7 @@ Field::Field(int width, int height)
 }
 
 Field::Field(const Field &other)
-    : width(other.width), height(other.height), field(other.field) {
+    : width(other.width), height(other.height), player_location(other.player_location) {
     field.resize(height);
     for(size_t i = 0; i != height; ++i) {
         field.at(i).resize(width);
@@ -98,11 +98,11 @@ void Field::change_player_pos(STEP s) {
             break;
     }
 
-    if (player_location.first < 0) player_location.first += get_width();
-    if (player_location.second < 0) player_location.second += get_height();
-
     player_location.first = player_location.first % get_width();
     player_location.second = player_location.second % get_height();
+
+    if (player_location.first < 0) player_location.first += get_width();
+    if (player_location.second < 0) player_location.second += get_height();
 
     field.at(player_location.second).at(player_location.first).set_obj(PLAYER);
 }
