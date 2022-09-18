@@ -2,24 +2,22 @@
 
 
 Field::Field(int width, int height)
-    : width(abs(width)), height(abs(height)), player_location({0, 0}) {
+    : width(width), height(height), player_location({0, 0}) {
 
-    field.resize(this->height);
     for(size_t i = 0; i != height; ++i) {
-        field.at(i).resize(this->width);
+        field.emplace_back();
         for(size_t j = 0; j != width; ++j) {
-            field.at(i).at(j) = Cell();
+            field.at(i).emplace_back();
         }
     }
 }
 
 Field::Field(const Field &other)
     : width(other.width), height(other.height), player_location(other.player_location) {
-    field.resize(height);
     for(size_t i = 0; i != height; ++i) {
-        field.at(i).resize(width);
+        field.emplace_back();
         for(size_t j = 0; j != width; ++j)
-            field.at(i).at(j) = other.field.at(i).at(j);
+            field.at(i).push_back(other.field.at(i).at(j));
     }
 }
 

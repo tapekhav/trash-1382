@@ -2,7 +2,6 @@
 #define LABS_CELL_H
 
 #include <iostream>
-#include "structs.h"
 #include "Event.h"
 #include <algorithm>
 

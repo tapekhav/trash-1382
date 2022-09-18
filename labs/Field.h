@@ -4,7 +4,6 @@
 #include <iostream>
 #include <algorithm>
 #include "Cell.h"
-#include "structs.h"
 #include "CellView.h"
 #include "Player.h"
 #include <vector>

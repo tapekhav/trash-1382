@@ -3,15 +3,14 @@
 
 #include "Player.h"
 #include "Field.h"
-#include "structs.h"
 #include "FieldView.h"
+#include "Mediator.h"
 
 class Controller {
 public:
     explicit Controller();
     void move(Player::STEP s);
     void start();
-
 private:
     Field field;
 };

@@ -2,7 +2,6 @@
 #define LABS_COMMANDERREADER_H
 
 #include <iostream>
-#include "structs.h"
 #include "Player.h"
 
 class CommanderReader {
@@ -11,7 +10,7 @@ public:
     ~CommanderReader() = default;
     void read_height();
     void read_width();
-    char read_step();
+    void read_step();
     int get_height() const;
     int get_width() const;
     Player::STEP get_step() const;

@@ -1,7 +1,7 @@
 #ifndef LABS_PLAYER_H
 #define LABS_PLAYER_H
 
-#include "structs.h"
+#include <algorithm>
 
 class Player {
 public:
@@ -9,7 +9,9 @@ public:
         UP,
         DOWN,
         LEFT,
-        RIGHT
+        RIGHT,
+        STOP,
+        EXIT
     };
     explicit Player(int health = 1, int damage = 1, int xp = 1);
     Player(const Player& other) = delete;

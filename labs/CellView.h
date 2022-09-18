@@ -2,7 +2,6 @@
 #define LABS_CELLVIEW_H
 
 #include "Cell.h"
-#include "structs.h"
 
 class CellView {
 public:

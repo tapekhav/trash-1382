@@ -1,6 +1,6 @@
 #include "Controller.h"
 
-Controller::Controller() : field(Field(20, 10)) {
+Controller::Controller() : field(Field(Mediator().get_width(), Mediator().get_height())) {
     field.make_field();
     FieldView field_view(field);
     field_view.print();
@@ -15,26 +15,9 @@ void Controller::move(Player::STEP s) {
 void Controller::start() {
     Player::STEP step;
     while(true) {
-        int i;
-        std::cin >> i;
-
-        switch (i) {
-            case 1:
-                step = Player::UP;
-                break;
-            case 2:
-                step = Player::DOWN;
-                break;
-            case 3:
-                step = Player::RIGHT;
-                break;
-            case 4:
-                step = Player::LEFT;
-                break;
-            default:
-                return;
-        }
-
+        step = Mediator().get_step();
+        if (step == Player::EXIT)
+            break;
         move(step);
     }
 }
