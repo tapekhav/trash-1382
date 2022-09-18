@@ -8,12 +8,21 @@
 
 class Cell {
 public:
-    explicit Cell(OBJECT obj = STANDARD);
+    enum OBJECT {
+        STANDARD,
+        ENEMY,
+        BOX,
+        HEAL,
+        BARRIER,
+        PLAYER
+    };
+    explicit Cell();
     Cell(const Cell& other) = default;
     Cell& operator=(const Cell& other);
     Cell(Cell&& other);
     Cell& operator=(Cell&& other);
     OBJECT get_obj() const;
+    void update();
     void set_obj(OBJECT obj);
 
 private:

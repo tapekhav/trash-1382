@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "structs.h"
+#include "Player.h"
 
 class CommanderReader {
 public:
@@ -13,10 +14,10 @@ public:
     char read_step();
     int get_height() const;
     int get_width() const;
-    STEP get_step() const;
+    Player::STEP get_step() const;
 private:
     int height, width;
-    STEP step;
+    Player::STEP step;
 };
 
 #endif

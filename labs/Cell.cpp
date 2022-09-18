@@ -1,6 +1,8 @@
 #include "Cell.h"
 
-Cell::Cell(OBJECT obj) : obj(obj) {}
+Cell::Cell() {
+    obj = Cell::STANDARD;
+}
 
 Cell& Cell::operator=(const Cell &other) {
     if (this != &other)
@@ -19,14 +21,19 @@ Cell &Cell::operator=(Cell &&other) {
     return *this;
 }
 
-OBJECT Cell::get_obj() const {
+Cell::OBJECT Cell::get_obj() const {
     return obj;
 }
 
-void Cell::set_obj(OBJECT obj) {
+void Cell::set_obj(Cell::OBJECT obj) {
     this->obj = obj;
 }
 
+
 void Cell::swap(Cell &other) {
     std::swap(obj, other.obj);
+}
+
+void Cell::update() {
+    event->execute();
 }

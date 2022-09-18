@@ -5,6 +5,12 @@
 
 class Player {
 public:
+    enum STEP {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    };
     explicit Player(int health = 1, int damage = 1, int xp = 1);
     Player(const Player& other) = delete;
     Player& operator=(const Player &other) = delete;

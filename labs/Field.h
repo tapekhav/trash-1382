@@ -6,6 +6,7 @@
 #include "Cell.h"
 #include "structs.h"
 #include "CellView.h"
+#include "Player.h"
 #include <vector>
 #include <random>
 #include <cmath>
@@ -19,7 +20,7 @@ public:
     Field(Field&& other) noexcept;
     Field& operator=(Field&& other) noexcept;
     void make_field();
-    void change_player_pos(STEP s);
+    void change_player_pos(Player::STEP s);
     void swap(Field& other);
     int get_height() const;
     int get_width()  const;

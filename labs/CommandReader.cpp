@@ -16,16 +16,16 @@ char CommanderReader::read_step() {
     std::cout << "Введите направление перемещения игрока(u, d, l, r): ";
     switch(c) {
         case 'u':
-            step = UP;
+            step = Player::UP;
             break;
         case 'd':
-            step = DOWN;
+            step = Player::DOWN;
             break;
         case 'l':
-            step = LEFT;
+            step = Player::LEFT;
             break;
         case 'r':
-            step = RIGHT;
+            step = Player::RIGHT;
             break;
         case 'e':
             break;
@@ -45,6 +45,6 @@ int CommanderReader::get_width() const {
     return width;
 }
 
-STEP CommanderReader::get_step() const {
+Player::STEP CommanderReader::get_step() const {
     return step;
 }

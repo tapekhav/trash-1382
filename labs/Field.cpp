@@ -52,7 +52,7 @@ std::vector<std::vector<Cell>> Field::get_field() const  {
 }
 
 void Field::make_field() {
-    field.at(0).at(0).set_obj(PLAYER);
+    field.at(0).at(0).set_obj(Cell::PLAYER);
     for(size_t i = 0; i != height; ++i) {
         size_t val = i == 0 ? 1 : 0;
         for(size_t j = val; j != width; ++j) {
@@ -62,16 +62,16 @@ void Field::make_field() {
 
             switch(dist(rng)) {
                 case 1:
-                    field.at(i).at(j).set_obj(BOX);
+                    field.at(i).at(j).set_obj(Cell::BOX);
                     break;
                 case 2:
-                    field.at(i).at(j).set_obj(HEAL);
+                    field.at(i).at(j).set_obj(Cell::HEAL);
                     break;
                 case 3:
-                    field.at(i).at(j).set_obj(ENEMY);
+                    field.at(i).at(j).set_obj(Cell::ENEMY);
                     break;
                 case 4:
-                    field.at(i).at(j).set_obj(BARRIER);
+                    field.at(i).at(j).set_obj(Cell::BARRIER);
                     break;
                 default:
                     break;
@@ -80,31 +80,31 @@ void Field::make_field() {
     }
 }
 
-void Field::change_player_pos(STEP s) {
-    field.at(player_location.second).at(player_location.first).set_obj(STANDARD);
+void Field::change_player_pos(Player::STEP s) {
+    field.at(player_location.second).at(player_location.first).set_obj(Cell::STANDARD);
 
     switch(s) {
-        case UP:
+        case Player::UP:
             player_location.second--;
             break;
-        case DOWN:
+        case Player::DOWN:
             player_location.second++;
             break;
-        case LEFT:
+        case Player::LEFT:
             player_location.first--;
             break;
-        case RIGHT:
+        case Player::RIGHT:
             player_location.first++;
             break;
     }
 
-    player_location.first = player_location.first % get_width();
-    player_location.second = player_location.second % get_height();
+    player_location.first = player_location.first % width;
+    player_location.second = player_location.second % height;
 
-    if (player_location.first < 0) player_location.first += get_width();
-    if (player_location.second < 0) player_location.second += get_height();
+    if (player_location.first < 0) player_location.first += width;
+    if (player_location.second < 0) player_location.second += height;
 
-    field.at(player_location.second).at(player_location.first).set_obj(PLAYER);
+    field.at(player_location.second).at(player_location.first).set_obj(Cell::PLAYER);
 }
 
 int Field::get_height() const {

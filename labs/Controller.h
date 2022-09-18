@@ -9,7 +9,7 @@
 class Controller {
 public:
     explicit Controller();
-    void move(STEP s);
+    void move(Player::STEP s);
     void start();
 
 private:

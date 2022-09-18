@@ -3,22 +3,22 @@
 CellView::CellView(const Cell& c) {
     switch(c.get_obj())
     {
-        case STANDARD:
+        case Cell::STANDARD:
             cell = ' ';
             break;
-        case BOX:
+        case Cell::BOX:
             cell = 'b';
             break;
-        case ENEMY:
+        case Cell::ENEMY:
             cell = 'e';
             break;
-        case HEAL:
+        case Cell::HEAL:
             cell = 'h';
             break;
-        case BARRIER:
+        case Cell::BARRIER:
             cell = '/';
             break;
-        case PLAYER:
+        case Cell::PLAYER:
             cell = 'p';
             break;
         default:
