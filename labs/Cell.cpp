@@ -35,5 +35,18 @@ void Cell::swap(Cell &other) {
 }
 
 void Cell::update() {
-    event->execute();
+    if (check_player())
+        event->execute();
+}
+
+void Cell::set_event(Event* event) {
+    this->event = event;
+}
+
+void Cell::set_player_location(bool location) {
+    player_location = location;
+}
+
+bool Cell::check_player() const {
+    return player_location;
 }

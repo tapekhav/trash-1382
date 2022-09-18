@@ -53,6 +53,7 @@ std::vector<std::vector<Cell>> Field::get_field() const  {
 
 void Field::make_field() {
     field.at(0).at(0).set_obj(Cell::PLAYER);
+    field.at(0).at(0).set_player_location(true);
     for(size_t i = 0; i != height; ++i) {
         size_t val = i == 0 ? 1 : 0;
         for(size_t j = val; j != width; ++j) {
@@ -82,6 +83,7 @@ void Field::make_field() {
 
 void Field::change_player_pos(Player::STEP s) {
     field.at(player_location.second).at(player_location.first).set_obj(Cell::STANDARD);
+    field.at(player_location.second).at(player_location.first).set_player_location(false);
 
     switch(s) {
         case Player::UP:
@@ -105,6 +107,7 @@ void Field::change_player_pos(Player::STEP s) {
     if (player_location.second < 0) player_location.second += height;
 
     field.at(player_location.second).at(player_location.first).set_obj(Cell::PLAYER);
+    field.at(player_location.second).at(player_location.first).set_player_location(true);
 }
 
 int Field::get_height() const {

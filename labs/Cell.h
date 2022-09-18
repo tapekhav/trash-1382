@@ -23,11 +23,14 @@ public:
     Cell& operator=(Cell&& other);
     OBJECT get_obj() const;
     void update();
+    void set_event(Event* event);
+    void set_player_location(bool location);
     void set_obj(OBJECT obj);
-
+    bool check_player() const;
 private:
     void swap(Cell &other);
     OBJECT obj;
+    bool player_location;
     Event* event;
 };
 

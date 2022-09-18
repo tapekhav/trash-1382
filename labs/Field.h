@@ -25,7 +25,6 @@ public:
     int get_height() const;
     int get_width()  const;
     std::vector<std::vector<Cell>> get_field() const;
-
 private:
     std::vector<std::vector<Cell>> field;
     int height, width;
