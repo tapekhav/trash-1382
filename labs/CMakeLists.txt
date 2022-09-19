@@ -3,5 +3,5 @@ project(labs)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(labs main.cpp Cell.cpp Cell.h CellView.cpp CellView.h Field.cpp Field.h Player.cpp Player.h
-        Controller.cpp Controller.h Event.cpp Event.h FIeldView.cpp FieldView.h CommandReader.cpp CommanderReader.h Mediator.cpp Mediator.h)
+add_executable(labs main.cpp Background/Cell.cpp Background/Cell.h Background/CellView.cpp Background/CellView.h Background/Field.cpp Background/Field.h Characters/Player.cpp Characters/Player.h
+        Control/Controller.cpp Control/Controller.h Events/Event.cpp Events/Event.h Background/FIeldView.cpp Background/FieldView.h Control/CommandReader.cpp Control/CommanderReader.h Control/Mediator.cpp Control/Mediator.h)

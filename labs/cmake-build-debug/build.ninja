@@ -55,59 +55,59 @@ build CMakeFiles/labs.dir/main.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/De
   OBJECT_DIR = CMakeFiles/labs.dir
   OBJECT_FILE_DIR = CMakeFiles/labs.dir
 
-build CMakeFiles/labs.dir/Cell.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Cell.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Cell.cpp.o.d
+build CMakeFiles/labs.dir/Background/Cell.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Background/Cell.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Background/Cell.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Background
 
-build CMakeFiles/labs.dir/CellView.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/CellView.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/CellView.cpp.o.d
+build CMakeFiles/labs.dir/Background/CellView.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Background/CellView.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Background/CellView.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Background
 
-build CMakeFiles/labs.dir/Field.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Field.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Field.cpp.o.d
+build CMakeFiles/labs.dir/Background/Field.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Background/Field.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Background/Field.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Background
 
-build CMakeFiles/labs.dir/Player.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Player.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Player.cpp.o.d
+build CMakeFiles/labs.dir/Characters/Player.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Characters/Player.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Characters/Player.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Characters
 
-build CMakeFiles/labs.dir/Controller.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Controller.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Controller.cpp.o.d
+build CMakeFiles/labs.dir/Control/Controller.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Control/Controller.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Control/Controller.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Control
 
-build CMakeFiles/labs.dir/Event.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Event.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Event.cpp.o.d
+build CMakeFiles/labs.dir/Events/Event.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/Event.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/Event.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events
 
-build CMakeFiles/labs.dir/FIeldView.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/FIeldView.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/FIeldView.cpp.o.d
+build CMakeFiles/labs.dir/Background/FIeldView.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Background/FIeldView.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Background/FIeldView.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Background
 
-build CMakeFiles/labs.dir/CommandReader.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/CommandReader.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/CommandReader.cpp.o.d
+build CMakeFiles/labs.dir/Control/CommandReader.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Control/CommandReader.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Control/CommandReader.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Control
 
-build CMakeFiles/labs.dir/Mediator.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Mediator.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Mediator.cpp.o.d
+build CMakeFiles/labs.dir/Control/Mediator.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Control/Mediator.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Control/Mediator.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Control
 
 
 # =============================================================================
@@ -117,7 +117,7 @@ build CMakeFiles/labs.dir/Mediator.cpp.o: CXX_COMPILER__labs_Debug /home/vladimi
 #############################################
 # Link the executable labs
 
-build labs: CXX_EXECUTABLE_LINKER__labs_Debug CMakeFiles/labs.dir/main.cpp.o CMakeFiles/labs.dir/Cell.cpp.o CMakeFiles/labs.dir/CellView.cpp.o CMakeFiles/labs.dir/Field.cpp.o CMakeFiles/labs.dir/Player.cpp.o CMakeFiles/labs.dir/Controller.cpp.o CMakeFiles/labs.dir/Event.cpp.o CMakeFiles/labs.dir/FIeldView.cpp.o CMakeFiles/labs.dir/CommandReader.cpp.o CMakeFiles/labs.dir/Mediator.cpp.o
+build labs: CXX_EXECUTABLE_LINKER__labs_Debug CMakeFiles/labs.dir/main.cpp.o CMakeFiles/labs.dir/Background/Cell.cpp.o CMakeFiles/labs.dir/Background/CellView.cpp.o CMakeFiles/labs.dir/Background/Field.cpp.o CMakeFiles/labs.dir/Characters/Player.cpp.o CMakeFiles/labs.dir/Control/Controller.cpp.o CMakeFiles/labs.dir/Events/Event.cpp.o CMakeFiles/labs.dir/Background/FIeldView.cpp.o CMakeFiles/labs.dir/Control/CommandReader.cpp.o CMakeFiles/labs.dir/Control/Mediator.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/labs.dir
   POST_BUILD = :
