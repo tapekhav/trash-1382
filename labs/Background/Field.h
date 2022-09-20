@@ -12,7 +12,7 @@
 
 class Field {
 public:
-    explicit Field(int width = 0, int height = 0);
+    explicit Field(int width = 10, int height = 10);
     ~Field() = default;
     Field(const Field &other);
     Field& operator=(const Field &other);

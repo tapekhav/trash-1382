@@ -7,11 +7,10 @@
 class Mediator {
 public:
     Mediator() = default;
-    int get_height();
-    int get_width();
-    Player::STEP get_step();
+    void start();
 private:
-    CommanderReader input;
+    CommandReader input;
+    Controller game;
 };
 
 #endif //LABS_MEDIATOR_H

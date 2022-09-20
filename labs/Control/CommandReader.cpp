@@ -1,16 +1,17 @@
 #include "CommandReader.h"
 
-void CommanderReader::read_height() {
+void CommandReader::read_size() {
     std::cout << "Введите высоту: ";
     std::cin >> height;
-}
+    check(height);
 
-void CommanderReader::read_width() {
-    std::cout << "Введите ширину: ";
+    std::cout << "Введите ширине: ";
     std::cin >> width;
+    check(width);
 }
 
-void CommanderReader::read_step() {
+
+void CommandReader::read_step() {
     char c;
 
     std::cout << "Введите направление перемещения игрока(u, d, l, r): ";
@@ -38,21 +39,36 @@ void CommanderReader::read_step() {
                          " \\_____/_/    \\_\\_|  |_|______|  \\____/   \\/   |______|_|  \\_\\\n\033[0m";
             break;
         default:
-            std::cout << "Вы ввели неправильный символ!\n";
             step = Player::STOP;
             break;
     }
 
 }
 
-int CommanderReader::get_height() const {
+void CommandReader::read_char() {
+    std::cout << "Введите 'y', если хотите оставить у поля стандартное значение(10, 10): ";
+    std::cin >> choice;
+}
+
+int CommandReader::get_height() const {
     return height;
 }
 
-int CommanderReader::get_width() const {
+int CommandReader::get_width() const {
     return width;
 }
 
-Player::STEP CommanderReader::get_step() const {
+Player::STEP CommandReader::get_step() const {
     return step;
+}
+
+char CommandReader::get_char() const {
+    return choice;
+}
+
+void CommandReader::check(int &arg) {
+    if (arg <= 0) {
+        std::cout << "Вы ввели величину некорректно. Будет присвоено стандартное значение.\n";
+        arg = 1;
+    }
 }

@@ -1,16 +1,18 @@
 #include "Mediator.h"
 
-int Mediator::get_height() {
-    input.read_height();
-    return input.get_height();
-}
+void Mediator::start() {
+    input.read_char();
 
-int Mediator::get_width() {
-    input.read_width();
-    return input.get_width();
-}
+    if (input.get_char() != 'y') {
+        input.read_size();
+        game.set_field(input.get_width(), input.get_height());
+    } else {
+        game.set_field_standard();
+    }
 
-Player::STEP Mediator::get_step() {
-    input.read_step();
-    return input.get_step();
+    while(input.get_step() != Player::EXIT) {
+        game.show_field();
+        input.read_step();
+        game.set_step(input.get_step());
+    }
 }

@@ -4,15 +4,19 @@
 #include "../Characters/Player.h"
 #include "../Background/Field.h"
 #include "../Background/FieldView.h"
-#include "Mediator.h"
 
 class Controller {
 public:
-    explicit Controller();
-    void move(Player::STEP s);
-    void start();
+    Controller();
+
+    void set_field(int width, int height);
+    void set_field_standard();
+    void set_step(Player::STEP step);
+
+    void show_field();
 private:
     Field field;
+    FieldView field_view;
 };
 
 

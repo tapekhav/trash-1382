@@ -1,8 +1,9 @@
 #include "Control/Controller.h"
+#include "Control/Mediator.h"
 
 
 signed main() {
-    Controller().start();
+    Mediator().start();
 
     return 0;
 }

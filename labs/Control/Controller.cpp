@@ -1,33 +1,23 @@
 #include "Controller.h"
 
-Controller::Controller() {
-    int height = 0;
-    int width = 0;
 
-    while(height <= 0 || width <= 0) {
-        height = Mediator().get_height();
-        width = Mediator().get_width();
-        std::cout << "Введите данные корректно!\n";
-    }
-    Field other(width, height);
-    field = other;
+Controller::Controller() : field(Field()), field_view(FieldView(field)) {}
+
+void Controller::set_field(int width, int height) {
+    field = Field(width, height);
     field.make_field();
-    FieldView field_view(field);
-    field_view.print();
 }
 
-void Controller::move(Player::STEP s) {
-    field.change_player_pos(s);
-    FieldView field_view(field);
-    field_view.print();
+void Controller::set_field_standard() {
+    field = Field();
+    field.make_field();
 }
 
-void Controller::start() {
-    Player::STEP step;
-    while(true) {
-        step = Mediator().get_step();
-        if (step == Player::EXIT)
-            break;
-        move(step);
-    }
+void Controller::set_step(Player::STEP step) {
+    field.change_player_pos(step);
+}
+
+void Controller::show_field() {
+    field_view = FieldView(field);
+    field_view.print();
 }
