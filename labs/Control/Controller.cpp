@@ -31,4 +31,3 @@ void Controller::start() {
         move(step);
     }
 }
-

@@ -3,12 +3,12 @@
 
 #include <iostream>
 #include <algorithm>
-#include "Cell.h"
-#include "CellView.h"
-#include "../Characters/Player.h"
 #include <vector>
 #include <random>
 #include <cmath>
+#include "Cell.h"
+#include "CellView.h"
+#include "../Characters/Player.h"
 
 class Field {
 public:
@@ -18,15 +18,20 @@ public:
     Field& operator=(const Field &other);
     Field(Field&& other) noexcept;
     Field& operator=(Field&& other) noexcept;
+
     void make_field();
     void change_player_pos(Player::STEP s);
-    void swap(Field& other);
+
     int get_height() const;
     int get_width()  const;
     std::vector<std::vector<Cell>> get_field() const;
 private:
+    bool check_cell(Cell cell) const;
+    void swap(Field& other);
+
     std::vector<std::vector<Cell>> field;
-    int height, width;
+    int height;
+    int width;
     std::pair<int, int> player_location;
 };
 

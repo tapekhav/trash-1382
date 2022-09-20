@@ -14,10 +14,6 @@ public:
         EXIT
     };
     explicit Player(int health = 1, int damage = 1, int xp = 1);
-    Player(const Player& other) = delete;
-    Player& operator=(const Player &other) = delete;
-    Player(Player&& other) noexcept;
-    Player& operator=(Player&& other) noexcept;
 
     int get_health() const;
     int get_damage() const;
@@ -27,7 +23,9 @@ public:
     void set_damage(int damage);
     void add_xp(int xp);
 private:
-    int health, damage, xp;
+    int health;
+    int damage;
+    int xp;
 };
 
 #endif //LABS_PLAYER_H

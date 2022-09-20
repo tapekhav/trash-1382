@@ -5,8 +5,6 @@
 
 class CellView {
 public:
-    CellView() = default;
-    ~CellView() = default;
     explicit CellView(const Cell& c);
     char get_cell() const;
 private:

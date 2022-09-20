@@ -1,7 +1,7 @@
 #ifndef LABS_MEDIATOR_H
 #define LABS_MEDIATOR_H
 
-#include "CommanderReader.h"
+#include "CommandReader.h"
 #include "Controller.h"
 
 class Mediator {
