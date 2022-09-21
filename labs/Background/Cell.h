@@ -15,11 +15,13 @@ public:
         BARRIER,
         PLAYER
     };
-    explicit Cell();
-    OBJECT get_obj() const;
-    void update(Player& player);
-    void set_event(Event* event);
+    Cell();
+
     void set_obj(OBJECT obj);
+    OBJECT get_obj() const;
+
+    void set_event(Event* event);
+    void update(Player& player);
 private:
     OBJECT obj;
     Event* event;

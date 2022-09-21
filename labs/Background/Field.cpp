@@ -28,11 +28,11 @@ Field& Field::operator=(const Field &other) {
     return *this;
 }
 
-Field::Field(Field&& other) noexcept {
+Field::Field(Field&& other) {
     this->swap(other);
 }
 
-Field& Field::operator=(Field&& other) noexcept {
+Field& Field::operator=(Field&& other) {
     if (this != &other)
         this->swap(other);
     return *this;

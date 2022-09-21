@@ -69,6 +69,6 @@ char CommandReader::get_char() const {
 void CommandReader::check(int &arg) {
     if (arg <= 0) {
         std::cout << "Вы ввели величину некорректно. Будет присвоено стандартное значение.\n";
-        arg = 1;
+        arg = 10;
     }
 }

@@ -13,11 +13,10 @@
 class Field {
 public:
     explicit Field(int width = 10, int height = 10);
-    ~Field() = default;
     Field(const Field &other);
     Field& operator=(const Field &other);
-    Field(Field&& other) noexcept;
-    Field& operator=(Field&& other) noexcept;
+    Field(Field&& other);
+    Field& operator=(Field&& other);
 
     void make_field();
     void change_player_pos(Player::STEP s);

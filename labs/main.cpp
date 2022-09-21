@@ -1,4 +1,3 @@
-#include "Control/Controller.h"
 #include "Control/Mediator.h"
 
 

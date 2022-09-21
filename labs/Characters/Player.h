@@ -21,7 +21,7 @@ public:
 
     void set_health(int health);
     void set_damage(int damage);
-    void add_xp(int xp);
+    void set_xp(int xp);
 private:
     int health;
     int damage;

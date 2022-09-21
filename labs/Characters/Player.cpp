@@ -23,7 +23,7 @@ void Player::set_damage(int damage) {
     this->damage = damage;
 }
 
-void Player::add_xp(int xp) {
+void Player::set_xp(int xp) {
     this->xp += xp;
 }
 
