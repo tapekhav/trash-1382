@@ -1,0 +1,1 @@
+g++ main.cpp Cell.cpp CellView.cpp CommandReader.cpp Controller.cpp Event.cpp Field.cpp FieldView.cpp && ./a.out
