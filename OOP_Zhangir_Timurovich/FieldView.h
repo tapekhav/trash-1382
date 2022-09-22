@@ -8,13 +8,12 @@
 class FieldView {
 public:
     explicit FieldView(Field *other);
-
     FieldView() = default;
+
 
     void show_field();
 
 
-
 private:
-    Field* field_obj;
+    Field *field_obj;
 };

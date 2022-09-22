@@ -17,7 +17,7 @@ public:
 
     void create_field();
 
-    ~Controller() = default;
+    ~Controller();
 
 
 private:
