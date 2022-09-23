@@ -1,15 +1,11 @@
 #include "Mediator.h"
 
-/*
-class Event;
-class Controller;
-class Mediator;
-class CommanReader;
-class ConcreteEvents;
-*/
-
 int main() {
-    Mediator mediator();
+    Controller controller;
+    CommandReader commandReader;
+
+    Mediator mediator(controller, commandReader);
+    mediator.start();
 
     return 0;
 };

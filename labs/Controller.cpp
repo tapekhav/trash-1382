@@ -1,21 +1,28 @@
 #include "Controller.h"
 
-void Controller::createField(unsigned int width, unsigned int height, unsigned playerPositionX, unsigned int playerPositionY) {
-    this->field = Field(width, height, playerPositionX, playerPositionY);
+void Controller::createField(unsigned int width, unsigned int height) {
+    this->field = Field(width, height);
 }
 
-void Controller::setPlayerPosition(unsigned int playerPositionX, unsigned int playerPositionY) {
-    this->field.setPlayerPosition(playerPositionX, playerPositionY);
+void Controller::movePlayerPosition(char c) {
+    Player::STEP s;
+    switch (c) {
+        case 'w':
+            s = Player::UP;
+            break;
+        case 's':
+            s = Player::DOWN;
+            break;
+        case 'a':
+            s = Player::LEFT;
+            break;
+        case 'd':
+            s = Player::RIGHT;
+            break;
+    }
+    this->field.movePlayer(s);
 }
 
-unsigned int Controller::getPlayerPositionX() const {
-    return this->field.getPlayerPositionX();
-}
-
-unsigned int Controller::getPlayerPositionY() const {
-    return this->field.getPlayerPositionY();
-}
-
-void Controller::printFieldView() const {
+void Controller::printFieldView() const{
     this->fieldView.print(this->field);
 }

@@ -1,4 +1,7 @@
+#include <random>
 #include "Field.h"
+#include "TrapEvent.h"
+
 
 Field::Field(unsigned int width,
              unsigned int height,
@@ -6,28 +9,54 @@ Field::Field(unsigned int width,
              unsigned int playerPositionY):
         height(height),
         width(width),
-        playerPositionX(playerPositionX),
-        playerPositionY(playerPositionY){
+        playerPosition({playerPositionX, playerPositionY}){
 
     setField();
 };
 
+
+Field::Field(const Field& fieldObj):
+    height(fieldObj.height),
+    width(fieldObj.width),
+    playerPosition(fieldObj.playerPosition),
+    field(fieldObj.field){};
+
+void Field::swap(Field &fieldObj){
+    std::swap(height, fieldObj.height);
+    std::swap(width, fieldObj.width);
+    std::swap(field, fieldObj.field);
+    std::swap(playerPosition, fieldObj.playerPosition);
+}
+
+Field& Field::operator=(const Field& fieldObj){
+    if(this != &fieldObj){
+        Field(fieldObj).swap(*this);
+    }
+    return *this;
+}
+
+Field::Field(Field&& fieldObj){
+    this->swap(fieldObj);
+};
+
+Field& Field::operator=(Field&& filedObj) {
+    if (this != &filedObj)
+        this->swap(filedObj);
+    return *this;
+}
+
+
 void Field::setField(){
-    field.resize(this->height);
-    for(int h = 0; h < this->height; ++h){
-        field.at(h).resize(this->width);
-        for(int w = 0; w < this->width; ++w){
-            if (h == 3 && w == 2){
-                this->playerPositionX = 2;
-                this->playerPositionY = 3;
-                field.at(h).at(w) = Cell(true, true);
-                continue;
-            }
-            if (h + w == 10){
+    field.resize(height);
+    for(int h = 0; h < height; ++h){
+        field.at(h).resize(width);
+        for(int w = 0; w < width; ++w){
+            if (10 <= h + w and h + w <= 11){
                 field.at(h).at(w) = Cell(false, false);
             }else {
                 field.at(h).at(w) = Cell(true, false);
             }
+            if (h == playerPosition.second and w == playerPosition.first) field.at(h).at(w).setStepped();
         }
     }
 };
@@ -40,22 +69,41 @@ unsigned int Field::getHeight() const{
     return this->height;
 };
 
-Cell Field::getCell(int h, int w) const{
-    return this->field.at(h).at(w);
-}
+const Cell& Field::getCell(unsigned int h, unsigned int w) const{
+    return field.at(h).at(w).getCell();
+};
 
-void Field::setPlayerPosition(unsigned int playerPositionX, unsigned int playerPositionY) {
-    //TODO проверить можно ил пройти и проверить на перенос в другое метос
-    this->field.at(playerPositionY).at(playerPositionX).setUnstepped();
-    this->playerPositionX = playerPositionX;
-    this->playerPositionY = playerPositionY;
-    this->field.at(this->playerPositionY).at(this->playerPositionX).setStepped();
-}
+void Field::movePlayer(Player::STEP step) {
 
-unsigned int Field::getPlayerPositionX() const {
-    return this->playerPositionX;
-}
+    auto newPosition = playerPosition;
+    switch (step) {
+        case Player::UP:
+            ++newPosition.second;
+            break;
+        case Player::DOWN:
+            --newPosition.second;
+            break;
+        case Player::LEFT:
+            --newPosition.first;
+            break;
+        case Player::RIGHT:
+            ++newPosition.first;
+            break;
+        default:
+            break;
+    }
 
-unsigned int Field::getPlayerPositionY() const {
-    return this->playerPositionY;
+    newPosition.first%=int(width);
+    if(newPosition.first < 0) newPosition.first += int(width);
+
+    newPosition.second%=int(height);
+    if(newPosition.second < 0) newPosition.second += int(height);
+
+
+
+    if (field.at(newPosition.second).at(newPosition.first).isPassable()){
+        field.at(playerPosition.second).at(playerPosition.first).setUnstepped();
+        field.at(newPosition.second).at(newPosition.first).setStepped();
+        playerPosition = newPosition;
+    }
 };

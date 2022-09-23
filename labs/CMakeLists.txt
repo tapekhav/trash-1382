@@ -3,4 +3,4 @@ project(Game)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Game main.cpp FieldView.cpp FieldView.h Field.cpp Field.h Cell.cpp Cell.h CellView.cpp CellView.cpp CellView.h Player.cpp Player.h ComandReader.cpp ComandReader.h MediatorObject.cpp MediatorObject.h Mediator.cpp Mediator.h Controller.cpp Controller.h)
+add_executable(Game main.cpp FieldView.cpp FieldView.h Field.cpp Field.h Cell.cpp Cell.h CellView.cpp CellView.cpp CellView.h Player.cpp Player.h CommandReader.cpp CommandReader.h MediatorObject.cpp MediatorObject.h Mediator.cpp Mediator.h Controller.cpp Controller.h Event.cpp Event.h)

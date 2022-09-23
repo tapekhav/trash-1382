@@ -1,0 +1,3 @@
+/home/ajems/Desktop/LETI/3rd_sem/OOP/Game/cmake-build-debug/CMakeFiles/Game.dir
+/home/ajems/Desktop/LETI/3rd_sem/OOP/Game/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ajems/Desktop/LETI/3rd_sem/OOP/Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir

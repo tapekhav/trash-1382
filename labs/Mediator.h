@@ -3,18 +3,19 @@
 
 
 #include "MediatorObject.h"
-#include "ComandReader.h"
+#include "CommandReader.h"
 #include "Controller.h"
 
 class Mediator {
 public:
-    Mediator();
+    Mediator(Controller&, CommandReader&);
+    void start();
 private:
-    ComandReader comandReader;
+    Player::STEP step;
+    CommandReader commandReader;
     Controller controller;
-    void notify(MediatorObject& mediatorObject);
-    void update();
-    void getFieldView() const;
+    void notify(MediatorObject&);
+    bool update(char&);
 };
 
 

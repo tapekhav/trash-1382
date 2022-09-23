@@ -1,36 +1,32 @@
 #include "Mediator.h"
-#include "ComandReader.h"
+#include "CommandReader.h"
 #include "Controller.h"
-#include <typeinfo>
 
-void Mediator::notify(MediatorObject &mediatorObject) {
-    if(typeid(mediatorObject) == typeid(this->comandReader)){
-
-    } else if (typeid(mediatorObject) == typeid(this->controller)){
-
-    }
-};
-
-Mediator::Mediator() {
-    this->comandReader = ComandReader();
+Mediator::Mediator(Controller& controller, CommandReader& commandReader) {
+    this->commandReader = CommandReader();
     this->controller = Controller();
-    this->controller.createField(this->comandReader.getFieldWidth(),
-                                 this->comandReader.getFieldHeight(),
-                                 this->comandReader.getPlayerPositionX(),
-                                 this->comandReader.getPlayerPositionY());
-    while(1){
-        update();
-    }
 }
 
+void Mediator::notify(MediatorObject &mediatorObject) {
+    if(typeid(mediatorObject) == typeid(this->commandReader)){}
+    else if (typeid(mediatorObject) == typeid(this->controller)){};
+};
 
-//вызывается внутри ComandReader с передачей экземпляра
-//Mediator передает данные контроллеру вызовом соответсвующего метода
+void Mediator::start() {
+    controller.createField(
+            commandReader.getFieldWidth(),
+            commandReader.getFieldHeight());
 
-void Mediator::update(){
-    this->comandReader.readInput();
-    this->comandReader.getWay();
-    //TODO проверить куда пошел player
-    this->controller.setPlayerPosition(this->controller.getPlayerPositionX()+1, this->controller.getPlayerPositionY());
-    this->controller.printFieldView();
+    controller.printFieldView();
+
+    char input = ' ';
+    while (update(input));
+}
+
+bool Mediator::update(char& input){
+    commandReader.getPlayerMove(input);
+    if (input == 'e') return false;
+    controller.movePlayerPosition(input);
+    controller.printFieldView();
+    return true;
 }

@@ -9,18 +9,14 @@
 
 class Controller: public MediatorObject{
 public:
-    Controller();
-    void createField(unsigned int height, unsigned int width, unsigned playerPositionX, unsigned int playerPositionY);
-    void setPlayerPosition(unsigned int playerPositionX, unsigned int playerPositionY);
-    unsigned int getPlayerPositionX() const;
-    unsigned int getPlayerPositionY() const;
+    Controller() = default;
+    void createField(unsigned int height, unsigned int width);
+    void movePlayerPosition(char c);
     void printFieldView() const;
 private:
     Field field;
     FieldView fieldView;
     Player player;
-
-
 };
 
 

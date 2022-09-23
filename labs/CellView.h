@@ -9,7 +9,7 @@ private:
     enum Color{PASSABLE, NOTPASSABLE, STEPPED};
     Color cellType;
 public:
-    CellView(const Cell &cell);
+    CellView(const Cell& cell);
     char getCellView() const;
 };
 
