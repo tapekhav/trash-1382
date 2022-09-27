@@ -3,34 +3,34 @@
 CellView::CellView(Cell c) {
     switch (c.get_obj()) {
         case Cell::coin:
-            cell = '$';
+            view = '$';
             break;
         case Cell::enemy:
-            cell = 'e';
+            view = 'e';
             break;
         case Cell::wall_vert:
-            cell = '|';
+            view = '|';
             break;
         case Cell::wall_hor:
-            cell = '-';
+            view = '-';
             break;
         case Cell::heal:
-            cell = '@';
+            view = '@';
             break;
         case Cell::empty:
-            cell = ' ';
+            view = ' ';
             break;
         case Cell::player:
-            cell = 'p';
+            view = 'p';
             break;
         case Cell::fix:
-            cell = '+';
+            view = '+';
             break;
     }
 
 }
 
 
-char CellView::get_cell() {
-    return this->cell;
+char CellView::get_view() {
+    return this->view;
 }

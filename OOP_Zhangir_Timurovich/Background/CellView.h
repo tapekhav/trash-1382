@@ -5,8 +5,8 @@
 class CellView {
 public:
     explicit CellView(Cell c);
-    char get_cell();
+    char get_view();
 private:
-    char cell;
+    char view;
 };
 

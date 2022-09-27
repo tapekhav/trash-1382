@@ -5,17 +5,14 @@
 
 class Mediator {
 public:
-    Mediator();
+    Mediator(Controller& controller, CommandReader& reader);
 
     ~Mediator() = default;
 
-    void start();
-
-    void show_game();
+    void start_game();
 
 private:
     Controller controller;
     CommandReader reader;
-    bool active;
 };
 

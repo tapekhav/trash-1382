@@ -12,25 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Cell.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cell.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CellView.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CellView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandReader.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CommandReader.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Event.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Field.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Field.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FieldView.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FieldView.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mediator.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mediator.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Player.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compile command.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Cell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/CellView.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/CellView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/FieldView.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/FieldView.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Mediator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Mediator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,12 +59,12 @@
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="OOP_Zhangir_Timurovich" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_Zhangir_Timurovich" TARGET_NAME="OOP_Zhangir_Timurovich" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_Zhangir_Timurovich" RUN_TARGET_NAME="OOP_Zhangir_Timurovich">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OOP_Zhangir_Timurovich" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_Zhangir_Timurovich" TARGET_NAME="OOP_Zhangir_Timurovich" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_Zhangir_Timurovich" RUN_TARGET_NAME="OOP_Zhangir_Timurovich">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -89,6 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1664279885532</updated>
       <workItem from="1664279886970" duration="1258000" />
+      <workItem from="1664289842141" duration="1017000" />
     </task>
     <servers />
   </component>

@@ -25,12 +25,10 @@ public:
     [[nodiscard]] bool check_player() const;
 
     void set_event(Event *new_event);
-
-    Cell(const Cell& other) = default;
-    Cell& operator=(const Cell& other);
     Cell(Cell&& other) noexcept ;
     Cell& operator=(Cell&& other) noexcept ;
-
+    Cell(const Cell& other);
+    Cell& operator=(const Cell& other);
     ~Cell() = default;
 
 private:

@@ -4,8 +4,10 @@
 #include "Control/Mediator.h"
 
 int main() {
-    Mediator med;
-    med.start();
-    med.show_game();
+    CommandReader reader;
+    reader.set_size();
+    Controller controller(reader.get_width(), reader.get_height());
+    Mediator mediator(controller, reader);
+    mediator.start_game();
 }
 

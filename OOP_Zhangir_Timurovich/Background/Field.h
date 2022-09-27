@@ -28,6 +28,7 @@ public:
     [[nodiscard]] int get_player_x() const;
 
     [[nodiscard]] int get_player_y() const;
+    Cell get_cell(int x, int y) const;
 
 private:
     int width{};

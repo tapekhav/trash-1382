@@ -62,7 +62,7 @@ Field::Field(const Field &other) {
 }
 
 
-std::vector<int> Field::get_size() const {
+std::vector<int> Field::get_size() const{
     std::vector<int> sizes = {this->width, this->height};
     return sizes;
 }
@@ -138,6 +138,10 @@ int Field::get_new_y(int y) const {
 void Field::update_player(int prev_x, int prev_y) {
     this->field[prev_y][prev_x].set_obj(Cell::empty);
     this->field[this->player_y][this->player_x].set_obj(Cell::player);
+}
+
+Cell Field::get_cell(int x, int y) const{
+    return this->field.at(y).at(x);
 }
 
 
