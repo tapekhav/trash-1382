@@ -1,5 +1,4 @@
 #include "Cell.h"
-#include "Player.h"
 
 Cell::Cell(Cell::TYPE type) {
     this->obj = type;

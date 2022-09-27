@@ -1,7 +1,7 @@
-#include "Field.h"
-#include "FieldView.h"
-#include "Controller.h"
-#include "Mediator.h"
+#include "Background/Field.h"
+#include "Background/FieldView.h"
+#include "Control/Controller.h"
+#include "Control/Mediator.h"
 
 int main() {
     Mediator med;

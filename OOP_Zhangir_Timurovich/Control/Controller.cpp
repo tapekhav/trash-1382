@@ -7,9 +7,6 @@ damage) {
     this->field = new Field(width, height);
     this->view = FieldView(this->field);
 }
-Controller::~Controller(){
-    delete [] field;
-};
 
 void Controller::show_field() {
     this->view.show_field();

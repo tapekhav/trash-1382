@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Player.h"
-#include "Field.h"
-#include "FieldView.h"
+#include "../Characters/Player.h"
+#include "../Background/Field.h"
+#include "../Background/FieldView.h"
 #include "CommandReader.h"
 
 
@@ -17,7 +17,7 @@ public:
 
     void create_field();
 
-    ~Controller();
+    ~Controller() = default;
 
 
 private:

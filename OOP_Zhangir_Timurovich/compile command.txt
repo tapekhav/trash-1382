@@ -1,1 +1,2 @@
-g++ main.cpp Cell.cpp CellView.cpp CommandReader.cpp Controller.cpp Event.cpp Field.cpp FieldView.cpp && ./a.out
+g++ main.cpp Background/Cell.cpp Background/CellView.cpp Control/CommandReader.cpp Control/Controller.cpp Events/Event.cpp Background/Field.cpp Background/FieldV
+iew.cpp Control/Mediator.cpp Characters/Player.cpp

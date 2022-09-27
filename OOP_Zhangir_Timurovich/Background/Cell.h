@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Player.h"
-#include "Event.h"
+#include "../Characters/Player.h"
+#include "../Events/Event.h"
 
 class Cell {
 public:

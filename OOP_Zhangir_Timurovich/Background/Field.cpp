@@ -141,10 +141,6 @@ void Field::update_player(int prev_x, int prev_y) {
 }
 
 
-//void Field::update_player() {
-//    this->field[player_y][player_x] =
-//}
-
 
 
 
