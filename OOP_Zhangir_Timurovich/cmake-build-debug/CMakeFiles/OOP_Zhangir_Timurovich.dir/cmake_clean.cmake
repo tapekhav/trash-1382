@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o"
+  "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o"

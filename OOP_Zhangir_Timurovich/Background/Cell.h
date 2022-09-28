@@ -2,25 +2,16 @@
 
 #include "../Characters/Player.h"
 #include "../Events/Event.h"
+#include "../CellTypes/CellType.h"
 
 class Cell {
 public:
-    enum TYPE {
-        coin,
-        enemy,
-        wall_vert,
-        wall_hor,
-        heal,
-        empty,
-        player,
-        fix
-    };
 
-    explicit Cell(TYPE type = empty);
+    explicit Cell();
 
-    TYPE get_obj();
+    CellType* get_type();
 
-    void set_obj(TYPE obj);
+    void set_type(CellType* cell_type);
 
     [[nodiscard]] bool check_player() const;
 
@@ -32,9 +23,9 @@ public:
     ~Cell() = default;
 
 private:
-    TYPE obj;
     bool player_loc{};
     Event *event{};
+    CellType* type{};
 
     void set_player();
     void swap(Cell &other);

@@ -1,16 +1,17 @@
 #include "Cell.h"
 
-Cell::Cell(Cell::TYPE type) {
-    this->obj = type;
+Cell::Cell() {
+//    this->type = type;
+    this->event = nullptr;
     set_player();
 };
 
-Cell::TYPE Cell::get_obj() {
-    return this->obj;
+CellType* Cell::get_type() {
+    return this->type;
 };
 
-void Cell::set_obj(Cell::TYPE type) {
-    this->obj = type;
+void Cell::set_type(CellType* cell_type) {
+    this->type = cell_type;
     set_player();
 }
 
@@ -19,7 +20,7 @@ bool Cell::check_player() const {
 }
 
 void Cell::set_player() {
-    if (this->obj == Cell::player)
+    if (dynamic_cast<PlayerType*>(this->type))
         this->player_loc = true;
     else
         this->player_loc = false;
@@ -42,11 +43,13 @@ Cell::Cell(Cell &&other)  noexcept {
 Cell::Cell(const Cell& other){
     this->player_loc = other.player_loc;
     this->event = other.event;
-    this->obj = other.obj;
+    this->type = other.type;
 }
 
 void Cell::swap(Cell &other) {
-    std::swap(obj, other.obj);
+    std::swap(type, other.type);
+    std::swap(event, other.event);
+    std::swap(player_loc, other.player_loc);
 }
 
 Cell &Cell::operator=(const Cell& other)= default;

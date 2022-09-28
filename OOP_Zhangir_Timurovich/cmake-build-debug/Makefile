@@ -150,6 +150,33 @@ Background/Cell.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.s
 .PHONY : Background/Cell.cpp.s
 
+Background/CellType.o: Background/CellType.cpp.o
+
+.PHONY : Background/CellType.o
+
+# target to build an object file
+Background/CellType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o
+.PHONY : Background/CellType.cpp.o
+
+Background/CellType.i: Background/CellType.cpp.i
+
+.PHONY : Background/CellType.i
+
+# target to preprocess a source file
+Background/CellType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.i
+.PHONY : Background/CellType.cpp.i
+
+Background/CellType.s: Background/CellType.cpp.s
+
+.PHONY : Background/CellType.s
+
+# target to generate assembly for a file
+Background/CellType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.s
+.PHONY : Background/CellType.cpp.s
+
 Background/CellView.o: Background/CellView.cpp.o
 
 .PHONY : Background/CellView.o
@@ -405,6 +432,9 @@ help:
 	@echo "... Background/Cell.o"
 	@echo "... Background/Cell.i"
 	@echo "... Background/Cell.s"
+	@echo "... Background/CellType.o"
+	@echo "... Background/CellType.i"
+	@echo "... Background/CellType.s"
 	@echo "... Background/CellView.o"
 	@echo "... Background/CellView.i"
 	@echo "... Background/CellView.s"

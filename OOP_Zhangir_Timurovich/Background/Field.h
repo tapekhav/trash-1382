@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Cell.h"
+#include "../CellTypes/CellType.h"
 
 
 class Field {
@@ -16,8 +17,6 @@ public:
     void create_field();
 
     [[nodiscard]] std::vector<int> get_size() const;
-
-    [[nodiscard]] std::vector<std::vector<Cell>> get_field();
 
     Field &operator=(const Field &other);
 

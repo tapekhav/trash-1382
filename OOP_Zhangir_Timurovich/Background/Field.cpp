@@ -9,42 +9,60 @@ Field::Field(int width, int height) {
     this->height = height;
     this->player_x = 1;
     this->player_y = 1;
+    this->field = std::vector<std::vector<Cell>>(this->height, std::vector<Cell>(this->width));
 }
 
 void Field::create_field() {
-    std::vector<std::vector<Cell>> map(this->height, std::vector<Cell>(this->width));
+    CellType* cl;
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
-            if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1))
-                map[y][x] = Cell(Cell::wall_vert);
-            else if (y == 0 || y == (this->height - 1))
-                map[y][x] = Cell(Cell::wall_hor);
+            if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1)){
+                cl = new WallVertType;
+                this->field.at(y).at(x) = Cell();
+                this->field.at(y).at(x).set_type(cl);
+            }
+            else if (y == 0 || y == (this->height - 1)){
+                cl = new WallHorType;
+                this->field.at(y).at(x) = Cell();
+                this->field.at(y).at(x).set_type(cl);
+            }
             else {
                 std::random_device dev;
                 std::mt19937 rng(dev());
                 std::uniform_int_distribution<std::mt19937::result_type> dist(1, 100);
                 switch (dist(rng)) {
                     case 1:
-                        map[y][x] = Cell(Cell::enemy);
+                        cl = new EnemyType;
+                        this->field.at(y).at(x) = Cell();
+                        this->field.at(y).at(x).set_type(cl);
                         break;
                     case 2:
-                        map[y][x] = Cell(Cell::coin);
+                        cl = new CoinType;
+                        this->field.at(y).at(x) = Cell();
+                        this->field.at(y).at(x).set_type(cl);
                         break;
                     case 3:
-                        map[y][x] = Cell(Cell::heal);
+                        cl = new HealType;
+                        this->field.at(y).at(x) = Cell();
+                        this->field.at(y).at(x).set_type(cl);
                         break;
                     case 4:
-                        map[y][x] = Cell(Cell::fix);
+                        cl = new FixType;
+                        this->field.at(y).at(x) = Cell();
+                        this->field.at(y).at(x).set_type(cl);
                         break;
                     default:
-                        map[y][x] = Cell(Cell::empty);
+                        cl = new EmptyType;
+                        this->field.at(y).at(x) = Cell();
+                        this->field.at(y).at(x).set_type(cl);
                         break;
                 }
             }
         }
     }
-    map[this->player_y][this->player_x] = Cell(Cell::player);
-    this->field = map;
+    cl = new PlayerType;
+    this->field.at(this->player_y).at(this->player_x) = Cell();
+    this->field.at(this->player_y).at(this->player_x).set_type(cl);
 }
 
 Field::Field(const Field &other) {
@@ -65,10 +83,6 @@ Field::Field(const Field &other) {
 std::vector<int> Field::get_size() const{
     std::vector<int> sizes = {this->width, this->height};
     return sizes;
-}
-
-std::vector<std::vector<Cell>> Field::get_field() {
-    return this->field;
 }
 
 Field::Field(Field &&other) noexcept {
@@ -100,7 +114,7 @@ bool Field::move_player(int x, int y) {
     int new_y = get_new_y(y);
     int prev_x = this->player_x;
     int prev_y = this->player_y;
-    if (this->field[new_y][new_x].get_obj() == Cell::empty) {
+    if (dynamic_cast<EmptyType*>(this->field[new_y][new_x].get_type())) {
         this->player_x = new_x;
         this->player_y = new_y;
         update_player(prev_x, prev_y);
@@ -136,8 +150,10 @@ int Field::get_new_y(int y) const {
 }
 
 void Field::update_player(int prev_x, int prev_y) {
-    this->field[prev_y][prev_x].set_obj(Cell::empty);
-    this->field[this->player_y][this->player_x].set_obj(Cell::player);
+    CellType* cl = new EmptyType;
+    this->field[prev_y][prev_x].set_type(cl);
+    cl = new PlayerType;
+    this->field[this->player_y][this->player_x].set_type(cl);
 }
 
 Cell Field::get_cell(int x, int y) const{

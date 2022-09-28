@@ -21,7 +21,5 @@ private:
     int armour;
     int coins;
     int damage;
-
-    void set_armour(int arg);
 };
 

@@ -1,36 +1,27 @@
 #include "CellView.h"
 
 CellView::CellView(Cell c) {
-    switch (c.get_obj()) {
-        case Cell::coin:
-            view = '$';
-            break;
-        case Cell::enemy:
-            view = 'e';
-            break;
-        case Cell::wall_vert:
-            view = '|';
-            break;
-        case Cell::wall_hor:
-            view = '-';
-            break;
-        case Cell::heal:
-            view = '@';
-            break;
-        case Cell::empty:
-            view = ' ';
-            break;
-        case Cell::player:
-            view = 'p';
-            break;
-        case Cell::fix:
-            view = '+';
-            break;
+    CellType *type = c.get_type();
+    if (dynamic_cast<CoinType *>(type)) {
+        view = '$';
+    } else if (dynamic_cast<EnemyType *>(type)) {
+        view = 'e';
+    } else if (dynamic_cast<WallVertType *>(type)) {
+        view = '|';
+    } else if (dynamic_cast<WallHorType *>(type)) {
+        view = '-';
+    } else if (dynamic_cast<HealType *>(type)) {
+        view = '@';
+    } else if (dynamic_cast<EmptyType *>(type)) {
+        view = ' ';
+    } else if (dynamic_cast<PlayerType *>(type)) {
+        view = 'p';
+    } else if (dynamic_cast<FixType *>(type)) {
+        view = '+';
     }
-
 }
 
 
-char CellView::get_view() {
+char CellView::get_view() const {
     return this->view;
 }
