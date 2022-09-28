@@ -13,23 +13,28 @@ void CommandReader::read_size() {
 
 void CommandReader::read_step() {
     char c;
+    const char key_left = 'a';
+    const char key_right = 'd';
+    const char key_up = 'w';
+    const char key_down = 's';
+    const char key_exit = 'e';
 
-    std::cout << "Введите направление перемещения игрока(u, d, l, r): ";
+    std::cout << "Введите направление перемещения игрока(w, a, s, d). Для выхода напишите e: ";
     std::cin >> c;
     switch(c) {
-        case 'u':
+        case key_up:
             step = Player::UP;
             break;
-        case 'd':
+        case key_down:
             step = Player::DOWN;
             break;
-        case 'l':
+        case key_left:
             step = Player::LEFT;
             break;
-        case 'r':
+        case key_right:
             step = Player::RIGHT;
             break;
-        case 'e':
+        case key_exit:
             step = Player::EXIT;
             std::cout << "\033[1;31m  _____          __  __ ______    ______      ________ _____  \n"
                          " / ____|   /\\   |  \\/  |  ____|  / __ \\ \\    / /  ____|  __ \\ \n"

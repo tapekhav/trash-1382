@@ -1,9 +1,9 @@
 #include "Cell.h"
 
-Cell::Cell() : obj(STANDARD) {}
+Cell::Cell() : player_in(false), passability(true), event(nullptr) {}
 
-Cell::OBJECT Cell::get_obj() const {
-    return obj;
+bool Cell::get_player_in() const {
+    return player_in;
 }
 
 void Cell::update(Player& player) {
@@ -11,9 +11,23 @@ void Cell::update(Player& player) {
 }
 
 void Cell::set_event(Event* event) {
+    if(this->event != nullptr)
+        this->event->~Event();
     this->event = event;
 }
 
-void Cell::set_obj(Cell::OBJECT obj) {
-    this->obj = obj;
+void Cell::set_player_in(bool player_status) {
+    player_in = player_status;
+}
+
+void Cell::set_passability(bool pass) {
+    passability = pass;
+}
+
+bool Cell::get_passability() const {
+    return passability;
+}
+
+Event *Cell::get_event() const {
+    return event;
 }

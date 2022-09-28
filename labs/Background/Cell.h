@@ -2,28 +2,27 @@
 #define LABS_CELL_H
 
 #include <iostream>
-#include "../Events/Event.h"
 #include <algorithm>
+#include "../Events/Box.h"
+#include "../Events/Enemy.h"
+#include "../Events/Heal.h"
 
 class Cell {
 public:
-    enum OBJECT {
-        STANDARD,
-        ENEMY,
-        BOX,
-        HEAL,
-        BARRIER,
-        PLAYER
-    };
     Cell();
 
-    void set_obj(OBJECT obj);
-    OBJECT get_obj() const;
+    void set_player_in(bool player_status);
+    bool get_player_in() const;
+
+    bool get_passability() const;
+    void set_passability(bool pass);
 
     void set_event(Event* event);
     void update(Player& player);
+    Event* get_event() const;
 private:
-    OBJECT obj;
+    bool player_in;
+    bool passability;
     Event* event;
 };
 

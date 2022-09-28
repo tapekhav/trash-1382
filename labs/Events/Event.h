@@ -6,9 +6,8 @@
 
 class Event{
 public:
-    Event() = default;
     virtual void execute(Player& player) = 0;
-    virtual ~Event() = 0;
+    virtual ~Event() = default;
 };
 
 #endif //LABS_EVENT_H

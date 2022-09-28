@@ -1,29 +1,18 @@
 #include "CellView.h"
 
 CellView::CellView(const Cell& c) {
-    switch(c.get_obj())
-    {
-        case Cell::STANDARD:
-            cell = ' ';
-            break;
-        case Cell::BOX:
-            cell = 'b';
-            break;
-        case Cell::ENEMY:
-            cell = 'e';
-            break;
-        case Cell::HEAL:
-            cell = 'h';
-            break;
-        case Cell::BARRIER:
-            cell = '/';
-            break;
-        case Cell::PLAYER:
-            cell = 'p';
-            break;
-        default:
-            cell = '?';
-            break;
+    if (c.get_player_in())
+        cell = 'p';
+    else if (dynamic_cast<Box*>(c.get_event()) != nullptr)
+        cell = 'b';
+    else if (dynamic_cast<Heal*>(c.get_event()) != nullptr)
+        cell = 'h';
+    else if (dynamic_cast<Enemy*>(c.get_event()) != nullptr)
+        cell = 'e';
+    else if (!c.get_passability())
+        cell = '/';
+    else {
+        cell = ' ';
     }
 }
 

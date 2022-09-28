@@ -6,9 +6,6 @@
 
 class CommandReader {
 public:
-    CommandReader() = default;
-    ~CommandReader() = default;
-
     void read_step();
     void read_size();
     void read_char();

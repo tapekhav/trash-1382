@@ -6,7 +6,6 @@
 
 class Mediator {
 public:
-    Mediator() = default;
     void start();
 private:
     CommandReader input;

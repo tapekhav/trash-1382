@@ -9,6 +9,9 @@
 #include "Cell.h"
 #include "CellView.h"
 #include "../Characters/Player.h"
+#include "../Events/Heal.h"
+#include "../Events/Box.h"
+#include "../Events/Enemy.h"
 
 class Field {
 public:
@@ -25,9 +28,9 @@ public:
     int get_width()  const;
     std::vector<std::vector<Cell>> get_field() const;
 private:
-    bool check_cell(Cell cell) const;
     void swap(Field& other);
 
+    Player player;
     std::vector<std::vector<Cell>> field;
     int height;
     int width;
