@@ -4,13 +4,12 @@
 enum {
     THIRST = 20,
     HUNGER = 10,
-    HEALTH = 5,
-    STEP_SIZE = 1
+    HEALTH = 5
 };
 
 class Player {
 public:
-    Player() :mHealth(HEALTH), mThirst(THIRST), mHunger(HUNGER), mStepSize(STEP_SIZE) {};
+    Player() :mHealth(HEALTH), mThirst(THIRST), mHunger(HUNGER){};
     Player(const Player& obj);
     Player(Player&& obj);
 
@@ -19,12 +18,10 @@ public:
     int GetHealth() const { return mHealth; }
     int GetHunger() const { return mHunger; }
     int GetThirst() const { return mThirst; }
-    int GetStepSize() const { return mStepSize; }
 private:
     int mThirst;
     int mHunger;
     int mHealth;
-    int mStepSize;
 };
 
 #endif //SURVIVAL_PLAYER_H

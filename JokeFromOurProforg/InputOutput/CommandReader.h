@@ -9,6 +9,7 @@
 class CommandReader : public Handle {
 public:
     void Start();
+    void Help(bool type) const;
 
     void Read();
     void ReadWidthAndHeight();

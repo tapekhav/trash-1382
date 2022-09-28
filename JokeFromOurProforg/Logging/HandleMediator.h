@@ -20,7 +20,7 @@ public:
 	void CharMsg(char &cmd) override;
 	void PairMsg(std::pair<int, int>& couple) override;
 
-	void DoCmd() const;
+	bool DoCmd() const;
 private:
 	Commander* mCommander;
 	CommandReader* mCommandReader;

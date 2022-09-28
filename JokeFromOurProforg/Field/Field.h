@@ -2,20 +2,16 @@
 #define SURVIVAL_FIELD_H
 
 #include "Player/Player.h"
-#include "Event/Event.h"
+#include "Field/Cell.h"
 
 #include <vector>
 #include <cmath>
 
 enum {
-    STANDARD_SIZE = 15
+    STANDARD_SIZE = 15,
+    MAX_SIZE = 20
 };
 
-enum CellType {
-    EMPTY,
-    WALL,
-    EVENT
-};
 
 enum Direction {
     RIGHT,
@@ -44,29 +40,11 @@ public:
     int GetHeight() const { return mHeight; }
     int GetPlayerPositionX() const { return mPlayerPosition.xCoord; }
     int GetPlayerPositionY() const { return mPlayerPosition.yCoord; }
-    CellType GetCellType(int yCoord, int xCoord) const { return mField[yCoord][xCoord].GetType(); }
+    Cell GetCell(int idy, int idx) const;
     int GetPlayerHunger() const { return mPlayer.GetHunger(); }
     int GetPlayerHealth() const { return mPlayer.GetHealth(); }
     int GetPlayerThirsty() const { return mPlayer.GetThirst(); }
-    int GetPlayerStepSize() const { return mPlayer.GetStepSize(); }
 private:
-    class Cell {
-    public:
-        Cell() : mType(EMPTY) {};
-        Cell(const Cell& obj);
-
-        Cell& operator =(Cell const& other);
-
-        CellType GetType() const { return mType; }
-
-        void SetEvent(CellType typeEvent);
-
-        bool ActiveEvent();
-
-    private:
-        CellType mType;
-        Event* mEvent;
-    };
 
     std::vector<std::vector<Cell>> mField;
     int mWidth, mHeight;
