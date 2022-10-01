@@ -6,8 +6,6 @@
 class CellViewer {
 public:
 	char View(Cell cell) const;
-
-private:
 };
 
 #endif //SURVIVE_CELLVIEWER_H

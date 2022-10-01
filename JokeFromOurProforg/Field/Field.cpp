@@ -6,6 +6,7 @@ Field::Field(int width, int height) : mPlayerPosition(height / 2, width / 2), mW
         for (int yIdx = 0; yIdx < mHeight; yIdx++)
             mField[xIdx].push_back(Cell());
     }
+    mField[height / 2][width / 2 + 1].SetWall(true);
 }
 
 Field& Field::operator=(Field const& other) {
@@ -47,18 +48,18 @@ Field::Field(Field&& obj) : Field(obj.mWidth, obj.mHeight) {
     mPlayer = obj.mPlayer;
 }
 
-bool Field::MovePlayer(Direction dir) {
-    if (dir == RIGHT) {
+bool Field::MovePlayer(EnumClass::Direction dir) {
+    if (dir == EnumClass::RIGHT) {
         if (mField[mPlayerPosition.yCoord][(mPlayerPosition.xCoord + 1) % mHeight].IsWall())
             return false;
         mPlayerPosition.xCoord = (mPlayerPosition.xCoord + 1) % mHeight;
     }
-    else if (dir == UP) {
+    else if (dir == EnumClass::UP) {
         if (mField[(mPlayerPosition.yCoord + mWidth - 1) % mWidth][mPlayerPosition.xCoord].IsWall())
             return false;
         mPlayerPosition.yCoord = (mPlayerPosition.yCoord + mWidth - 1) % mWidth;
     }
-    else if (dir == LEFT) {
+    else if (dir == EnumClass::LEFT) {
         if (mField[mPlayerPosition.yCoord][(mPlayerPosition.xCoord + mHeight - 1) % mHeight].IsWall())
             return false;
         mPlayerPosition.xCoord = (mPlayerPosition.xCoord + mHeight - 1) % mHeight;

@@ -15,7 +15,7 @@ void CommandReader::IncorrectInput() {
 }
 
 void CommandReader::ReadWidthAndHeight() {
-    std::cout << "The size of the map must be in range from 1 to 20\n";
+    std::cout << "The size of the map must be in range from 2 to 20\n";
     std::cout << "Enter a size for the map." << std::endl << "Width: ";
     std::cin >> mSize.first;
     std::cout << "\nHeight: ";

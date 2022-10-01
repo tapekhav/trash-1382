@@ -1,15 +1,11 @@
 #ifndef SURVIVAL_PLAYER_H
 #define SURVIVAL_PLAYER_H
 
-enum {
-    THIRST = 20,
-    HUNGER = 10,
-    HEALTH = 5
-};
+#include "Enums.h"
 
 class Player {
 public:
-    Player() :mHealth(HEALTH), mThirst(THIRST), mHunger(HUNGER){};
+    Player() :mHealth(EnumClass::HEALTH), mThirst(EnumClass::THIRST), mHunger(EnumClass::HUNGER) {};
     Player(const Player& obj);
     Player(Player&& obj);
 

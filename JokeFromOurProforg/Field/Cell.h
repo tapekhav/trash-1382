@@ -11,6 +11,7 @@ public:
     Cell& operator =(Cell const& other);
 
     bool IsWall() const { return mWall; }
+    void SetWall(bool val) { mWall = val; }
 
     void ActiveEvent();
 

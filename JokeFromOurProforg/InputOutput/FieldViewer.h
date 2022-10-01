@@ -3,6 +3,8 @@
 
 #include "Field/Field.h"
 #include "InputOutput/CellView.h"
+#include "InputOutput/PlayerView.h"
+#include "Enums.h"
 
 #include <iostream>
 
@@ -12,17 +14,10 @@ public:
 
 private:
 
-    enum FieldObj {
-        BORDER_ABOVE_AND_BOTTOM,
-        BORDER_LEFT_AND_RIGHT,
-        BORDER_RIGHT_ABOVE_AND_LEFT_BOTTOM,
-        BORDER_RIGHT_BOTTOM_AND_LEFT_ABOVE,
-        PLAYER
-    };
-
-    char HandleObject(FieldObj type);
+    char HandleObject(EnumClass::FieldObj type);
 
     CellViewer mCellViewer;
+    PlayerViewer mPlayerViewer;
 };
 
 #endif //SURVIVAL_FIELDVIEWER_H

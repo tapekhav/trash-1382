@@ -8,8 +8,8 @@ void Commander::SetFieldSize(int width, int height) {
     mField = Field(width, height);
 }
 
-void Commander::PlayerGo(Direction dir) {
-    mGameProgress = mField.MovePlayer(dir);
+void Commander::PlayerGo(EnumClass::Direction dir) {
+    mField.MovePlayer(dir);
 }
 
 void Commander::ShowField() {

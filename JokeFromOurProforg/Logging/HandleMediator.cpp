@@ -1,39 +1,39 @@
 #include "Logging/HandleMediator.h"
 
 
-void HandleMediator::Notify(Action activity) {
+void HandleMediator::Notify(EnumClass::Action activity) {
 	switch (activity)
 	{
-	case FIELD_SIZE:
+	case EnumClass::FIELD_SIZE:
 		mCommandReader->Start();
 		while (mApproval != 'Y' && mApproval != 'N')
 			mCommandReader->IncorrectInput();
 		if (mApproval == 'Y') {
 			mCommandReader->ReadWidthAndHeight();
-			if (mSize.first < 1)
-				mSize.first = 1;
-			else if (mSize.first > MAX_SIZE)
-				mSize.first = MAX_SIZE;
-			if (mSize.second < 1)
-				mSize.second = 1;
-			else if (mSize.second > MAX_SIZE)
-				mSize.second = MAX_SIZE;
+			if (mSize.first < EnumClass::MIN_SIZE)
+				mSize.first = EnumClass::MIN_SIZE;
+			else if (mSize.first > EnumClass::MAX_SIZE)
+				mSize.first = EnumClass::MAX_SIZE;
+			if (mSize.second < EnumClass::MIN_SIZE)
+				mSize.second = EnumClass::MIN_SIZE;
+			else if (mSize.second > EnumClass::MAX_SIZE)
+				mSize.second = EnumClass::MAX_SIZE;
 			mCommander->SetFieldSize(mSize.first, mSize.second);
 		}
 		else {
 			mCommander->SetStandardSizeField();
 		}
 		break;
-	case GAME_PROGRESS:
+	case EnumClass::GAME_PROGRESS:
 		mGame->SetGameProgress(mCommander->GetGameProgress());
 		break;
-	case DO_CMD:
+	case EnumClass::DO_CMD:
 		while (!DoCmd()) {
 			mCommandReader->Help(false);
 			mCommandReader->IncorrectInput();
 		}
 		break;
-	case FINISH:
+	case EnumClass::FINISH:
 		mCommandReader->GoodBye();
 	}
 }
@@ -52,16 +52,16 @@ bool HandleMediator::DoCmd() const {
 	switch (mApproval)
 	{
 	case 'd':
-		mCommander->PlayerGo(RIGHT);
+		mCommander->PlayerGo(EnumClass::RIGHT);
 		break;
 	case 'w':
-		mCommander->PlayerGo(UP);
+		mCommander->PlayerGo(EnumClass::UP);
 		break;
 	case 'a':
-		mCommander->PlayerGo(LEFT);
+		mCommander->PlayerGo(EnumClass::LEFT);
 		break;
 	case 's':
-		mCommander->PlayerGo(DOWN);
+		mCommander->PlayerGo(EnumClass::DOWN);
 		break;
 	case 'q':
 		mCommander->SetGameProgress(false);

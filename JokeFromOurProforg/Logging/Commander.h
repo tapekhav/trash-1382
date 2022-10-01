@@ -4,6 +4,7 @@
 #include "Field/Field.h"
 #include "InputOutput/FieldViewer.h"
 #include "Logging/Handle.h"
+#include "Enums.h"
 
 class Commander : public Handle {
 public:
@@ -12,7 +13,7 @@ public:
     void SetStandardSizeField();
     void SetFieldSize(int width, int height);
 
-    void PlayerGo(Direction dir);
+    void PlayerGo(EnumClass::Direction dir);
 
     void ShowField();
 

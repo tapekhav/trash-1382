@@ -5,6 +5,7 @@
 #include "InputOutput/CommandReader.h"
 #include "Logging/Commander.h"
 #include "Logging/Game.h"
+#include "Enums.h"
 
 class HandleMediator : public Mediator {
 public:
@@ -16,7 +17,7 @@ public:
 
 	}
 
-	void Notify(Action activity) override;
+	void Notify(EnumClass::Action activity) override;
 	void CharMsg(char &cmd) override;
 	void PairMsg(std::pair<int, int>& couple) override;
 

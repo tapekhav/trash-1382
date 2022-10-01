@@ -1,18 +1,13 @@
 #ifndef SURVIVAL_MEDIATOR_H
 #define SURVIVAL_MEDIATOR_H
 
-#include <iostream>
+#include "Enums.h"
 
-enum Action {
-	FIELD_SIZE,
-	GAME_PROGRESS,
-	DO_CMD,
-	FINISH
-};
+#include <iostream>
 
 class Mediator {
 public:
-	virtual void Notify(Action activity) = 0;
+	virtual void Notify(EnumClass::Action activity) = 0;
 	virtual void CharMsg(char &cmd) = 0;
 	virtual void PairMsg(std::pair<int, int> &couple) = 0;
 };
