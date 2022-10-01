@@ -3,7 +3,7 @@
 
 
 TrapEventBanana::~TrapEventBanana(){
-    std::cout << "broke\n";
+    std::cout << "Banana broke\n";
 }
 
 void TrapEventBanana::callReaction() {

@@ -1,11 +1,10 @@
-#include "Cell.h"
 #include "CellView.h"
 
-
-char CellView::getCellView(const Cell& cell) const{
-    return view.at(cell.getType());
+CellView &CellView::operator=(const CellView &other) {
+    view = other.view;
+    return *this;
 }
 
-CellView &CellView::operator=(const CellView &) {
-    return *this;
+char CellView::getView(const Cell& cell) const {
+    return view.at(cell.getId());
 }

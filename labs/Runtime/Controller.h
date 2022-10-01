@@ -11,14 +11,13 @@
 class Controller: public MediatorObject{
 public:
     void createField(unsigned int height, unsigned int width);
-    void movePlayerPosition(char c);
-    void printFieldView() const;
-    Controller &operator=(const Controller&);
-    void start() final;
+    void notify(char&) final;
 private:
     Field field;
     FieldView fieldView;
     Player player;
+    void movePlayerPosition(char c);
+    void printFieldView() const;
 };
 
 

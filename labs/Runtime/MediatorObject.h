@@ -4,7 +4,7 @@
 
 class MediatorObject {
 public:
-    virtual void start() = 0;
+    virtual void notify(char&) = 0;
 };
 
 

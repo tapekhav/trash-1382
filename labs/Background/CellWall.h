@@ -5,11 +5,8 @@
 #include "Cell.h"
 
 class CellWall: public Cell{
-private:
-    bool passable;
 public:
     CellWall();
-    bool isPassable() const override;
 };
 
 

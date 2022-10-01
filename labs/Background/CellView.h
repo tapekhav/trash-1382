@@ -7,15 +7,16 @@
 
 class CellView{
 private:
-    const std::map<Cell::Type, char> view = {
-            {Cell::Grass, ' '},
-            {Cell::Player, '*'},
-            {Cell::Wall, '#'},
-            {Cell::Empty, '?'}
+    std::map<int, char> view = {
+            {0, ' '},
+            {1, '*'},
+            {2, '#'},
+            {-1, '?'}
     };
+
 public:
-    char getCellView(const Cell& cell) const;
     CellView &operator=(const CellView&);
+    char getView(const Cell&) const;
 };
 
 

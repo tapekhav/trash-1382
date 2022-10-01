@@ -2,8 +2,7 @@
 
 
 void Controller::createField(unsigned int width, unsigned int height) {
-    field = Field(width, height);
-    fieldView.initialize(&field);
+    field = Field(std::pair<unsigned int, unsigned int>({width, height}));
 }
 
 void Controller::movePlayerPosition(char c) {
@@ -29,17 +28,14 @@ void Controller::movePlayerPosition(char c) {
 }
 
 void Controller::printFieldView() const{
-    fieldView.printFieldView();
+    fieldView.printFieldView(&field);
 }
 
-Controller &Controller::operator=(const Controller &other) {
-    this->field = other.field;
-    this->player = other.player;
-    this->fieldView = other.fieldView;
-    return *this;
+
+
+void Controller::notify(char& command) {
+    movePlayerPosition(command);
+    printFieldView();
 }
 
-void Controller::start() {
-
-}
 

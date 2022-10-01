@@ -6,6 +6,7 @@
 
 class Event {
 public:
+    virtual ~Event() = default;
     virtual void callReaction() = 0;
 };
 

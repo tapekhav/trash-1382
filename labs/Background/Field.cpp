@@ -7,28 +7,22 @@
 #include "CellPlayer.h"
 
 
-Field::Field(unsigned int width,
-             unsigned int height,
-             unsigned int playerPositionX,
-             unsigned int playerPositionY):
-        height(height),
-        width(width),
-        playerPosition({playerPositionX, playerPositionY}){
+Field::Field(std::pair<unsigned int, unsigned int> fieldSize, std::pair<int, int> playerPosition):
+        fieldSize(fieldSize),
+        playerPosition(playerPosition){
 
     setField();
 };
 
 
 Field::Field(const Field& fieldObj):
-    height(fieldObj.height),
-    width(fieldObj.width),
+    fieldSize(fieldObj.fieldSize),
     playerPosition(fieldObj.playerPosition){
     field = fieldObj.field; //копирование вектора
 };
 
 void Field::swap(Field &fieldObj){
-    std::swap(height, fieldObj.height);
-    std::swap(width, fieldObj.width);
+    std::swap(fieldSize, fieldObj.fieldSize);
     std::swap(field, fieldObj.field);
     std::swap(playerPosition, fieldObj.playerPosition);
 }
@@ -52,41 +46,36 @@ Field& Field::operator=(Field&& filedObj) {
 
 
 void Field::setField(){
-
-    for(int h = 0; h < height; ++h){
+    for(int h = 0; h < fieldSize.second; ++h){
         field.emplace_back();
-        for(int w = 0; w < width; ++w){
+        for(int w = 0; w < fieldSize.first; ++w){
             if (10 <= h + w and h + w <= 11){
-                CellWall* cellwall = new CellWall();
-                field.at(h).push_back(cellwall);
+                auto* cellWall = new CellWall();
+                field.at(h).push_back(cellWall);
             }else {
-                CellGrass* cellGrass = new CellGrass();
+                auto* cellGrass = new CellGrass();
                 field.at(h).push_back(cellGrass);
             }
             if (h+w == 3){
                 auto* trapEvent = new TrapEventJoker();
                 field.at(h).at(w)->setEvent(trapEvent);
             }
-            if (h == height - 3){
+            if (h == fieldSize.second - 3){
                 auto* trapEvent = new TrapEventBanana();
                 field.at(h).at(w)->setEvent(trapEvent);
             }
-            CellPlayer* cellPlayer = new CellPlayer();
+            auto* cellPlayer = new CellPlayer();
             if (h == playerPosition.second and w == playerPosition.first) field.at(h).at(w) = cellPlayer;
         }
     }
 };
 
-unsigned int Field::getWidth() const{
-    return width;
-};
-
-unsigned int Field::getHeight() const{
-    return height;
+std::pair<unsigned int, unsigned int> Field::getFieldSize() const{
+    return fieldSize;
 };
 
 const Cell& Field::getCell(unsigned int height, unsigned int width) const{
-    return *field.at(height).at(width);
+    return field.at(height).at(width)->getCell();
 }
 
 void Field::movePlayer(Player::STEP step) {
@@ -109,24 +98,25 @@ void Field::movePlayer(Player::STEP step) {
             break;
     }
 
-    newPosition.first%=int(width);
-    if(newPosition.first < 0) newPosition.first += int(width);
+    newPosition.first%=int(fieldSize.first);
+    if(newPosition.first < 0) newPosition.first += int(fieldSize.first);
 
-    newPosition.second%=int(height);
-    if(newPosition.second < 0) newPosition.second += int(height);
+    newPosition.second%=int(fieldSize.second);
+    if(newPosition.second < 0) newPosition.second += int(fieldSize.second);
 
 
     if (field.at(newPosition.second).at(newPosition.first)->isPassable()){
         auto* cellGrass = new CellGrass();
-        auto* cellPlayer = new CellPlayer();
-
-        field.at(playerPosition.second).at(playerPosition.first)->~Cell();
-        field.at(playerPosition.second).at(playerPosition.first) = cellGrass;
 
         field.at(newPosition.second).at(newPosition.first)->callEvent();
-        field.at(newPosition.second).at(newPosition.first)->~Cell();
-        field.at(newPosition.second).at(newPosition.first) = cellPlayer;
+        field.at(newPosition.second).at(newPosition.first)->Cell::~Cell();
+        field.at(newPosition.second).at(newPosition.first) = field.at(playerPosition.second).at(playerPosition.first);
+
+        field.at(playerPosition.second).at(playerPosition.first)->Cell::~Cell();
+        field.at(playerPosition.second).at(playerPosition.first) = cellGrass;
 
         playerPosition = newPosition;
     }
 }
+
+

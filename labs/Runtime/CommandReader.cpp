@@ -23,11 +23,9 @@ unsigned int CommandReader::getFieldHeight() const{
     return CommandReader::checkUIData(inputData);
 }
 
-char CommandReader::getPlayerMove() const {
-    char input;
-    std::cin >> input;
-    return input;
-}
+void CommandReader::getPlayerMove(char& command) const {
+    std::cin >> command;
+};
 
 unsigned int CommandReader::checkUIData(const std::string& input) const{
     if (isNumber(input)){
@@ -37,7 +35,7 @@ unsigned int CommandReader::checkUIData(const std::string& input) const{
         std::cout << "Incorrect value!\nDefault value is used\n";
         return MINSIZE;
     }
-}
+};
 
 bool CommandReader::isNumber(const std::string &s) const{
     std::string::const_iterator it = s.begin();
@@ -45,6 +43,6 @@ bool CommandReader::isNumber(const std::string &s) const{
     return !s.empty() && it == s.end();
 }
 
-void CommandReader::start() {
-
+void CommandReader::notify(char& command) {
+    getPlayerMove(command);
 }

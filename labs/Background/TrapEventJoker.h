@@ -7,7 +7,7 @@
 class TrapEventJoker: public Event{
 public:
     TrapEventJoker() = default;
-    ~TrapEventJoker();
+    ~TrapEventJoker() override;
     void callReaction() override;
 };
 

@@ -1,20 +1,16 @@
-#include <iostream>
 #include "Mediator.h"
 #include "CommandReader.h"
 #include "Controller.h"
 
-Mediator::Mediator(Controller& controller, CommandReader& commandReader) {
-    this->controller = controller;
-    this->commandReader = commandReader;
-}
+Mediator::Mediator(Controller& controller, CommandReader& commandReader)
+    : controller(controller), commandReader(commandReader){};
 
 void Mediator::notify(MediatorObject &mediatorObject) {
     if(typeid(mediatorObject) == typeid(this->commandReader)){
-        command = commandReader.getPlayerMove();
+        commandReader.notify(command);
     }
     else if (typeid(mediatorObject) == typeid(this->controller)){
-        controller.movePlayerPosition(command);
-        controller.printFieldView();
+        controller.notify(command);
     };
 };
 
@@ -23,7 +19,7 @@ void Mediator::start() {
             commandReader.getFieldWidth(),
             commandReader.getFieldHeight());
 
-    controller.printFieldView();
+    notify(controller);
 
     while (update());
 }

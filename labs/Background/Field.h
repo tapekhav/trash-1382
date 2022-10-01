@@ -11,15 +11,12 @@
 
 class Field{
 private:
-    unsigned int height;
-    unsigned int width;
+    std::pair<unsigned int, unsigned int> fieldSize;
     std::pair<int, int> playerPosition;
     std::vector<std::vector<Cell*>> field;
 public:
-    Field(unsigned int width = MINWIDTH,
-          unsigned int height = MINHEIGHT,
-          unsigned int playerPositionX = 0,
-          unsigned int playerPositionY = 0);
+    Field(std::pair<unsigned int, unsigned int> fieldSize = {MINWIDTH, MINHEIGHT},
+          std::pair<int, int> playerPosition = {0, 0});
 
     Field(const Field&);
     void swap(Field&);
@@ -30,8 +27,7 @@ public:
     void setField();
     void movePlayer(Player::STEP);
 
-    unsigned int getWidth() const;
-    unsigned int getHeight() const;
+    std::pair<unsigned int, unsigned int> getFieldSize() const;
     const Cell& getCell(unsigned int, unsigned int) const;
 };
 

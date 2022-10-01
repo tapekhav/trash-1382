@@ -12,7 +12,7 @@ public:
         NOTHING
     };
 
-    explicit Player(unsigned int health = 100,
+    Player(unsigned int health = 100,
            unsigned int shield = 0,
            unsigned int xp = 0);
 
@@ -30,9 +30,6 @@ public:
     void downShield(unsigned int health);
 
     void roundValue(unsigned int& value);
-
-    Player& operator=(const Player&);
-
 
 private:
     unsigned int health;

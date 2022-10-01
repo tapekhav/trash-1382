@@ -3,31 +3,19 @@
 #include "CellView.h"
 #include "FieldView.h"
 
-void FieldView::initialize(Field* field) {
-    this->field = field;
-    //cellView = CellView();
-};
 
-
-void FieldView::printFieldView() const{
+void FieldView::printFieldView(const Field* field) const{
     std::cout << " + ";
-    for (int w = 0; w != field->getWidth(); ++w) std::cout<<" - ";
+    for (int w = 0; w != field->getFieldSize().first; ++w) std::cout<<" - ";
     std::cout << " + \n";
 
-    for(unsigned int h = 0; h != field->getHeight(); ++h){
+    for(unsigned int h = 0; h != field->getFieldSize().second; ++h){
         std::cout << " | ";
-        for(unsigned int w = 0; w != field->getWidth(); ++w) std::cout << " " << cellView.getCellView(field->getCell(field->getHeight()-h-1, w)) << " ";
+        for(unsigned int w = 0; w != field->getFieldSize().first; ++w) std::cout << " " << cellView.getView(field->getCell(field->getFieldSize().second-h-1, w)) << " ";
         std::cout << " | " << '\n';
     }
 
     std::cout << " + ";
-    for (int w = 0; w != field->getWidth(); ++w) std::cout<<" - ";
+    for (int w = 0; w != field->getFieldSize().first; ++w) std::cout<<" - ";
     std::cout << " + " << '\n';
-}
-
-FieldView &FieldView::operator=(const FieldView &other){
-    this->field = other.field;
-    this->cellView = other.cellView;
-    return *this;
-}
-
+};

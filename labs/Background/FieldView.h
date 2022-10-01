@@ -6,11 +6,8 @@
 
 class FieldView {
 public:
-    void initialize(Field* field);
-    void printFieldView() const;
-    FieldView &operator=(const FieldView &other);
+    void printFieldView(const Field*) const;
 private:
-    Field* field;
     CellView cellView;
 };
 

@@ -7,7 +7,7 @@
 class TrapEventBanana: public Event{
 public:
     TrapEventBanana() = default;
-    ~TrapEventBanana();
+    ~TrapEventBanana() override;
     void callReaction() override;
 };
 

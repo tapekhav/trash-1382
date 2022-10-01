@@ -1,11 +1,13 @@
-#include <iostream>
 #include "Cell.h"
 #include "Event.h"
 
+bool Cell::isPassable() const {
+    return passable;
+}
 
 void Cell::setEvent(Event* event){
     if (this->event != nullptr)
-        this->event->~Event();
+        delete this->event;
     this->event = event;
 }
 
@@ -14,10 +16,10 @@ void Cell::callEvent() {
         event->callReaction();
 }
 
-bool Cell::isPassable() const {
-    return false;
+int Cell::getId() const{
+    return id;
 }
 
-Cell::Type Cell::getType() const{
-    return type;
-}
+const Cell& Cell::getCell() const{
+    return *this;
+};

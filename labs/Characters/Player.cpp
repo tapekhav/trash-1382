@@ -62,10 +62,3 @@ void Player::downShield(unsigned int shield){
 void Player::roundValue(unsigned int& value){
     value = std::min(value, MAXVALUE);
 }
-
-Player &Player::operator=(const Player &other) {
-    this->health =other.health;
-    this->shield = other.shield;
-    this->xp = other.xp;
-    return *this;
-}

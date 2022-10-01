@@ -6,21 +6,18 @@
 
 
 //написать конструктор пкопирования/рисваивания для смены клетки в поле
+//проверить деструктор event
 class Cell{
 public:
-    virtual bool isPassable() const;
+    bool isPassable() const;
     void setEvent(Event* event);
     void callEvent();
-    enum Type{
-        Grass,
-        Wall,
-        Player,
-        Empty
-    };
-    Cell::Type getType() const;
+    int getId() const;
+    const Cell& getCell() const;
 protected:
     Event* event = nullptr;
-    Type type = Type(Empty);
+    int id = -1;
+    bool passable = false;
 };
 
 
