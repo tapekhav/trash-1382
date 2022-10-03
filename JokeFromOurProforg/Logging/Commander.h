@@ -3,12 +3,13 @@
 
 #include "Field/Field.h"
 #include "InputOutput/FieldViewer.h"
+#include "InputOutput/PlayerView.h"
 #include "Logging/Handle.h"
 #include "Enums.h"
 
 class Commander : public Handle {
 public:
-    Commander() : mGameProgress(true) {}
+    Commander();
 
     void SetStandardSizeField();
     void SetFieldSize(int width, int height);
@@ -17,12 +18,14 @@ public:
 
     void ShowField();
 
-    bool GetGameProgress() const { return mGameProgress; }
-    void SetGameProgress(bool val) { mGameProgress = val; }
+    ~Commander();
+
 private:
-    Field mField;
-    bool mGameProgress;
-    FieldViewer mView;
+    Field* mField;
+    FieldViewer* mView;
+    Player* mPlayer;
+    PlayerViewer* mStatus;
+
 };
 
 #endif //SURVIVAL_COMMANDER_H

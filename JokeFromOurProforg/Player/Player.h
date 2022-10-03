@@ -14,6 +14,10 @@ public:
     int GetHealth() const { return mHealth; }
     int GetHunger() const { return mHunger; }
     int GetThirst() const { return mThirst; }
+
+    void DamagePlayer(int val);
+    void SetThirst();
+    void SetHunger();
 private:
     int mThirst;
     int mHunger;

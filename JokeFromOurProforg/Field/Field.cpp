@@ -21,7 +21,6 @@ Field& Field::operator=(Field const& other) {
         mField.emplace_back(other.mField[idy]);
     mPlayerPosition.xCoord = other.mPlayerPosition.xCoord;
     mPlayerPosition.yCoord = other.mPlayerPosition.yCoord;
-    mPlayer = other.mPlayer;
     return *this;
 }
 
@@ -31,7 +30,6 @@ Field::Field(const Field& obj) : Field(obj.mWidth, obj.mHeight) {
             mField[yIdx][xIdx] = obj.mField[yIdx][xIdx];
     mPlayerPosition.xCoord = obj.mPlayerPosition.xCoord;
     mPlayerPosition.yCoord = obj.mPlayerPosition.yCoord;
-    mPlayer = obj.mPlayer;
 }
 
 Field::Field(Field&& obj) : Field(obj.mWidth, obj.mHeight) {
@@ -45,7 +43,6 @@ Field::Field(Field&& obj) : Field(obj.mWidth, obj.mHeight) {
     obj.mPlayerPosition.xCoord = -1;
     mPlayerPosition.yCoord = obj.mPlayerPosition.yCoord;
     obj.mPlayerPosition.yCoord = -1;
-    mPlayer = obj.mPlayer;
 }
 
 bool Field::MovePlayer(EnumClass::Direction dir) {

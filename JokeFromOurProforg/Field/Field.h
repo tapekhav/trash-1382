@@ -29,12 +29,12 @@ public:
     int GetPlayerPositionX() const { return mPlayerPosition.xCoord; }
     int GetPlayerPositionY() const { return mPlayerPosition.yCoord; }
     Cell GetCell(int idy, int idx) const;
-    Player GetPlayer() const { return mPlayer; }
+
+
 private:
 
     std::vector<std::vector<Cell>> mField;
     int mWidth, mHeight;
-    Player mPlayer;
     Position mPlayerPosition;
 };
 

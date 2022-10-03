@@ -23,9 +23,7 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 		else {
 			mCommander->SetStandardSizeField();
 		}
-		break;
-	case EnumClass::GAME_PROGRESS:
-		mGame->SetGameProgress(mCommander->GetGameProgress());
+		mGame->SetGameProgress(true);
 		break;
 	case EnumClass::DO_CMD:
 		while (!DoCmd()) {
@@ -64,7 +62,6 @@ bool HandleMediator::DoCmd() const {
 		mCommander->PlayerGo(EnumClass::DOWN);
 		break;
 	case 'q':
-		mCommander->SetGameProgress(false);
 		break;
 	case 'h':
 		mCommandReader->Help(true);

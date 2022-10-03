@@ -3,7 +3,6 @@
 
 #include "Field/Field.h"
 #include "InputOutput/CellView.h"
-#include "InputOutput/PlayerView.h"
 #include "Enums.h"
 
 #include <iostream>
@@ -17,7 +16,6 @@ private:
     char HandleObject(EnumClass::FieldObj type);
 
     CellViewer mCellViewer;
-    PlayerViewer mPlayerViewer;
 };
 
 #endif //SURVIVAL_FIELDVIEWER_H

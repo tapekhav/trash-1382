@@ -11,6 +11,7 @@ public:
 	void SetGameProgress(bool val) { mGameProgress = val; }
 private:
 	bool mGameProgress;
+	int mEpox;
 };
 
 #endif //SURVIVAL_GAME_H
