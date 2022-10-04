@@ -14,7 +14,6 @@ public:
 private:
 
     char HandleObject(EnumClass::FieldObj type);
-
     CellViewer mCellViewer;
 };
 

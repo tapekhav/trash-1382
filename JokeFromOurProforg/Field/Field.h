@@ -26,6 +26,8 @@ public:
 
     int GetWidth() const { return mWidth; }
     int GetHeight() const { return mHeight; }
+    void SetPlayerPositionX(int x) { mPlayerPosition.xCoord = x; }
+    void SetPlayerPositionY(int y) { mPlayerPosition.yCoord = y; }
     int GetPlayerPositionX() const { return mPlayerPosition.xCoord; }
     int GetPlayerPositionY() const { return mPlayerPosition.yCoord; }
     Cell GetCell(int idy, int idx) const;

@@ -15,11 +15,25 @@ void CommandReader::IncorrectInput() {
 }
 
 void CommandReader::ReadWidthAndHeight() {
-    std::cout << "The size of the map must be in range from 2 to 20\n";
+    std::cout << "The size of the map must be in range from 3 to 15\n";
+    std::cout << "If you enter an incorrect output, the values will move to the rigth range\n";
     std::cout << "Enter a size for the map." << std::endl << "Width: ";
     std::cin >> mSize.first;
+    while (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "This input is incorrect!\nEnter number: ";
+        std::cin >> mSize.first;
+    }
+
     std::cout << "\nHeight: ";
     std::cin >> mSize.second;
+    while (std::cin.fail()) {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cout << "This input is incorrect!\nEnter number: ";
+        std::cin >> mSize.second;
+    }
     std::cout << std::endl;
     mMediator->PairMsg(mSize);
 }

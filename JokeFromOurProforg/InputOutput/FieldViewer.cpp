@@ -17,7 +17,6 @@ char FieldViewer::HandleObject(EnumClass::FieldObj type) {
 }
 
 void FieldViewer::View(const Field& field) {
-    system("cls");
     std::cout << HandleObject(EnumClass::BORDER_RIGHT_BOTTOM_AND_LEFT_ABOVE) << ' ';
     for (int idx = 0; idx < field.GetHeight(); idx++)
         std::cout << HandleObject(EnumClass::BORDER_ABOVE_AND_BOTTOM) << ' ';

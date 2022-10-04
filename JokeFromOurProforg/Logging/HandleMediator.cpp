@@ -10,18 +10,22 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 			mCommandReader->IncorrectInput();
 		if (mApproval == 'Y') {
 			mCommandReader->ReadWidthAndHeight();
-			if (mSize.first < EnumClass::MIN_SIZE)
+			if (mSize.first < EnumClass::MIN_SIZE) {
 				mSize.first = EnumClass::MIN_SIZE;
-			else if (mSize.first > EnumClass::MAX_SIZE)
+			}
+			else if (mSize.first > EnumClass::MAX_SIZE) {
 				mSize.first = EnumClass::MAX_SIZE;
-			if (mSize.second < EnumClass::MIN_SIZE)
+			}
+			if (mSize.second < EnumClass::MIN_SIZE) {
 				mSize.second = EnumClass::MIN_SIZE;
-			else if (mSize.second > EnumClass::MAX_SIZE)
+			}
+			else if (mSize.second > EnumClass::MAX_SIZE) {
 				mSize.second = EnumClass::MAX_SIZE;
+			}
 			mCommander->SetFieldSize(mSize.first, mSize.second);
 		}
 		else {
-			mCommander->SetStandardSizeField();
+			mCommander->SetFieldSize(EnumClass::STANDARD_SIZE, EnumClass::STANDARD_SIZE);
 		}
 		mGame->SetGameProgress(true);
 		break;
@@ -62,12 +66,13 @@ bool HandleMediator::DoCmd() const {
 		mCommander->PlayerGo(EnumClass::DOWN);
 		break;
 	case 'q':
+		mGame->SetGameProgress(false);
 		break;
 	case 'h':
 		mCommandReader->Help(true);
 		break;
 	default:
-		return false;
+		mCommandReader->IncorrectInput();
 	}
 	return true;
 }

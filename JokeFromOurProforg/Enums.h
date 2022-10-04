@@ -4,7 +4,7 @@
 class EnumClass {
 public:
     enum FIELD_SIZE{
-        MIN_SIZE = 2,
+        MIN_SIZE = 3,
         STANDARD_SIZE = 15,
         MAX_SIZE = 20
     };

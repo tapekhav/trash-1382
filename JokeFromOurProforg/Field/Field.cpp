@@ -45,31 +45,6 @@ Field::Field(Field&& obj) : Field(obj.mWidth, obj.mHeight) {
     obj.mPlayerPosition.yCoord = -1;
 }
 
-bool Field::MovePlayer(EnumClass::Direction dir) {
-    if (dir == EnumClass::RIGHT) {
-        if (mField[mPlayerPosition.yCoord][(mPlayerPosition.xCoord + 1) % mHeight].IsWall())
-            return false;
-        mPlayerPosition.xCoord = (mPlayerPosition.xCoord + 1) % mHeight;
-    }
-    else if (dir == EnumClass::UP) {
-        if (mField[(mPlayerPosition.yCoord + mWidth - 1) % mWidth][mPlayerPosition.xCoord].IsWall())
-            return false;
-        mPlayerPosition.yCoord = (mPlayerPosition.yCoord + mWidth - 1) % mWidth;
-    }
-    else if (dir == EnumClass::LEFT) {
-        if (mField[mPlayerPosition.yCoord][(mPlayerPosition.xCoord + mHeight - 1) % mHeight].IsWall())
-            return false;
-        mPlayerPosition.xCoord = (mPlayerPosition.xCoord + mHeight - 1) % mHeight;
-    }
-    else {
-        if (mField[(mPlayerPosition.yCoord + 1) % mWidth][mPlayerPosition.xCoord].IsWall())
-            return false;
-        mPlayerPosition.yCoord = (mPlayerPosition.yCoord + 1) % mWidth;
-    }
-    mField[mPlayerPosition.yCoord][mPlayerPosition.xCoord].ActiveEvent();
-    return true;
-}
-
 Cell Field::GetCell(int idy, int idx) const {
     if (idx >= 0 && idx < GetHeight() && idy >= 0 && idy < GetWidth())
         return mField[idy][idx];

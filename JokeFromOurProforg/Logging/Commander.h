@@ -11,7 +11,6 @@ class Commander : public Handle {
 public:
     Commander();
 
-    void SetStandardSizeField();
     void SetFieldSize(int width, int height);
 
     void PlayerGo(EnumClass::Direction dir);
