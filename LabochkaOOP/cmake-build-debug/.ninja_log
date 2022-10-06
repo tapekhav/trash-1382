@@ -1,0 +1,18 @@
+# ninja log v5
+1	22	1665068766836953304	CMakeFiles/LabochkaOOP.dir/EventsPerson/EventDmg.cpp.o	4fa78c4f68b31fe5
+23	494	1665069885968138126	CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o	f9ce377d5e84bbc0
+21	41	1665068766856954077	CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o	5f18106b15a6f778
+3	620	1665069886092140815	CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o	e5df0712bc5e0118
+620	708	1665069886184142809	LabochkaOOP	9d3e1e5f63b24b76
+0	32	1665070979421671993	build.ninja	25f289d0ce44288b
+2	27	1665069885500127990	CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o	aa4489c04727b1fe
+3	490	1665069885964138039	CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o	de5a4658d182d696
+1	21	1665068766836953304	CMakeFiles/LabochkaOOP.dir/EventsPerson/EventHp.cpp.o	1baab03274f035c1
+1	24	1665068766840953458	CMakeFiles/LabochkaOOP.dir/EventsPerson/EventXp.cpp.o	9e0d40dd193d129d
+3	533	1665069886008138994	CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o	432f876c9f7161e2
+2	535	1665069886008138994	CMakeFiles/LabochkaOOP.dir/main.cpp.o	80efb28d867b1fe
+0	17	1665068766832953149	CMakeFiles/LabochkaOOP.dir/EventsPerson/EventPerson.cpp.o	b851de287a85bb94
+32	243	1665068767056961807	CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o	275e9289ee179ffd
+495	576	1665068663464939899	untitled48	557ce2d2edbc7439
+27	397	1665069885868135960	CMakeFiles/LabochkaOOP.dir/EventsField/EventField.cpp.o	7805ef0bc9df655b
+2	23	1665069885496127903	CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o	484ceaff45e2887e
