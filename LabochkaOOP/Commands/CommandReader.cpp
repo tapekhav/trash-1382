@@ -37,7 +37,7 @@
         std::cout<<"Команды :\n\t\tw - движение вперед\n\t\ts - движение вниз\n\t\t"
                    "d - движение вправо\n\t\ta - движение влево\n\t\te - выйти из игры"<<std::endl;
         std::cout<<" Введите команду: ";
-        std::cin>>sym;
+        input_sym(sym);
         switch (sym) {
             case 'w':
                 step = Person::UP;
@@ -68,6 +68,10 @@
 
     int CommandReader::get_width()const{
         return width;
+    }
+    char CommandReader::input_sym(char &sym){
+        std::cin>>sym;
+        return sym;
     }
     char CommandReader::get_sym()const{
         return sym;

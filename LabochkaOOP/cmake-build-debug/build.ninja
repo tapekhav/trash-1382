@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug/
+cmake_ninja_workdir = /home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target LabochkaOOP
 
@@ -49,7 +49,7 @@ cmake_ninja_workdir = /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cma
 
 build cmake_object_order_depends_target_LabochkaOOP: phony || CMakeFiles/LabochkaOOP.dir
 
-build CMakeFiles/LabochkaOOP.dir/main.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/main.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/main.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/main.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/main.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -57,7 +57,7 @@ build CMakeFiles/LabochkaOOP.dir/main.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /ho
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventPerson.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/EventsPerson/EventPerson.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventPerson.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/EventsPerson/EventPerson.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/EventsPerson/EventPerson.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -65,7 +65,7 @@ build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventPerson.cpp.o: CXX_COMPILER__L
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventXp.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/EventsPerson/EventXp.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventXp.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/EventsPerson/EventXp.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/EventsPerson/EventXp.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -73,7 +73,7 @@ build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventXp.cpp.o: CXX_COMPILER__Laboc
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventHp.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/EventsPerson/EventHp.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventHp.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/EventsPerson/EventHp.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/EventsPerson/EventHp.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -81,7 +81,7 @@ build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventHp.cpp.o: CXX_COMPILER__Laboc
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventDmg.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/EventsPerson/EventDmg.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventDmg.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/EventsPerson/EventDmg.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/EventsPerson/EventDmg.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -89,7 +89,7 @@ build CMakeFiles/LabochkaOOP.dir/EventsPerson/EventDmg.cpp.o: CXX_COMPILER__Labo
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Cell/Cell.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Cell/Cell.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -97,7 +97,7 @@ build CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o: CXX_COMPILER__LabochkaOOP_Debu
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Cell/CellView.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Cell/CellView.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -105,7 +105,7 @@ build CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o: CXX_COMPILER__LabochkaOOP_
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Persons/Person.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Persons/Person.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -113,7 +113,7 @@ build CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o: CXX_COMPILER__LabochkaOOP
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Field/Field.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Field/Field.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -121,7 +121,7 @@ build CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o: CXX_COMPILER__LabochkaOOP_De
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Field/FieldView.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Field/FieldView.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -129,7 +129,7 @@ build CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o: CXX_COMPILER__LabochkaOO
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Commands/CommandReader.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Commands/CommandReader.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -137,7 +137,7 @@ build CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o: CXX_COMPILER__Lab
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Commands/Controller.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Commands/Controller.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -145,7 +145,7 @@ build CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o: CXX_COMPILER__Laboch
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/Commands/Mediator.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Commands/Mediator.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -153,7 +153,7 @@ build CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o: CXX_COMPILER__Labochka
   TARGET_COMPILE_PDB = CMakeFiles/LabochkaOOP.dir/
   TARGET_PDB = LabochkaOOP.pdb
 
-build CMakeFiles/LabochkaOOP.dir/EventsField/EventField.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/EventsField/EventField.cpp || cmake_object_order_depends_target_LabochkaOOP
+build CMakeFiles/LabochkaOOP.dir/EventsField/EventField.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/EventsField/EventField.cpp || cmake_object_order_depends_target_LabochkaOOP
   DEP_FILE = CMakeFiles/LabochkaOOP.dir/EventsField/EventField.cpp.o.d
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
@@ -183,7 +183,7 @@ build LabochkaOOP: CXX_EXECUTABLE_LINKER__LabochkaOOP_Debug CMakeFiles/LabochkaO
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug && /snap/clion/206/bin/cmake/linux/bin/ccmake -S/home/corvussharp/CLionProjects/trash-1382/LabochkaOOP -B/home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug
+  COMMAND = cd /home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug && /snap/clion/206/bin/cmake/linux/bin/ccmake -S/home/corvussharp/CLionProjects/LabochkaOOP -B/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -195,7 +195,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug && /snap/clion/206/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/corvussharp/CLionProjects/trash-1382/LabochkaOOP -B/home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug
+  COMMAND = cd /home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug && /snap/clion/206/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/corvussharp/CLionProjects/LabochkaOOP -B/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -211,7 +211,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/corvussharp/CLionProjects/trash-1382/LabochkaOOP/cmake-build-debug
+# Folder: /home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug
 
 build all: phony LabochkaOOP
 

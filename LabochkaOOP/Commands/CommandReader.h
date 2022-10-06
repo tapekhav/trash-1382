@@ -25,6 +25,7 @@ public:
     int get_height() const;
     int get_width()const;
 
+    char input_sym(char &sym);
     char get_sym()const;
     char field_choice();
 
