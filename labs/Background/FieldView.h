@@ -2,6 +2,7 @@
 #define LABS_FIELDVIEW_H
 
 #include "Field.h"
+#include "CellView.h"
 #include <vector>
 
 class FieldView {

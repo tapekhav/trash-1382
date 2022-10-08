@@ -1,7 +1,7 @@
 #include "Player.h"
 
 Player::Player(int health, int damage, int xp)
-    : health(health), damage(damage), xp(xp) {}
+    : health(health), damage(damage), xp(xp), lvl(1) {}
 
 int Player::get_damage() const {
     return damage;
@@ -13,6 +13,10 @@ int Player::get_health() const {
 
 int Player::get_xp() const {
     return xp;
+}
+
+int Player::get_lvl() const {
+    return lvl;
 }
 
 void Player::set_health(int health) {
@@ -27,3 +31,6 @@ void Player::set_xp(int xp) {
     this->xp += xp;
 }
 
+void Player::add_lvl() {
+    ++lvl;
+}

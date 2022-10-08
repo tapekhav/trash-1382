@@ -103,23 +103,35 @@ build CMakeFiles/labs.dir/Control/Mediator.cpp.o: CXX_COMPILER__labs_Debug /home
   OBJECT_DIR = CMakeFiles/labs.dir
   OBJECT_FILE_DIR = CMakeFiles/labs.dir/Control
 
-build CMakeFiles/labs.dir/Events/Box.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/Box.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Events/Box.cpp.o.d
+build CMakeFiles/labs.dir/Events/ChangePlayer/Box.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/ChangePlayer/Box.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/ChangePlayer/Box.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events/ChangePlayer
 
-build CMakeFiles/labs.dir/Events/Heal.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/Heal.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Events/Heal.cpp.o.d
+build CMakeFiles/labs.dir/Events/ChangePlayer/Heal.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/ChangePlayer/Heal.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/ChangePlayer/Heal.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events/ChangePlayer
 
-build CMakeFiles/labs.dir/Events/Enemy.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/Enemy.cpp || cmake_object_order_depends_target_labs
-  DEP_FILE = CMakeFiles/labs.dir/Events/Enemy.cpp.o.d
+build CMakeFiles/labs.dir/Events/ChangePlayer/Enemy.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/ChangePlayer/Enemy.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/ChangePlayer/Enemy.cpp.o.d
   FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles/labs.dir
-  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events/ChangePlayer
+
+build CMakeFiles/labs.dir/Events/ChangeField/NewLevel.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/ChangeField/NewLevel.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/ChangeField/NewLevel.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events/ChangeField
+
+build CMakeFiles/labs.dir/Events/Rules/EndGame.cpp.o: CXX_COMPILER__labs_Debug /home/vladimir/Desktop/c++/labs/Events/Rules/EndGame.cpp || cmake_object_order_depends_target_labs
+  DEP_FILE = CMakeFiles/labs.dir/Events/Rules/EndGame.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles/labs.dir
+  OBJECT_FILE_DIR = CMakeFiles/labs.dir/Events/Rules
 
 
 # =============================================================================
@@ -129,7 +141,7 @@ build CMakeFiles/labs.dir/Events/Enemy.cpp.o: CXX_COMPILER__labs_Debug /home/vla
 #############################################
 # Link the executable labs
 
-build labs: CXX_EXECUTABLE_LINKER__labs_Debug CMakeFiles/labs.dir/main.cpp.o CMakeFiles/labs.dir/Background/Cell.cpp.o CMakeFiles/labs.dir/Background/CellView.cpp.o CMakeFiles/labs.dir/Background/Field.cpp.o CMakeFiles/labs.dir/Characters/Player.cpp.o CMakeFiles/labs.dir/Control/Controller.cpp.o CMakeFiles/labs.dir/Background/FIeldView.cpp.o CMakeFiles/labs.dir/Control/CommandReader.cpp.o CMakeFiles/labs.dir/Control/Mediator.cpp.o CMakeFiles/labs.dir/Events/Box.cpp.o CMakeFiles/labs.dir/Events/Heal.cpp.o CMakeFiles/labs.dir/Events/Enemy.cpp.o
+build labs: CXX_EXECUTABLE_LINKER__labs_Debug CMakeFiles/labs.dir/main.cpp.o CMakeFiles/labs.dir/Background/Cell.cpp.o CMakeFiles/labs.dir/Background/CellView.cpp.o CMakeFiles/labs.dir/Background/Field.cpp.o CMakeFiles/labs.dir/Characters/Player.cpp.o CMakeFiles/labs.dir/Control/Controller.cpp.o CMakeFiles/labs.dir/Background/FIeldView.cpp.o CMakeFiles/labs.dir/Control/CommandReader.cpp.o CMakeFiles/labs.dir/Control/Mediator.cpp.o CMakeFiles/labs.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/labs.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/labs.dir/Events/ChangePlayer/Enemy.cpp.o CMakeFiles/labs.dir/Events/ChangeField/NewLevel.cpp.o CMakeFiles/labs.dir/Events/Rules/EndGame.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/labs.dir
   POST_BUILD = :

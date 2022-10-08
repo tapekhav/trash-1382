@@ -3,9 +3,8 @@
 
 #include <iostream>
 #include <algorithm>
-#include "../Events/Box.h"
-#include "../Events/Enemy.h"
-#include "../Events/Heal.h"
+#include "../Events/ChangePlayer/EventPlayer.h"
+//#include "../Events/ChangeField/EventField.h"
 
 class Cell {
 public:
@@ -17,13 +16,14 @@ public:
     bool get_passability() const;
     void set_passability(bool pass);
 
-    void set_event(Event* event);
+    void set_event(EventPlayer* event);
     void update(Player& player);
-    Event* get_event() const;
+    EventPlayer* get_event() const;
 private:
     bool player_in;
     bool passability;
-    Event* event;
+    EventPlayer* eventPlayer;
+    //EventField* eventField;
 };
 
 #endif //LABS_CELL_H

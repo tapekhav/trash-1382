@@ -7,11 +7,10 @@
 #include <random>
 #include <cmath>
 #include "Cell.h"
-#include "CellView.h"
 #include "../Characters/Player.h"
-#include "../Events/Heal.h"
-#include "../Events/Box.h"
-#include "../Events/Enemy.h"
+#include "../Events/ChangePlayer/Box.h"
+#include "../Events/ChangePlayer/Enemy.h"
+#include "../Events/ChangePlayer/Heal.h"
 
 class Field {
 public:
@@ -21,12 +20,13 @@ public:
     Field(Field&& other);
     Field& operator=(Field&& other);
 
+    void generate_enemy();
     void make_field();
     void change_player_pos(Player::STEP s);
 
     int get_height() const;
     int get_width()  const;
-    std::vector<std::vector<Cell>> get_field() const;
+    Cell get_cur_cell(int x, int y) const;
 private:
     void swap(Field& other);
 

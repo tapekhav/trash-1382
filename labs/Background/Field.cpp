@@ -2,7 +2,7 @@
 
 
 Field::Field(int width, int height)
-    : width(width), height(height), player_location({0, 0}), player(Player()) {
+    : width(width), height(height), player_location({0, 0}), player() {
     for(size_t i = 0; i != height; ++i) {
         field.emplace_back();
         for(size_t j = 0; j != width; ++j) {
@@ -14,7 +14,12 @@ Field::Field(int width, int height)
 
 Field::Field(const Field &other)
     : width(other.width), height(other.height), player_location(other.player_location) {
-    field = other.field;
+    for(size_t i = 0; i != height; ++i) {
+        field.emplace_back();
+        for(size_t j = 0; j != width; ++j) {
+            field.at(i).push_back(other.field.at(i).at(j));
+        }
+    }
 }
 
 void Field::swap(Field &other) {
@@ -41,8 +46,19 @@ Field& Field::operator=(Field&& other) {
     return *this;
 }
 
-std::vector<std::vector<Cell>> Field::get_field() const  {
-    return field;
+Cell Field::get_cur_cell(int x, int y) const  {
+    return field.at(y).at(x);
+}
+
+void Field::generate_enemy() {
+    std::random_device dev;
+    std::mt19937 rng(dev());
+    std::uniform_int_distribution gen_height(1, height - 1);
+    std::uniform_int_distribution gen_width(0, width - 1);
+
+    auto* enemy = new Enemy;
+    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy);
+    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy);
 }
 
 void Field::make_field() {
@@ -52,7 +68,7 @@ void Field::make_field() {
         for(size_t j = val; j != width; ++j) {
             std::random_device dev;
             std::mt19937 rng(dev());
-            std::uniform_int_distribution<> dist(1,50);
+            std::uniform_int_distribution dist(1,50);
 
             switch(dist(rng)) {
                 case 1: {
@@ -65,21 +81,18 @@ void Field::make_field() {
                     field.at(i).at(j).set_event(heal);
                     break;
                 }
-                case 3: {
-                    auto *enemy = new Enemy;
-                    field.at(i).at(j).set_event(enemy);
-                    break;
-                }
-                case 4:
+                case 3:
                     field.at(i).at(j).set_passability(false);
                     break;
                 default:
                     break;
-
             }
         }
     }
+    generate_enemy();
 }
+
+
 
 void Field::change_player_pos(Player::STEP s) {
     auto tmp = player_location;
@@ -102,8 +115,8 @@ void Field::change_player_pos(Player::STEP s) {
             break;
     }
 
-    tmp.first = tmp.first % width;
-    tmp.second = tmp.second % height;
+    tmp.first %= width;
+    tmp.second %= height;
 
     if (tmp.first < 0) tmp.first += width;
     if (tmp.second < 0) tmp.second += height;
@@ -113,6 +126,7 @@ void Field::change_player_pos(Player::STEP s) {
     }
 
     field.at(player_location.second).at(player_location.first).set_player_in(true);
+    field.at(player_location.second).at(player_location.first).update(player);
 }
 
 int Field::get_height() const {
