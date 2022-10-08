@@ -18,7 +18,12 @@ Field::Field(std::pair<unsigned int, unsigned int> fieldSize, std::pair<int, int
 Field::Field(const Field& fieldObj):
     fieldSize(fieldObj.fieldSize),
     playerPosition(fieldObj.playerPosition){
-    field = fieldObj.field; //копирование вектора
+    for (int h = 0; h != fieldSize.second; ++h){
+        field.emplace_back();
+        for (int w = 0; w != fieldSize.first; ++w){
+            field.at(h).push_back(fieldObj.field.at(h).at(w));
+        }
+    }
 };
 
 void Field::swap(Field &fieldObj){

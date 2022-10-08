@@ -28,6 +28,7 @@ void Mediator::start() {
 bool Mediator::update(){
     notify(commandReader);
     if (command == 'e') return false;
+    if (command == 'h') std::cout << help << '\n';
     notify(controller);
     return true;
 }

@@ -31,8 +31,6 @@ void Controller::printFieldView() const{
     fieldView.printFieldView(&field);
 }
 
-
-
 void Controller::notify(char& command) {
     movePlayerPosition(command);
     printFieldView();

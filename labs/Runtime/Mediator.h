@@ -16,6 +16,7 @@ private:
     Controller controller;
     void notify(MediatorObject&);
     bool update();
+    std::string help = "Use WASD to move\te for exit game";
 };
 
 
