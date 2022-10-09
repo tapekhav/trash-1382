@@ -5,8 +5,9 @@
 #ifndef UNTITLED48_CELL_H
 #define UNTITLED48_CELL_H
 #include "../EventsPerson//EventPerson.h"
-
+#include "../Enemy/Enemy.h"
 class Cell{
+
 public:
     enum OBJECT{
         STANDARD,
@@ -22,7 +23,7 @@ public:
     OBJECT get_obj() const;
     void update(Person& person);
     void set_event_person(EventPerson* event_);
-
+    void set_enemy(Enemy* enemy);
     void set_obj(OBJECT obj);
     void set_person_loc(bool loc);
 
@@ -33,6 +34,7 @@ private:
     OBJECT object;
     bool player_loc;
     EventPerson* event;
+    Enemy enemy;
 };
 
 

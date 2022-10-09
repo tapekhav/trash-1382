@@ -142,18 +142,15 @@ Field& Field::operator=(const Field &other) {
               //  auto* eventFieldChange = new EventFieldChange;
              //  auto* eventChangeMap = new EventFieldChange;
 
-                bool set_p_l = true;
 
                 switch(dist(rng)) {
                     case 1:
                         field.at(i).at(j).set_obj(Cell::BOX);
                         field.at(i).at(j).set_event_person(eventXp);
-                        field.at(i).at(j).set_person_loc(set_p_l);
                         break;
                     case 2:
                         field.at(i).at(j).set_obj(Cell::HP);
                         field.at(i).at(j).set_event_person(eventHp);
-                        field.at(i).at(j).set_person_loc(set_p_l);
                         break;
                     case 3:
                         field.at(i).at(j).set_obj(Cell::BLOCK);
@@ -164,7 +161,6 @@ Field& Field::operator=(const Field &other) {
                     case 5:
                         field.at(i).at(j).set_obj(Cell::DMG);
                         field.at(i).at(j).set_event_person(eventDmg);
-                        field.at(i).at(j).set_person_loc(set_p_l);
                         break;
                     case 6:
                         field.at(i).at(j).set_obj(Cell::CHANGEMAP);

@@ -13,14 +13,16 @@ Cell::OBJECT Cell::get_obj() const {
 }
 
     void Cell::update(Person& person){
-        if(check_player()) event->doing(person);
+        if(event != nullptr) event->doing(person);
     }
 
     void Cell::set_event_person(EventPerson* event_){
         delete this->event;
         this->event = event_;
     }
-
+    void Cell::set_enemy(Enemy* enemy){
+        delete this->enemy;
+    }
     void Cell::set_obj(OBJECT obj){
         this->object = obj;
     }
@@ -28,5 +30,5 @@ Cell::OBJECT Cell::get_obj() const {
         this->player_loc = loc;
     }
     bool Cell::check_player()const{
-        return player_loc;
+
     }
