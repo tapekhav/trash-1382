@@ -13,8 +13,8 @@ void Controller::set_field_standard() {
     field.make_field();
 }
 
-void Controller::set_step(Player::STEP step) {
-    field.change_player_pos(step);
+void Controller::set_step(Player::STEP step, Player& player) {
+    field.change_player_pos(player, step);
 }
 
 void Controller::show_field() {

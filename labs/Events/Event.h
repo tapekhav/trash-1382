@@ -1,13 +1,12 @@
 #ifndef LABS_EVENT_H
 #define LABS_EVENT_H
 
+#include "./ChangePlayer/EventPlayer.h"
 
-#include "../Characters/Player.h"
-
-class Event{
+class Event {
 public:
-    virtual void execute(Player& player) = 0;
+    virtual void execute() = 0;
     virtual ~Event() = default;
 };
 
-#endif //LABS_EVENT_H
+#endif

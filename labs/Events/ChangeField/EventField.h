@@ -6,7 +6,6 @@
 class EventField {
 public:
     virtual void execute(Field& field) = 0;
-    EventField() = default;
     virtual ~EventField() = default;
 };
 

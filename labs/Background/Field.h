@@ -22,7 +22,7 @@ public:
 
     void generate_enemy();
     void make_field();
-    void change_player_pos(Player::STEP s);
+    void change_player_pos(Player &player, Player::STEP s);
 
     int get_height() const;
     int get_width()  const;
@@ -30,11 +30,10 @@ public:
 private:
     void swap(Field& other);
 
-    Player player;
     std::vector<std::vector<Cell>> field;
     int height;
     int width;
     std::pair<int, int> player_location;
 };
 
-#endif //LABS_FIELD_H
+#endif

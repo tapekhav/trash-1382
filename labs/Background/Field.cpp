@@ -2,7 +2,7 @@
 
 
 Field::Field(int width, int height)
-    : width(width), height(height), player_location({0, 0}), player() {
+    : width(width), height(height), player_location({0, 0}) {
     for(size_t i = 0; i != height; ++i) {
         field.emplace_back();
         for(size_t j = 0; j != width; ++j) {
@@ -94,7 +94,7 @@ void Field::make_field() {
 
 
 
-void Field::change_player_pos(Player::STEP s) {
+void Field::change_player_pos(Player &player, Player::STEP s) {
     auto tmp = player_location;
     field.at(player_location.second).at(player_location.first).set_player_in(false);
 
@@ -127,6 +127,7 @@ void Field::change_player_pos(Player::STEP s) {
 
     field.at(player_location.second).at(player_location.first).set_player_in(true);
     field.at(player_location.second).at(player_location.first).update(player);
+    std::cout << "hp = " << player.get_health() << " xp = " << player.get_xp() << " damage = " << player.get_damage() << '\n';
 }
 
 int Field::get_height() const {

@@ -6,7 +6,6 @@
 class Heal: public EventPlayer {
 public:
     void execute(Player& player) override;
-    ~Heal() override = default;
 };
 
 

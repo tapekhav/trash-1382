@@ -1,20 +1,20 @@
 #include "Cell.h"
 
-Cell::Cell() : player_in(false), passability(true), eventPlayer(nullptr) {}
+Cell::Cell() : player_in(false), passability(true), event(nullptr) {}
 
 bool Cell::get_player_in() const {
     return player_in;
 }
 
 void Cell::update(Player& player) {
-    if (eventPlayer != nullptr)
-        eventPlayer->execute(player);
+    if (auto tmp = dynamic_cast<EventPlayer*>(event))
+        tmp->execute(player);
 }
 
 
-void Cell::set_event(EventPlayer* event) {
-    delete this->eventPlayer;
-    this->eventPlayer = event;
+void Cell::set_event(Event* event) {
+    delete this->event;
+    this->event = event;
 }
 
 void Cell::set_player_in(bool player_status) {
@@ -29,6 +29,6 @@ bool Cell::get_passability() const {
     return passability;
 }
 
-EventPlayer *Cell::get_event() const {
-    return eventPlayer;
+Event *Cell::get_event() const {
+    return event;
 }

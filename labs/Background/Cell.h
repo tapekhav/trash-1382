@@ -4,7 +4,6 @@
 #include <iostream>
 #include <algorithm>
 #include "../Events/ChangePlayer/EventPlayer.h"
-//#include "../Events/ChangeField/EventField.h"
 
 class Cell {
 public:
@@ -16,14 +15,13 @@ public:
     bool get_passability() const;
     void set_passability(bool pass);
 
-    void set_event(EventPlayer* event);
+    void set_event(Event* event);
     void update(Player& player);
-    EventPlayer* get_event() const;
+    Event* get_event() const;
 private:
     bool player_in;
     bool passability;
-    EventPlayer* eventPlayer;
-    //EventField* eventField;
+    Event* event;
 };
 
 #endif //LABS_CELL_H
