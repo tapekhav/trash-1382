@@ -10,12 +10,14 @@
 class Model: public Observable {
 private:
     Field field;
-    std::shared_ptr<Player> player = std::make_shared<Player>(Player());
+    std::shared_ptr<Player> player;
 public:
     Model(std::pair<int, int>);
-    void createField(std::pair<int, int>);
+    void createField(std::pair<int, int>, std::pair<int, int>);
     void movePlayerPosition(char c);
-    Field* getField();
+    std::pair<int, int> getPlayerPosition() const;
+    const Field* getField();
+    bool isEndGame() const;
 
 };
 

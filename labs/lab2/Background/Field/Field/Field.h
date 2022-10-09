@@ -17,7 +17,7 @@ class Field{
 private:
     std::pair<int, int> fieldSize;
     std::pair<int, int> playerPosition;
-    std::vector<std::vector<Cell*>> field;
+    std::vector<std::vector<Cell>> field;
     CellFactory cellFactory;
 public:
     Field(std::pair<int, int> fieldSize = {MINWIDTH, MINHEIGHT},
@@ -33,6 +33,7 @@ public:
     void movePlayer(Player::STEP, std::shared_ptr<Player> player);
 
     std::pair<int, int> getFieldSize() const;
+    std::pair<int, int> getPlayerPosition() const;
     const Cell& getCell(int, int) const;
 };
 

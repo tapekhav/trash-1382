@@ -19,10 +19,9 @@ public:
 
     int getHealth() const;
     int getShield() const;
+    int getXp() const;
     int getCoins() const;
 
-    void setHealth(int health);
-    void setShield(int shield);
 
     void addHealth(int health);
     void addShield(int shield);

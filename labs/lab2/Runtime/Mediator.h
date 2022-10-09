@@ -14,9 +14,9 @@ private:
     char command = ' ';
     CommandReader commandReader;
     Controller controller;
+    void help() const;
     void notify(MediatorObject&);
     bool update();
-    std::string help = "Use WASD to move\te for exit game";
 };
 
 

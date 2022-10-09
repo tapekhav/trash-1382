@@ -6,5 +6,13 @@ Controller::Controller(std::pair<int, int> size): fieldView(FieldView(&model)), 
 };
 
 void Controller::notify(char& command) {
-    model.movePlayerPosition(command);
+    if (command == 'f'){
+        model.createField(std::pair<int, int> ({15, 10}), model.getPlayerPosition());
+    }
+    else
+        model.movePlayerPosition(command);
+}
+
+bool Controller::isEndGame() const{
+    return model.isEndGame();
 }

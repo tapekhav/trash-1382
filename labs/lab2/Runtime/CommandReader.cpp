@@ -10,7 +10,7 @@ unsigned int CommandReader::getFieldWidth() const{
     std::string inputData;
 
     std::cin >> inputData;
-    return CommandReader::checkUIData(inputData);
+    return checkUIData(inputData);
 }
 
 
@@ -20,7 +20,7 @@ unsigned int CommandReader::getFieldHeight() const{
     std::string inputData;
 
     std::cin >> inputData;
-    return CommandReader::checkUIData(inputData);
+    return checkUIData(inputData);
 }
 
 void CommandReader::getPlayerMove(char& command) const {

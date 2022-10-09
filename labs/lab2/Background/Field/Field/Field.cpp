@@ -1,5 +1,9 @@
 #include <iostream>
+#include <utility>
 #include "Field.h"
+#include "Event/EventPlayer/EventPlayerAddHealth.h"
+#include "Event/EventPlayer/EventPlayerAddCoin.h"
+#include "Event/EventPlayer/EventPlayerAddShield.h"
 
 
 Field::Field(std::pair<int, int> fieldSize, std::pair<int, int> playerPosition):
@@ -51,22 +55,25 @@ void Field::setField(){
         field.emplace_back();
         for(int w = 0; w < fieldSize.first; ++w){
             if (10 <= h + w and h + w <= 11){
-                auto* cellWall = cellFactory.getCell("Wall");
-                field.at(h).push_back(cellWall);
+                auto cellWall = cellFactory.getCell("Wall");
+                field.at(h).push_back(*cellWall);
             }else {
-                auto* cellGrass = cellFactory.getCell("Grass");
-                field.at(h).push_back(cellGrass);
+                auto cellGrass = cellFactory.getCell("Grass");
+                field.at(h).push_back(*cellGrass);
             }
             if (h+w == 3){
-                //auto* addHealth = new EventPlayerAddHealth(10);
-                //field.at(h).at(w)->setEvent(addHealth);
+                auto* addHealth = new EventPlayerAddHealth(10);
+                field.at(h).at(w).setEvent(addHealth);
             }
             if (h == fieldSize.second - 3){
-                //auto* addShield = new EventPlayerAddShield(10);
-                //field.at(h).at(w)->setEvent(addShield);
+                auto* addCoin = new EventPlayerAddCoin(10);
+                field.at(h).at(w).setEvent(addCoin);
             }
-            //auto* cellPlayer = new CellPlayer();
-            if (h == playerPosition.second and w == playerPosition.first) field.at(h).at(w) = cellFactory.getCell("Player");
+            if (w == fieldSize.first - 3){
+                auto* addShield = new EventPlayerAddShield(10);
+                field.at(h).at(w).setEvent(addShield);
+            }
+            if (h == playerPosition.second and w == playerPosition.first) field.at(h).at(w) = *cellFactory.getCell("Player");
         }
     }
     std::cout << "Field seted\n";
@@ -77,7 +84,7 @@ std::pair<int, int> Field::getFieldSize() const{
 };
 
 const Cell& Field::getCell(int height, int width) const{
-    return field.at(height).at(width)->getCell();
+    return field.at(height).at(width).getCell();
 }
 
 void Field::movePlayer(Player::STEP step, std::shared_ptr<Player> player) {
@@ -107,16 +114,18 @@ void Field::movePlayer(Player::STEP step, std::shared_ptr<Player> player) {
     if(newPosition.second < 0) newPosition.second += int(fieldSize.second);
 
 
-    if (field.at(newPosition.second).at(newPosition.first)->isPassable()){
-        auto* cellGrass = new CellGrass();
-
-        //field.at(newPosition.second).at(newPosition.first)->callEvent(player);
-        field.at(newPosition.second).at(newPosition.first)->Cell::~Cell();
+    if (field.at(newPosition.second).at(newPosition.first).isPassable()){
+        field.at(newPosition.second).at(newPosition.first).callEvent(player);
+        field.at(newPosition.second).at(newPosition.first).Cell::~Cell();
         field.at(newPosition.second).at(newPosition.first) = field.at(playerPosition.second).at(playerPosition.first);
 
-        field.at(playerPosition.second).at(playerPosition.first)->Cell::~Cell();
-        field.at(playerPosition.second).at(playerPosition.first) = cellFactory.getCell("Grass");
+        field.at(playerPosition.second).at(playerPosition.first).Cell::~Cell();
+        field.at(playerPosition.second).at(playerPosition.first) = *cellFactory.getCell("Grass");
 
         playerPosition = newPosition;
     }
+}
+
+std::pair<int, int> Field::getPlayerPosition() const {
+    return playerPosition;
 }

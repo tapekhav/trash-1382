@@ -11,6 +11,7 @@ class Controller: public MediatorObject{
 public:
     Controller(std::pair<int, int>);
     void notify(char&) final;
+    bool isEndGame() const;
 private:
     Model model;
     FieldView fieldView;

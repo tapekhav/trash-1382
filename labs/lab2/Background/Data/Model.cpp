@@ -2,26 +2,22 @@
 #include "Model.h"
 
 Model::Model(std::pair<int, int> size){
+    player = std::make_shared<Player>(Player());
     std::cout << "Constructor Model\n";
     field = Field(size);
     std::cout << "Finished Model constr\n";
 }
 
-void Model::createField(std::pair<int, int> size) {
-    std::cout << "New Field " << size.first << " " << size.second << '\n';
-    field = Field(size);
-    std::cout << "After constructor " <<field.getFieldSize().first << '\t' << field.getFieldSize().second << '\n';
+void Model::createField(std::pair<int, int> size, std::pair<int, int> playerPosition) {
+    field = Field(size, playerPosition);
     this->notify();
 }
 
-Field* Model::getField() {
-    std::cout << "In get Field " << field.getFieldSize().first << '\t' << field.getFieldSize().second << '\n';
+const Field* Model::getField() {
     return &field;
 }
 
 void Model::movePlayerPosition(char c) {
-    std::cout << "In move player " << field.getFieldSize().first << '\t' << field.getFieldSize().second << '\n';
-
     Player::STEP s;
     switch (c) {
         case 'w':
@@ -42,4 +38,13 @@ void Model::movePlayerPosition(char c) {
     }
     field.movePlayer(s, player);
     this->notify();
+}
+
+std::pair<int, int> Model::getPlayerPosition() const {
+    return field.getPlayerPosition();
+}
+
+bool Model::isEndGame() const {
+    if ((player->getCoins() >= (field.getFieldSize().first/2)*10) || (player->getHealth() <= 0)) return true;
+    return false;
 }
