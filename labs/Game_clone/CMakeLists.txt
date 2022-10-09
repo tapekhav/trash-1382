@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.23)
+project(Game)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(Game Runtime/main.cpp Background/Field/FieldView.cpp Background/Field/FieldView.h Background/Field/Field.cpp Background/Field/Field.h Background/Cell/Cell.cpp Background/Cell/Cell.h Background/Cell/CellView.cpp Background/Cell/CellView.cpp Background/Cell/CellView.h Characters/Player.cpp Characters/Player.h Runtime/CommandReader.cpp Runtime/CommandReader.h Runtime/MediatorObject.h Runtime/Mediator.cpp Runtime/Mediator.h Runtime/Controller.cpp Runtime/Controller.h Background/Event/Event.h Background/Cell/CellGrass.cpp Background/Cell/CellGrass.h Background/Cell/CellWall.cpp Background/Cell/CellWall.h Background/Cell/CellPlayer.cpp Background/Cell/CellPlayer.h Background/Event/EventPlayer/IEventPlayer.h Background/Event/EventPlayer/EventPlayerAddHealth.cpp Background/Event/EventPlayer/EventPlayerAddHealth.h Background/Event/EventPlayer/EventPlayerAddShield.cpp Background/Event/EventPlayer/EventPlayerAddShield.h Background/Event/EventPlayer/EventPlayerDownHealth.cpp Background/Event/EventPlayer/EventPlayerDownHealth.h Background/Event/EventPlayer/EventPlayerDownShield.cpp Background/Event/EventPlayer/EventPlayerDownShield.h Runtime/Observer.h Runtime/Observable.cpp Runtime/Observable.h Runtime/Model.cpp Runtime/Model.h)
