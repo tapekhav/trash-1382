@@ -2,6 +2,7 @@
 #define LABS_CONTROLLER_H
 
 #include "../Background/FieldView.h"
+#include "../Characters/PlayerView.h"
 
 class Controller {
 public:
@@ -9,11 +10,13 @@ public:
 
     void set_field(int width, int height);
     void set_field_standard();
-    void set_step(Player::STEP step, Player& player);
+    void set_step(Player::STEP step);
 
-    void show_field();
+    bool end_game() const;
 private:
+    Player player;
     Field field;
+    PlayerView player_view;
     FieldView field_view;
 };
 

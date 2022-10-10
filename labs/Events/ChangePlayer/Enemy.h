@@ -2,6 +2,7 @@
 #define LABS_ENEMY_H
 
 #include "EventPlayer.h"
+#include <random>
 
 class Enemy: public EventPlayer {
 public:

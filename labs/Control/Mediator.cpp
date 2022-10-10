@@ -1,7 +1,6 @@
 #include "Mediator.h"
 
 void Mediator::start() {
-    Player player;
     input.read_char();
 
     if (input.get_char() != 'y') {
@@ -12,8 +11,9 @@ void Mediator::start() {
     }
 
     while(input.get_step() != Player::EXIT) {
-        game.show_field();
         input.read_step();
-        game.set_step(input.get_step(), player);
+        if (game.end_game())
+            return;
+        game.set_step(input.get_step());
     }
 }

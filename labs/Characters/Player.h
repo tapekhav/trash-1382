@@ -2,8 +2,9 @@
 #define LABS_PLAYER_H
 
 #include <algorithm>
+#include "../Control/Observer/Observable.h"
 
-class Player {
+class Player : public Observable {
 public:
     enum STEP {
         UP,
@@ -24,11 +25,13 @@ public:
     void set_damage(int damage);
     void set_xp(int xp);
     void add_lvl();
+    void add_murder();
 private:
     int health;
     int damage;
     int xp;
     int lvl;
+    int num_of_murders;
 };
 
 #endif //LABS_PLAYER_H

@@ -3,16 +3,16 @@
 
 #include "Field.h"
 #include "CellView.h"
-#include <vector>
 
-class FieldView {
+class FieldView : public Observer {
 public:
-    explicit FieldView(Field& other);
-    void print() const;
+    explicit FieldView(Field* other);
+    void update() override;
 private:
     void print_border() const;
+    void print() const;
 
-    Field field;
+    Field* field;
 };
 
 #endif

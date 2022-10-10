@@ -1,9 +1,12 @@
 #ifndef LABS_CELL_H
 #define LABS_CELL_H
 
+class Field;
+
 #include <iostream>
 #include <algorithm>
 #include "../Events/ChangePlayer/EventPlayer.h"
+#include "../Events/ChangeField/EventField.h"
 
 class Cell {
 public:
@@ -24,4 +27,4 @@ private:
     Event* event;
 };
 
-#endif //LABS_CELL_H
+#endif

@@ -1,12 +1,14 @@
 #ifndef LABS_NEWLEVEL_H
 #define LABS_NEWLEVEL_H
 
+class Field;
+
 #include "EventField.h"
 
 class NewLevel : public EventField {
 public:
-    NewLevel() = default;
-    void execute(Field& field) override;
+    void execute(Field& field) final;
+    ~NewLevel() override = default;
 };
 
 

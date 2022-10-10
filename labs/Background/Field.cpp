@@ -1,6 +1,5 @@
 #include "Field.h"
 
-
 Field::Field(int width, int height)
     : width(width), height(height), player_location({0, 0}) {
     for(size_t i = 0; i != height; ++i) {
@@ -56,9 +55,10 @@ void Field::generate_enemy() {
     std::uniform_int_distribution gen_height(1, height - 1);
     std::uniform_int_distribution gen_width(0, width - 1);
 
-    auto* enemy = new Enemy;
-    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy);
-    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy);
+    auto* enemy1 = new Enemy;
+    auto* enemy2 = new Enemy;
+    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy1);
+    field.at(gen_height(rng)).at(gen_width(rng)).set_event(enemy2);
 }
 
 void Field::make_field() {
@@ -81,7 +81,11 @@ void Field::make_field() {
                     field.at(i).at(j).set_event(heal);
                     break;
                 }
-                case 3:
+                /*case 3: {
+                    auto *newlevel = new NewLevel;
+                    field.at(i).at(j).set_event(newlevel);
+                } */
+                case 4:
                     field.at(i).at(j).set_passability(false);
                     break;
                 default:
@@ -89,10 +93,9 @@ void Field::make_field() {
             }
         }
     }
-    generate_enemy();
+    this->generate_enemy();
+    this->Notify();
 }
-
-
 
 void Field::change_player_pos(Player &player, Player::STEP s) {
     auto tmp = player_location;
@@ -127,7 +130,11 @@ void Field::change_player_pos(Player &player, Player::STEP s) {
 
     field.at(player_location.second).at(player_location.first).set_player_in(true);
     field.at(player_location.second).at(player_location.first).update(player);
-    std::cout << "hp = " << player.get_health() << " xp = " << player.get_xp() << " damage = " << player.get_damage() << '\n';
+
+    if (s != Player::EXIT)
+        this->Notify();
+
+
 }
 
 int Field::get_height() const {
