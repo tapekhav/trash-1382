@@ -6,7 +6,7 @@ Field::Field(int width, int height) : mPlayerPosition(height / 2, width / 2), mW
         for (int yIdx = 0; yIdx < mHeight; yIdx++)
             mField[xIdx].push_back(Cell());
     }
-    mField[height / 2][width / 2 + 1].SetWall(true);
+    mField[width / 2][height / 2 + 1].SetWall(true);
 }
 
 Field& Field::operator=(Field const& other) {

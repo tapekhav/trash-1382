@@ -6,9 +6,11 @@
 
 class Game : public Handle {
 public:
-	void StartGame() const;
+
+	void StartGame();
 
 	void SetGameProgress(bool val) { mGameProgress = val; }
+	int GetMove() const { return mMove; }
 private:
 	bool mGameProgress;
 	int mMove;

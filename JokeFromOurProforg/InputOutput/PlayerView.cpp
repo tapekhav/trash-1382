@@ -6,7 +6,9 @@ void PlayerViewer::View(Player player) const{
 	std::cout << "Your thirst: ";
 	ViewProperty(EnumClass::THIRST, player.GetThirst());
 	std::cout << "Your health: ";
-	ViewProperty(EnumClass::HEALTH, player.GetHealth());
+	for (int idx = 0; idx < player.GetHealth(); idx++)
+		std::cout << ChooseView(EnumClass::HEALTH, false) << " ";
+	std::cout << std::endl;
 }
 
 void PlayerViewer::ViewProperty(EnumClass::Properties type, int val) const{

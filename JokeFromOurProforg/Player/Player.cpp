@@ -23,10 +23,3 @@ Player::Player(Player&& obj) {
     mHunger = obj.mHunger;
     obj.mHunger = 0;
 }
-
-void Player::DamagePlayer(int val) {
-    mHealth -= val;
-    if (mHealth <= 0) {
-        //продумать прослойку для обрщения к Commander при потери здоровья
-    }
-}

@@ -28,14 +28,21 @@ public:
         FIELD_SIZE,
         GAME_PROGRESS,
         DO_CMD,
-        FINISH
+        FINISH,
+        DEFEAT,
+        VICTORY,
+        MOVE_COUNT = 50
     };
+
 
     enum Properties{  
         THIRST = 20,
         HUNGER = 10,
-        HEALTH = 5
+        HEALTH = 5,
+        DAMAGE = 1
     };
+
+
 };
 
 #endif //SURVIVE_ENUMS_H

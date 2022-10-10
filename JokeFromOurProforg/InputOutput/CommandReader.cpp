@@ -15,7 +15,7 @@ void CommandReader::IncorrectInput() {
 }
 
 void CommandReader::ReadWidthAndHeight() {
-    std::cout << "The size of the map must be in range from 3 to 15\n";
+    std::cout << "The size of the map must be in range from 3 to 20\n";
     std::cout << "If you enter an incorrect output, the values will move to the rigth range\n";
     std::cout << "Enter a size for the map." << std::endl << "Width: ";
     std::cin >> mSize.first;
@@ -64,4 +64,14 @@ void CommandReader::Help(bool type) const {
         std::cout << "Enter any symbol to continue: ";
         std::cin >> c;
     }
+}
+
+void CommandReader::DefeatMsg() const {
+    std::cout << "---DEFEAT---" << std::endl;
+    std::cout << "Unfortunately, you're dead!" << std::endl;
+}
+
+void CommandReader::VictoryMsg() const {
+    std::cout << "---VICTORY---" << std::endl;
+    std::cout << "You survived. You won." << std::endl;
 }

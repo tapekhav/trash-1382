@@ -5,6 +5,7 @@
 #include "InputOutput/FieldViewer.h"
 #include "InputOutput/PlayerView.h"
 #include "Logging/Handle.h"
+#include "Event/EventManager.h"
 #include "Enums.h"
 
 class Commander : public Handle {
@@ -17,14 +18,20 @@ public:
 
     void ShowField();
 
+    void SetMove(int steps);
+
     ~Commander();
 
 private:
+    void SpendEnergy(bool type);
+
+    int mMove;
+
     Field* mField;
     FieldViewer* mView;
     Player* mPlayer;
     PlayerViewer* mStatus;
-
+    EventManager* mManager;
 };
 
 #endif //SURVIVAL_COMMANDER_H

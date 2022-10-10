@@ -5,6 +5,7 @@ Commander::Commander() {
     mField = new Field;
     mView = new FieldViewer;
     mStatus = new PlayerViewer;
+    mManager = new EventManager;
 }
 
 void Commander::SetFieldSize(int width, int height) {
@@ -12,6 +13,8 @@ void Commander::SetFieldSize(int width, int height) {
 }
 
 void Commander::PlayerGo(EnumClass::Direction dir) {
+    mMediator->Notify(EnumClass::MOVE_COUNT);
+    SpendEnergy(mMove % 2 == 1);
     switch (dir)
     {
     case EnumClass::RIGHT:
@@ -42,9 +45,29 @@ void Commander::ShowField() {
     mView->View(*mField);
 }
 
+void Commander::SpendEnergy(bool type) {
+    mPlayer->LoseThirstUnit();
+    
+    if (type)
+        mPlayer->LoseHungerUnit();
+
+    if (mPlayer->GetHunger() == 0 || mPlayer->GetThirst() == 0)
+        mPlayer->DamagePlayer(EnumClass::DAMAGE);
+    if (mPlayer->GetHealth() == 0) {
+        ShowField();
+        mMediator->Notify(EnumClass::DEFEAT);
+    }
+    
+}
+
+void Commander::SetMove(int steps) {
+    mMove = steps;
+}
+
 Commander::~Commander() {
     delete mPlayer;
     delete mView;
     delete mStatus;
     delete mField;
+    delete mManager;
 }

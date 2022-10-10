@@ -37,7 +37,21 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 		break;
 	case EnumClass::FINISH:
 		mCommandReader->GoodBye();
+		break;
+	case EnumClass::DEFEAT:
+		mCommandReader->DefeatMsg();
+		mGame->SetGameProgress(false);
+		break;
+	case EnumClass::VICTORY:
+		mCommandReader->VictoryMsg();
+		mGame->SetGameProgress(false);
+		break;
+	case EnumClass::MOVE_COUNT:
+		mCommander->SetMove(mGame->GetMove());
+		break;
 	}
+	
+
 }
 
 void HandleMediator::CharMsg(char& cmd) {

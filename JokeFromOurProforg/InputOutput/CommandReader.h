@@ -16,6 +16,9 @@ public:
     void GoodBye() const;
 
     void IncorrectInput();
+    
+    void VictoryMsg() const;
+    void DefeatMsg() const;
 
 private:
 
