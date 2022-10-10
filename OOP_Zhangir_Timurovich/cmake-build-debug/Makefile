@@ -150,33 +150,6 @@ Background/Cell.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.s
 .PHONY : Background/Cell.cpp.s
 
-Background/CellType.o: Background/CellType.cpp.o
-
-.PHONY : Background/CellType.o
-
-# target to build an object file
-Background/CellType.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o
-.PHONY : Background/CellType.cpp.o
-
-Background/CellType.i: Background/CellType.cpp.i
-
-.PHONY : Background/CellType.i
-
-# target to preprocess a source file
-Background/CellType.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.i
-.PHONY : Background/CellType.cpp.i
-
-Background/CellType.s: Background/CellType.cpp.s
-
-.PHONY : Background/CellType.s
-
-# target to generate assembly for a file
-Background/CellType.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.s
-.PHONY : Background/CellType.cpp.s
-
 Background/CellView.o: Background/CellView.cpp.o
 
 .PHONY : Background/CellView.o
@@ -257,6 +230,33 @@ Background/FieldView.s: Background/FieldView.cpp.s
 Background/FieldView.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.s
 .PHONY : Background/FieldView.cpp.s
+
+CellTypes/CellType.o: CellTypes/CellType.cpp.o
+
+.PHONY : CellTypes/CellType.o
+
+# target to build an object file
+CellTypes/CellType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o
+.PHONY : CellTypes/CellType.cpp.o
+
+CellTypes/CellType.i: CellTypes/CellType.cpp.i
+
+.PHONY : CellTypes/CellType.i
+
+# target to preprocess a source file
+CellTypes/CellType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.i
+.PHONY : CellTypes/CellType.cpp.i
+
+CellTypes/CellType.s: CellTypes/CellType.cpp.s
+
+.PHONY : CellTypes/CellType.s
+
+# target to generate assembly for a file
+CellTypes/CellType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s
+.PHONY : CellTypes/CellType.cpp.s
 
 Characters/Player.o: Characters/Player.cpp.o
 
@@ -420,6 +420,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test.o: test.cpp.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -432,9 +459,6 @@ help:
 	@echo "... Background/Cell.o"
 	@echo "... Background/Cell.i"
 	@echo "... Background/Cell.s"
-	@echo "... Background/CellType.o"
-	@echo "... Background/CellType.i"
-	@echo "... Background/CellType.s"
 	@echo "... Background/CellView.o"
 	@echo "... Background/CellView.i"
 	@echo "... Background/CellView.s"
@@ -444,6 +468,9 @@ help:
 	@echo "... Background/FieldView.o"
 	@echo "... Background/FieldView.i"
 	@echo "... Background/FieldView.s"
+	@echo "... CellTypes/CellType.o"
+	@echo "... CellTypes/CellType.i"
+	@echo "... CellTypes/CellType.s"
 	@echo "... Characters/Player.o"
 	@echo "... Characters/Player.i"
 	@echo "... Characters/Player.s"
@@ -462,6 +489,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

@@ -27,4 +27,4 @@ add_executable(OOP_Zhangir_Timurovich
         Control/Mediator.h
         Events/Event.cpp
         Events/Event.h
-        main.cpp CellTypes/CellType.h CellTypes/CellType.cpp)
+        main.cpp CellTypes/CellType.h CellTypes/CellType.cpp test.cpp Characters/PlayerView.cpp Characters/PlayerView.h)

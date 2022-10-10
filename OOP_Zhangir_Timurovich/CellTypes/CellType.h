@@ -7,8 +7,6 @@ class CellType {
 
 class CoinType : public CellType {
     void execute() override;
-
-public:
 };
 
 

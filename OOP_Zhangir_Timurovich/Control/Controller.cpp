@@ -3,13 +3,15 @@
 
 Controller::Controller(int width, int height, int health, int armour, int
 damage) {
-    this->player = Player(health, armour, damage);
+    this->player = new Player(health, armour, damage);
     this->field = new Field(width, height);
-    this->view = FieldView(this->field);
+    this->field_view = FieldView(this->field);
+    this->player_view = PlayerView(this->player);
 }
 
 void Controller::show_field() {
-    this->view.show_field();
+    this->field_view.show_field();
+    this->player_view.show_chars();
 }
 
 void Controller::create_field(){
@@ -36,7 +38,7 @@ void Controller::move_player(CommandReader::MOVES move) {
             return;
     }
     field->move_player(x, y);
-    view.show_field();
+    field_view.show_field();
 }
 
 

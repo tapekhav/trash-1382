@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Characters/Player.h"
+#include "../Characters/PlayerView.h"
 #include "../Background/Field.h"
 #include "../Background/FieldView.h"
 #include "CommandReader.h"
@@ -21,8 +22,9 @@ public:
 
 
 private:
-    Player player;
-    FieldView view{};
+    Player* player;
+    FieldView field_view{};
     Field *field{};
+    PlayerView player_view{};
 };
 

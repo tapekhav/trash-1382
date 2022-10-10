@@ -187,18 +187,31 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/main.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.s
 
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o: CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o: ../Background/CellType.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o -c /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o: CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o: ../CellTypes/CellType.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o -c /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp
 
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.cpp > CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.i
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp > CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.i
 
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.s
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o: CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make
+CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o: ../test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o -c /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/test.cpp
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/test.cpp > CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.i
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/test.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.s
 
 # Object files for target OOP_Zhangir_Timurovich
 OOP_Zhangir_Timurovich_OBJECTS = \
@@ -212,7 +225,8 @@ OOP_Zhangir_Timurovich_OBJECTS = \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o" \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o" \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o" \
-"CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o"
+"CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o" \
+"CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o"
 
 # External object files for target OOP_Zhangir_Timurovich
 OOP_Zhangir_Timurovich_EXTERNAL_OBJECTS =
@@ -227,10 +241,11 @@ OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o
-OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o
+OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o
+OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable OOP_Zhangir_Timurovich"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable OOP_Zhangir_Timurovich"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

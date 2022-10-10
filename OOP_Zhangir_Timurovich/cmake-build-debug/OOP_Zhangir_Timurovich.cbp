@@ -96,12 +96,6 @@
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.cpp">
-			<Option target="OOP_Zhangir_Timurovich"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h">
-			<Option target="OOP_Zhangir_Timurovich"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellView.cpp">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
@@ -118,6 +112,12 @@
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/FieldView.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.cpp">
@@ -151,6 +151,9 @@
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/main.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/test.cpp">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CMakeLists.txt">

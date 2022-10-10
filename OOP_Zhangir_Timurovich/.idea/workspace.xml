@@ -12,47 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CellTypes/CellType.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CellTypes/CellType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/PlayerView.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/PlayerView.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Cell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/CellView.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/CellView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CellTypes/CellType.h" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.16.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compile command.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ООП рома папин.docx" beforeDir="false" afterPath="$PROJECT_DIR$/ООП рома папин.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +59,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/tracror" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
   </component>
@@ -117,7 +96,12 @@
       <updated>1664279885532</updated>
       <workItem from="1664279886970" duration="1258000" />
       <workItem from="1664289842141" duration="1064000" />
-      <workItem from="1664378141897" duration="18351000" />
+      <workItem from="1664378141897" duration="18945000" />
+      <workItem from="1664440886284" duration="480000" />
+      <workItem from="1664442239090" duration="3095000" />
+      <workItem from="1665139302386" duration="8018000" />
+      <workItem from="1665172571986" duration="39000" />
+      <workItem from="1665403059491" duration="2719000" />
     </task>
     <servers />
   </component>
@@ -134,5 +118,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
