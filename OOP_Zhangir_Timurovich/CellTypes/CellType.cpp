@@ -28,6 +28,10 @@ bool PlayerType::get_pass() {
     return this->pass;
 }
 
-bool FixType::get_pass() {
+bool StoneType::get_pass() {
+    return this->pass;
+}
+
+bool CollapseType::get_pass() {
     return this->pass;
 }

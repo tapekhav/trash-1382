@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o"
+  "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o"
+  "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o"

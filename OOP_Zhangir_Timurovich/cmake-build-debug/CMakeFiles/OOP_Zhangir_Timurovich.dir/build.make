@@ -252,6 +252,32 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s
 
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Events/FieldEvents/Collapse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o -c /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.cpp
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.cpp > CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.i
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.s
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o: CMakeFiles/OOP_Zhangir_Timurovich.dir/flags.make
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o: ../Events/GameRulesEvents/RulesEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o -c /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.cpp
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.cpp > CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.i
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.cpp -o CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.s
+
 # Object files for target OOP_Zhangir_Timurovich
 OOP_Zhangir_Timurovich_OBJECTS = \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o" \
@@ -268,7 +294,9 @@ OOP_Zhangir_Timurovich_OBJECTS = \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o" \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o" \
 "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o" \
-"CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o"
+"CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o" \
+"CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o" \
+"CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o"
 
 # External object files for target OOP_Zhangir_Timurovich
 OOP_Zhangir_Timurovich_EXTERNAL_OBJECTS =
@@ -288,9 +316,11 @@ OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvent
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o
+OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o
+OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make
 OOP_Zhangir_Timurovich: CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable OOP_Zhangir_Timurovich"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable OOP_Zhangir_Timurovich"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

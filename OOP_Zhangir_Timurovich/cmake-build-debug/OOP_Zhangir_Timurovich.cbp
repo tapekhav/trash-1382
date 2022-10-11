@@ -158,7 +158,19 @@
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/FieldEvent.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.cpp">

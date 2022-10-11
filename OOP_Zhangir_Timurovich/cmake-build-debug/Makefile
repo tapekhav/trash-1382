@@ -420,6 +420,60 @@ Events/Event.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.s
 .PHONY : Events/Event.cpp.s
 
+Events/FieldEvents/Collapse.o: Events/FieldEvents/Collapse.cpp.o
+
+.PHONY : Events/FieldEvents/Collapse.o
+
+# target to build an object file
+Events/FieldEvents/Collapse.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o
+.PHONY : Events/FieldEvents/Collapse.cpp.o
+
+Events/FieldEvents/Collapse.i: Events/FieldEvents/Collapse.cpp.i
+
+.PHONY : Events/FieldEvents/Collapse.i
+
+# target to preprocess a source file
+Events/FieldEvents/Collapse.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.i
+.PHONY : Events/FieldEvents/Collapse.cpp.i
+
+Events/FieldEvents/Collapse.s: Events/FieldEvents/Collapse.cpp.s
+
+.PHONY : Events/FieldEvents/Collapse.s
+
+# target to generate assembly for a file
+Events/FieldEvents/Collapse.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.s
+.PHONY : Events/FieldEvents/Collapse.cpp.s
+
+Events/GameRulesEvents/RulesEvent.o: Events/GameRulesEvents/RulesEvent.cpp.o
+
+.PHONY : Events/GameRulesEvents/RulesEvent.o
+
+# target to build an object file
+Events/GameRulesEvents/RulesEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o
+.PHONY : Events/GameRulesEvents/RulesEvent.cpp.o
+
+Events/GameRulesEvents/RulesEvent.i: Events/GameRulesEvents/RulesEvent.cpp.i
+
+.PHONY : Events/GameRulesEvents/RulesEvent.i
+
+# target to preprocess a source file
+Events/GameRulesEvents/RulesEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.i
+.PHONY : Events/GameRulesEvents/RulesEvent.cpp.i
+
+Events/GameRulesEvents/RulesEvent.s: Events/GameRulesEvents/RulesEvent.cpp.s
+
+.PHONY : Events/GameRulesEvents/RulesEvent.s
+
+# target to generate assembly for a file
+Events/GameRulesEvents/RulesEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.s
+.PHONY : Events/GameRulesEvents/RulesEvent.cpp.s
+
 Events/PlayerEvents/Enemy.o: Events/PlayerEvents/Enemy.cpp.o
 
 .PHONY : Events/PlayerEvents/Enemy.o
@@ -570,6 +624,12 @@ help:
 	@echo "... Events/Event.o"
 	@echo "... Events/Event.i"
 	@echo "... Events/Event.s"
+	@echo "... Events/FieldEvents/Collapse.o"
+	@echo "... Events/FieldEvents/Collapse.i"
+	@echo "... Events/FieldEvents/Collapse.s"
+	@echo "... Events/GameRulesEvents/RulesEvent.o"
+	@echo "... Events/GameRulesEvents/RulesEvent.i"
+	@echo "... Events/GameRulesEvents/RulesEvent.s"
 	@echo "... Events/PlayerEvents/Enemy.o"
 	@echo "... Events/PlayerEvents/Enemy.i"
 	@echo "... Events/PlayerEvents/Enemy.s"

@@ -10,9 +10,7 @@ public:
 
     virtual ~FieldEvent() = default;
 
-    virtual void execute(Field &field) = 0;
-
-    void execute(Player *pPlayer) override {};
+    virtual void execute(void* obj) = 0;
 };
 
 

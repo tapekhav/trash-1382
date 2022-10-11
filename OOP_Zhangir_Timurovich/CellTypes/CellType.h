@@ -118,11 +118,11 @@ private:
 };
 
 
-class FixType : public CellType {
+class StoneType : public CellType {
 public:
-    FixType() = default;
+    StoneType() = default;
 
-    ~FixType() override = default;
+    ~StoneType() override = default;
 
     void execute() override {};
 
@@ -131,5 +131,22 @@ public:
 private:
     bool pass = false;
 };
+
+class CollapseType : public CellType {
+public:
+    CollapseType() = default;
+
+    ~CollapseType() override = default;
+
+    void execute() override {};
+
+    bool get_pass() override;
+
+private:
+    bool pass = true;
+};
+
+
+
 
 

@@ -1,16 +1,4 @@
 C:\windows\system32\wsl.exe --distribution Ubuntu --exec /bin/sh -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich; sleep 0.001"
 -- Configuring done
-CMake Error at CMakeLists.txt:11 (add_executable):
-  Cannot find source file:
-
-    test.cpp
-
-  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
-  .hpp .hxx .in .txx
-
-
-CMake Error at CMakeLists.txt:11 (add_executable):
-  No SOURCES given to target: OOP_Zhangir_Timurovich
-
-
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+-- Generating done
+-- Build files have been written to: /mnt/c/Users/roman/OneDrive/Р”РѕРєСѓРјРµРЅС‚С‹/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug

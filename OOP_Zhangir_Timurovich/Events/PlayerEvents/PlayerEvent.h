@@ -7,10 +7,9 @@ class PlayerEvent : public Event {
 public:
     PlayerEvent() = default;
 
-    virtual void execute(Player *player) = 0;
+    virtual void execute(void* obj) = 0;
 
     virtual ~PlayerEvent() = default;
-
-    void execute() override {};
+    
 };
 

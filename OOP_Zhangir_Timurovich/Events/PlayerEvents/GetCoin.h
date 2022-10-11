@@ -7,6 +7,6 @@ public:
     GetCoin() = default;
 
     ~GetCoin() override = default;
-    void execute(Player *player) override;
+    void execute(void *obj) override;
 };
 

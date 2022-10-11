@@ -16,8 +16,10 @@ CellView::CellView(Cell c) {
         view = ' ';
     } else if (dynamic_cast<PlayerType *>(type)) {
         view = 'p';
-    } else if (dynamic_cast<FixType *>(type)) {
-        view = '+';
+    } else if (dynamic_cast<StoneType *>(type)) {
+        view = '*';
+    } else if(dynamic_cast<CollapseType *>(type)){
+        view = '?';
     }
 }
 

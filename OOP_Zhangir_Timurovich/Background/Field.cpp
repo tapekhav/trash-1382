@@ -5,6 +5,8 @@
 #include "Cell.h"
 #include "../Characters/Player.h"
 #include "../Events/PlayerEvents/PlayerEvent.h"
+#include "../Events/FieldEvents/FieldEvent.h"
+#include "../Events/FieldEvents/Collapse.h"
 #include "../Events/PlayerEvents/Enemy.h"
 #include "../Events/PlayerEvents/GetCoin.h"
 #include "../Events/PlayerEvents/Heal.h"
@@ -14,12 +16,12 @@ Field::Field(int width, int height) {
     this->height = height;
     this->player_x = 1;
     this->player_y = 1;
-    this->field = std::vector<std::vector<Cell>>(this->height, std::vector<Cell>(this->width));
 }
 
 void Field::create_field() {
     CellType *cl;
-    PlayerEvent *ev = nullptr;
+    Event *ev = nullptr;
+    this->field = std::vector<std::vector<Cell>>(this->height, std::vector<Cell>(this->width));
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
             ev = nullptr;
@@ -45,15 +47,24 @@ void Field::create_field() {
                         cl = new HealType;
                         ev = new Heal;
                         break;
-                    case 4: // TODO: поменять на обвал
-                        cl = new FixType;
+                    case 4:
+                        cl = new StoneType;
+                        break;
+                    case 5:
+                        cl = new CollapseType;
+                        ev = new Collapse;
                         break;
                     default:
                         cl = new EmptyType;
                         break;
                 }
             }
+            if(dynamic_cast<PlayerEvent*>(ev))
+                ev = dynamic_cast<PlayerEvent*>(ev);
+            else if(dynamic_cast<FieldEvent*>(ev))
+                ev = dynamic_cast<FieldEvent*>(ev);
             this->field.at(y).at(x) = Cell(cl, ev);
+            ev = dynamic_cast<Event*>(ev);
         }
     }
     cl = new PlayerType;
@@ -114,8 +125,14 @@ bool Field::move_player(Player *player, int x, int y) {
         this->player_y = new_y;
         auto *pl = dynamic_cast<PlayerEvent *> (this->field.at(new_y).at(
                 new_x).get_event());
+        auto *fl = dynamic_cast<FieldEvent *> (this->field.at(new_y).at(
+                new_x).get_event());
         if (pl) {
+//            std::cout << "KEK\n";
             pl->execute(player);
+        } else if (fl) {
+//            std::cout << "COLLAPSE\n";
+            fl->execute(this);
         }
         update_player(prev_x, prev_y);
         return true;
