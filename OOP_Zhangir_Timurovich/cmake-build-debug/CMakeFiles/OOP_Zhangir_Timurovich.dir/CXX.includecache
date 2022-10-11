@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.cpp
+iostream
+-
 Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
 
@@ -15,14 +17,8 @@ Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
 ../Events/Event.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
-CellType.h
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h
-
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.cpp
-CellType.h
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h
-
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h
+../CellTypes/CellType.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellView.cpp
 CellView.h
@@ -31,8 +27,8 @@ CellView.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellView.h
 Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
-CellType.h
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h
+../CellTypes/CellType.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.cpp
 iostream
@@ -45,12 +41,22 @@ Field.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
 Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
+../Characters/Player.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+../Events/PlayerEvents/PlayerEvent.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/PlayerEvent.h
+../Events/PlayerEvents/Enemy.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.h
+../Events/PlayerEvents/GetCoin.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/GetCoin.h
+../Events/PlayerEvents/Heal.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Heal.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
 Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
-CellType.h
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/CellType.h
+../CellTypes/CellType.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/FieldView.cpp
 FieldView.h
@@ -70,6 +76,12 @@ CellView.h
 Cell.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
 
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp
+CellType.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
+
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.cpp
 Player.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
@@ -78,9 +90,15 @@ Player.h
 vector
 -
 
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Control/CommandReader.cpp
-CommandReader.h
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Control/CommandReader.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/PlayerView.cpp
+PlayerView.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/PlayerView.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/PlayerView.h
+Player.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+iostream
+-
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Control/CommandReader.h
 string
@@ -97,6 +115,8 @@ CommandReader.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Control/Controller.h
 ../Characters/Player.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+../Characters/PlayerView.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/PlayerView.h
 ../Background/Field.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
 ../Background/FieldView.h
@@ -119,6 +139,40 @@ Event.h
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+../Characters/Player.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.cpp
+Enemy.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.h
+PlayerEvent.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/PlayerEvent.h
+random
+-
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/GetCoin.cpp
+GetCoin.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/GetCoin.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/GetCoin.h
+PlayerEvent.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/PlayerEvent.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Heal.cpp
+Heal.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Heal.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Heal.h
+PlayerEvent.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/PlayerEvent.h
+
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/PlayerEvent.h
+../Event.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+../../Characters/Player.h
+/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
 
 /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/main.cpp
 Background/Field.h

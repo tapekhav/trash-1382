@@ -3,74 +3,104 @@
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../Background/Cell.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../Background/CellType.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o: ../Events/Event.h
 
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o: ../Background/CellType.cpp
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellType.cpp.o: ../Background/CellType.h
-
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Background/CellView.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Background/CellView.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o: ../Events/Event.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Background/Field.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Background/Field.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/Enemy.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/GetCoin.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/Heal.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/PlayerEvent.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/CellView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/Field.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/FieldView.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Background/FieldView.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o: ../Events/Event.h
 
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o: ../CellTypes/CellType.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o: ../CellTypes/CellType.h
+
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/Player.cpp.o: ../Characters/Player.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/Player.cpp.o: ../Characters/Player.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.o: ../Characters/PlayerView.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.o: ../Characters/PlayerView.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/CommandReader.cpp.o: ../Control/CommandReader.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/CommandReader.cpp.o: ../Control/CommandReader.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Background/CellView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Background/Field.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Background/FieldView.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Characters/PlayerView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Control/CommandReader.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Control/Controller.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Control/Controller.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o: ../Events/Event.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Background/CellView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Background/Field.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Background/FieldView.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Characters/PlayerView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Control/CommandReader.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Control/Controller.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Control/Mediator.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Control/Mediator.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Events/Event.h
 
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Events/Event.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Events/Event.h
 
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Events/PlayerEvents/Enemy.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Events/PlayerEvents/Enemy.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Events/PlayerEvents/PlayerEvent.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o: ../Events/PlayerEvents/GetCoin.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o: ../Events/PlayerEvents/GetCoin.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o: ../Events/PlayerEvents/PlayerEvent.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o: ../Events/PlayerEvents/Heal.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o: ../Events/PlayerEvents/Heal.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o: ../Events/PlayerEvents/PlayerEvent.h
+
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Background/Cell.h
-CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Background/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Background/CellView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Background/Field.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Background/FieldView.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Characters/PlayerView.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Control/CommandReader.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Control/Controller.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o: ../Control/Mediator.h

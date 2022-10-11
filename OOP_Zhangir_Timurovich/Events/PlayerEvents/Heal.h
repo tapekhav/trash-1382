@@ -5,5 +5,9 @@
 
 class Heal : public PlayerEvent {
 public:
+    Heal() = default;
+
+    ~Heal() override = default;
+
     void execute(Player *player) override;
 };

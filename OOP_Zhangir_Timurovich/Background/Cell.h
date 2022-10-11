@@ -7,7 +7,7 @@
 class Cell {
 public:
 
-    explicit Cell(CellType *cell_type = new EmptyType, Event *event = nullptr, bool pass = true);
+    explicit Cell(CellType *cell_type = new EmptyType, Event *event = nullptr);
 
     CellType *get_type();
 

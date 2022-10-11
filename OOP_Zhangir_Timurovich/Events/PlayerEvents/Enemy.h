@@ -5,6 +5,10 @@
 
 class Enemy : public PlayerEvent {
 public:
+    Enemy() = default;
+
+    ~Enemy() override = default;
+
     void execute(Player *player) override;
 };
 

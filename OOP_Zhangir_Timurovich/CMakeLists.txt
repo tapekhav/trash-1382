@@ -7,6 +7,7 @@ include_directories(Background)
 include_directories(Characters)
 include_directories(Control)
 include_directories(Events)
+include_directories(CellTypes)
 
 add_executable(OOP_Zhangir_Timurovich
         Background/Cell.cpp
@@ -27,4 +28,4 @@ add_executable(OOP_Zhangir_Timurovich
         Control/Mediator.h
         Events/Event.cpp
         Events/Event.h
-        main.cpp CellTypes/CellType.h test.cpp Characters/PlayerView.cpp Characters/PlayerView.h Events/FieldEvents/FieldEvent.h Events/PlayerEvents/PlayerEvent.h Events/PlayerEvents/GetCoin.cpp Events/PlayerEvents/GetCoin.h Events/PlayerEvents/Heal.cpp Events/PlayerEvents/Heal.h Events/PlayerEvents/Enemy.cpp Events/PlayerEvents/Enemy.h CellTypes/CellType.cpp)
+        main.cpp CellTypes/CellType.h Characters/PlayerView.cpp Characters/PlayerView.h Events/FieldEvents/FieldEvent.h Events/PlayerEvents/PlayerEvent.h Events/PlayerEvents/GetCoin.cpp Events/PlayerEvents/GetCoin.h Events/PlayerEvents/Heal.cpp Events/PlayerEvents/Heal.h Events/PlayerEvents/Enemy.cpp Events/PlayerEvents/Enemy.h CellTypes/CellType.cpp)

@@ -20,12 +20,10 @@ Field::Field(int width, int height) {
 void Field::create_field() {
     CellType *cl;
     PlayerEvent *ev = nullptr;
-    bool ps = true;
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
             ev = nullptr;
             cl = nullptr;
-            ps = true;
             if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1)) {
                 cl = new WallVertType;
             } else if (y == 0 || y == (this->height - 1)) {
@@ -49,14 +47,13 @@ void Field::create_field() {
                         break;
                     case 4: // TODO: поменять на обвал
                         cl = new FixType;
-                        ps = false;
                         break;
                     default:
                         cl = new EmptyType;
                         break;
                 }
             }
-            this->field.at(y).at(x) = Cell(cl, ev, ps);
+            this->field.at(y).at(x) = Cell(cl, ev);
         }
     }
     cl = new PlayerType;
@@ -113,10 +110,8 @@ bool Field::move_player(Player *player, int x, int y) {
     int prev_x = this->player_x;
     int prev_y = this->player_y;
     if (this->field[new_y][new_x].get_pass()) {
-        std::cout << this->player_x << " old " << player_y << '\n';
         this->player_x = new_x;
         this->player_y = new_y;
-        std::cout << new_x << " new " << new_y << '\n';
         auto *pl = dynamic_cast<PlayerEvent *> (this->field.at(new_y).at(
                 new_x).get_event());
         if (pl) {

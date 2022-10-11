@@ -6,7 +6,12 @@
 
 class FieldEvent : public Event {
 public:
-    virtual void execute(Field& field) = 0;
+    FieldEvent() = default;
+
+    virtual ~FieldEvent() = default;
+
+    virtual void execute(Field &field) = 0;
+
     void execute(Player *pPlayer) override {};
 };
 

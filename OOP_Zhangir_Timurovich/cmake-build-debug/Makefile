@@ -285,6 +285,33 @@ Characters/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/Player.cpp.s
 .PHONY : Characters/Player.cpp.s
 
+Characters/PlayerView.o: Characters/PlayerView.cpp.o
+
+.PHONY : Characters/PlayerView.o
+
+# target to build an object file
+Characters/PlayerView.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.o
+.PHONY : Characters/PlayerView.cpp.o
+
+Characters/PlayerView.i: Characters/PlayerView.cpp.i
+
+.PHONY : Characters/PlayerView.i
+
+# target to preprocess a source file
+Characters/PlayerView.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.i
+.PHONY : Characters/PlayerView.cpp.i
+
+Characters/PlayerView.s: Characters/PlayerView.cpp.s
+
+.PHONY : Characters/PlayerView.s
+
+# target to generate assembly for a file
+Characters/PlayerView.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Characters/PlayerView.cpp.s
+.PHONY : Characters/PlayerView.cpp.s
+
 Control/CommandReader.o: Control/CommandReader.cpp.o
 
 .PHONY : Control/CommandReader.o
@@ -393,6 +420,87 @@ Events/Event.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.s
 .PHONY : Events/Event.cpp.s
 
+Events/PlayerEvents/Enemy.o: Events/PlayerEvents/Enemy.cpp.o
+
+.PHONY : Events/PlayerEvents/Enemy.o
+
+# target to build an object file
+Events/PlayerEvents/Enemy.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o
+.PHONY : Events/PlayerEvents/Enemy.cpp.o
+
+Events/PlayerEvents/Enemy.i: Events/PlayerEvents/Enemy.cpp.i
+
+.PHONY : Events/PlayerEvents/Enemy.i
+
+# target to preprocess a source file
+Events/PlayerEvents/Enemy.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.i
+.PHONY : Events/PlayerEvents/Enemy.cpp.i
+
+Events/PlayerEvents/Enemy.s: Events/PlayerEvents/Enemy.cpp.s
+
+.PHONY : Events/PlayerEvents/Enemy.s
+
+# target to generate assembly for a file
+Events/PlayerEvents/Enemy.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.s
+.PHONY : Events/PlayerEvents/Enemy.cpp.s
+
+Events/PlayerEvents/GetCoin.o: Events/PlayerEvents/GetCoin.cpp.o
+
+.PHONY : Events/PlayerEvents/GetCoin.o
+
+# target to build an object file
+Events/PlayerEvents/GetCoin.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o
+.PHONY : Events/PlayerEvents/GetCoin.cpp.o
+
+Events/PlayerEvents/GetCoin.i: Events/PlayerEvents/GetCoin.cpp.i
+
+.PHONY : Events/PlayerEvents/GetCoin.i
+
+# target to preprocess a source file
+Events/PlayerEvents/GetCoin.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.i
+.PHONY : Events/PlayerEvents/GetCoin.cpp.i
+
+Events/PlayerEvents/GetCoin.s: Events/PlayerEvents/GetCoin.cpp.s
+
+.PHONY : Events/PlayerEvents/GetCoin.s
+
+# target to generate assembly for a file
+Events/PlayerEvents/GetCoin.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.s
+.PHONY : Events/PlayerEvents/GetCoin.cpp.s
+
+Events/PlayerEvents/Heal.o: Events/PlayerEvents/Heal.cpp.o
+
+.PHONY : Events/PlayerEvents/Heal.o
+
+# target to build an object file
+Events/PlayerEvents/Heal.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o
+.PHONY : Events/PlayerEvents/Heal.cpp.o
+
+Events/PlayerEvents/Heal.i: Events/PlayerEvents/Heal.cpp.i
+
+.PHONY : Events/PlayerEvents/Heal.i
+
+# target to preprocess a source file
+Events/PlayerEvents/Heal.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.i
+.PHONY : Events/PlayerEvents/Heal.cpp.i
+
+Events/PlayerEvents/Heal.s: Events/PlayerEvents/Heal.cpp.s
+
+.PHONY : Events/PlayerEvents/Heal.s
+
+# target to generate assembly for a file
+Events/PlayerEvents/Heal.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.s
+.PHONY : Events/PlayerEvents/Heal.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -419,33 +527,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-test.o: test.cpp.o
-
-.PHONY : test.o
-
-# target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.o
-.PHONY : test.cpp.o
-
-test.i: test.cpp.i
-
-.PHONY : test.i
-
-# target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.i
-.PHONY : test.cpp.i
-
-test.s: test.cpp.s
-
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/test.cpp.s
-.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -474,6 +555,9 @@ help:
 	@echo "... Characters/Player.o"
 	@echo "... Characters/Player.i"
 	@echo "... Characters/Player.s"
+	@echo "... Characters/PlayerView.o"
+	@echo "... Characters/PlayerView.i"
+	@echo "... Characters/PlayerView.s"
 	@echo "... Control/CommandReader.o"
 	@echo "... Control/CommandReader.i"
 	@echo "... Control/CommandReader.s"
@@ -486,12 +570,18 @@ help:
 	@echo "... Events/Event.o"
 	@echo "... Events/Event.i"
 	@echo "... Events/Event.s"
+	@echo "... Events/PlayerEvents/Enemy.o"
+	@echo "... Events/PlayerEvents/Enemy.i"
+	@echo "... Events/PlayerEvents/Enemy.s"
+	@echo "... Events/PlayerEvents/GetCoin.o"
+	@echo "... Events/PlayerEvents/GetCoin.i"
+	@echo "... Events/PlayerEvents/GetCoin.s"
+	@echo "... Events/PlayerEvents/Heal.o"
+	@echo "... Events/PlayerEvents/Heal.i"
+	@echo "... Events/PlayerEvents/Heal.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 .PHONY : help
 
 

@@ -12,29 +12,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Cell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CellTypes/CellType.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CellTypes/CellType.h" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compile command.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +104,7 @@
       <workItem from="1665172571986" duration="39000" />
       <workItem from="1665403059491" duration="22639000" />
       <workItem from="1665486753845" duration="6767000" />
-      <workItem from="1665494090485" duration="1715000" />
+      <workItem from="1665494090485" duration="9327000" />
     </task>
     <servers />
   </component>
@@ -128,5 +122,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Control/Mediator.cpp</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
