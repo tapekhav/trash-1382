@@ -3,6 +3,11 @@
 #include <random>
 #include "Field.h"
 #include "Cell.h"
+#include "../Characters/Player.h"
+#include "../Events/PlayerEvents/PlayerEvent.h"
+#include "../Events/PlayerEvents/Enemy.h"
+#include "../Events/PlayerEvents/GetCoin.h"
+#include "../Events/PlayerEvents/Heal.h"
 
 Field::Field(int width, int height) {
     this->width = width;
@@ -13,56 +18,49 @@ Field::Field(int width, int height) {
 }
 
 void Field::create_field() {
-    CellType* cl;
+    CellType *cl;
+    PlayerEvent *ev = nullptr;
+    bool ps = true;
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
-            if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1)){
+            ev = nullptr;
+            cl = nullptr;
+            ps = true;
+            if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1)) {
                 cl = new WallVertType;
-                this->field.at(y).at(x) = Cell();
-                this->field.at(y).at(x).set_type(cl);
-            }
-            else if (y == 0 || y == (this->height - 1)){
+            } else if (y == 0 || y == (this->height - 1)) {
                 cl = new WallHorType;
-                this->field.at(y).at(x) = Cell();
-                this->field.at(y).at(x).set_type(cl);
-            }
-            else {
+            } else {
                 std::random_device dev;
                 std::mt19937 rng(dev());
-                std::uniform_int_distribution<std::mt19937::result_type> dist(1, 100);
+                std::uniform_int_distribution<std::mt19937::result_type> dist(1, 80);
                 switch (dist(rng)) {
                     case 1:
                         cl = new EnemyType;
-                        this->field.at(y).at(x) = Cell();
-                        this->field.at(y).at(x).set_type(cl);
+                        ev = new Enemy;
                         break;
                     case 2:
                         cl = new CoinType;
-                        this->field.at(y).at(x) = Cell();
-                        this->field.at(y).at(x).set_type(cl);
+                        ev = new GetCoin;
                         break;
                     case 3:
                         cl = new HealType;
-                        this->field.at(y).at(x) = Cell();
-                        this->field.at(y).at(x).set_type(cl);
+                        ev = new Heal;
                         break;
-                    case 4:
+                    case 4: // TODO: поменять на обвал
                         cl = new FixType;
-                        this->field.at(y).at(x) = Cell();
-                        this->field.at(y).at(x).set_type(cl);
+                        ps = false;
                         break;
                     default:
                         cl = new EmptyType;
-                        this->field.at(y).at(x) = Cell();
-                        this->field.at(y).at(x).set_type(cl);
                         break;
                 }
             }
+            this->field.at(y).at(x) = Cell(cl, ev, ps);
         }
     }
     cl = new PlayerType;
-    this->field.at(this->player_y).at(this->player_x) = Cell();
-    this->field.at(this->player_y).at(this->player_x).set_type(cl);
+    this->field.at(this->player_y).at(this->player_x) = Cell(cl);
 }
 
 Field::Field(const Field &other) {
@@ -80,7 +78,7 @@ Field::Field(const Field &other) {
 }
 
 
-std::vector<int> Field::get_size() const{
+std::vector<int> Field::get_size() const {
     std::vector<int> sizes = {this->width, this->height};
     return sizes;
 }
@@ -109,14 +107,21 @@ Field &Field::operator=(Field &&other) noexcept {
     return *this;
 }
 
-bool Field::move_player(int x, int y) {
+bool Field::move_player(Player *player, int x, int y) {
     int new_x = get_new_x(x);
     int new_y = get_new_y(y);
     int prev_x = this->player_x;
     int prev_y = this->player_y;
-    if (dynamic_cast<EmptyType*>(this->field[new_y][new_x].get_type())) {
+    if (this->field[new_y][new_x].get_pass()) {
+        std::cout << this->player_x << " old " << player_y << '\n';
         this->player_x = new_x;
         this->player_y = new_y;
+        std::cout << new_x << " new " << new_y << '\n';
+        auto *pl = dynamic_cast<PlayerEvent *> (this->field.at(new_y).at(
+                new_x).get_event());
+        if (pl) {
+            pl->execute(player);
+        }
         update_player(prev_x, prev_y);
         return true;
     }
@@ -150,21 +155,14 @@ int Field::get_new_y(int y) const {
 }
 
 void Field::update_player(int prev_x, int prev_y) {
-    CellType* cl = new EmptyType;
+    CellType *cl = new EmptyType;
     this->field[prev_y][prev_x].set_type(cl);
+    this->field[prev_y][prev_x].set_event(nullptr);
     cl = new PlayerType;
     this->field[this->player_y][this->player_x].set_type(cl);
 }
 
-Cell Field::get_cell(int x, int y) const{
+Cell Field::get_cell(int x, int y) const {
     return this->field.at(y).at(x);
 }
-
-
-
-
-
-
-
-
 

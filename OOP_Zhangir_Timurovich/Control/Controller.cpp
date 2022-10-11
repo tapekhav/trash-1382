@@ -37,7 +37,7 @@ void Controller::move_player(CommandReader::MOVES move) {
         case CommandReader::MOVES::NOWHERE:
             return;
     }
-    field->move_player(x, y);
+    field->move_player(player, x, y);
     field_view.show_field();
 }
 

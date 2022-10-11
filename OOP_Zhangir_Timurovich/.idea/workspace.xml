@@ -12,25 +12,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Characters/PlayerView.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/PlayerView.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Cell.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CellTypes/CellType.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CellTypes/CellType.h" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compile command.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2FLml06BvssQdJ4usqSu2sEm7Pv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,11 +82,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OOP_Zhangir_Timurovich" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_Zhangir_Timurovich" TARGET_NAME="OOP_Zhangir_Timurovich" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_Zhangir_Timurovich" RUN_TARGET_NAME="OOP_Zhangir_Timurovich">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -101,7 +108,9 @@
       <workItem from="1664442239090" duration="3095000" />
       <workItem from="1665139302386" duration="8018000" />
       <workItem from="1665172571986" duration="39000" />
-      <workItem from="1665403059491" duration="2719000" />
+      <workItem from="1665403059491" duration="22639000" />
+      <workItem from="1665486753845" duration="6767000" />
+      <workItem from="1665494090485" duration="1715000" />
     </task>
     <servers />
   </component>

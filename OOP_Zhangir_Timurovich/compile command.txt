@@ -1,2 +1,1 @@
-g++ main.cpp Background/Cell.cpp Background/CellView.cpp Control/CommandReader.cpp Control/Controller.cpp Events/Event.cpp Background/Field.cpp Background/FieldV
-iew.cpp Control/Mediator.cpp Characters/Player.cpp CellTypes/CellType.cpp
+g++ main.cpp Background/Cell.cpp Background/CellView.cpp Control/CommandReader.cpp Control/Controller.cpp Events/Event.cpp Background/Field.cpp Background/FieldView.cpp Control/Mediator.cpp Characters/Player.cpp CellTypes/CellType.cpp Characters/PlayerView.cpp Events/PlayerEvents/Enemy.cpp Events/PlayerEvents/GetCoin.cpp Events/PlayerEvents/Heal.cpp

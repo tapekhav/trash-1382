@@ -22,7 +22,7 @@ public:
 
     Field &operator=(Field &&other) noexcept;
 
-    bool move_player(int x, int y);
+    bool move_player(Player* player, int x, int y);
 
     [[nodiscard]] int get_player_x() const;
 

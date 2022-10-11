@@ -11,15 +11,17 @@ public:
     int get_armour() const;
     int get_coins() const;
     int get_damage() const;
-    void add_health(int arg);
-    void add_armour(int arg);
-    void add_coins(int arg);
-    void add_damage(int arg);
+    bool is_max_health() const;
+    void set_health(int arg);
+    void set_armour(int arg);
+    void set_coins(int arg);
+    void set_damage(int arg);
 
 private:
     int health;
     int armour;
     int coins;
     int damage;
+    int max_health;
 };
 

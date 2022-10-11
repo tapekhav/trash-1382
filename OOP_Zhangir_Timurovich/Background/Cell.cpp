@@ -1,28 +1,34 @@
 #include "Cell.h"
 
-Cell::Cell() {
-//    this->type = type;
-    this->event = nullptr;
-    set_player();
+Cell::Cell(CellType *cell_type, Event *event, bool pass) {
+    set_pass(pass);
+    set_event(event);
+    set_type(cell_type);
 };
 
-CellType* Cell::get_type() {
+CellType *Cell::get_type() {
     return this->type;
 };
 
-void Cell::set_type(CellType* cell_type) {
+void Cell::set_type(CellType *cell_type) {
     this->type = cell_type;
     set_player();
 }
+
+bool Cell::get_pass() const {
+    return this->pass;
+}
+
 
 bool Cell::check_player() const {
     return this->player_loc;
 }
 
 void Cell::set_player() {
-    if (dynamic_cast<PlayerType*>(this->type))
+    if (dynamic_cast<PlayerType *>(this->type)) {
         this->player_loc = true;
-    else
+//        this->event = nullptr;
+    } else
         this->player_loc = false;
 }
 
@@ -36,11 +42,11 @@ Cell &Cell::operator=(Cell &&other) noexcept {
     return *this;
 }
 
-Cell::Cell(Cell &&other)  noexcept {
+Cell::Cell(Cell &&other) noexcept {
     this->swap(other);
 }
 
-Cell::Cell(const Cell& other){
+Cell::Cell(const Cell &other) {
     this->player_loc = other.player_loc;
     this->event = other.event;
     this->type = other.type;
@@ -52,6 +58,14 @@ void Cell::swap(Cell &other) {
     std::swap(player_loc, other.player_loc);
 }
 
-Cell &Cell::operator=(const Cell& other)= default;
+Event *Cell::get_event() const {
+    return this->event;
+}
+
+void Cell::set_pass(bool ps) {
+    this->pass = ps;
+}
+
+Cell &Cell::operator=(const Cell &other) = default;
 
 

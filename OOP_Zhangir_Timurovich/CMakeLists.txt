@@ -27,4 +27,4 @@ add_executable(OOP_Zhangir_Timurovich
         Control/Mediator.h
         Events/Event.cpp
         Events/Event.h
-        main.cpp CellTypes/CellType.h CellTypes/CellType.cpp test.cpp Characters/PlayerView.cpp Characters/PlayerView.h)
+        main.cpp CellTypes/CellType.h test.cpp Characters/PlayerView.cpp Characters/PlayerView.h Events/FieldEvents/FieldEvent.h Events/PlayerEvents/PlayerEvent.h Events/PlayerEvents/GetCoin.cpp Events/PlayerEvents/GetCoin.h Events/PlayerEvents/Heal.cpp Events/PlayerEvents/Heal.h Events/PlayerEvents/Enemy.cpp Events/PlayerEvents/Enemy.h CellTypes/CellType.cpp)
