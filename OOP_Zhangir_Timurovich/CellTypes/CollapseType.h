@@ -13,11 +13,8 @@ public:
 
     bool get_pass() override;
 
-//    Event *get_event();
-
 private:
     bool pass ;
-//    Event *event;
 };
 
 

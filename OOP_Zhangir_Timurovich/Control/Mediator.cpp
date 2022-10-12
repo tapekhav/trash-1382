@@ -10,8 +10,8 @@ void Mediator::start_game() {
         mv = reader.set_move();
         CommandReader::MOVES move = reader.get_move();
         res = controller.move_player(move);
-        if(res)
-            controller.show_field();
+//        if(res)
+        controller.show_field();
     }
 }
 

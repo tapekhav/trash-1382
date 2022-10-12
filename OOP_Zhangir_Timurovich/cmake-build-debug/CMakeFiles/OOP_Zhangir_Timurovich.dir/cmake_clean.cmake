@@ -19,7 +19,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/CommandReader.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o"
-  "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o"
   "CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o"

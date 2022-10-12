@@ -88,10 +88,6 @@ void Field::create_field() {
                         break;
                 }
             }
-            if (dynamic_cast<PlayerEvent *>(ev))
-                ev = dynamic_cast<PlayerEvent *>(ev);
-            else if (dynamic_cast<FieldEvent *>(ev))
-                ev = dynamic_cast<FieldEvent *>(ev);
             this->field.at(y).at(x) = Cell(cl, ev);
         }
     }

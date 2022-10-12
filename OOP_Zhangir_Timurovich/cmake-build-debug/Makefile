@@ -663,33 +663,6 @@ Control/Mediator.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.s
 .PHONY : Control/Mediator.cpp.s
 
-Events/Event.o: Events/Event.cpp.o
-
-.PHONY : Events/Event.o
-
-# target to build an object file
-Events/Event.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o
-.PHONY : Events/Event.cpp.o
-
-Events/Event.i: Events/Event.cpp.i
-
-.PHONY : Events/Event.i
-
-# target to preprocess a source file
-Events/Event.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.i
-.PHONY : Events/Event.cpp.i
-
-Events/Event.s: Events/Event.cpp.s
-
-.PHONY : Events/Event.s
-
-# target to generate assembly for a file
-Events/Event.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.s
-.PHONY : Events/Event.cpp.s
-
 Events/FieldEvents/Collapse.o: Events/FieldEvents/Collapse.cpp.o
 
 .PHONY : Events/FieldEvents/Collapse.o
@@ -1002,9 +975,6 @@ help:
 	@echo "... Control/Mediator.o"
 	@echo "... Control/Mediator.i"
 	@echo "... Control/Mediator.s"
-	@echo "... Events/Event.o"
-	@echo "... Events/Event.i"
-	@echo "... Events/Event.s"
 	@echo "... Events/FieldEvents/Collapse.o"
 	@echo "... Events/FieldEvents/Collapse.i"
 	@echo "... Events/FieldEvents/Collapse.s"

@@ -8,11 +8,7 @@ bool StoneType::get_pass() {
     return this->pass;
 }
 
-//Event *StoneType::get_event() {
-//    return this->event;
-//}
 
 StoneType::StoneType() {
     this->pass = false;
-//    this->event = nullptr;
 }
