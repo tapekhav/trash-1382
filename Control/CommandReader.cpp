@@ -5,7 +5,7 @@ void CommandReader::read_size() {
     std::cin >> height;
     check(height);
 
-    std::cout << "Введите ширине: ";
+    std::cout << "Введите ширину: ";
     std::cin >> width;
     check(width);
 }
@@ -77,3 +77,13 @@ void CommandReader::check(int &arg) {
         arg = 10;
     }
 }
+
+void CommandReader::print_win() const {
+    std::cout << "Ты победил!\n";
+}
+
+void CommandReader::print_death() const {
+    std::cout << "Ты умер!\n";
+}
+
+

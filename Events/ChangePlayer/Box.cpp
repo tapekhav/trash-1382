@@ -7,4 +7,6 @@ void Box::execute(Player &player) {
         player.set_xp(0);
         player.set_health(player.get_health() + 5);
     }
+
+    player.Notify();
 }

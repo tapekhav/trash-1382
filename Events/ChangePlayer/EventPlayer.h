@@ -7,7 +7,6 @@
 class EventPlayer : public Event {
 public:
     virtual void execute(Player& player) = 0;
-    void execute() override {};
     virtual ~EventPlayer() = default;
 };
 

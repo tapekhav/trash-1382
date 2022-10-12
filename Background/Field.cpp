@@ -65,9 +65,6 @@ void Field::generate_keys() {
 
     field.at(pair1.first).at(pair1.second) = new CellKey;
     field.at(pair2.first).at(pair2.second) = new CellKey;
-
-    std::cout << pair1.first << pair1.second << '\n';
-    std::cout << pair2.first << pair2.second << '\n';
 }
 
 CellType *Field::generate_cell() {
@@ -96,6 +93,10 @@ CellType *Field::generate_cell() {
             cell = new CellNewLevel;
             break;
         }
+        case 6: {
+            cell = new CellKey;
+            break;
+        }
         default:
             cell = new CellStandard;
             break;
@@ -120,7 +121,7 @@ void Field::make_field() {
     this->Notify();
 }
 
-Event* Field::change_player_pos(Player& player, Player::STEP s) {
+Event* Field::change_player_pos(Player::STEP s) {
     auto tmp = player_location;
 
     delete field.at(player_location.second).at(player_location.first);
@@ -158,7 +159,6 @@ Event* Field::change_player_pos(Player& player, Player::STEP s) {
 
     if (s != Player::EXIT) {
         this->Notify();
-        player.Notify();
     }
 
     return ev;

@@ -27,7 +27,7 @@ public:
     void make_field();
     CellType* generate_cell();
 
-    Event* change_player_pos(Player &player, Player::STEP s);
+    Event* change_player_pos(Player::STEP s);
     std::pair<int, int> get_player_location() const;
 
     int get_height() const;

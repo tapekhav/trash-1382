@@ -8,7 +8,6 @@ class Field;
 class EventField : public Event {
 public:
     virtual void execute(Field& field) = 0;
-    void execute() override {};
     virtual ~EventField() = default;
 };
 
