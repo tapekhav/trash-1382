@@ -5,9 +5,10 @@
 #include "../../Characters/Player.h"
 
 class RulesEvent : public Event {
+public:
     RulesEvent() = default;
 
-    virtual void execute(void* obj) = 0;
+    virtual bool execute(void *obj) = 0;
 
     virtual ~RulesEvent() = default;
 };

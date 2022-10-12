@@ -2,16 +2,20 @@
 
 
 void Mediator::start_game() {
+    bool res = true;
+    bool mv = true;
     controller.create_field();
     controller.show_field();
-    while(reader.set_move()){
+    while (mv && res) {
+        mv = reader.set_move();
         CommandReader::MOVES move = reader.get_move();
-        controller.move_player(move);
-        controller.show_field();
+        res = controller.move_player(move);
+        if(res)
+            controller.show_field();
     }
 }
 
-Mediator::Mediator(Controller& controller, CommandReader& reader) {
+Mediator::Mediator(Controller &controller, CommandReader &reader) {
     this->controller = controller;
     this->reader = reader;
 };

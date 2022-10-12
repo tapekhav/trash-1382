@@ -18,7 +18,7 @@ void Controller::create_field(){
     this->field->create_field();
 }
 
-void Controller::move_player(CommandReader::MOVES move) {
+bool Controller::move_player(CommandReader::MOVES move) {
     int x = 0;
     int y = 0;
     switch (move) {
@@ -35,9 +35,9 @@ void Controller::move_player(CommandReader::MOVES move) {
             y += 1;
             break;
         case CommandReader::MOVES::NOWHERE:
-            return;
+            return true;
     }
-    field->move_player(player, x, y);
+    return field->move_player(player, x, y);
 }
 
 

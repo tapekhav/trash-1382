@@ -5,9 +5,11 @@
 #include "Collapse.h"
 
 
-void Collapse::execute(void *obj) {
+bool Collapse::execute(void *obj) {
     if (obj) {
         auto *field = (Field *) obj;
         field->create_field();
+        return true;
     }
+    return false;
 }

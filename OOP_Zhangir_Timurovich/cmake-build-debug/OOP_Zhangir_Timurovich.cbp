@@ -116,10 +116,73 @@
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/FieldView.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.cpp">
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h">
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CoinType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CoinType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CollapseType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CollapseType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/DecreaseType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/DecreaseType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/EmptyType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/EmptyType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/EnemyType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/EnemyType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/HealType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/HealType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/IncreaseType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/IncreaseType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/PlayerType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/PlayerType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/StoneType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/StoneType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/WallHorType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/WallHorType.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/WallVertType.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/WallVertType.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.cpp">
@@ -179,7 +242,19 @@
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Increase.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/Lose.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/Lose.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/RulesEvent.h">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/Win.cpp">
+			<Option target="OOP_Zhangir_Timurovich"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/GameRulesEvents/Win.h">
 			<Option target="OOP_Zhangir_Timurovich"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.cpp">

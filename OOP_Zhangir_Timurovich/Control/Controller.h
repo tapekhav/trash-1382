@@ -14,7 +14,7 @@ public:
 
     void show_field();
 
-    void move_player(CommandReader::MOVES move);
+    bool move_player(CommandReader::MOVES move);
 
     void create_field();
 

@@ -8,5 +8,5 @@ public:
 
     ~Increase() override = default;
 
-    void execute(void *obj) override;
+    bool execute(void *obj) override;
 };

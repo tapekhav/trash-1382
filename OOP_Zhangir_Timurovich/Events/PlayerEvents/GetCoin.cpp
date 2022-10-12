@@ -1,9 +1,11 @@
 #include "GetCoin.h"
 
-void GetCoin::execute(void *obj) {
-    auto* player = (Player*) obj;
-    if (player) {
+bool GetCoin::execute(void *obj) {
+    if (obj) {
+        auto *player = (Player *) obj;
         player->set_coins(player->get_coins() + 1);
+        return true;
     }
+    return false;
 }
 

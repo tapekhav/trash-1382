@@ -12,36 +12,91 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/Decrease.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/Decrease.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/Increase.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Events/FieldEvents/Increase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/CoinType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/CoinType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/CollapseType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/CollapseType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/DecreaseType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/DecreaseType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/EmptyType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/EmptyType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/EnemyType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/EnemyType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/HealType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/HealType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/IncreaseType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/IncreaseType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/PlayerType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/PlayerType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/StoneType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/StoneType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/WallHorType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/WallHorType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/WallVertType.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CellTypes/WallVertType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/GameRulesEvents/Lose.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/GameRulesEvents/Lose.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/GameRulesEvents/Win.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Events/GameRulesEvents/Win.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/CellView.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/Cell.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Cell.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Background/CellView.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/CellView.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Field.h" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CellTypes/CellType.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CellTypes/CellType.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/CellTypes/CellType.h" beforeDir="false" afterPath="$PROJECT_DIR$/CellTypes/CellType.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Mediator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Event.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Collapse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Collapse.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/GameRulesEvents/RulesEvent.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Collapse.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Collapse.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Decrease.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Decrease.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Decrease.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Decrease.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/FieldEvent.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Increase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Increase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/FieldEvents/Increase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/FieldEvents/Increase.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/GameRulesEvents/RulesEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/GameRulesEvents/RulesEvent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Enemy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/GetCoin.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Heal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/Heal.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/PlayerEvents/PlayerEvent.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Cell.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/CellView.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Controller.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/GetCoin.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Heal.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/main.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OOP_Zhangir_Timurovich.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile command.txt" beforeDir="false" afterPath="$PROJECT_DIR$/compile command.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,12 +144,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="OOP_Zhangir_Timurovich" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_Zhangir_Timurovich" TARGET_NAME="OOP_Zhangir_Timurovich" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_Zhangir_Timurovich" RUN_TARGET_NAME="OOP_Zhangir_Timurovich">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OOP_Zhangir_Timurovich" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_Zhangir_Timurovich" TARGET_NAME="OOP_Zhangir_Timurovich" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_Zhangir_Timurovich" RUN_TARGET_NAME="OOP_Zhangir_Timurovich">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -123,6 +178,7 @@
       <workItem from="1665403059491" duration="22639000" />
       <workItem from="1665486753845" duration="6767000" />
       <workItem from="1665494090485" duration="32754000" />
+      <workItem from="1665576282906" duration="17494000" />
     </task>
     <servers />
   </component>
@@ -140,5 +196,16 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Events/GameRulesEvents/Lose.cpp</url>
+          <line>11</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

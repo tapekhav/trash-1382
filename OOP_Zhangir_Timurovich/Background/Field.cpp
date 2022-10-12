@@ -12,15 +12,21 @@
 #include "../Events/PlayerEvents/Enemy.h"
 #include "../Events/PlayerEvents/GetCoin.h"
 #include "../Events/PlayerEvents/Heal.h"
+#include "../Events/GameRulesEvents/Win.h"
+#include "../Events/GameRulesEvents/Lose.h"
 //#include "../Events/GameRulesEvents/"
 
 Field::Field(int width, int height) {
-    if (width >= 10)
+    if (width >= 10 && width <= 40)
         this->width = width;
+    else if (width >= 40)
+        this->width = 40;
     else
         this->width = 10;
-    if (height >= 10)
+    if (height >= 10 && height <= 40)
         this->height = height;
+    else if (height >= 40)
+        this->height = 40;
     else
         this->height = 10;
     this->player_x = 1;
@@ -146,10 +152,16 @@ bool Field::move_player(Player *player, int x, int y) {
         this->player_x = new_x;
         this->player_y = new_y;
         Cell cl = this->field.at(new_y).at(new_x);
-        auto *pl = dynamic_cast<PlayerEvent *> (cl.get_event());
-        auto *fl = dynamic_cast<FieldEvent *> (cl.get_event());
+        Event *ev = cl.get_event();
+        Event *wn = new Win;
+        Event *ls = new Lose;
+        auto *pl = dynamic_cast<PlayerEvent *> (ev);
+        auto *fl = dynamic_cast<FieldEvent *> (ev);
         if (pl) {
             pl->execute(player);
+            if (wn->execute(player) || ls->execute(player)) {
+                return false;
+            }
         } else if (fl) {
             fl->execute(this);
         }
@@ -185,7 +197,7 @@ int Field::get_new_y(int y) const {
 }
 
 void Field::update_player(int prev_x, int prev_y) {
-    if (prev_x < this->width && prev_y < this->height){
+    if (prev_x < this->width && prev_y < this->height) {
         CellType *cl = new EmptyType;
         this->field[prev_y][prev_x].set_type(cl);
         this->field[prev_y][prev_x].set_event(nullptr);
@@ -224,20 +236,26 @@ int Field::get_height_inc() const {
 }
 
 void Field::update_height() {
-    if ((this->height + this->height_inc) > 10) {
-        this->height += this->height_inc;
-    } else {
+    int new_height = this->height + this->height_inc;
+    if (new_height > 10 && new_height < 40) {
+        this->height = new_height;
+    } else if (new_height < 10) {
         this->height = 10;
+    } else {
+        this->height = 40;
     }
     update_coords();
     this->height_inc = 0;
 }
 
 void Field::update_width() {
-    if ((this->width + this->width_inc) > 10) {
-        this->width += this->width_inc;
-    } else {
+    int new_width = this->width + this->width_inc;
+    if (new_width > 10 && new_width < 40) {
+        this->width = new_width;
+    } else if (new_width < 10) {
         this->width = 10;
+    } else {
+        this->width = 40;
     }
     update_coords();
     this->width_inc = 0;

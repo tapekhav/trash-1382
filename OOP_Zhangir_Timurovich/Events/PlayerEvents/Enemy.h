@@ -1,5 +1,4 @@
 #pragma once
-
 #include "PlayerEvent.h"
 #include <random>
 
@@ -9,6 +8,6 @@ public:
 
     ~Enemy() override = default;
 
-    void execute(void *obj) override;
+    bool execute(void *obj) override;
 };
 

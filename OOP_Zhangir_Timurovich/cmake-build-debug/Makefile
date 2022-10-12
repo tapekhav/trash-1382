@@ -231,32 +231,302 @@ Background/FieldView.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/FieldView.cpp.s
 .PHONY : Background/FieldView.cpp.s
 
-CellTypes/CellType.o: CellTypes/CellType.cpp.o
+CellTypes/CoinType.o: CellTypes/CoinType.cpp.o
 
-.PHONY : CellTypes/CellType.o
+.PHONY : CellTypes/CoinType.o
 
 # target to build an object file
-CellTypes/CellType.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.o
-.PHONY : CellTypes/CellType.cpp.o
+CellTypes/CoinType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CoinType.cpp.o
+.PHONY : CellTypes/CoinType.cpp.o
 
-CellTypes/CellType.i: CellTypes/CellType.cpp.i
+CellTypes/CoinType.i: CellTypes/CoinType.cpp.i
 
-.PHONY : CellTypes/CellType.i
+.PHONY : CellTypes/CoinType.i
 
 # target to preprocess a source file
-CellTypes/CellType.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.i
-.PHONY : CellTypes/CellType.cpp.i
+CellTypes/CoinType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CoinType.cpp.i
+.PHONY : CellTypes/CoinType.cpp.i
 
-CellTypes/CellType.s: CellTypes/CellType.cpp.s
+CellTypes/CoinType.s: CellTypes/CoinType.cpp.s
 
-.PHONY : CellTypes/CellType.s
+.PHONY : CellTypes/CoinType.s
 
 # target to generate assembly for a file
-CellTypes/CellType.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CellType.cpp.s
-.PHONY : CellTypes/CellType.cpp.s
+CellTypes/CoinType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CoinType.cpp.s
+.PHONY : CellTypes/CoinType.cpp.s
+
+CellTypes/CollapseType.o: CellTypes/CollapseType.cpp.o
+
+.PHONY : CellTypes/CollapseType.o
+
+# target to build an object file
+CellTypes/CollapseType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CollapseType.cpp.o
+.PHONY : CellTypes/CollapseType.cpp.o
+
+CellTypes/CollapseType.i: CellTypes/CollapseType.cpp.i
+
+.PHONY : CellTypes/CollapseType.i
+
+# target to preprocess a source file
+CellTypes/CollapseType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CollapseType.cpp.i
+.PHONY : CellTypes/CollapseType.cpp.i
+
+CellTypes/CollapseType.s: CellTypes/CollapseType.cpp.s
+
+.PHONY : CellTypes/CollapseType.s
+
+# target to generate assembly for a file
+CellTypes/CollapseType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/CollapseType.cpp.s
+.PHONY : CellTypes/CollapseType.cpp.s
+
+CellTypes/DecreaseType.o: CellTypes/DecreaseType.cpp.o
+
+.PHONY : CellTypes/DecreaseType.o
+
+# target to build an object file
+CellTypes/DecreaseType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/DecreaseType.cpp.o
+.PHONY : CellTypes/DecreaseType.cpp.o
+
+CellTypes/DecreaseType.i: CellTypes/DecreaseType.cpp.i
+
+.PHONY : CellTypes/DecreaseType.i
+
+# target to preprocess a source file
+CellTypes/DecreaseType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/DecreaseType.cpp.i
+.PHONY : CellTypes/DecreaseType.cpp.i
+
+CellTypes/DecreaseType.s: CellTypes/DecreaseType.cpp.s
+
+.PHONY : CellTypes/DecreaseType.s
+
+# target to generate assembly for a file
+CellTypes/DecreaseType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/DecreaseType.cpp.s
+.PHONY : CellTypes/DecreaseType.cpp.s
+
+CellTypes/EmptyType.o: CellTypes/EmptyType.cpp.o
+
+.PHONY : CellTypes/EmptyType.o
+
+# target to build an object file
+CellTypes/EmptyType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EmptyType.cpp.o
+.PHONY : CellTypes/EmptyType.cpp.o
+
+CellTypes/EmptyType.i: CellTypes/EmptyType.cpp.i
+
+.PHONY : CellTypes/EmptyType.i
+
+# target to preprocess a source file
+CellTypes/EmptyType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EmptyType.cpp.i
+.PHONY : CellTypes/EmptyType.cpp.i
+
+CellTypes/EmptyType.s: CellTypes/EmptyType.cpp.s
+
+.PHONY : CellTypes/EmptyType.s
+
+# target to generate assembly for a file
+CellTypes/EmptyType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EmptyType.cpp.s
+.PHONY : CellTypes/EmptyType.cpp.s
+
+CellTypes/EnemyType.o: CellTypes/EnemyType.cpp.o
+
+.PHONY : CellTypes/EnemyType.o
+
+# target to build an object file
+CellTypes/EnemyType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EnemyType.cpp.o
+.PHONY : CellTypes/EnemyType.cpp.o
+
+CellTypes/EnemyType.i: CellTypes/EnemyType.cpp.i
+
+.PHONY : CellTypes/EnemyType.i
+
+# target to preprocess a source file
+CellTypes/EnemyType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EnemyType.cpp.i
+.PHONY : CellTypes/EnemyType.cpp.i
+
+CellTypes/EnemyType.s: CellTypes/EnemyType.cpp.s
+
+.PHONY : CellTypes/EnemyType.s
+
+# target to generate assembly for a file
+CellTypes/EnemyType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/EnemyType.cpp.s
+.PHONY : CellTypes/EnemyType.cpp.s
+
+CellTypes/HealType.o: CellTypes/HealType.cpp.o
+
+.PHONY : CellTypes/HealType.o
+
+# target to build an object file
+CellTypes/HealType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/HealType.cpp.o
+.PHONY : CellTypes/HealType.cpp.o
+
+CellTypes/HealType.i: CellTypes/HealType.cpp.i
+
+.PHONY : CellTypes/HealType.i
+
+# target to preprocess a source file
+CellTypes/HealType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/HealType.cpp.i
+.PHONY : CellTypes/HealType.cpp.i
+
+CellTypes/HealType.s: CellTypes/HealType.cpp.s
+
+.PHONY : CellTypes/HealType.s
+
+# target to generate assembly for a file
+CellTypes/HealType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/HealType.cpp.s
+.PHONY : CellTypes/HealType.cpp.s
+
+CellTypes/IncreaseType.o: CellTypes/IncreaseType.cpp.o
+
+.PHONY : CellTypes/IncreaseType.o
+
+# target to build an object file
+CellTypes/IncreaseType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/IncreaseType.cpp.o
+.PHONY : CellTypes/IncreaseType.cpp.o
+
+CellTypes/IncreaseType.i: CellTypes/IncreaseType.cpp.i
+
+.PHONY : CellTypes/IncreaseType.i
+
+# target to preprocess a source file
+CellTypes/IncreaseType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/IncreaseType.cpp.i
+.PHONY : CellTypes/IncreaseType.cpp.i
+
+CellTypes/IncreaseType.s: CellTypes/IncreaseType.cpp.s
+
+.PHONY : CellTypes/IncreaseType.s
+
+# target to generate assembly for a file
+CellTypes/IncreaseType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/IncreaseType.cpp.s
+.PHONY : CellTypes/IncreaseType.cpp.s
+
+CellTypes/PlayerType.o: CellTypes/PlayerType.cpp.o
+
+.PHONY : CellTypes/PlayerType.o
+
+# target to build an object file
+CellTypes/PlayerType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/PlayerType.cpp.o
+.PHONY : CellTypes/PlayerType.cpp.o
+
+CellTypes/PlayerType.i: CellTypes/PlayerType.cpp.i
+
+.PHONY : CellTypes/PlayerType.i
+
+# target to preprocess a source file
+CellTypes/PlayerType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/PlayerType.cpp.i
+.PHONY : CellTypes/PlayerType.cpp.i
+
+CellTypes/PlayerType.s: CellTypes/PlayerType.cpp.s
+
+.PHONY : CellTypes/PlayerType.s
+
+# target to generate assembly for a file
+CellTypes/PlayerType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/PlayerType.cpp.s
+.PHONY : CellTypes/PlayerType.cpp.s
+
+CellTypes/StoneType.o: CellTypes/StoneType.cpp.o
+
+.PHONY : CellTypes/StoneType.o
+
+# target to build an object file
+CellTypes/StoneType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/StoneType.cpp.o
+.PHONY : CellTypes/StoneType.cpp.o
+
+CellTypes/StoneType.i: CellTypes/StoneType.cpp.i
+
+.PHONY : CellTypes/StoneType.i
+
+# target to preprocess a source file
+CellTypes/StoneType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/StoneType.cpp.i
+.PHONY : CellTypes/StoneType.cpp.i
+
+CellTypes/StoneType.s: CellTypes/StoneType.cpp.s
+
+.PHONY : CellTypes/StoneType.s
+
+# target to generate assembly for a file
+CellTypes/StoneType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/StoneType.cpp.s
+.PHONY : CellTypes/StoneType.cpp.s
+
+CellTypes/WallHorType.o: CellTypes/WallHorType.cpp.o
+
+.PHONY : CellTypes/WallHorType.o
+
+# target to build an object file
+CellTypes/WallHorType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallHorType.cpp.o
+.PHONY : CellTypes/WallHorType.cpp.o
+
+CellTypes/WallHorType.i: CellTypes/WallHorType.cpp.i
+
+.PHONY : CellTypes/WallHorType.i
+
+# target to preprocess a source file
+CellTypes/WallHorType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallHorType.cpp.i
+.PHONY : CellTypes/WallHorType.cpp.i
+
+CellTypes/WallHorType.s: CellTypes/WallHorType.cpp.s
+
+.PHONY : CellTypes/WallHorType.s
+
+# target to generate assembly for a file
+CellTypes/WallHorType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallHorType.cpp.s
+.PHONY : CellTypes/WallHorType.cpp.s
+
+CellTypes/WallVertType.o: CellTypes/WallVertType.cpp.o
+
+.PHONY : CellTypes/WallVertType.o
+
+# target to build an object file
+CellTypes/WallVertType.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallVertType.cpp.o
+.PHONY : CellTypes/WallVertType.cpp.o
+
+CellTypes/WallVertType.i: CellTypes/WallVertType.cpp.i
+
+.PHONY : CellTypes/WallVertType.i
+
+# target to preprocess a source file
+CellTypes/WallVertType.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallVertType.cpp.i
+.PHONY : CellTypes/WallVertType.cpp.i
+
+CellTypes/WallVertType.s: CellTypes/WallVertType.cpp.s
+
+.PHONY : CellTypes/WallVertType.s
+
+# target to generate assembly for a file
+CellTypes/WallVertType.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/CellTypes/WallVertType.cpp.s
+.PHONY : CellTypes/WallVertType.cpp.s
 
 Characters/Player.o: Characters/Player.cpp.o
 
@@ -501,6 +771,60 @@ Events/FieldEvents/Increase.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.s
 .PHONY : Events/FieldEvents/Increase.cpp.s
 
+Events/GameRulesEvents/Lose.o: Events/GameRulesEvents/Lose.cpp.o
+
+.PHONY : Events/GameRulesEvents/Lose.o
+
+# target to build an object file
+Events/GameRulesEvents/Lose.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Lose.cpp.o
+.PHONY : Events/GameRulesEvents/Lose.cpp.o
+
+Events/GameRulesEvents/Lose.i: Events/GameRulesEvents/Lose.cpp.i
+
+.PHONY : Events/GameRulesEvents/Lose.i
+
+# target to preprocess a source file
+Events/GameRulesEvents/Lose.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Lose.cpp.i
+.PHONY : Events/GameRulesEvents/Lose.cpp.i
+
+Events/GameRulesEvents/Lose.s: Events/GameRulesEvents/Lose.cpp.s
+
+.PHONY : Events/GameRulesEvents/Lose.s
+
+# target to generate assembly for a file
+Events/GameRulesEvents/Lose.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Lose.cpp.s
+.PHONY : Events/GameRulesEvents/Lose.cpp.s
+
+Events/GameRulesEvents/Win.o: Events/GameRulesEvents/Win.cpp.o
+
+.PHONY : Events/GameRulesEvents/Win.o
+
+# target to build an object file
+Events/GameRulesEvents/Win.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Win.cpp.o
+.PHONY : Events/GameRulesEvents/Win.cpp.o
+
+Events/GameRulesEvents/Win.i: Events/GameRulesEvents/Win.cpp.i
+
+.PHONY : Events/GameRulesEvents/Win.i
+
+# target to preprocess a source file
+Events/GameRulesEvents/Win.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Win.cpp.i
+.PHONY : Events/GameRulesEvents/Win.cpp.i
+
+Events/GameRulesEvents/Win.s: Events/GameRulesEvents/Win.cpp.s
+
+.PHONY : Events/GameRulesEvents/Win.s
+
+# target to generate assembly for a file
+Events/GameRulesEvents/Win.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/Win.cpp.s
+.PHONY : Events/GameRulesEvents/Win.cpp.s
+
 Events/PlayerEvents/Enemy.o: Events/PlayerEvents/Enemy.cpp.o
 
 .PHONY : Events/PlayerEvents/Enemy.o
@@ -630,9 +954,39 @@ help:
 	@echo "... Background/FieldView.o"
 	@echo "... Background/FieldView.i"
 	@echo "... Background/FieldView.s"
-	@echo "... CellTypes/CellType.o"
-	@echo "... CellTypes/CellType.i"
-	@echo "... CellTypes/CellType.s"
+	@echo "... CellTypes/CoinType.o"
+	@echo "... CellTypes/CoinType.i"
+	@echo "... CellTypes/CoinType.s"
+	@echo "... CellTypes/CollapseType.o"
+	@echo "... CellTypes/CollapseType.i"
+	@echo "... CellTypes/CollapseType.s"
+	@echo "... CellTypes/DecreaseType.o"
+	@echo "... CellTypes/DecreaseType.i"
+	@echo "... CellTypes/DecreaseType.s"
+	@echo "... CellTypes/EmptyType.o"
+	@echo "... CellTypes/EmptyType.i"
+	@echo "... CellTypes/EmptyType.s"
+	@echo "... CellTypes/EnemyType.o"
+	@echo "... CellTypes/EnemyType.i"
+	@echo "... CellTypes/EnemyType.s"
+	@echo "... CellTypes/HealType.o"
+	@echo "... CellTypes/HealType.i"
+	@echo "... CellTypes/HealType.s"
+	@echo "... CellTypes/IncreaseType.o"
+	@echo "... CellTypes/IncreaseType.i"
+	@echo "... CellTypes/IncreaseType.s"
+	@echo "... CellTypes/PlayerType.o"
+	@echo "... CellTypes/PlayerType.i"
+	@echo "... CellTypes/PlayerType.s"
+	@echo "... CellTypes/StoneType.o"
+	@echo "... CellTypes/StoneType.i"
+	@echo "... CellTypes/StoneType.s"
+	@echo "... CellTypes/WallHorType.o"
+	@echo "... CellTypes/WallHorType.i"
+	@echo "... CellTypes/WallHorType.s"
+	@echo "... CellTypes/WallVertType.o"
+	@echo "... CellTypes/WallVertType.i"
+	@echo "... CellTypes/WallVertType.s"
 	@echo "... Characters/Player.o"
 	@echo "... Characters/Player.i"
 	@echo "... Characters/Player.s"
@@ -660,6 +1014,12 @@ help:
 	@echo "... Events/FieldEvents/Increase.o"
 	@echo "... Events/FieldEvents/Increase.i"
 	@echo "... Events/FieldEvents/Increase.s"
+	@echo "... Events/GameRulesEvents/Lose.o"
+	@echo "... Events/GameRulesEvents/Lose.i"
+	@echo "... Events/GameRulesEvents/Lose.s"
+	@echo "... Events/GameRulesEvents/Win.o"
+	@echo "... Events/GameRulesEvents/Win.i"
+	@echo "... Events/GameRulesEvents/Win.s"
 	@echo "... Events/PlayerEvents/Enemy.o"
 	@echo "... Events/PlayerEvents/Enemy.i"
 	@echo "... Events/PlayerEvents/Enemy.s"

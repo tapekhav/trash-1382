@@ -10,7 +10,7 @@ public:
 
     virtual ~FieldEvent() = default;
 
-    virtual void execute(void* obj) = 0;
+    virtual bool execute(void* obj) = 0;
 };
 
 

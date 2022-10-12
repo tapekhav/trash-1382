@@ -6,7 +6,7 @@ class Event {
 public:
     Event() = default;
 
-    virtual void execute(void* obj) = 0;
+    virtual bool execute(void* obj) = 0;
 
     virtual ~Event() = default;
 

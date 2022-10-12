@@ -6,7 +6,7 @@
 int main() {
     CommandReader reader;
     reader.set_size();
-    Controller controller(reader.get_width(), reader.get_height());
+    Controller controller(reader.get_width(), reader.get_height(), 5, 10, 10);
     Mediator mediator(controller, reader);
     mediator.start_game();
 }
