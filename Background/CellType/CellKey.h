@@ -7,9 +7,8 @@
 class CellKey : public CellType {
 public:
     CellKey();
-    ~CellKey() override = default;
-
-    Event* get_event() final;
+    Event* get_event() override;
+    ~CellKey() override;
 private:
     Event* event;
 };

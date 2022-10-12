@@ -7,3 +7,7 @@ CellKey::CellKey() {
 Event *CellKey::get_event() {
     return event;
 }
+
+CellKey::~CellKey() {
+    delete event;
+}

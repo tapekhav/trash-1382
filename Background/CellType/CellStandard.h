@@ -3,9 +3,11 @@
 
 #include "CellType.h"
 
-class CellStandard : CellType {
+class CellStandard : public CellType {
 public:
-    Event* get_event() final;
+    CellStandard() = default;
+    Event* get_event() override;
+    ~CellStandard() override = default;
 };
 
 #endif

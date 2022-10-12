@@ -7,8 +7,8 @@
 class CellTrap : public CellType {
 public:
     CellTrap();
-    ~CellTrap() override = default;
-    Event* get_event() final;
+    Event* get_event() override;
+    ~CellTrap() override;
 private:
     Event* event;
 };

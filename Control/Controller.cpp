@@ -15,7 +15,7 @@ void Controller::set_field_standard() {
 }
 
 void Controller::set_step(Player::STEP step) {
-    field.change_player_pos(player, step);
+    check_event(field.change_player_pos(player, step));
 }
 
 bool Controller::end_game() const {
@@ -32,4 +32,13 @@ bool Controller::win_game() const {
         return true;
     }
     return false;
+}
+
+void Controller::check_event(Event *event) {
+    if (event != nullptr) {
+        if (auto tmp = dynamic_cast<EventPlayer*>(event))
+            tmp->execute(player);
+        if (auto temp = dynamic_cast<EventField*>(event))
+            temp->execute(field);
+    }
 }

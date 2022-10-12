@@ -7,3 +7,7 @@ CellTrap::CellTrap() {
 Event *CellTrap::get_event() {
     return event;
 }
+
+CellTrap::~CellTrap() {
+    delete event;
+}

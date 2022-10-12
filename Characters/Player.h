@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include "../Control/Observer/Observable.h"
+#include "../Background/CellType/CellType.h"
 
 class Player : public Observable {
 public:

@@ -10,4 +10,4 @@ public:
 };
 
 
-#endif //LABS_BOX_H
+#endif

@@ -7,9 +7,8 @@
 class CellNewLevel : public CellType {
 public:
     CellNewLevel();
-    ~CellNewLevel() override = default;
-
-    Event* get_event() final;
+    Event* get_event() override;
+    ~CellNewLevel() override;
 private:
     Event* event;
 };

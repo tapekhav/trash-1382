@@ -12,6 +12,8 @@ public:
     void set_field_standard();
     void set_step(Player::STEP step);
 
+    void check_event(Event* event);
+
     bool win_game() const;
     bool end_game() const;
 private:

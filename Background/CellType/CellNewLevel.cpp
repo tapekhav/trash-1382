@@ -7,3 +7,9 @@ CellNewLevel::CellNewLevel() {
 Event *CellNewLevel::get_event() {
     return event;
 }
+
+CellNewLevel::~CellNewLevel() {
+    delete event;
+}
+
+

@@ -10,7 +10,9 @@ void FieldView::print() const {
     for (int i = 0; i != field->get_height(); ++i) {
         std::cout << "|";
         for (int j = 0; j != field->get_width(); ++j) {
-            std::cout << CellView(field->get_cur_cell(j, i)).get_cell() << "  ";
+            if (field->get_player_location().first == j && field->get_player_location().second == i)
+                std::cout << "p  ";
+            else std::cout << CellView(field->get_cur_cell(j, i)).get_cell() << "  ";
         }
         std::cout << " |\n";
     }

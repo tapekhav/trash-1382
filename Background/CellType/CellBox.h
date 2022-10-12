@@ -7,9 +7,8 @@
 class CellBox : public CellType {
 public:
     CellBox();
-    ~CellBox() override = default;
-
-    Event* get_event() final;
+    Event* get_event() override;
+    ~CellBox() override;
 private:
     Event* event;
 };

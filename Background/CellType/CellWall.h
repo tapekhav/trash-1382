@@ -5,7 +5,9 @@
 
 class CellWall : public CellType {
 public:
-    Event* get_event() final;
+    CellWall() = default;
+    Event* get_event() override;
+    ~CellWall() override = default;
 };
 
 

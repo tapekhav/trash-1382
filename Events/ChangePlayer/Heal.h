@@ -9,4 +9,4 @@ public:
 };
 
 
-#endif //LABS_HEAL_H
+#endif

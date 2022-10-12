@@ -7,9 +7,8 @@
 class CellHeal : public CellType {
 public:
     CellHeal();
-    ~CellHeal() override = default;
-
-    Event* get_event() final;
+    Event* get_event() override;
+    ~CellHeal() override;
 private:
     Event* event;
 };

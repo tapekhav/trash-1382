@@ -7,3 +7,8 @@ CellBox::CellBox() {
 Event *CellBox::get_event() {
     return event;
 }
+
+CellBox::~CellBox() {
+    delete event;
+}
+
