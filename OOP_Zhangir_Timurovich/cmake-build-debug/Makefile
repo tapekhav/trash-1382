@@ -447,32 +447,59 @@ Events/FieldEvents/Collapse.cpp.s:
 	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.s
 .PHONY : Events/FieldEvents/Collapse.cpp.s
 
-Events/GameRulesEvents/RulesEvent.o: Events/GameRulesEvents/RulesEvent.cpp.o
+Events/FieldEvents/Decrease.o: Events/FieldEvents/Decrease.cpp.o
 
-.PHONY : Events/GameRulesEvents/RulesEvent.o
+.PHONY : Events/FieldEvents/Decrease.o
 
 # target to build an object file
-Events/GameRulesEvents/RulesEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.o
-.PHONY : Events/GameRulesEvents/RulesEvent.cpp.o
+Events/FieldEvents/Decrease.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o
+.PHONY : Events/FieldEvents/Decrease.cpp.o
 
-Events/GameRulesEvents/RulesEvent.i: Events/GameRulesEvents/RulesEvent.cpp.i
+Events/FieldEvents/Decrease.i: Events/FieldEvents/Decrease.cpp.i
 
-.PHONY : Events/GameRulesEvents/RulesEvent.i
+.PHONY : Events/FieldEvents/Decrease.i
 
 # target to preprocess a source file
-Events/GameRulesEvents/RulesEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.i
-.PHONY : Events/GameRulesEvents/RulesEvent.cpp.i
+Events/FieldEvents/Decrease.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.i
+.PHONY : Events/FieldEvents/Decrease.cpp.i
 
-Events/GameRulesEvents/RulesEvent.s: Events/GameRulesEvents/RulesEvent.cpp.s
+Events/FieldEvents/Decrease.s: Events/FieldEvents/Decrease.cpp.s
 
-.PHONY : Events/GameRulesEvents/RulesEvent.s
+.PHONY : Events/FieldEvents/Decrease.s
 
 # target to generate assembly for a file
-Events/GameRulesEvents/RulesEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/GameRulesEvents/RulesEvent.cpp.s
-.PHONY : Events/GameRulesEvents/RulesEvent.cpp.s
+Events/FieldEvents/Decrease.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.s
+.PHONY : Events/FieldEvents/Decrease.cpp.s
+
+Events/FieldEvents/Increase.o: Events/FieldEvents/Increase.cpp.o
+
+.PHONY : Events/FieldEvents/Increase.o
+
+# target to build an object file
+Events/FieldEvents/Increase.cpp.o:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o
+.PHONY : Events/FieldEvents/Increase.cpp.o
+
+Events/FieldEvents/Increase.i: Events/FieldEvents/Increase.cpp.i
+
+.PHONY : Events/FieldEvents/Increase.i
+
+# target to preprocess a source file
+Events/FieldEvents/Increase.cpp.i:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.i
+.PHONY : Events/FieldEvents/Increase.cpp.i
+
+Events/FieldEvents/Increase.s: Events/FieldEvents/Increase.cpp.s
+
+.PHONY : Events/FieldEvents/Increase.s
+
+# target to generate assembly for a file
+Events/FieldEvents/Increase.cpp.s:
+	$(MAKE) -f CMakeFiles/OOP_Zhangir_Timurovich.dir/build.make CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.s
+.PHONY : Events/FieldEvents/Increase.cpp.s
 
 Events/PlayerEvents/Enemy.o: Events/PlayerEvents/Enemy.cpp.o
 
@@ -627,9 +654,12 @@ help:
 	@echo "... Events/FieldEvents/Collapse.o"
 	@echo "... Events/FieldEvents/Collapse.i"
 	@echo "... Events/FieldEvents/Collapse.s"
-	@echo "... Events/GameRulesEvents/RulesEvent.o"
-	@echo "... Events/GameRulesEvents/RulesEvent.i"
-	@echo "... Events/GameRulesEvents/RulesEvent.s"
+	@echo "... Events/FieldEvents/Decrease.o"
+	@echo "... Events/FieldEvents/Decrease.i"
+	@echo "... Events/FieldEvents/Decrease.s"
+	@echo "... Events/FieldEvents/Increase.o"
+	@echo "... Events/FieldEvents/Increase.i"
+	@echo "... Events/FieldEvents/Increase.s"
 	@echo "... Events/PlayerEvents/Enemy.o"
 	@echo "... Events/PlayerEvents/Enemy.i"
 	@echo "... Events/PlayerEvents/Enemy.s"

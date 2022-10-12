@@ -25,7 +25,11 @@ int Player::get_damage() const {
 }
 
 void Player::set_health(int arg) {
-    this->health = arg;
+    if(arg<0){
+        this->health = 0;
+    }
+    else
+        this->health = arg;
 }
 
 void Player::set_armour(int arg) {
@@ -33,11 +37,19 @@ void Player::set_armour(int arg) {
 }
 
 void Player::set_coins(int arg) {
-    this->coins = arg;
+    if(arg<0){
+        this->coins = 0;
+    }
+    else
+        this->coins = arg;
 }
 
 void Player::set_damage(int arg) {
-    this->damage = arg;
+    if(arg<0){
+        this->damage = 0;
+    }
+    else
+        this->damage = arg;
 }
 
 bool Player::is_max_health() const {

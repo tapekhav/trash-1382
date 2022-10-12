@@ -6,8 +6,8 @@
 
 
 void Collapse::execute(void *obj) {
-    auto* field = (Field*) obj;
-    if (field) {
+    if (obj) {
+        auto *field = (Field *) obj;
         field->create_field();
     }
 }

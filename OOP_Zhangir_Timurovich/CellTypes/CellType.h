@@ -146,6 +146,34 @@ private:
     bool pass = true;
 };
 
+class IncreaseType : public CellType {
+public:
+    IncreaseType() = default;
+
+    ~IncreaseType() override = default;
+
+    void execute() override {};
+
+    bool get_pass() override;
+
+private:
+    bool pass = true;
+};
+
+class DecreaseType : public CellType {
+public:
+    DecreaseType() = default;
+
+    ~DecreaseType() override = default;
+
+    void execute() override {};
+
+    bool get_pass() override;
+
+private:
+    bool pass = true;
+};
+
 
 
 

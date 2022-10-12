@@ -20,6 +20,10 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Background/Fiel
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../CellTypes/CellType.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/FieldEvents/Collapse.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/FieldEvents/Decrease.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/FieldEvents/FieldEvent.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/FieldEvents/Increase.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/Enemy.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/GetCoin.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o: ../Events/PlayerEvents/Heal.h
@@ -75,6 +79,33 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/Control/Mediator.cpp.o: ../Events/Event.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Events/Event.cpp
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o: ../Events/Event.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Background/Cell.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Background/Field.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../CellTypes/CellType.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Events/FieldEvents/Collapse.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Events/FieldEvents/Collapse.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o: ../Events/FieldEvents/FieldEvent.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Background/Cell.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Background/Field.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../CellTypes/CellType.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Events/FieldEvents/Decrease.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Events/FieldEvents/Decrease.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o: ../Events/FieldEvents/FieldEvent.h
+
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Background/Cell.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Background/Field.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../CellTypes/CellType.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Characters/Player.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Events/FieldEvents/FieldEvent.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Events/FieldEvents/Increase.cpp
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o: ../Events/FieldEvents/Increase.h
 
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Characters/Player.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o: ../Events/Event.h

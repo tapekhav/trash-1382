@@ -35,3 +35,11 @@ bool StoneType::get_pass() {
 bool CollapseType::get_pass() {
     return this->pass;
 }
+
+bool IncreaseType::get_pass() {
+    return this->pass;
+}
+
+bool DecreaseType::get_pass() {
+    return this->pass;
+}

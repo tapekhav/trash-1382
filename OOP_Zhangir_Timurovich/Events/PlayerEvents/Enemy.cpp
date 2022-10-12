@@ -11,6 +11,9 @@ void Enemy::execute(void *obj) {
         if (player->get_damage() > hp(rng)) {
             player->set_coins(player->get_coins() + 5);
         }
+        else{
+            player->set_coins(player->get_coins() - 5);
+        }
     }
 }
 

@@ -10,6 +10,6 @@ public:
     virtual void execute(void* obj) = 0;
 
     virtual ~PlayerEvent() = default;
-    
+
 };
 

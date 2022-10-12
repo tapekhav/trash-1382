@@ -21,6 +21,10 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/Background/Field.cpp.o
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Decrease.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/FieldEvent.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Increase.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Enemy.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/GetCoin.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/PlayerEvents/Heal.h
@@ -76,6 +80,33 @@ CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/Event.cpp.o
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.cpp
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Collapse.cpp.o
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.cpp
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Collapse.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/FieldEvent.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Decrease.cpp.o
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Decrease.cpp
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Decrease.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/FieldEvent.h
+CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/FieldEvents/Increase.cpp.o
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Cell.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Background/Field.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/CellTypes/CellType.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/FieldEvent.h
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Increase.cpp
+ /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/FieldEvents/Increase.h
 CMakeFiles/OOP_Zhangir_Timurovich.dir/Events/PlayerEvents/Enemy.cpp.o
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Characters/Player.h
  /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/Events/Event.h
