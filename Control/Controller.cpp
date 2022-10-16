@@ -19,17 +19,9 @@ void Controller::set_step(Player::STEP step) {
 }
 
 bool Controller::end_game() const {
-    if (player.get_health() <= 0) {
-        std::cout << "You are dead!\n";
-        return true;
-    }
-    return false;
+    return player.get_health() <= 0;
 }
 
 bool Controller::win_game() const {
-    if (player.get_keys() == 2) {
-        std::cout << "You are winner!\n";
-        return true;
-    }
-    return false;
+    return player.get_keys() == 2;
 }

@@ -12,8 +12,15 @@ void Mediator::start() {
 
     while(input.get_step() != Player::EXIT) {
         input.read_step();
-        if (game.end_game() || game.win_game())
-            return;
         game.set_step(input.get_step());
+
+        if (game.end_game()) {
+            input.print_death();
+            return;
+        }
+        if (game.win_game()) {
+            input.print_win();
+            return;
+        }
     }
 }

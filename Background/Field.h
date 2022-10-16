@@ -21,12 +21,13 @@ public:
     Field(Field&& other);
     Field& operator=(Field&& other);
 
-    void generate_key();
+    void generate_keys();
+    Cell generate_cell();
     void make_field();
     void clear_field();
 
     void change_player_pos(Player &player, Player::STEP s);
-    void set_player_location();
+    std::pair<int, int> get_player_location() const;
 
     int get_height() const;
     int get_width()  const;

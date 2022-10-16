@@ -10,7 +10,6 @@ public:
     void update() override;
 private:
     void print_border() const;
-    void print() const;
 
     Field* field;
 };

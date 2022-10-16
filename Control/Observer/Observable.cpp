@@ -1,14 +1,14 @@
 #include "Observable.h"
 
-void Observable::Attach(Observer *observer) {
+void Observable::attach(Observer *observer) {
     observers.push_back(observer);
 }
 
-void Observable::Detach(Observer *observer) {
+void Observable::detach(Observer *observer) {
     std::remove(observers.begin(), observers.end(), observer);
 }
 
-void Observable::Notify() {
+void Observable::notify() {
     for (auto elem : observers)
         elem->update();
 }

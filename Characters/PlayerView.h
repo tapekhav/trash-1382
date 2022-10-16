@@ -11,8 +11,6 @@ public:
     explicit PlayerView(Player* other);
     void update() override;
 private:
-    void print() const;
-
     Player* player;
 };
 

@@ -77,3 +77,11 @@ void CommandReader::check(int &arg) {
         arg = 10;
     }
 }
+
+void CommandReader::print_death() const {
+    std::cout << "Ты умер!\n";
+}
+
+void CommandReader::print_win() const {
+    std::cout << "Ты победил!\n";
+}

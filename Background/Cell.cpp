@@ -1,10 +1,6 @@
 #include "Cell.h"
 
-Cell::Cell() : player_in(false), passability(true), event(nullptr) {}
-
-bool Cell::get_player_in() const {
-    return player_in;
-}
+Cell::Cell() : pass(true), event(nullptr) {}
 
 void Cell::update(Player& player, Field& field) {
     if (auto tmp = dynamic_cast<EventPlayer*>(event))
@@ -15,22 +11,18 @@ void Cell::update(Player& player, Field& field) {
 
 
 void Cell::set_event(Event* event) {
+    delete this->event;
     this->event = event;
 }
 
-void Cell::set_player_in(bool player_status) {
-    player_in = player_status;
+void Cell::set_pass(bool pass) {
+    this->pass = pass;
 }
 
-void Cell::set_passability(bool pass) {
-    passability = pass;
-}
-
-bool Cell::get_passability() const {
-    return passability;
+bool Cell::get_pass() const {
+    return pass;
 }
 
 Event *Cell::get_event() const {
     return event;
 }
-

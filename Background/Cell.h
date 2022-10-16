@@ -10,27 +10,19 @@ class Field;
 #include "../Events/ChangePlayer/Heal.h"
 #include "../Events/ChangePlayer/Trap.h"
 #include "../Events/ChangeField/NewLevel.h"
-#include "../Events/ChangeField/NewLevel.h"
-#include "../Events/ChangeField/NewLevel.h"
-#include "../Events/ChangeField/NewLevel.h"
-#include "../Events/ChangeField/NewLevel.h"
 
 class Cell {
 public:
     Cell();
 
-    void set_player_in(bool player_status);
-    bool get_player_in() const;
-
-    bool get_passability() const;
-    void set_passability(bool pass);
+    bool get_pass() const;
+    void set_pass(bool pass);
 
     void set_event(Event* event);
     void update(Player& player, Field& field);
     Event* get_event() const;
 private:
-    bool player_in;
-    bool passability;
+    bool pass;
     Event* event;
 };
 

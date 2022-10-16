@@ -9,7 +9,7 @@
 
 class CellView {
 public:
-    explicit CellView(Cell&& c);
+    explicit CellView(const Cell& c);
     char get_cell() const;
 private:
     char cell;

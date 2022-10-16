@@ -1,8 +1,9 @@
 #include "CellView.h"
 
-CellView::CellView(Cell&& c) {
-    if (c.get_player_in())
-        cell = 'p';
+CellView::CellView(const Cell& c) {
+    if (dynamic_cast<NewLevel*>(c.get_event()) != nullptr) {
+        cell = 'n';
+    }
     else if (dynamic_cast<Box*>(c.get_event()) != nullptr) {
         cell = 'b';
     }
@@ -15,10 +16,7 @@ CellView::CellView(Cell&& c) {
     else if (dynamic_cast<Trap*>(c.get_event()) != nullptr) {
         cell = 't';
     }
-    else if (dynamic_cast<NewLevel*>(c.get_event()) != nullptr) {
-        cell = 'n';
-    }
-    else if (!c.get_passability())
+    else if (!c.get_pass())
         cell = '/';
     else {
         cell = ' ';

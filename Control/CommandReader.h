@@ -14,6 +14,9 @@ public:
     int get_width() const;
     char get_char() const;
     Player::STEP get_step() const;
+
+    void print_death() const;
+    void print_win() const;
 private:
     void check(int& arg);
 

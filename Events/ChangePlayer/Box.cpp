@@ -5,6 +5,8 @@ void Box::execute(Player &player) {
     if (player.get_xp() == player.get_lvl() * 10) {
         player.add_lvl();
         player.set_xp(0);
-        player.set_health(player.get_health() + 5);
+        player.set_health(player.get_lvl() * 5);
     }
+
+    player.notify();
 }
