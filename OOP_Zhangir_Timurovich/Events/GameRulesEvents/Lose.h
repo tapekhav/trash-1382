@@ -10,9 +10,6 @@ public:
     ~Lose() override = default;
 
     bool execute() override;
-
-protected:
-    Player *player;
 };
 
 

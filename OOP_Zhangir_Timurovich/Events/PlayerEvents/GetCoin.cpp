@@ -8,5 +8,7 @@ bool GetCoin::execute() {
     return false;
 }
 
-GetCoin::GetCoin(Player *player) : player(player) {}
+GetCoin::GetCoin(Player *player) {
+    this->player = player;
+}
 

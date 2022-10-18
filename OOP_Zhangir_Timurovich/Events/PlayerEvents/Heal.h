@@ -10,7 +10,4 @@ public:
     ~Heal() override = default;
 
     bool execute() override;
-
-private:
-    Player *player;
 };

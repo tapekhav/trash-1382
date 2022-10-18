@@ -10,7 +10,5 @@ public:
 
     bool execute() override;
 
-private:
-    Player *player;
 };
 

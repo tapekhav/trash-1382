@@ -122,7 +122,7 @@ bool Field::move_player(Player *player, int x, int y) {
         auto *fl = dynamic_cast<FieldEvent *> (ev);
         if (pl || fl) {
             ev->execute();
-            if (wn->execute() || ls->execute()) {
+            if (pl && (wn->execute() || ls->execute())) {
                 return false;
             }
         }

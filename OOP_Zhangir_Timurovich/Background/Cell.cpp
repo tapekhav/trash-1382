@@ -44,6 +44,7 @@ Cell::Cell(const Cell &other) {
     this->pass = other.pass;
 }
 
+
 void Cell::swap(Cell &other) {
     std::swap(event, other.event);
     std::swap(player_loc, other.player_loc);

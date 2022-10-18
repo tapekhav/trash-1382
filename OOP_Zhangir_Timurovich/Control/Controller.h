@@ -27,6 +27,5 @@ private:
     FieldView field_view{};
     Field *field{};
     PlayerView player_view{};
-//    EventBulder builder;
 };
 

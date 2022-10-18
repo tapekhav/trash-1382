@@ -6,7 +6,6 @@
 
 class RulesEvent : public Event {
 public:
-//    RulesEvent(Player *player);
 
     virtual bool execute() = 0;
 

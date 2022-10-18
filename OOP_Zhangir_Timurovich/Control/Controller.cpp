@@ -14,9 +14,10 @@ void Controller::show_field() {
     this->player_view.show_chars();
 }
 
-void Controller::create_field(){
+void Controller::create_field() {
     this->field->create_field(player);
 }
+
 
 bool Controller::move_player(CommandReader::MOVES move) {
     int x = 0;

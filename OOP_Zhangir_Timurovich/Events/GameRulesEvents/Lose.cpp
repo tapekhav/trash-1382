@@ -9,4 +9,6 @@ bool Lose::execute() {
     return false;
 }
 
-Lose::Lose(Player *player) : player(player) {}
+Lose::Lose(Player *player) {
+    this->player = player;
+}

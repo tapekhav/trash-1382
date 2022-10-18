@@ -18,6 +18,8 @@ bool Enemy::execute() {
     return false;
 }
 
-Enemy::Enemy(Player *player) : player(player) {}
+Enemy::Enemy(Player *player) {
+    this->player = player;
+}
 
 

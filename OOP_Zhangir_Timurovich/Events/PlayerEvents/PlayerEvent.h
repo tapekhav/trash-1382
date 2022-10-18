@@ -5,13 +5,12 @@
 
 class PlayerEvent : public Event {
 public:
-//    PlayerEvent(Player *player);
 
     virtual bool execute() = 0;
 
     virtual ~PlayerEvent() = default;
 
-private:
+protected:
     Player *player{};
 };
 

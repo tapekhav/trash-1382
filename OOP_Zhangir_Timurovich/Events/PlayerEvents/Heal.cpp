@@ -1,7 +1,9 @@
 #include "Heal.h"
 
 
-Heal::Heal(Player *player) : player(player) {}
+Heal::Heal(Player *player) {
+    this->player = player;
+}
 
 bool Heal::execute() {
     if (player) {

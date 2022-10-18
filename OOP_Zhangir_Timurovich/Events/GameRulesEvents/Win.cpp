@@ -8,4 +8,6 @@ bool Win::execute() {
     return false;
 }
 
-Win::Win(Player *player) : player(player) {}
+Win::Win(Player *player){
+    this->player = player;
+}

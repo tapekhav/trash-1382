@@ -9,9 +9,6 @@ public:
     ~Win() override = default;
 
     bool execute() override;
-
-protected:
-    Player *player;
 };
 
 
