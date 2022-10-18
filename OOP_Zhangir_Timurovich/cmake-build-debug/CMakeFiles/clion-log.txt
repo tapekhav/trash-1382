@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\roman\OneDrive\Документы\GitHub\course-work\OOP_Zhangir_Timurovich Select CMakeLists.txt

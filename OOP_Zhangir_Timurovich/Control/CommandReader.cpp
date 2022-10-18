@@ -7,8 +7,8 @@ void CommandReader::set_size() {
     int res;
     std::cin >> res;
     if (res) {
-        this->width = 10;
-        this->height = 10;
+        this->width = 15;
+        this->height = 15;
         return;
     }
     std::cout << "Width: ";
