@@ -5,11 +5,14 @@
 
 class Lose : public RulesEvent {
 public:
-    Lose() = default;
+    Lose(Player *player);
 
     ~Lose() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
+
+protected:
+    Player *player;
 };
 
 

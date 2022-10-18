@@ -8,7 +8,10 @@
 class FieldView {
 public:
     explicit FieldView(Field *other);
+
     FieldView() = default;
+
+    void print_border() const;
 
 
     void show_field();

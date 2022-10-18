@@ -5,9 +5,12 @@
 
 class Heal : public PlayerEvent {
 public:
-    Heal() = default;
+    Heal(Player* player);
 
     ~Heal() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
+
+private:
+    Player *player;
 };

@@ -4,11 +4,12 @@
 
 class Collapse : public FieldEvent {
 public:
-    Collapse() = default;
+    Collapse(Field *field, Player *player);
+
 
     ~Collapse() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
 };
 
 

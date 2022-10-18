@@ -4,11 +4,14 @@
 
 class Win : public RulesEvent {
 public:
-    Win() = default;
+    Win(Player* player);
 
     ~Win() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
+
+protected:
+    Player *player;
 };
 
 

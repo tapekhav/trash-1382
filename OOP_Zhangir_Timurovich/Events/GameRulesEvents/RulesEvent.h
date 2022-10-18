@@ -6,11 +6,14 @@
 
 class RulesEvent : public Event {
 public:
-    RulesEvent() = default;
+//    RulesEvent(Player *player);
 
-    virtual bool execute(void *obj) = 0;
+    virtual bool execute() = 0;
 
     virtual ~RulesEvent() = default;
+
+protected:
+    Player *player{};
 };
 
 

@@ -1,3 +1,0 @@
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug/CMakeFiles/OOP_Zhangir_Timurovich.dir

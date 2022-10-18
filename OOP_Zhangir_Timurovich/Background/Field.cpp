@@ -5,6 +5,7 @@
 #include "Cell.h"
 #include "../Characters/Player.h"
 #include "../Events/PlayerEvents/PlayerEvent.h"
+#include "../Events/EventBuilder.h"
 #include "../Events/FieldEvents/FieldEvent.h"
 #include "../Events/FieldEvents/Collapse.h"
 #include "../Events/FieldEvents/Decrease.h"
@@ -35,64 +36,22 @@ Field::Field(int width, int height) {
     this->width_inc = 0;
 }
 
-void Field::create_field() {
-    CellType *cl;
-    Event *ev = nullptr;
+void Field::create_field(Player *player) {
     update_height();
     update_width();
-    this->field = std::vector<std::vector<Cell>>(this->height, std::vector<Cell>(this->width));
-    std::cout << this->width << ' ' << this->height << '\n';
-    std::cout << this->player_x << ' ' << this->player_y << '\n';
+    this->field = std::vector < std::vector < Cell >> (height, std::vector<Cell>(width));
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
-            ev = nullptr;
-            cl = nullptr;
-            if ((x == 0 || x == (this->width - 1)) && y != 0 && y != (this->height - 1)) {
-                cl = new WallVertType;
-            } else if (y == 0 || y == (this->height - 1)) {
-                cl = new WallHorType;
-            } else {
-                std::random_device dev;
-                std::mt19937 rng(dev());
-                std::uniform_int_distribution<std::mt19937::result_type> dist(1, 50);
-                switch (dist(rng)) {
-                    case 1:
-                        cl = new EnemyType;
-                        ev = new Enemy;
-                        break;
-                    case 2:
-                        cl = new CoinType;
-                        ev = new GetCoin;
-                        break;
-                    case 3:
-                        cl = new HealType;
-                        ev = new Heal;
-                        break;
-                    case 4:
-                        cl = new StoneType;
-                        break;
-                    case 5:
-                        cl = new CollapseType;
-                        ev = new Collapse;
-                        break;
-                    case 6:
-                        cl = new IncreaseType;
-                        ev = new Increase;
-                        break;
-                    case 7:
-                        cl = new DecreaseType;
-                        ev = new Decrease;
-                        break;
-                    default:
-                        cl = new EmptyType;
-                        break;
-                }
-            }
-            this->field.at(y).at(x) = Cell(cl, ev);
+            this->field.at(y).at(x) = Cell();
         }
     }
-    cl = new PlayerType;
-    this->field.at(this->player_y).at(this->player_x) = Cell(cl);
+    update_events(player);
+}
+
+void Field::update_events(Player *player) {
+    EventBuilder builder(this, player);
+    builder.update_events();
+    std::cout << "Events updated\n";
 }
 
 Field::Field(const Field &other) {
@@ -100,7 +59,7 @@ Field::Field(const Field &other) {
     this->height = other.height;
     this->player_x = other.player_x;
     this->player_y = other.player_y;
-    std::vector<std::vector<Cell>> map(this->height, std::vector<Cell>(this->width));
+    std::vector <std::vector<Cell>> map(this->height, std::vector<Cell>(this->width));
     for (int y = 0; y < other.height; y++) {
         for (int x = 0; x < other.width; x++) {
             map[y][x] = other.field[y][x];
@@ -115,8 +74,11 @@ std::vector<int> Field::get_size() const {
     return sizes;
 }
 
-Field::Field(Field &&other) noexcept {
-    this->swap(other);
+Field::Field(Field &&other)
+
+noexcept {
+this->
+swap(other);
 };
 
 void Field::swap(Field &other) {
@@ -133,13 +95,17 @@ Field &Field::operator=(const Field &other) {
     return *this;
 }
 
-Field &Field::operator=(Field &&other) noexcept {
-    if (this != &other)
-        this->swap(other);
-    return *this;
+Field &Field::operator=(Field &&other)
+
+noexcept {
+if (this != &other)
+this->
+swap(other);
+return *this;
 }
 
 bool Field::move_player(Player *player, int x, int y) {
+    EventBuilder builder(this, player);
     int new_x = get_new_x(x);
     int new_y = get_new_y(y);
     int prev_x = this->player_x;
@@ -147,19 +113,18 @@ bool Field::move_player(Player *player, int x, int y) {
     if (this->field[new_y][new_x].get_pass()) {
         this->player_x = new_x;
         this->player_y = new_y;
+        this->get_cell(new_x, new_y).set_player(true);
         Cell cl = this->field.at(new_y).at(new_x);
         Event *ev = cl.get_event();
-        Event *wn = new Win;
-        Event *ls = new Lose;
+        Event *wn = builder.create_WinEvent();
+        Event *ls = builder.create_LoseEvent();
         auto *pl = dynamic_cast<PlayerEvent *> (ev);
         auto *fl = dynamic_cast<FieldEvent *> (ev);
-        if (pl) {
-            pl->execute(player);
-            if (wn->execute(player) || ls->execute(player)) {
+        if (pl || fl) {
+            ev->execute();
+            if (wn->execute() || ls->execute()) {
                 return false;
             }
-        } else if (fl) {
-            fl->execute(this);
         }
         update_player(prev_x, prev_y);
     }
@@ -177,33 +142,30 @@ int Field::get_player_y() const {
 int Field::get_new_x(int x) const {
     int new_x = this->player_x + x;
     if (new_x == 0)
-        new_x = this->width - 2;
-    else if (new_x == (this->width - 1))
+        new_x = this->width - 1;
+    else if (new_x == this->width)
         new_x = 1;
     return new_x;
 }
 
 int Field::get_new_y(int y) const {
     int new_y = this->player_y + y;
-    if (new_y == 0)
-        new_y = this->height - 2;
-    else if (new_y == (this->height - 1))
-        new_y = 1;
+    if (new_y == -1)
+        new_y = this->height - 1;
+    else if (new_y == this->height)
+        new_y = 0;
     return new_y;
 }
 
 void Field::update_player(int prev_x, int prev_y) {
     if (prev_x < this->width && prev_y < this->height) {
-        CellType *cl = new EmptyType;
-        this->field[prev_y][prev_x].set_type(cl);
-        this->field[prev_y][prev_x].set_event(nullptr);
-        cl = new PlayerType;
-        this->field[this->player_y][this->player_x].set_type(cl);
+        this->get_cell(prev_x, prev_y).set_event(nullptr);
+        this->get_cell(prev_x, prev_y).set_player(false);
     }
 }
 
-Cell Field::get_cell(int x, int y) const {
-    return this->field.at(y).at(x);
+Cell &Field::get_cell(int x, int y) {
+    return this->field[y][x];
 }
 
 void Field::add_width(int wd) {
@@ -266,5 +228,7 @@ void Field::update_coords() {
     }
 }
 
-
+void Field::set_cell(int x, int y, Cell cell) {
+    field.at(y).at(x) = cell;
+}
 

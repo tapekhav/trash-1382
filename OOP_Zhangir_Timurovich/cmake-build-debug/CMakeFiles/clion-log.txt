@@ -1,4 +1,1 @@
-C:\windows\system32\wsl.exe --distribution Ubuntu --exec /bin/sh -c "export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G 'CodeBlocks - Unix Makefiles' /mnt/c/Users/roman/OneDrive/Документы/GitHub/course-work/OOP_Zhangir_Timurovich; sleep 0.001"
--- Configuring done
--- Generating done
--- Build files have been written to: /mnt/c/Users/roman/OneDrive/Р”РѕРєСѓРјРµРЅС‚С‹/GitHub/course-work/OOP_Zhangir_Timurovich/cmake-build-debug
+CMakeLists.txt not found in C:\Users\roman\OneDrive\Рабочий стол\OOP Select CMakeLists.txt

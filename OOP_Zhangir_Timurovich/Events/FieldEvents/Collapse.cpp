@@ -4,11 +4,14 @@
 
 #include "Collapse.h"
 
+Collapse::Collapse(Field *field, Player* player){
+    this->player = player;
+    this->field = field;
+}
 
-bool Collapse::execute(void *obj) {
-    if (obj) {
-        auto *field = (Field *) obj;
-        field->create_field();
+bool Collapse::execute() {
+    if (field) {
+        field->create_field(this->player);
         return true;
     }
     return false;

@@ -4,9 +4,13 @@
 
 class GetCoin : public PlayerEvent {
 public:
-    GetCoin() = default;
+    GetCoin(Player *player);
 
     ~GetCoin() override = default;
-    bool execute(void *obj) override;
+
+    bool execute() override;
+
+private:
+    Player *player;
 };
 

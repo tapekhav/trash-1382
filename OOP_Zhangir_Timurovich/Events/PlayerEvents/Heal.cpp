@@ -1,8 +1,10 @@
 #include "Heal.h"
 
-bool Heal::execute(void *obj) {
-    if (obj) {
-        auto* player = (Player*) obj;
+
+Heal::Heal(Player *player) : player(player) {}
+
+bool Heal::execute() {
+    if (player) {
         if (player->is_max_health()) {
             player->set_damage(player->get_damage() + 1);
         } else

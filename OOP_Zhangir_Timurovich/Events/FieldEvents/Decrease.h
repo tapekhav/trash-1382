@@ -4,11 +4,11 @@
 
 class Decrease : public FieldEvent {
 public:
-    Decrease() = default;
+    Decrease(Field *field, Player *player);
 
     ~Decrease() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
 };
 
 

@@ -1,37 +1,30 @@
 #pragma once
 
 #include "Cell.h"
-#include "../CellTypes/CellType.h"
-#include "../CellTypes/CoinType.h"
-#include "../CellTypes/CollapseType.h"
-#include "../CellTypes/DecreaseType.h"
-#include "../CellTypes/EmptyType.h"
-#include "../CellTypes/EnemyType.h"
-#include "../CellTypes/HealType.h"
-#include "../CellTypes/IncreaseType.h"
-#include "../CellTypes/PlayerType.h"
-#include "../CellTypes/StoneType.h"
-#include "../CellTypes/WallHorType.h"
-#include "../CellTypes/WallVertType.h"
 
 
 class Field {
 public:
     explicit Field(int width = 10, int height = 10);
 
-    Field(Field &&other) noexcept;
+    Field(Field &&other)
+
+    noexcept;
 
     Field(const Field &other);
 
     ~Field() = default;
 
-    void create_field();
+    void create_field(Player *player);
 
     [[nodiscard]] std::vector<int> get_size() const;
 
+
     Field &operator=(const Field &other);
 
-    Field &operator=(Field &&other) noexcept;
+    Field &operator=(Field &&other)
+
+    noexcept;
 
     bool move_player(Player *player, int x, int y);
 
@@ -39,11 +32,13 @@ public:
 
     [[nodiscard]] int get_player_y() const;
 
-    Cell get_cell(int x, int y) const;
+    Cell& get_cell(int x, int y);
 
     void add_width(int width);
 
     void add_height(int height);
+
+    void set_cell(int x, int y, Cell cell);
 
     int get_width_inc() const;
 
@@ -60,13 +55,15 @@ private:
     int player_y{};
     int width_inc{};
     int height_inc{};
-    std::vector<std::vector<Cell>> field;
+    std::vector <std::vector<Cell>> field;
 
     void swap(Field &other);
 
     void update_height();
 
     void update_width();
+
+    void update_events(Player *player);
 
     [[nodiscard]] int get_new_x(int x) const;
 

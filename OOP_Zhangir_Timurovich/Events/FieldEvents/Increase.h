@@ -4,9 +4,9 @@
 
 class Increase : public FieldEvent {
 public:
-    Increase() = default;
+    Increase(Field* field, Player* player);
 
     ~Increase() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
 };

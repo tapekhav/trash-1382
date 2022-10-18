@@ -1,0 +1,2 @@
+all:
+	g++ main.cpp Background/Cell.cpp Background/CellView.cpp Control/CommandReader.cpp Control/Controller.cpp Background/Field.cpp Background/FieldView.cpp Control/Mediator.cpp Characters/Player.cpp Characters/PlayerView.cpp Events/PlayerEvents/Enemy.cpp Events/PlayerEvents/GetCoin.cpp Events/PlayerEvents/Heal.cpp Events/FieldEvents/Collapse.cpp Events/FieldEvents/Increase.cpp Events/FieldEvents/Decrease.cpp Events/GameRulesEvents/Win.cpp Events/GameRulesEvents/Lose.cpp Events/EventBuilder.cpp Events/FieldEvents/FieldEvent.cpp -o kek

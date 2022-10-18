@@ -1,13 +1,17 @@
 #pragma once
+
 #include "PlayerEvent.h"
 #include <random>
 
 class Enemy : public PlayerEvent {
 public:
-    Enemy() = default;
+    Enemy(Player* player);
 
     ~Enemy() override = default;
 
-    bool execute(void *obj) override;
+    bool execute() override;
+
+private:
+    Player *player;
 };
 

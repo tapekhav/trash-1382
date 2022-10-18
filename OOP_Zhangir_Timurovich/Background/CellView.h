@@ -1,18 +1,13 @@
 #pragma once
 
 #include "Cell.h"
-#include "../CellTypes/CellType.h"
-#include "../CellTypes/CoinType.h"
-#include "../CellTypes/CollapseType.h"
-#include "../CellTypes/DecreaseType.h"
-#include "../CellTypes/EmptyType.h"
-#include "../CellTypes/EnemyType.h"
-#include "../CellTypes/HealType.h"
-#include "../CellTypes/IncreaseType.h"
-#include "../CellTypes/PlayerType.h"
-#include "../CellTypes/StoneType.h"
-#include "../CellTypes/WallHorType.h"
-#include "../CellTypes/WallVertType.h"
+#include "../Events/Event.h"
+#include "../Events/FieldEvents/Collapse.h"
+#include "../Events/FieldEvents/Increase.h"
+#include "../Events/FieldEvents/Decrease.h"
+#include "../Events/PlayerEvents/Enemy.h"
+#include "../Events/PlayerEvents/Heal.h"
+#include "../Events/PlayerEvents/GetCoin.h"
 
 class CellView {
 public:

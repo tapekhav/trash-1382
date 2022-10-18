@@ -2,15 +2,19 @@
 
 #include "../Event.h"
 #include "../../Background/Field.h"
+#include "../../Characters/Player.h"
 
 
 class FieldEvent : public Event {
 public:
-    FieldEvent() = default;
 
     virtual ~FieldEvent() = default;
 
-    virtual bool execute(void* obj) = 0;
+    virtual bool execute() = 0;
+
+protected:
+    Field* field{};
+    Player* player{};
 };
 
 

@@ -5,6 +5,7 @@
 #include "../Background/Field.h"
 #include "../Background/FieldView.h"
 #include "CommandReader.h"
+#include "../Events/EventBuilder.h"
 
 
 class Controller {
@@ -26,5 +27,6 @@ private:
     FieldView field_view{};
     Field *field{};
     PlayerView player_view{};
+//    EventBulder builder;
 };
 

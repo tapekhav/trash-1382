@@ -1,8 +1,13 @@
 #include "Increase.h"
 
-bool Increase::execute(void *obj) {
-    if (obj) {
-        auto *field = (Field *) obj;
+Increase::Increase(Field *field, Player *player) {
+    this->player = player;
+    this->field = field;
+}
+
+
+bool Increase::execute() {
+    if (field) {
         field->add_height(5);
         field->add_width(5);
         return true;
