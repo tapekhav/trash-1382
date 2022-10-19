@@ -2,10 +2,7 @@
 #include "Model.h"
 #include "../../Runtime/GameStatus.h"
 
-Model::Model(std::pair<int, int> size){
-    player = Player();
-    field = Field(size);
-}
+Model::Model(std::pair<int, int> size): player(Player()), field((Field(size))){};
 
 void Model::createField(std::pair<int, int> size, std::pair<int, int> playerPosition) {
     field = Field(size, playerPosition);

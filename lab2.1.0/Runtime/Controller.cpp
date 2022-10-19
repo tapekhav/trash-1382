@@ -11,7 +11,6 @@ void Controller::notify(char& command) {
     }
     else{
         model.movePlayerPosition(command);
-        //model.callEvent(model.getPlayerPosition());
     }
 
 }

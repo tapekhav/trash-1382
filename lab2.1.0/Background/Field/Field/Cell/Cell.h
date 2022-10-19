@@ -3,20 +3,22 @@
 
 
 #include <memory>
-#include "../../../../Characters/Player.h"
+#include "../../../Characters/Player.h"
 #include "../Event/Event.h"
 
 class Cell{
 public:
     bool isPassable() const;
+    bool isStepped() const;
+    void setUnstepped();
+    void setStepped();
     void setEvent(Event* event);
-    const void callEvent(void*) const;
-    int getType() const;
     Event* getEvent();
+    void callEvent(GameObject*);
 protected:
     Event* event = nullptr;
-    int type = -1;
     bool passable = false;
+    bool stepped = false;
 };
 
 

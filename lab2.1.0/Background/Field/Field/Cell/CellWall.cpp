@@ -1,6 +1,6 @@
 #include "CellWall.h"
 
 CellWall::CellWall() {
-    type = 2;
+    Cell::stepped = false;
     Cell::passable = false;
 }

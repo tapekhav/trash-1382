@@ -2,7 +2,7 @@
 
 EventPlayerAddHealth::EventPlayerAddHealth(int value): value(value){};
 
-void EventPlayerAddHealth::changeSpecification(Player* player) {
+void EventPlayerAddHealth::changePlayer(Player* player) {
     player->addHealth(value);
 }
 

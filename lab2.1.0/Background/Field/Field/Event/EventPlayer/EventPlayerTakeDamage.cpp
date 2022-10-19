@@ -3,6 +3,6 @@
 
 EventPlayerTakeDamage::EventPlayerTakeDamage(int value): value(value){}
 
-void EventPlayerTakeDamage::changeSpecification(Player* player) {
-    player->downHealth(value);
-};
+void EventPlayerTakeDamage::changePlayer(Player* player) {
+    player->takeDamage(value);
+}

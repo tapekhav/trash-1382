@@ -6,10 +6,10 @@
 
 class EventPlayerAddShield: public EventPlayer{
 public:
-    explicit EventPlayerAddShield(int value = 0);
+    explicit EventPlayerAddShield(int value = 10);
     ~EventPlayerAddShield() override = default;
 private:
-    void changeSpecification(Player* player) override;
+    void changePlayer(Player* player) override;
     int value;
 };
 

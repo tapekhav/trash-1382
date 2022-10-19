@@ -6,10 +6,10 @@
 
 class EventPlayerAddCoin: public EventPlayer{
 public:
-    EventPlayerAddCoin(int value = 10);
-    ~EventPlayerAddCoin() = default;
+    explicit EventPlayerAddCoin(int value = 10);
+    ~EventPlayerAddCoin() override = default;
 private:
-    void changeSpecification(Player* player) override;
+    void changePlayer(Player*) override;
     int value;
 };
 

@@ -9,7 +9,7 @@ public:
     explicit EventPlayerAddHealth(int value = 10);
     ~EventPlayerAddHealth() override = default;
 private:
-    void changeSpecification(Player* player) override;
+    void changePlayer(Player* player) override;
     int value;
 };
 

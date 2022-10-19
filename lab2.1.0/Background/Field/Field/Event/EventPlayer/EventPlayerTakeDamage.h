@@ -5,10 +5,10 @@
 
 class EventPlayerTakeDamage: public EventPlayer{
 public:
-    explicit EventPlayerTakeDamage(int value);
+    explicit EventPlayerTakeDamage(int value = 10);
     ~EventPlayerTakeDamage() override = default;
 private:
-    void changeSpecification(Player* player) override;
+    void changePlayer(Player* player) override;
     int value;
 };
 

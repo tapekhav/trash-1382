@@ -1,6 +1,6 @@
 #include "CellPlayer.h"
 
 CellPlayer::CellPlayer() {
-    type = 1;
+    Cell::stepped = true;
     Cell::passable = false;
 }

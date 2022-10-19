@@ -1,7 +1,8 @@
 #include "EventPlayer.h"
 
 
-void EventPlayer::callReaction(void *obj) {
-    auto player = (Player*) obj;
-    changeSpecification(player);
+void EventPlayer::callReaction(GameObject *obj) {
+    if (auto player = dynamic_cast<Player*>(obj)){
+        changePlayer(player);
+    }
 }

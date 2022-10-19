@@ -3,11 +3,11 @@
 
 
 #include "EventField.h"
+#include "../../Field.h"
 
 class EventFieldSpawnCoins: public EventField{
 public:
-    EventFieldSpawnCoins() = default;
-    ~EventFieldSpawnCoins() = default;
+    ~EventFieldSpawnCoins() override = default;
 private:
     void changeField(Field* ) override;
 };

@@ -3,13 +3,13 @@
 
 
 #include "EventField.h"
+#include "../../Field.h"
 
 class EventFieldCrashWall: public EventField{
 public:
-    EventFieldCrashWall() = default;
-    ~EventFieldCrashWall() = default;
+    ~EventFieldCrashWall() override = default;
 private:
-    void changeField(Field* ) override;
+    void changeField(Field*) override;
 };
 
 

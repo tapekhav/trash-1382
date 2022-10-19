@@ -2,6 +2,6 @@
 
 
 CellGrass::CellGrass(){
-    type = 0;
+    Cell::stepped = false;
     Cell::passable = true;
 }
