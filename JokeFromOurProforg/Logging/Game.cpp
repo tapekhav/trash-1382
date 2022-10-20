@@ -7,5 +7,7 @@ void Game::StartGame(){
 		mMediator->Notify(EnumClass::DO_CMD);
 		mMove++;
 	}
+	if (mGameProgress)
+		mMediator->Notify(EnumClass::VICTORY);
 	mMediator->Notify(EnumClass::FINISH);
 }

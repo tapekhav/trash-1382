@@ -2,19 +2,20 @@
 
 Commander::Commander() {
     mPlayer = new Player;
-    mField = new Field;
     mView = new FieldViewer;
     mStatus = new PlayerViewer;
-    mManager = new EventManager;
 }
 
 void Commander::SetFieldSize(int width, int height) {
     mField = new Field(width, height);
+    mManager = new EventManager(mPlayer, mField);
+    mField->SetEventManager(mManager);
 }
 
 void Commander::PlayerGo(EnumClass::Direction dir) {
     mMediator->Notify(EnumClass::MOVE_COUNT);
-    SpendEnergy(mMove % 2 == 1);
+    srand(time(0));
+
     switch (dir)
     {
     case EnumClass::RIGHT:
@@ -36,33 +37,36 @@ void Commander::PlayerGo(EnumClass::Direction dir) {
     default:
         break;
     }
-    
+    mField->TriggerCells();
+    SpendEnergy(mMove % 2 == 1);
 }
 
 void Commander::ShowField() {
     system("cls");
     mStatus->View(*mPlayer);
+    mStatus->PrintStatus(mManager->GetStatus());
     mView->View(*mField);
 }
 
 void Commander::SpendEnergy(bool type) {
     mPlayer->LoseThirstUnit();
-    
+
     if (type)
         mPlayer->LoseHungerUnit();
 
-    if (mPlayer->GetHunger() == 0 || mPlayer->GetThirst() == 0)
+    if (mPlayer->GetHunger() <= 0 || mPlayer->GetThirst() <= 0)
         mPlayer->DamagePlayer(EnumClass::DAMAGE);
-    if (mPlayer->GetHealth() == 0) {
+    if (mPlayer->GetHealth() <= 0) {
         ShowField();
         mMediator->Notify(EnumClass::DEFEAT);
     }
-    
+
 }
 
 void Commander::SetMove(int steps) {
     mMove = steps;
 }
+
 
 Commander::~Commander() {
     delete mPlayer;

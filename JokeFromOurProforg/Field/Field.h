@@ -28,12 +28,16 @@ public:
     void SetPlayerPositionY(int y) { mPlayerPosition.yCoord = y; }
     int GetPlayerPositionX() const { return mPlayerPosition.xCoord; }
     int GetPlayerPositionY() const { return mPlayerPosition.yCoord; }
-    Cell GetCell(int idy, int idx) const;
+    Cell& GetCell(int idy, int idx) const;
 
+    void SetEventManager(Manager* manager);
+    void TriggerCells();
+
+    ~Field();
 
 private:
 
-    std::vector<std::vector<Cell>> mField;
+    Cell** mField;
     int mWidth, mHeight;
     Position mPlayerPosition;
 };

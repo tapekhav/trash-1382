@@ -9,6 +9,7 @@
 class PlayerViewer {
 public:
 	void View(Player player) const;
+	void PrintStatus(EnumClass::Events status);
 
 private:
 	void ViewProperty(EnumClass::Properties type, int val) const;

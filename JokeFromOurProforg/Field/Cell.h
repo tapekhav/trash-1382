@@ -2,7 +2,7 @@
 #define SURVIVE_CELL_H
 
 #include "Event/Event.h"
-#include "Event/EventManager.h"
+#include "Event/Manager.h"
 
 class Cell {
 public:
@@ -13,14 +13,17 @@ public:
 
     bool IsWall() const { return mWall; }
     void SetWall(bool val) { mWall = val; }
-    void SetManager(EventManager* manager) { mManager = manager; }
+    void SetManager(Manager* manager) { mManager = manager; }
 
-    void ActiveEvent();
+    Event* GetEvent() const { return mEvent; }
+    void CheckEvent();
+    void SetEvent(EnumClass::Events event);
+    void ActivateEvent();
 
 private:
     bool mWall;
     Event* mEvent;
-    EventManager* mManager;
+    Manager* mManager;
 };
 
 #endif //SURVIVE_CELL_H

@@ -3,7 +3,7 @@
 
 class EnumClass {
 public:
-    enum FIELD_SIZE{
+    enum FIELD_SIZE {
         MIN_SIZE = 3,
         STANDARD_SIZE = 15,
         MAX_SIZE = 20
@@ -35,13 +35,36 @@ public:
     };
 
 
-    enum Properties{  
+    enum Properties {
         THIRST = 20,
         HUNGER = 10,
         HEALTH = 5,
         DAMAGE = 1
     };
 
+    enum Events_Properties {
+        BERRY_BUSH = 1,
+        WOLF_BUSH = 1,
+        BEAR_BUSH = 5,
+        RABBIT_BUSH = 5,
+        WATER_CAVE = 3,
+        SAINT_WATER_CAVE = 5,
+        PROBABILITY = 100,
+        BOUND = 2,
+        LIFE_TIME = 7
+    };
+
+    enum Events {
+        NONE,
+        BERRY,
+        WOLF,
+        RABBIT,
+        BEAR,
+        WATER,
+        SAINT_WATER,
+        TELEPORT,
+        EARTHQUAKE
+    };
 
 };
 
