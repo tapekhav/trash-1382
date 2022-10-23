@@ -1,7 +1,7 @@
 #ifndef SURVIVAL_GAME_H
 #define SURVIVAL_GAME_H
 
-#include "Logging/Handle.h"
+#include "Processing/Handle.h"
 #include "Enums.h"
 
 class Game : public Handle {

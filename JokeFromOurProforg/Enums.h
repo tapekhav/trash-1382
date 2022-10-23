@@ -66,6 +66,12 @@ public:
         EARTHQUAKE
     };
 
+    enum Log {
+        LOG_STATUS,
+        LOG_GAME,
+        LOG_ERROR
+    };
+
 };
 
 #endif //SURVIVE_ENUMS_H

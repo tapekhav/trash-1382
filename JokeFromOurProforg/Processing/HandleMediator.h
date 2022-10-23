@@ -1,10 +1,10 @@
 #ifndef SURVIVAL_HANDLE_MEDIATOR_H
 #define SURVIVAL_HANDLE_MEDIATOR_H
 
-#include "Logging/Mediator.h"
+#include "Processing/Mediator.h"
 #include "InputOutput/CommandReader.h"
-#include "Logging/Commander.h"
-#include "Logging/Game.h"
+#include "Processing/Commander.h"
+#include "Processing/Game.h"
 #include "Enums.h"
 
 class HandleMediator : public Mediator {

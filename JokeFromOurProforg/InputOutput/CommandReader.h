@@ -1,7 +1,7 @@
 #ifndef SURVIVAL_COMMANDREADER_H
 #define SURVIVAL_COMMANDREADER_H
 
-#include "Logging/Handle.h"
+#include "Processing/Handle.h"
 
 #include <iostream>
 #include <string>

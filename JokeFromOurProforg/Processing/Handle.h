@@ -1,7 +1,7 @@
 #ifndef SURVIVE_HANDLE_H
 #define SURVIVE_HANDLE_H
 
-#include "Logging/Mediator.h"
+#include "Processing/Mediator.h"
 
 class Handle {
 public:

@@ -13,7 +13,6 @@
 #include "Event/Manager.h"
 #include "Player/Player.h"
 #include "Field/Field.h"
-#include "Logging/Mediator.h"
 #include "Enums.h"
 
 #include <iostream>

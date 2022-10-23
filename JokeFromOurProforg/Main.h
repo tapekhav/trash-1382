@@ -8,4 +8,4 @@
 #include <iostream>
 
 // TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
-#include "Logging/HandleMediator.h"
+#include "Processing/HandleMediator.h"
