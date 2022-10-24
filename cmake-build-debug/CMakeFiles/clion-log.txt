@@ -1,4 +1,4 @@
-/snap/clion/206/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/206/bin/ninja/linux/ninja -G Ninja -S /home/vladimir/Desktop/c++/labs -B /home/vladimir/Desktop/c++/labs/cmake-build-debug
+/snap/clion/209/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/209/bin/ninja/linux/ninja -G Ninja -S /home/vladimir/Desktop/c++/lab2/trash-1382 -B /home/vladimir/Desktop/c++/lab2/trash-1382/cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/vladimir/Desktop/c++/labs/cmake-build-debug
+-- Build files have been written to: /home/vladimir/Desktop/c++/lab2/trash-1382/cmake-build-debug

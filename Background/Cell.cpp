@@ -2,11 +2,9 @@
 
 Cell::Cell() : pass(true), event(nullptr) {}
 
-void Cell::update(Player& player, Field& field) {
-    if (auto tmp = dynamic_cast<EventPlayer*>(event))
-        tmp->execute(player);
-    else if (auto tmp = dynamic_cast<EventField*>(event))
-        tmp->execute(field);
+void Cell::update() {
+    if (event != nullptr)
+        event->execute();
 }
 
 

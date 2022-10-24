@@ -3,9 +3,10 @@
 
 #include "EventPlayer.h"
 
-class Heal: public EventPlayer {
+class Heal final : public EventPlayer {
 public:
-    void execute(Player& player) override;
+    explicit Heal(Player*);
+    void execute() final;
 };
 
 

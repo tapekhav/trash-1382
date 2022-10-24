@@ -2,14 +2,10 @@
 #define LABS_CELLVIEW_H
 
 #include "Cell.h"
-#include "../Events/ChangePlayer/Box.h"
-#include "../Events/ChangePlayer/Key.h"
-#include "../Events/ChangePlayer/Heal.h"
-#include "../Events/ChangePlayer/Trap.h"
 
 class CellView {
 public:
-    explicit CellView(const Cell& c);
+    explicit CellView(const Cell&);
     char get_cell() const;
 private:
     char cell;

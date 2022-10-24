@@ -4,10 +4,12 @@
 #include "EventPlayer.h"
 #include <random>
 
-class Trap : public EventPlayer {
+class Trap final : public EventPlayer {
 public:
-    void execute(Player& player) override;
-    ~Trap() override = default;
+    explicit Trap(Player*, int);
+    void execute() final;
+private:
+    int damage;
 };
 
 

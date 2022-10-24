@@ -9,31 +9,31 @@ class Cell;
 #include <random>
 #include "Cell.h"
 #include "../Characters/Player.h"
-#include "../Control/Observer/Observer.h"
-#include "../Control/Observer/Observable.h"
+#include "../Logging/Observer.h"
+#include "../Logging/Observable.h"
+#include "../Events/EventCreator.h"
 
 class Field : public Observable {
 public:
     explicit Field(int width = 10, int height = 10);
     ~Field();
-    Field(const Field &other);
-    Field& operator=(const Field &other);
+    Field(const Field&);
+    Field& operator=(const Field&);
     Field(Field&& other);
-    Field& operator=(Field&& other);
+    Field& operator=(Field&&);
 
-    void generate_keys();
-    Cell generate_cell();
-    void make_field();
-    void clear_field();
+    void generate_walls();
+    void delete_walls();
+    void make_field(Player&);
 
-    void change_player_pos(Player &player, Player::STEP s);
+    void change_player_location(Player&, Player::STEP);
     std::pair<int, int> get_player_location() const;
 
     int get_height() const;
     int get_width()  const;
-    Cell get_cur_cell(int x, int y) const;
+    Cell& get_cur_cell(int, int);
 private:
-    void swap(Field& other);
+    void swap(Field&);
 
     std::vector<std::vector<Cell>> field;
     int height;

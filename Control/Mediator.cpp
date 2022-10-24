@@ -10,17 +10,11 @@ void Mediator::start() {
         game.set_field_standard();
     }
 
-    while(input.get_step() != Player::EXIT) {
+    while(input.get_step() != Player::EXIT && game.get_status() == GameStatus::ON) {
         input.read_step();
         game.set_step(input.get_step());
 
-        if (game.end_game()) {
-            input.print_death();
-            return;
-        }
-        if (game.win_game()) {
-            input.print_win();
-            return;
-        }
+        game.check_win_game();
+        game.check_end_game();
     }
 }

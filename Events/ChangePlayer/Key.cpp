@@ -1,6 +1,10 @@
 #include "Key.h"
 
-void Key::execute(Player &player) {
-    player.add_key();
-    player.notify();
+Key::Key(Player *player) {
+    this->player = player;
+}
+
+void Key::execute() {
+    player->add_key();
+    player->notify();
 }

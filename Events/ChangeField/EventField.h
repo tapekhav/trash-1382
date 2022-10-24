@@ -2,15 +2,13 @@
 #define LABS_EVENTFIELD_H
 
 class Field;
-
-#include "../../Background/Field.h"
+#include "../Events/Event.h"
 
 class EventField : public Event {
 public:
-    virtual void execute(Field& field) = 0;
-    void execute() override {};
-    virtual ~EventField() = default;
+    void execute() override = 0;
+protected:
+    Field* field;
 };
-
 
 #endif

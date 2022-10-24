@@ -7,8 +7,8 @@
 
 class Observable {
 public:
-    void attach(Observer *observer);
-    void detach(Observer *observer);
+    void attach(Observer*);
+    void detach(Observer*);
     void notify();
 private:
     std::vector<Observer*> observers;

@@ -4,10 +4,10 @@
 #include "EventPlayer.h"
 #include <random>
 
-class Key: public EventPlayer {
+class Key final : public EventPlayer {
 public:
-    void execute(Player& player) override;
-    ~Key() override = default;
+    explicit Key(Player*);
+    void execute() final;
 };
 
 

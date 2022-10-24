@@ -2,7 +2,7 @@
 #define LABS_PLAYER_H
 
 #include <algorithm>
-#include "../Control/Observer/Observable.h"
+#include "../Logging/Observable.h"
 
 class Player : public Observable {
 public:
@@ -21,8 +21,8 @@ public:
     int get_xp()     const;
     int get_keys()   const;
 
-    void set_health(int health);
-    void set_xp(int xp);
+    void set_health(int);
+    void set_xp(int);
     void add_lvl();
     void add_key();
 private:

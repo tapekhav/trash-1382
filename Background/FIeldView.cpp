@@ -18,7 +18,8 @@ void FieldView::update() {
         for (int j = 0; j != field->get_width(); ++j) {
             if (field->get_player_location().first == j && field->get_player_location().second == i)
                 std::cout << "p  ";
-            else std::cout << CellView(field->get_cur_cell(j, i)).get_cell() << "  ";
+            else
+                std::cout << CellView(field->get_cur_cell(j, i)).get_cell() << "  ";
         }
         std::cout << " |\n";
     }

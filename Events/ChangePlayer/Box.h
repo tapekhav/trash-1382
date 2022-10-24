@@ -3,10 +3,10 @@
 
 #include "EventPlayer.h"
 
-class Box : public EventPlayer {
+class Box final : public EventPlayer {
 public:
-    void execute(Player& player) override;
-    ~Box() override = default;
+    explicit Box(Player*);
+    void execute() final;
 };
 
 

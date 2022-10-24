@@ -1,5 +1,5 @@
-#ifndef LABS_COMMANDERREADER_H
-#define LABS_COMMANDERREADER_H
+#ifndef LABS_COMMANDREADER_H
+#define LABS_COMMANDREADER_H
 
 #include <iostream>
 #include "../Characters/Player.h"
@@ -18,7 +18,7 @@ public:
     void print_death() const;
     void print_win() const;
 private:
-    void check(int& arg);
+    void check(int&);
 
     char choice;
     int height;
