@@ -11,9 +11,10 @@ class Cell;
 #include "../Characters/Player.h"
 #include "../Logging/Observer.h"
 #include "../Logging/Observable.h"
+#include "../Logging/LogLevel/GameLog.h"
 #include "../Events/EventCreator.h"
 
-class Field : public Observable {
+class Field : public GameLog {
 public:
     explicit Field(int width = 10, int height = 10);
     ~Field();
