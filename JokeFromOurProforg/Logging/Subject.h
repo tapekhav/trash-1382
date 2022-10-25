@@ -3,11 +3,17 @@
 
 #include "Logging/Observer.h"
 
+#include <vector>
+#include <algorithm>
+
 class Subject {
 public:
-	virtual void Attach(Observer* observer) = 0;
-	virtual void Detach(Observer* observer) = 0;
-	virtual void Notify() = 0;
+
+	void Attach(Observer* observer);
+	void Detach(Observer* observer);
+	void Notify(Message const &msg);
+private:
+	std::vector<Observer*> mObservers;
 };
 
 #endif //SURVIVE_SUBJECT_H

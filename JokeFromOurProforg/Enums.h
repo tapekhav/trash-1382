@@ -67,9 +67,9 @@ public:
     };
 
     enum Log {
-        LOG_STATUS,
-        LOG_GAME,
-        LOG_ERROR
+        LOG_HUNGER,
+        LOG_THIRST,
+        LOG_HEALTH
     };
 
 };

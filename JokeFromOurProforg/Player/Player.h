@@ -2,8 +2,9 @@
 #define SURVIVAL_PLAYER_H
 
 #include "Enums.h"
+#include "Logging/Subject.h"
 
-class Player {
+class Player : public Subject{
 public:
     Player() :mHealth(EnumClass::HEALTH), mThirst(EnumClass::THIRST), mHunger(EnumClass::HUNGER) {};
     Player(const Player& obj);
@@ -15,7 +16,7 @@ public:
     int GetHunger() const { return mHunger; }
     int GetThirst() const { return mThirst; }
 
-    void DamagePlayer(int val) { mHealth = mHealth - val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth - val; }
+    void DamagePlayer(int val);
     void HealPlayer(int val) { mHealth = mHealth + val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth + val;  }
 
     void SetThirst(int val) { mThirst = mThirst + val > EnumClass::THIRST ? EnumClass::THIRST : mThirst + val; }
@@ -23,6 +24,7 @@ public:
 
     void SetHunger(int val) { mHunger = mHunger + val > EnumClass::HUNGER ? EnumClass::HUNGER : mHunger + val; }
     void LoseHungerUnit() { mHunger = mHunger - 1 < 0 ? 0 : mHunger - 1; }
+
 private:
     int mThirst;
     int mHunger;

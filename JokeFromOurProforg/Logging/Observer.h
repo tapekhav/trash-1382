@@ -5,8 +5,8 @@
 
 class Observer {
 public:
-	virtual void Update(Message& msg) = 0;
-	virtual ~Observer() = 0;
+	virtual void Update(Message const &msg) = 0;
+	virtual ~Observer() {};
 };
 
 #endif //SURVIVE_OBSERVER_H

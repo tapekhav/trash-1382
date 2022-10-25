@@ -23,3 +23,11 @@ Player::Player(Player&& obj) {
     mHunger = obj.mHunger;
     obj.mHunger = 0;
 }
+
+void Player::DamagePlayer(int val) {
+    mHealth = mHealth - val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth - val;
+    Message* msg = new Message(EnumClass::LOG_HEALTH);
+    msg->IncreaseData(&mHealth);
+    Notify(*msg);
+    delete msg;
+}
