@@ -3,32 +3,47 @@
 //
 
 #include "Cell.h"
-#include "../EventsPerson//EventPerson.h"
+#include "../Events/EventsPerson//EventPerson.h"
 
-    Cell::Cell() : object(STANDARD), player_loc(false){
+    Cell::Cell() : player_loc(false), passability(true), event(nullptr){
 
     };
-Cell::OBJECT Cell::get_obj() const {
-    return object;
-}
 
-    void Cell::update(Person& person){
-        if(event != nullptr) event->doing(person);
+
+    Event* Cell::get_event() const{
+        return event;
     }
 
-    void Cell::set_event_person(EventPerson* event_){
+    void Cell::update(void* obj){
+            event->doing(obj);
+    }
+    /*
+    void Cell::update_field(Field *field) {
+        if(auto tmp = dynamic_cast<EventField*>(event))
+            tmp ->doing(field);
+    }
+     */
+
+    void Cell::set_event(Event* event_){
         delete this->event;
         this->event = event_;
     }
-    void Cell::set_enemy(Enemy* enemy){
-        delete this->enemy;
-    }
-    void Cell::set_obj(OBJECT obj){
-        this->object = obj;
-    }
-    void Cell::set_person_loc(bool loc){
-        this->player_loc = loc;
-    }
-    bool Cell::check_player()const{
 
+
+    bool Cell::get_passab() const {
+        return passability;
+    }
+
+    void Cell::set_passab(bool pass) {
+        passability = pass;
+    }
+    bool Cell::get_person_in()const{
+        return person_in;
+    }
+    void Cell::set_person_in(bool in){
+        person_in = in;
+    }
+
+
+    Cell::~Cell() {
     }

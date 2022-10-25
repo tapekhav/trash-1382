@@ -1,40 +1,36 @@
 //
 // Created by corvussharp on 21.09.22.
 //
-
+class Person;
 #ifndef UNTITLED48_CELL_H
 #define UNTITLED48_CELL_H
-#include "../EventsPerson//EventPerson.h"
+#include "../Events/EventsPerson//EventPerson.h"
 #include "../Enemy/Enemy.h"
+#include "../Events/EventsField//EventField.h"
 class Cell{
-
 public:
-    enum OBJECT{
-        STANDARD,
-        BLOCK,
-        HP,
-        PERSON,
-        BOX,
-        DMG,
-        CHANGEMAP
-    };
+     ~Cell();
     explicit Cell();
 
-    OBJECT get_obj() const;
-    void update(Person& person);
-    void set_event_person(EventPerson* event_);
-    void set_enemy(Enemy* enemy);
-    void set_obj(OBJECT obj);
-    void set_person_loc(bool loc);
+    void update(void* obj);
 
-    bool check_player()const;
+    void set_person_in(bool loc);
+    bool get_person_in() const;
 
+    bool get_passab() const;
+    void set_passab(bool pass);
+
+
+
+    Event* get_event() const;
+
+    void set_event(Event* event);
 private:
-
-    OBJECT object;
-    bool player_loc;
-    EventPerson* event;
+    bool passability;
+    bool person_in;
+    Event* event;
     Enemy enemy;
+    bool player_loc;
 };
 
 

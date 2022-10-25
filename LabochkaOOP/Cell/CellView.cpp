@@ -4,36 +4,28 @@
 
 #include "CellView.h"
 
-    CellView::CellView(const Cell& sym){
-        switch (sym.get_obj()) {
-            case Cell::STANDARD:
-                sym_cell = ' ';
-                break;
-            case Cell::BLOCK:
-                sym_cell = '!';
-                break;
-            case Cell::HP:
-                sym_cell = 'H';
-                break;
-            case Cell::PERSON:
-                sym_cell = 'Y';
-                break;
-            case Cell::BOX:
-                sym_cell = 'B';
-                break;
-            case Cell::DMG:
-                sym_cell = 'D';
-                break;
-            case Cell::CHANGEMAP:
-                sym_cell = 'X';
-                break;
-            default:
-                sym_cell = '?';
-                break;
-        }
-
+CellView::CellView(const Cell& c) {
+    if (c.get_person_in())
+        sym_cell = 'Y';
+    else if (dynamic_cast<EventXp*>(c.get_event()) != nullptr)
+        sym_cell = 'B';
+    else if (dynamic_cast<EventHp*>(c.get_event()) != nullptr)
+        sym_cell = 'H';
+    else if (dynamic_cast<EventDmg*>(c.get_event()) != nullptr)
+        sym_cell = 'D';
+    else if (dynamic_cast<EventChangeField*>(c.get_event()) != nullptr)
+        sym_cell = 'S';
+    else if (dynamic_cast<EventTrap*>(c.get_event()) != nullptr)
+        sym_cell = 'T';
+    else if (dynamic_cast<EventWin*>(c.get_event()) != nullptr){
+        sym_cell = 'W';
     }
-    char CellView::get_cell()const{
+    else {
+        sym_cell = ' ';
+    }
+}
+
+char CellView::get_cell()const{
         return sym_cell;
     };
 

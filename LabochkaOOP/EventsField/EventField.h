@@ -4,12 +4,13 @@
 
 #ifndef UNTITLED48_EVENTFIELD_H
 #define UNTITLED48_EVENTFIELD_H
+
 #include "../Field/Field.h"
 
 class EventField {
 public:
-    virtual void doing(Field& field) = 0;
+    virtual void execute(Field& field) = 0;
+    virtual ~EventField() = default;
 };
-
 
 #endif //UNTITLED48_EVENTFIELD_H

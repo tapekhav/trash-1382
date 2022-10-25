@@ -66,12 +66,19 @@
         return height;
     }
 
+    void CommandReader::print_death(){
+    std::cerr<<"Вы откинулуись!";
+    }
+
     int CommandReader::get_width()const{
         return width;
     }
     char CommandReader::input_sym(char &sym){
         std::cin>>sym;
         return sym;
+    }
+    void CommandReader::print_win(){
+        std::cerr<<"ПобедОчка";
     }
     char CommandReader::get_sym()const{
         return sym;

@@ -9,7 +9,6 @@ int Enemy::get_hp() const {
 int Enemy::get_dmg() const {
     return dmg;
 }
-
     Enemy::Enemy(int hp, int dmg): hp(hp),dmg(dmg) {
 
 }

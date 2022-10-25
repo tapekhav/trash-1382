@@ -7,19 +7,20 @@
 
 #include "../Field/Field.h"
 #include "../Field/FieldView.h"
-
 class Controller{
 private:
-
     Field field;
     FieldView field_view;
 public:
     Controller();
-    Field get_field();
+
+    bool win_game();
+    bool death_person();
 
     void set_field(int w, int h);
     void set_field_base();
     void set_step(Person::STEP step);
+
     void print_field();
     void print_stats();
 };

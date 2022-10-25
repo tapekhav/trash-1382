@@ -21,9 +21,10 @@ public:
     int arg_error();
 
     bool valid_arg(int a);
-
+    void print_death();
     int get_height() const;
     int get_width()const;
+    void print_win();
 
     char input_sym(char &sym);
     char get_sym()const;
