@@ -51,7 +51,6 @@ void Field::create_field(Player *player) {
 void Field::update_events(Player *player) {
     EventBuilder builder(this, player);
     builder.update_events();
-    std::cout << "Events updated\n";
 }
 
 Field::Field(const Field &other) {

@@ -70,3 +70,4 @@ Event *EventBuilder::create_LoseEvent() {
     Lose *ev = new Lose(player);
     return ev;
 };
+

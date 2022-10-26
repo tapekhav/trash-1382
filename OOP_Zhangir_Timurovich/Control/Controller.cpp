@@ -1,12 +1,13 @@
 #include "Controller.h"
 #include "CommandReader.h"
 
-Controller::Controller(int width, int height, int health, int armour, int
+Controller::Controller(LogOutInfo* info, int width, int height, int health, int armour, int
 damage) {
     this->player = new Player(health, armour, damage);
     this->field = new Field(width, height);
     this->field_view = FieldView(this->field);
     this->player_view = PlayerView(this->player);
+    this->log_out_info = info;
 }
 
 void Controller::show_field() {

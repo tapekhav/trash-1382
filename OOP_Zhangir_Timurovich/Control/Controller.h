@@ -6,12 +6,14 @@
 #include "../Background/FieldView.h"
 #include "CommandReader.h"
 #include "../Events/EventBuilder.h"
+#include "../Info/Structs.h"
+#include "../Info/LogOutInfo.h"
 
 
 class Controller {
 public:
-    explicit Controller(int width = 10, int height = 10, int health = 100, int
-    armour = 100, int damage = 10);
+    explicit Controller(LogOutInfo *info = nullptr, int width = 10, int height = 10, int
+    health = 100, int armour = 100, int damage = 10);
 
     void show_field();
 
@@ -23,9 +25,10 @@ public:
 
 
 private:
-    Player* player;
+    Player *player;
     FieldView field_view{};
     Field *field{};
     PlayerView player_view{};
+    LogOutInfo *log_out_info;
 };
 

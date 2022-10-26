@@ -8,7 +8,7 @@ FieldView::FieldView(Field *other) {
 }
 
 void FieldView::show_field() {
-    system("clear");
+//    system("clear");
     std::vector<int> sizes = this->field_obj->get_size();
     for (int i = 0; i <= sizes[0]; i++) {
         std::cout <<" - ";

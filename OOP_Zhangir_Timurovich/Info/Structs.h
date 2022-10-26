@@ -1,0 +1,12 @@
+#ifndef MAIN_CPP_STRUCTS_H
+#define MAIN_CPP_STRUCTS_H
+
+enum LEVEL {
+    GAME = 0, STATUS = 1, ERROR = 2
+};
+
+enum OUTPUT {
+    CONSOLE, FILEOUT
+};
+
+#endif //MAIN_CPP_STRUCTS_H
