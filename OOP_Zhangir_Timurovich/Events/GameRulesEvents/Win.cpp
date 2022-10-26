@@ -3,7 +3,8 @@
 
 bool Win::execute() {
     if (player && player->get_coins() > 30) {
-        notify();
+        Message message(GAME, "Event happened");
+        notify(message);
         return true;
     }
     return false;

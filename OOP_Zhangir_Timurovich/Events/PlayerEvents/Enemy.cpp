@@ -13,7 +13,8 @@ bool Enemy::execute() {
             player->set_coins(player->get_coins() - 5);
             player->set_health(player->get_health() - (int) dmg(rng));
         }
-        notify();
+        Message message(GAME, "Event happened");
+        notify(message);
         return true;
     }
     return false;

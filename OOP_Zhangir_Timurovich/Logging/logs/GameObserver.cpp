@@ -4,7 +4,7 @@
 
 #include "GameObserver.h"
 
-void GameObserver::update() {
+void GameObserver::update(Message &msg) {
     return;
 }
 

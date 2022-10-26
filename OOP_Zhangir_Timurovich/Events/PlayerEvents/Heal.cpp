@@ -11,7 +11,8 @@ bool Heal::execute() {
             player->set_damage(player->get_damage() + 1);
         } else
             player->set_health(player->get_health() + 1);
-        notify();
+        Message message(GAME, "Event happened");
+        notify(message);
         return true;
     }
     return false;

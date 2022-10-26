@@ -13,7 +13,8 @@ bool Decrease::execute() {
     if (field) {
         field->add_height(-5);
         field->add_width(-5);
-        notify();
+        Message message(GAME, "Event happened");
+        notify(message);
         return true;
     }
     return false;

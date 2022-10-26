@@ -4,7 +4,8 @@
 
 bool Lose::execute() {
     if (this->player && this->player->get_health() <= 0) {
-        notify();
+        Message message(GAME, "Event happened");
+        notify(message);
         return true;
     }
     return false;

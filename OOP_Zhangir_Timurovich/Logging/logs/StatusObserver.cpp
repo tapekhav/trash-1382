@@ -4,7 +4,7 @@
 
 #include "StatusObserver.h"
 
-void StatusObserver::update() {
+void StatusObserver::update(Message &msg) {
     return;
 }
 

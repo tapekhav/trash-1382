@@ -12,7 +12,7 @@ class StatusObserver : public Observer {
 public:
     StatusObserver(Subject *model);
 
-    void update() override;
+    void update(Message &msg) override;
 
     ~StatusObserver() override = default;
 };

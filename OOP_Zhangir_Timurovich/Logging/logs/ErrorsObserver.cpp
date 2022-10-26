@@ -4,7 +4,7 @@
 
 #include "ErrorsObserver.h"
 
-void ErrorsObserver::update() {
+void ErrorsObserver::update(Message &msg) {
     return;
 }
 

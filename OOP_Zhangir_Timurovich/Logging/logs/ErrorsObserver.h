@@ -12,7 +12,7 @@ class ErrorsObserver : public Observer {
 public:
     ErrorsObserver(Subject *model);
 
-    void update() override;
+    void update(Message &msg) override;
 
     ~ErrorsObserver() override = default;
 };

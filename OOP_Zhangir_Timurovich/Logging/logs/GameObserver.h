@@ -9,7 +9,7 @@ public:
 
     GameObserver(Subject *model);
 
-    void update() override;
+    void update(Message &msg) override;
 
     ~GameObserver() override = default;
 
