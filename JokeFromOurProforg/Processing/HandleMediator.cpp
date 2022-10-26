@@ -27,6 +27,7 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 		else {
 			mCommander->SetFieldSize(EnumClass::STANDARD_SIZE, EnumClass::STANDARD_SIZE);
 		}
+		system("cls");
 		mGame->SetGameProgress(true);
 		break;
 	case EnumClass::DO_CMD:

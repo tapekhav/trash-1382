@@ -10,8 +10,9 @@ public:
 	Console(Observer* observer) : Decorator(observer) {}
 
 	void Update(Message const *msg) override;
+	std::ostream& Output(std::ostream& out) override;
 
-	~Console() { Decorator::~Decorator(); }
+	~Console() { delete mObserver; }
 };
 
 #endif //SURVIVE_CONSOLE_H

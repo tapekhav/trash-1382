@@ -7,8 +7,8 @@
 
 class Observer {
 public:
-	virtual void Update(Message const *msg) = 0;
-
+	virtual void Update(Message const* msg) { return; }
+	virtual std::ostream& Output(std::ostream& out) { return out; };
 	virtual ~Observer() {};
 
 protected:

@@ -26,8 +26,37 @@ Player::Player(Player&& obj) {
 
 void Player::DamagePlayer(int val) {
     mHealth = mHealth - val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth - val;
-    Message* msg = new Message(EnumClass::LOG_HEALTH);
-    msg->IncreaseData(&mHealth);
+    CreateMessage(EnumClass::LOG_HEALTH, &mHealth);
+}
+
+void Player::HealPlayer(int val) { 
+    mHealth = mHealth + val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth + val;
+    CreateMessage(EnumClass::LOG_HEALTH, &mHealth);
+}
+
+void Player::SetHunger(int val) {
+    mHunger = mHunger + val > EnumClass::HUNGER ? EnumClass::HUNGER : mHunger + val;
+    CreateMessage(EnumClass::LOG_HUNGER, &mHunger);
+}
+
+void Player::LoseHungerUnit() {
+    mHunger = mHunger - 1 < 0 ? 0 : mHunger - 1;
+    CreateMessage(EnumClass::LOG_HUNGER, &mHunger);
+}
+
+void Player::SetThirst(int val) {
+    mThirst = mThirst + val > EnumClass::THIRST ? EnumClass::THIRST : mThirst + val;
+    CreateMessage(EnumClass::LOG_THIRST, &mThirst);
+}
+
+void Player::LoseThirstUnit() { 
+    mThirst = mThirst - 1 < 0 ? 0 : mThirst - 1;
+    CreateMessage(EnumClass::LOG_THIRST, &mThirst);
+}
+
+void Player::CreateMessage(EnumClass::Log type, int* data) {
+    Message* msg = new Message(type);
+    msg->IncreaseData(data);
     Notify(msg);
     delete msg;
 }

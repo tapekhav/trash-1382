@@ -5,6 +5,7 @@
 #include "Logging/Logs/LogGame.h"
 #include "Logging/Logs/LogError.h"
 #include "Logging/OutputWays/Console.h"
+#include "Logging/OutputWays/File.h"
 
 #include <iostream>
 

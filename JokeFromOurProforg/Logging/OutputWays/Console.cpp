@@ -2,8 +2,9 @@
 
 void Console::Update(Message const *msg) {
 	Decorator::Update(msg);
+	Output(std::cout);
+}
 
-	if (dynamic_cast<LogStatus*>(mObserver))
-		std::cout << *dynamic_cast<LogStatus*>(mObserver) << std::endl;
-
+std::ostream& Console::Output(std::ostream& out) {
+	return mObserver->Output(out);
 }

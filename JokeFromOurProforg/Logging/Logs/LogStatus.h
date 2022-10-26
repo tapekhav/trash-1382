@@ -13,6 +13,9 @@ public:
 	friend std::ostream& operator <<(std::ostream& out, const LogStatus& logStatus);
 
 	void Update(Message const *msg) override;
+	std::ostream& Output(std::ostream& out) override;
+
+	~LogStatus() {}
 };
 
 #endif //SURVIVE_LOGSTATUS_H

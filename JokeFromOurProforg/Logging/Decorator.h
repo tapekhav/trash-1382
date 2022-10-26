@@ -8,11 +8,11 @@
 
 class Decorator : public Observer {
 public:
-	Decorator(Observer* observer): mObserver(observer){}
+	Decorator(Observer* observer);
 	
-	void Update(Message const* msg) override { mObserver->Update(msg); }
-	
-	~Decorator() { delete mObserver; }
+	void Update(Message const* msg) override;
+	std::ostream& Output(std::ostream& out) override;
+
 protected:
 	Observer* mObserver;
 };
