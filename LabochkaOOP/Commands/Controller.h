@@ -7,13 +7,18 @@
 
 #include "../Field/Field.h"
 #include "../Field/FieldView.h"
+#include "../LogsInfo/Structs.h"
+#include "../LogsInfo/LogOutInfo.h"
+#include "../Persons/Person.h"
+#include "../Logs/LogsLvlGame.h"
 class Controller{
 private:
+    Person person;
     Field field;
     FieldView field_view;
+    LogOutInfo *log_out_info{};
 public:
-    Controller();
-
+    explicit Controller(LogOutInfo *info = nullptr);
     bool win_game();
     bool death_person();
 

@@ -4,8 +4,8 @@
 
 #ifndef LABOCHKAOOP_EVENTS_H
 #define LABOCHKAOOP_EVENTS_H
-
-class Event{
+#include "../Logs/Subject.h"
+class Event: public Subject{
 public:
     virtual void doing(void*) = 0;
 

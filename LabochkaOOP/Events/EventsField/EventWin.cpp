@@ -9,4 +9,5 @@
 
 void EventWin::change_map(Field *field) {
     field->trig_win();
+    notify();
 }

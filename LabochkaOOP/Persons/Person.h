@@ -4,8 +4,8 @@
 
 #ifndef UNTITLED48_PERSON_H
 #define UNTITLED48_PERSON_H
-
-class Person{
+#include "../Logs/Subject.h"
+class Person: public Subject{
 public:
     enum STEP{
         UP,

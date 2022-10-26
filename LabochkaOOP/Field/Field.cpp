@@ -4,7 +4,8 @@
 
 #include "Field.h"
 #include "iostream"
-#include "../Events/EventsField/EventChangeField.h"
+
+
 
     void Field::swap(Field &other) {
         std::swap(width, other.width);
@@ -18,12 +19,14 @@
 }
     void Field::update_field( std::pair<int, int> person_loc){
     this->field.at(person_loc.second).at(person_loc.first).set_event(nullptr);
-}
-
+    }
 
     int  Field::get_height() const {
         return height;
     }
+
+
+
 
     int  Field::get_width() const {
         return width;
@@ -226,6 +229,7 @@ void  Field::change_person_pos(Person::STEP s) {
             person_loc = tmp;
             callEvent(&person,person_loc);
             update_field(person_loc);
+            notify();
         }
 
         field.at(person_loc.second).at(person_loc.first).set_person_in(true);

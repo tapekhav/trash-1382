@@ -10,7 +10,7 @@
 class Mediator{
 private:
     Person person;
-    CommandReader input;
+    CommandReader input{};
     Controller play;
 public:
     void start();

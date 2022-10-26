@@ -6,4 +6,5 @@
 
 void EventPerson::doing(void* obj){
     change_stats((Person*) obj);
+    notify();
 }

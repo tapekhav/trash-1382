@@ -8,5 +8,6 @@
 
 void EventChangeField::change_map(Field *field) {
     field->spawn_events();
+    notify();
 }
 

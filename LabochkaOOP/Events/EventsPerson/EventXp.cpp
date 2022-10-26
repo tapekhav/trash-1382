@@ -9,6 +9,7 @@ void EventXp::change_stats(Person* person) {
         person->set_lvl(person->get_lvl() + 1);
         person->set_xp(person->get_xp() - 150);
     }
+    notify();
 }
 
 

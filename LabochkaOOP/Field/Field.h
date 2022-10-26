@@ -15,9 +15,9 @@ class Cell;
 #include "../Events/EventsField/EventWin.h"
 #include "../Events/EventsPerson//EventDmg.h"
 #include "../Events/EventsPerson//EventTrap.h"
-
-
-class Field {
+#include "../Logs/Subject.h"
+#include "../Events/EventsField/EventChangeField.h"
+class Field: public Subject{
 private:
     bool trigWin;
     Person person;
@@ -35,7 +35,6 @@ public:
     Field(Field&& other);
     Field& operator=(Field&& other);
 
-    void generate_X_next_floor();
 
     void change_person_pos(Person::STEP s);
     Cell& getCell(std::pair<int, int>);
@@ -60,7 +59,7 @@ public:
     int get_height() const;
     int get_width() const;
     void spawn_new_events();
-    bool get_game_win_trigger() const;
+
     std::vector<std::vector<Cell>> get_field() const;
    // ~Field();
 

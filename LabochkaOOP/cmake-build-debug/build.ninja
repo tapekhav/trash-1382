@@ -157,6 +157,84 @@ build CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o: CXX_COMPIL
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
   OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Events/EventsPerson
 
+build CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlGame.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Logs/LogsLvlGame.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlGame.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Logs
+
+build CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlErrors.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Logs/LogsLvlErrors.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlErrors.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Logs
+
+build CMakeFiles/LabochkaOOP.dir/Logs/LogsStartEnd.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Logs/LogsStartEnd.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Logs/LogsStartEnd.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Logs
+
+build CMakeFiles/LabochkaOOP.dir/Logs/Subject.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Logs/Subject.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Logs/Subject.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Logs
+
+build CMakeFiles/LabochkaOOP.dir/OutPut/ConsoleOutput.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/OutPut/ConsoleOutput.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/OutPut/ConsoleOutput.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/OutPut
+
+build CMakeFiles/LabochkaOOP.dir/OutPut/FileOutput.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/OutPut/FileOutput.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/OutPut/FileOutput.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/OutPut
+
+build CMakeFiles/LabochkaOOP.dir/Logs/Massage.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Logs/Massage.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Logs/Massage.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Logs
+
+build CMakeFiles/LabochkaOOP.dir/Message/Message.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Message/Message.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Message/Message.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Message
+
+build CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/EvenetMessage.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Message/MessageLVL/EvenetMessage.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/EvenetMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL
+
+build CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/PersonMoveMessage.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Message/MessageLVL/PersonMoveMessage.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/PersonMoveMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL
+
+build CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/SystemMessage.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Message/MessageLVL/SystemMessage.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/SystemMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL
+
+build CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/WarningMessage.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/Message/MessageLVL/WarningMessage.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/WarningMessage.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/Message/MessageLVL
+
+build CMakeFiles/LabochkaOOP.dir/LogsInfo/LogOutInfo.cpp.o: CXX_COMPILER__LabochkaOOP_Debug /home/corvussharp/CLionProjects/LabochkaOOP/LogsInfo/LogOutInfo.cpp || cmake_object_order_depends_target_LabochkaOOP
+  DEP_FILE = CMakeFiles/LabochkaOOP.dir/LogsInfo/LogOutInfo.cpp.o.d
+  FLAGS = -g -std=gnu++2a
+  OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
+  OBJECT_FILE_DIR = CMakeFiles/LabochkaOOP.dir/LogsInfo
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target LabochkaOOP
@@ -165,7 +243,7 @@ build CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o: CXX_COMPIL
 #############################################
 # Link the executable LabochkaOOP
 
-build LabochkaOOP: CXX_EXECUTABLE_LINKER__LabochkaOOP_Debug CMakeFiles/LabochkaOOP.dir/main.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventPerson.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventXp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventHp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventDmg.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventField.cpp.o CMakeFiles/LabochkaOOP.dir/Enemy/Enemy.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventWin.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventChangeField.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o
+build LabochkaOOP: CXX_EXECUTABLE_LINKER__LabochkaOOP_Debug CMakeFiles/LabochkaOOP.dir/main.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventPerson.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventXp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventHp.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventDmg.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/Cell.cpp.o CMakeFiles/LabochkaOOP.dir/Cell/CellView.cpp.o CMakeFiles/LabochkaOOP.dir/Persons/Person.cpp.o CMakeFiles/LabochkaOOP.dir/Field/Field.cpp.o CMakeFiles/LabochkaOOP.dir/Field/FieldView.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/CommandReader.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Controller.cpp.o CMakeFiles/LabochkaOOP.dir/Commands/Mediator.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventField.cpp.o CMakeFiles/LabochkaOOP.dir/Enemy/Enemy.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventWin.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsField/EventChangeField.cpp.o CMakeFiles/LabochkaOOP.dir/Events/EventsPerson/EventTrap.cpp.o CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlGame.cpp.o CMakeFiles/LabochkaOOP.dir/Logs/LogsLvlErrors.cpp.o CMakeFiles/LabochkaOOP.dir/Logs/LogsStartEnd.cpp.o CMakeFiles/LabochkaOOP.dir/Logs/Subject.cpp.o CMakeFiles/LabochkaOOP.dir/OutPut/ConsoleOutput.cpp.o CMakeFiles/LabochkaOOP.dir/OutPut/FileOutput.cpp.o CMakeFiles/LabochkaOOP.dir/Logs/Massage.cpp.o CMakeFiles/LabochkaOOP.dir/Message/Message.cpp.o CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/EvenetMessage.cpp.o CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/PersonMoveMessage.cpp.o CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/SystemMessage.cpp.o CMakeFiles/LabochkaOOP.dir/Message/MessageLVL/WarningMessage.cpp.o CMakeFiles/LabochkaOOP.dir/LogsInfo/LogOutInfo.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LabochkaOOP.dir
   POST_BUILD = :

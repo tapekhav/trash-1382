@@ -25,13 +25,17 @@
 
     void Person::set_hp(int hp){
         this->health = hp;
+        notify();
     }
     void Person::set_dmg(int dmg){
         this->damage = dmg;
+        notify();
     }
     void Person::set_xp(int xpe){
         this->xp = xpe;
+        notify();
     }
     void Person::set_lvl(int lvl) {
         this->lvl = lvl;
+        notify();
     }

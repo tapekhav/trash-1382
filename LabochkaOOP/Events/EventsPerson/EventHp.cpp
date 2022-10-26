@@ -5,4 +5,5 @@
 #include "EventHp.h"
  void EventHp::change_stats(Person* person) {
      person->set_hp(person->get_hp()+5);
+     notify();
     }

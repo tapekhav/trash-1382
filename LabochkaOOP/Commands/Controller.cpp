@@ -4,7 +4,10 @@
 
 #include "Controller.h"
 
-    Controller::Controller(): field(Field(10,10)), field_view(field){
+    Controller::Controller(LogOutInfo *info): field(Field(10,10)), field_view(field){
+    this->log_out_info = info;
+    Observer* observer = new LogsLvlGame(this->person);
+    observer = new LogsLvlGame(this->field);
     }
     void  Controller::set_field(int w, int h){
         field = Field(w,h);
@@ -17,6 +20,7 @@
     void  Controller::set_step(Person::STEP step){
         field.change_person_pos(step);
     }
+
 
     bool Controller::win_game(){
         if(field.get_win()){

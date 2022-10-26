@@ -7,7 +7,8 @@ class Person;
 #include "../Events/EventsPerson//EventPerson.h"
 #include "../Enemy/Enemy.h"
 #include "../Events/EventsField//EventField.h"
-class Cell{
+#include "../Logs/Subject.h"
+class Cell:public Subject{
 public:
      ~Cell();
     explicit Cell();
