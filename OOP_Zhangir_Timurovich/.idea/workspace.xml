@@ -52,17 +52,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\roman\OneDrive\Рабочий стол\OOP\Ебейшая бюрократия" />
       <recent name="C:\Users\roman\OneDrive\Рабочий стол\OOP\Info" />
       <recent name="C:\Users\roman\OneDrive\Документы\GitHub\course-work\OOP_Zhangir_Timurovich\CellTypes" />
       <recent name="C:\Users\roman\OneDrive\Документы\GitHub\course-work\OOP_Zhangir_Timurovich\Background" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="OOP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -103,7 +99,9 @@
       <workItem from="1666653643846" duration="641000" />
       <workItem from="1666698981016" duration="11363000" />
       <workItem from="1666727100231" duration="14171000" />
-      <workItem from="1666786279494" duration="18137000" />
+      <workItem from="1666786279494" duration="18679000" />
+      <workItem from="1666810388859" duration="14000" />
+      <workItem from="1666810477084" duration="2561000" />
     </task>
     <servers />
   </component>

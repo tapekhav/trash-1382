@@ -3,9 +3,12 @@
 //
 
 #include "GameObserver.h"
+#include "../../Info/Structs.h"
 
 void GameObserver::update(Message &msg) {
-    return;
+    if(msg.getType() == GAME){
+        return;
+    }
 }
 
 GameObserver::GameObserver(Subject *model) {

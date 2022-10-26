@@ -5,7 +5,9 @@
 #include "ErrorsObserver.h"
 
 void ErrorsObserver::update(Message &msg) {
-    return;
+    if(msg.getType() == ERROR){
+        return;
+    }
 }
 
 ErrorsObserver::ErrorsObserver(Subject *model){{

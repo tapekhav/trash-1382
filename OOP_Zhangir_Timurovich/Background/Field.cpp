@@ -96,13 +96,10 @@ Field &Field::operator=(const Field &other) {
     return *this;
 }
 
-Field &Field::operator=(Field &&other)
-
-noexcept {
-if (this != &other)
-this->
-swap(other);
-return *this;
+Field &Field::operator=(Field &&other) {
+    if (this != &other)
+        this->swap(other);
+    return *this;
 }
 
 bool Field::move_player(Player *player, int x, int y) {

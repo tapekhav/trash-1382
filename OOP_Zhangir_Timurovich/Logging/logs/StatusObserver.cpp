@@ -5,7 +5,9 @@
 #include "StatusObserver.h"
 
 void StatusObserver::update(Message &msg) {
-    return;
+    if(msg.getType() == STATUS){
+        return;
+    }
 }
 
 StatusObserver::StatusObserver(Subject *model) {

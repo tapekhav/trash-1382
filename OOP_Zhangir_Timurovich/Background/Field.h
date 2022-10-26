@@ -23,9 +23,7 @@ public:
 
     Field &operator=(const Field &other);
 
-    Field &operator=(Field &&other)
-
-    noexcept;
+    Field &operator=(Field &&other);
 
     bool move_player(Player *player, int x, int y);
 
