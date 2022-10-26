@@ -15,6 +15,7 @@ public:
 private:
     std::string prefix;
     std::string   info;
+    int num;
 };
 
 

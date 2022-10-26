@@ -119,6 +119,10 @@ void Field::change_player_location(Player &player, Player::STEP s) {
     if (field.at(tmp.second).at(tmp.first).get_pass()) {
         player_location = tmp;
     }
+    else {
+        this->notify(Message("Error", "this cell is impassable"));
+        return;
+    }
 
     if (field.at(player_location.second).at(player_location.first).get_event() != nullptr) {
         this->notify(Message("Game", "event was played"));

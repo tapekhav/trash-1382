@@ -8,7 +8,12 @@ ErrorLog::~ErrorLog() {
     this->subject->detach(this);
 }
 
-void ErrorLog::update(const Message &msg) {
-    ConsoleLog log;
-    log.print(msg);
+void ErrorLog::update(Message &msg) {
+    for (auto elem : loggers) {
+        elem->print(msg);
+    }
+}
+
+void ErrorLog::set_loggers(std::vector<Logger *>& loggers) {
+    this->loggers = loggers;
 }

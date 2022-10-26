@@ -10,7 +10,8 @@ public:
     explicit StatusLog(Subject *subject);
     ~StatusLog();
 
-    void update(Logger*, const Message &) override;
+    void update(Message &) override;
+    void set_loggers(std::vector<Logger*>&) override;
 private:
     Subject *subject;
 };

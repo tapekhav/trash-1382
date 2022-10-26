@@ -8,11 +8,14 @@
 class Controller {
 public:
     Controller();
-    ~Controller();
 
     void set_field(int, int);
     void set_field_standard();
     void set_step(Player::STEP);
+
+    Player* get_player();
+    Field* get_field();
+    GameStatus* get_game_status();
 
     void check_win_game();
     void check_end_game();
@@ -22,9 +25,6 @@ private:
     Field            field;
     PlayerView player_view;
     FieldView   field_view;
-    GameLog      field_log;
-    GameLog     player_log;
-    StatusLog*  status_log;
     GameStatus game_status;
 };
 

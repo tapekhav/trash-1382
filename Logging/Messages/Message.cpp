@@ -3,6 +3,7 @@
 Message::Message(const std::string& prefix, const std::string& info, int num) {
     this->prefix = prefix;
     this->info = info;
+    this->num = num;
 }
 
 std::string Message::get_msg() {
@@ -21,5 +22,8 @@ std::ostream &operator<<(std::ostream& out, Message msg) {
 
 void Message::update() {
     prefix += ": ";
+    if (num != -1) {
+        info += ": " + std::to_string(num);
+    }
     info += "\n";
 }

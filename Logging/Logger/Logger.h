@@ -7,7 +7,7 @@
 
 class Logger {
 public:
-    virtual void print(Message) = 0;
+    virtual void print(Message&) = 0;
 };
 
 

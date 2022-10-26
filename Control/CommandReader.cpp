@@ -56,6 +56,27 @@ void CommandReader::read_char() {
     std::cin >> choice;
 }
 
+std::vector<Logger*> CommandReader::read_loggers() {
+    int number;
+    std::vector<Logger*> loggers;
+
+    std::cout << "Введите, куда будут выводиться логи (1 - в консоль, 2 - в файл, 3 - в консоль и в файл, другие значения - никуда): ";
+    std::cin >> number;
+
+    if (number == 1) {
+        loggers.push_back(new ConsoleLog);
+    }
+    if (number == 2) {
+        loggers.push_back(new FileLog(read_file_name()));
+    }
+    if (number == 3) {
+        loggers.push_back(new ConsoleLog);
+        loggers.push_back(new FileLog(read_file_name()));
+    }
+
+    return loggers;
+}
+
 int CommandReader::get_height() const {
     return height;
 }
@@ -77,4 +98,12 @@ void CommandReader::check(int &arg) {
         notify(Message("Error", "the value was entered incorrectly"));
         arg = 10;
     }
+}
+
+std::string CommandReader::read_file_name() const {
+    std::cout << "Введите имя файла: ";
+    std::string file_name;
+    std::cin >> file_name;
+
+    return file_name;
 }

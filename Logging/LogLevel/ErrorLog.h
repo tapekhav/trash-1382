@@ -8,7 +8,8 @@ public:
     explicit ErrorLog(Subject *subject);
     ~ErrorLog();
 
-    void update(const Message &) override;
+    void update(Message &) override;
+    void set_loggers(std::vector<Logger*>&) override;
 private:
     Subject *subject;
 };

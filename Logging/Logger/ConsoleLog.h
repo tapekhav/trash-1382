@@ -6,7 +6,7 @@
 
 class ConsoleLog : public Logger {
 public:
-    void print(Message) override;
+    void print(Message&) override;
 };
 
 

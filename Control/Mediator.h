@@ -11,11 +11,14 @@ public:
     ~Mediator();
 
     void start();
+    void attach_loggers(std::vector<Logger*>& loggers);
 private:
-
-    CommandReader input;
-    Controller     game;
-    ErrorLog* error_log;
+    CommandReader    input;
+    Controller        game;
+    ErrorLog*    error_log;
+    GameLog*     field_log;
+    GameLog*    player_log;
+    StatusLog*  status_log;
 };
 
 #endif //LABS_MEDIATOR_H

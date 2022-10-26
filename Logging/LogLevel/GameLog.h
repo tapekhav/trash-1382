@@ -12,7 +12,8 @@ public:
     explicit GameLog(Subject *subject);
     ~GameLog();
 
-    void update(Logger*, const Message &) override;
+    void set_loggers(std::vector<Logger*>&) override;
+    void update(Message &) override;
 private:
     Subject *subject;
 };

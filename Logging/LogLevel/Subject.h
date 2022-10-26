@@ -3,19 +3,18 @@
 
 #include "LogLevel.h"
 #include "../Logger/Logger.h"
+#include "../Logger/ConsoleLog.h"
 #include <vector>
 #include <algorithm>
 
 class Subject {
 public:
     void attach(LogLevel *);
-    void attach_logger(Logger *);
 
     void detach(LogLevel *);
-    void notify(const Message& msg);
+    void notify(Message msg);
 private:
     std::vector<LogLevel *> observers;
-    std::vector<Logger*>      loggers;
 };
 
 #endif

@@ -8,6 +8,12 @@ StatusLog::~StatusLog() {
     this->subject->detach(this);
 }
 
-void StatusLog::update(Logger* log, const Message &msg) {
-    log->print(msg);
+void StatusLog::update(Message &msg) {
+    for (auto elem : loggers){
+        elem->print(msg);
+    }
+}
+
+void StatusLog::set_loggers(std::vector<Logger *>& loggers) {
+    this->loggers = loggers;
 }

@@ -2,14 +2,7 @@
 
 
 Controller::Controller() : field(Field()), field_view(FieldView(&field)),
-                           player(Player()), player_view(PlayerView(&player)), game_status(GameStatus()),
-                           field_log(&field), player_log(&player) {
-    this->status_log = new StatusLog(&game_status);
-}
-
-Controller::~Controller() {
-    delete status_log;
-}
+                           player(Player()), player_view(PlayerView(&player)), game_status(GameStatus()) {}
 
 
 void Controller::set_field(int width, int height) {
@@ -27,6 +20,18 @@ void Controller::set_field_standard() {
 void Controller::set_step(Player::STEP step) {
     field.change_player_location(player, step);
     field_view.update();
+}
+
+Player *Controller::get_player() {
+    return &player;
+}
+
+Field *Controller::get_field() {
+    return &field;
+}
+
+GameStatus *Controller::get_game_status() {
+    return &game_status;
 }
 
 void Controller::check_end_game() {

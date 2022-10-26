@@ -8,7 +8,7 @@ FileLog::~FileLog() {
     file.close();
 }
 
-void FileLog::print(Message msg) {
+void FileLog::print(Message& msg) {
     msg.update();
-    file << msg << '\n';
+    file << msg;
 }
