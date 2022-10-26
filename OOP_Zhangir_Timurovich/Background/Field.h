@@ -1,9 +1,10 @@
 #pragma once
 
 #include "Cell.h"
+#include "../Logging/Subject.h"
 
 
-class Field {
+class Field : public Subject {
 public:
     explicit Field(int width = 10, int height = 10);
 
@@ -32,7 +33,7 @@ public:
 
     [[nodiscard]] int get_player_y() const;
 
-    Cell& get_cell(int x, int y);
+    Cell &get_cell(int x, int y);
 
     void add_width(int width);
 

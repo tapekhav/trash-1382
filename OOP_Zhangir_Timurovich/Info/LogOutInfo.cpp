@@ -15,4 +15,6 @@ std::vector <OUTPUT> LogOutInfo::get_outputs(){
 LogOutInfo::LogOutInfo(std::vector<OUTPUT> outputs, std::vector<LEVEL> levels){
     this->outputs = outputs;
     this->levels = levels;
+    this->file = new FileOut("logs.txt");
+    this->console = new ConsoleOut;
 }

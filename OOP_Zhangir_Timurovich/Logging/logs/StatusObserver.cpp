@@ -3,3 +3,6 @@
 //
 
 #include "StatusObserver.h"
+void StatusObserver::update(){
+    return;
+}

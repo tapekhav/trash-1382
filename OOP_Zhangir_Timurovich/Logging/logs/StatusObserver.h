@@ -5,9 +5,18 @@
 #ifndef MAIN_CPP_STATUSOBSERVER_H
 #define MAIN_CPP_STATUSOBSERVER_H
 
+#include "../Observer.h"
+#include "../Subject.h"
 
-class StatusObserver {
+class StatusObserver : public Observer {
+public:
+    StatusObserver(Subject *model) {
+        model->attach(this);
+    }
 
+    void update() override;
+
+    ~StatusObserver() override = default;
 };
 
 

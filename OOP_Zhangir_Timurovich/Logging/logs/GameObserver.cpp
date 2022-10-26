@@ -3,3 +3,7 @@
 //
 
 #include "GameObserver.h"
+
+void GameObserver::update(){
+    return;
+}

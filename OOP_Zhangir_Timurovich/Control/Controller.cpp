@@ -1,5 +1,8 @@
 #include "Controller.h"
 #include "CommandReader.h"
+#include "../Logging/logs/GameObserver.h"
+#include "../Logging/logs/ErrorsObserver.h"
+#include "../Logging/logs/StatusObserver.h"
 
 Controller::Controller(LogOutInfo* info, int width, int height, int health, int armour, int
 damage) {
@@ -8,6 +11,8 @@ damage) {
     this->field_view = FieldView(this->field);
     this->player_view = PlayerView(this->player);
     this->log_out_info = info;
+    Observer* observer = new GameObserver(this->player);
+    observer = new GameObserver(this->field);
 }
 
 void Controller::show_field() {

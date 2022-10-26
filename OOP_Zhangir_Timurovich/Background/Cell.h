@@ -2,8 +2,9 @@
 
 #include "../Characters/Player.h"
 #include "../Events/Event.h"
+#include "../Logging/Subject.h"
 
-class Cell {
+class Cell : public Subject {
 public:
 
     explicit Cell(Event *event = nullptr);

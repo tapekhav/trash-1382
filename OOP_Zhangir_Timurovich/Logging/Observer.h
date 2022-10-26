@@ -5,7 +5,7 @@
 class Observer {
 public:
 //    virtual void Update(Message const &msg) = 0;
-    virtual void Update() = 0;
+    virtual void update() = 0;
     virtual ~Observer() {};
 };
 

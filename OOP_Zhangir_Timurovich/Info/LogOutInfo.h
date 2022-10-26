@@ -3,19 +3,24 @@
 
 #include "Structs.h"
 #include <vector>
-
+#include <string>
+#include "../Output/ConsoleOut.h"
+#include "../Output/FileOut.h"
 
 class LogOutInfo {
 public:
-    LogOutInfo(std::vector<OUTPUT> outputs, std::vector<LEVEL> levels);
+    LogOutInfo(std::vector <OUTPUT> outputs, std::vector <LEVEL> levels);
 
     std::vector <LEVEL> get_levels();
 
     std::vector <OUTPUT> get_outputs();
 
+
 private:
     std::vector <OUTPUT> outputs;
     std::vector <LEVEL> levels;
+    FileOut *file;
+    ConsoleOut *console;
 };
 
 

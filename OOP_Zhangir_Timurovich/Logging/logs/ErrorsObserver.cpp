@@ -3,3 +3,7 @@
 //
 
 #include "ErrorsObserver.h"
+
+void ErrorsObserver::update() {
+    return;
+}
