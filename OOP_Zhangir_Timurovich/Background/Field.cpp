@@ -15,7 +15,9 @@
 #include "../Events/PlayerEvents/Heal.h"
 #include "../Events/GameRulesEvents/Win.h"
 #include "../Events/GameRulesEvents/Lose.h"
-//#include "../Events/GameRulesEvents/"
+#include "../Info/Structs.h"
+#include "../Logging/Message.h"
+
 
 Field::Field(int width, int height) {
     if (width >= 10 && width <= 40)
@@ -113,7 +115,11 @@ bool Field::move_player(Player *player, int x, int y) {
         this->player_x = new_x;
         this->player_y = new_y;
         this->get_cell(new_x, new_y).set_player(true);
-        notify();
+        std::string x_str = std::to_string(this->player_x);
+        std::string y_str = std::to_string(this->player_y);
+        std::string msg = "Player removed to x: " + x_str + "y: " + y_str;
+        Message message(GAME, msg);
+        notify(message);
         Cell cl = this->field.at(new_y).at(new_x);
         Event *ev = cl.get_event();
         Event *wn = builder.create_WinEvent();

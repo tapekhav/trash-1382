@@ -7,6 +7,7 @@
 #include "Observer.h"
 #include <vector>
 #include <algorithm>
+#include "Message.h"
 
 class Subject {
 public:
@@ -15,7 +16,7 @@ public:
 
     void detach(Observer *observer);
 
-    void notify();
+    void notify(Message& message);
 
 protected:
     std::vector<Observer *> observers;

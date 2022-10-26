@@ -11,8 +11,8 @@ void Subject::detach(Observer* observer) {
     std::remove(observers.begin(), observers.end(), observer);
 }
 
-void Subject::notify() {
-//    for (auto elem : observers) {
-//        elem->Update();
-//    }
+void Subject::notify(Message& message) {
+    for (auto elem : observers) {
+        elem->update();
+    }
 }
