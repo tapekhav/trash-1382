@@ -1,5 +1,6 @@
 #include "Logger/ConsoleLog.h"
 
-void ConsoleLog::print(Message* msg) {
-    std::cout << msg << '\n';
+void ConsoleLog::print(Message msg) {
+    msg.update();
+    std::cout << msg;
 }

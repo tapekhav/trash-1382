@@ -2,9 +2,9 @@
 #define LABS_PLAYER_H
 
 #include <algorithm>
-#include "../Logging/Observable.h"
+#include "../Logging/LogLevel/Subject.h"
 
-class Player : public Observable {
+class Player : public Subject {
 public:
     enum STEP {
         UP,

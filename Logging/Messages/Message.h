@@ -5,7 +5,16 @@
 
 class Message {
 public:
-    virtual std::string get_msg() = 0;
+    explicit Message(const std::string&, const std::string&, int num = -1);
+    std::string get_msg();
+    std::string get_prefix() const;
+    friend std::ostream& operator<<(std::ostream&, Message);
+
+    void update();
+
+private:
+    std::string prefix;
+    std::string   info;
 };
 
 

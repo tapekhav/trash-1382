@@ -8,7 +8,7 @@ public:
     explicit FileLog(const std::string &file_name = "input.txt");
     ~FileLog();
 
-    void print(Message*) override;
+    void print(Message) override;
 private:
     std::ofstream file;
 };

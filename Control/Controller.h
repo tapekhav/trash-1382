@@ -8,6 +8,7 @@
 class Controller {
 public:
     Controller();
+    ~Controller();
 
     void set_field(int, int);
     void set_field_standard();
@@ -17,10 +18,13 @@ public:
     void check_end_game();
     GameStatus::STATUS get_status() const;
 private:
-    Player player;
-    Field field;
+    Player          player;
+    Field            field;
     PlayerView player_view;
-    FieldView field_view;
+    FieldView   field_view;
+    GameLog      field_log;
+    GameLog     player_log;
+    StatusLog*  status_log;
     GameStatus game_status;
 };
 

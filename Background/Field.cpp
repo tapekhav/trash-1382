@@ -65,7 +65,6 @@ void Field::make_field(Player& player) {
                 field.at(i).at(j).set_pass(false);
         }
     }
-    this->notify();
 }
 
 void Field::generate_walls() {
@@ -121,10 +120,14 @@ void Field::change_player_location(Player &player, Player::STEP s) {
         player_location = tmp;
     }
 
+    if (field.at(player_location.second).at(player_location.first).get_event() != nullptr) {
+        this->notify(Message("Game", "event was played"));
+    }
+
     field.at(player_location.second).at(player_location.first).update();
 
     if (s != Player::EXIT) {
-        this->notify();
+        this->notify(Message("Game", "player change location"));
     }
 }
 

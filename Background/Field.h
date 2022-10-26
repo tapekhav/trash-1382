@@ -9,12 +9,11 @@ class Cell;
 #include <random>
 #include "Cell.h"
 #include "../Characters/Player.h"
-#include "../Logging/Observer.h"
-#include "../Logging/Observable.h"
 #include "../Logging/LogLevel/GameLog.h"
+#include "../Logging/Logger/ConsoleLog.h"
 #include "../Events/EventCreator.h"
 
-class Field : public GameLog {
+class Field : public Subject {
 public:
     explicit Field(int width = 10, int height = 10);
     ~Field();

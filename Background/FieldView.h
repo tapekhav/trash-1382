@@ -4,10 +4,10 @@
 #include "Field.h"
 #include "CellView.h"
 
-class FieldView : public Observer {
+class FieldView {
 public:
     explicit FieldView(Field*);
-    void update() override;
+    void update();
 private:
     void print_border() const;
 

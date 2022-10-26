@@ -1,0 +1,17 @@
+#ifndef TRASH_1382_ERRORLOG_H
+#define TRASH_1382_ERRORLOG_H
+
+#include "Subject.h"
+
+class ErrorLog : public LogLevel {
+public:
+    explicit ErrorLog(Subject *subject);
+    ~ErrorLog();
+
+    void update(const Message &) override;
+private:
+    Subject *subject;
+};
+
+
+#endif

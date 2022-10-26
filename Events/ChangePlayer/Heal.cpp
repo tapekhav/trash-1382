@@ -10,6 +10,4 @@ void Heal::execute() {
         player->set_health(player->get_health() + 1);
     else
         player->set_health(max_health);
-
-    player->notify();
 }

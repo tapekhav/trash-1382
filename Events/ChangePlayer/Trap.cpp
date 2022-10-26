@@ -7,5 +7,4 @@ Trap::Trap(Player *player, int damage) {
 
 void Trap::execute() {
     player->set_health(player->get_health() - damage);
-    player->notify();
 }

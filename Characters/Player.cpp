@@ -20,17 +20,21 @@ int Player::get_keys() const {
 }
 
 void Player::set_health(int health) {
-     this->health = health;
+    this->health = health;
+    notify(Message("Game", "player's health was changed"));
 }
 
 void Player::set_xp(int xp) {
     this->xp = xp;
+    notify(Message("Game", "player's xp was changed"));
 }
 
 void Player::add_lvl() {
     ++lvl;
+    notify(Message("Game", "player's lvl was changed"));
 }
 
 void Player::add_key() {
     ++num_of_keys;
+    notify(Message("Game", "player's count of keys was changed"));
 }

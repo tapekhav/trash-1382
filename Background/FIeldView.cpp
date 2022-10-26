@@ -1,8 +1,6 @@
 #include "FieldView.h"
 
-FieldView::FieldView(Field* other) : field(other) {
-    field->attach(this);
-}
+FieldView::FieldView(Field* other) : field(other) {}
 
 void FieldView::print_border() const {
     for (size_t i = 0; i != field->get_width() + 1; ++i)

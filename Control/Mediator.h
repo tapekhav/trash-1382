@@ -3,13 +3,19 @@
 
 #include "CommandReader.h"
 #include "Controller.h"
+#include "LogLevel/ErrorLog.h"
 
 class Mediator {
 public:
+    Mediator();
+    ~Mediator();
+
     void start();
 private:
+
     CommandReader input;
-    Controller game;
+    Controller     game;
+    ErrorLog* error_log;
 };
 
 #endif //LABS_MEDIATOR_H

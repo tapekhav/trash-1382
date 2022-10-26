@@ -91,13 +91,6 @@ build CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o: CXX_COMPILER__trash
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Characters
 
-build CMakeFiles/trash_1382.dir/Logging/Observable.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/Observable.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Observable.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
-  OBJECT_DIR = CMakeFiles/trash_1382.dir
-  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging
-
 build CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Control/CommandReader.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o.d
   FLAGS = -g
@@ -196,27 +189,6 @@ build CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o: CXX_COMPILER__tras
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Logger
 
-build CMakeFiles/trash_1382.dir/Logging/Messages/GameMsg.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/Messages/GameMsg.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Messages/GameMsg.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
-  OBJECT_DIR = CMakeFiles/trash_1382.dir
-  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Messages
-
-build CMakeFiles/trash_1382.dir/Logging/Messages/ErrorMsg.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/Messages/ErrorMsg.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Messages/ErrorMsg.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
-  OBJECT_DIR = CMakeFiles/trash_1382.dir
-  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Messages
-
-build CMakeFiles/trash_1382.dir/Logging/Messages/InputMsg.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/Messages/InputMsg.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Messages/InputMsg.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
-  OBJECT_DIR = CMakeFiles/trash_1382.dir
-  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Messages
-
 build CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/LogLevel/GameLog.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o.d
   FLAGS = -g
@@ -224,8 +196,8 @@ build CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o: CXX_COMPILER__tr
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/LogLevel
 
-build CMakeFiles/trash_1382.dir/Logging/LogLevel/InputLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/LogLevel/InputLog.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/InputLog.cpp.o.d
+build CMakeFiles/trash_1382.dir/Logging/LogLevel/StatusLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/LogLevel/StatusLog.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/StatusLog.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
@@ -245,6 +217,20 @@ build CMakeFiles/trash_1382.dir/Logging/LoggerPool.cpp.o: CXX_COMPILER__trash_13
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging
 
+build CMakeFiles/trash_1382.dir/Logging/LogLevel/ErrorLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/LogLevel/ErrorLog.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/ErrorLog.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
+  OBJECT_DIR = CMakeFiles/trash_1382.dir
+  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/LogLevel
+
+build CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/lab2/trash-1382/Logging/LogLevel/Subject.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/vladimir/Desktop/c++/lab2/trash-1382/Background -I/home/vladimir/Desktop/c++/lab2/trash-1382/Characters -I/home/vladimir/Desktop/c++/lab2/trash-1382/Control -I/home/vladimir/Desktop/c++/lab2/trash-1382/Logging -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangeField -I/home/vladimir/Desktop/c++/lab2/trash-1382/Events/ChangePlayer
+  OBJECT_DIR = CMakeFiles/trash_1382.dir
+  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/LogLevel
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target trash_1382
@@ -253,7 +239,7 @@ build CMakeFiles/trash_1382.dir/Logging/LoggerPool.cpp.o: CXX_COMPILER__trash_13
 #############################################
 # Link the executable trash_1382
 
-build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field.cpp.o CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o CMakeFiles/trash_1382.dir/Logging/Observable.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/GameMsg.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/ErrorMsg.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/InputMsg.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/InputLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LoggerPool.cpp.o
+build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field.cpp.o CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/StatusLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LoggerPool.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/ErrorLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   POST_BUILD = :

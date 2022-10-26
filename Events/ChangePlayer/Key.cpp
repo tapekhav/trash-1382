@@ -6,5 +6,4 @@ Key::Key(Player *player) {
 
 void Key::execute() {
     player->add_key();
-    player->notify();
 }

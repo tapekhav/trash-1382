@@ -1,5 +1,13 @@
 #include "Mediator.h"
 
+Mediator::Mediator() {
+    error_log = new ErrorLog(&input);
+}
+
+Mediator::~Mediator() {
+    delete error_log;
+}
+
 void Mediator::start() {
     input.read_char();
 

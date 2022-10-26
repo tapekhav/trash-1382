@@ -2,14 +2,13 @@
 #define LABS_PLAYERVIEW_H
 
 
-#include "../Logging/Observer.h"
 #include "Player.h"
 #include <iostream>
 
-class PlayerView : public Observer {
+class PlayerView {
 public:
     explicit PlayerView(Player*);
-    void update() override;
+    void update();
 private:
     Player* player;
 };

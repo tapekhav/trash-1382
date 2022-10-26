@@ -1,9 +1,10 @@
 #ifndef LABS_GAMESTATUS_H
 #define LABS_GAMESTATUS_H
 
-#include "../Logging/Observable.h"
+#include "../Logging/LogLevel/Subject.h"
+#include "../Logging/LogLevel/StatusLog.h"
 
-class GameStatus : public Observable {
+class GameStatus : public Subject {
 public:
     enum STATUS {
         ON,

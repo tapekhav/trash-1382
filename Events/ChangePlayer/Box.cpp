@@ -12,6 +12,4 @@ void Box::execute() {
         player->set_xp(0);
         player->set_health(player->get_lvl() * 5);
     }
-
-    player->notify();
 }
