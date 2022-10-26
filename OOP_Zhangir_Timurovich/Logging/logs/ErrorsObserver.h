@@ -10,9 +10,7 @@
 
 class ErrorsObserver : public Observer {
 public:
-    ErrorsObserver(Subject *model) {
-        model->attach(this);
-    }
+    ErrorsObserver(Subject *model);
 
     void update() override;
 

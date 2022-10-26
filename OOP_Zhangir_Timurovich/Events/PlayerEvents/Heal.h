@@ -10,4 +10,5 @@ public:
     ~Heal() override = default;
 
     bool execute() override;
+
 };

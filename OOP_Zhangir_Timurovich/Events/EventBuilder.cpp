@@ -1,5 +1,5 @@
 #include "EventBuilder.h"
-
+#include "../Logging/logs/GameObserver.h"
 
 EventBuilder::EventBuilder(Field *field, Player *player) {
     this->field = field;

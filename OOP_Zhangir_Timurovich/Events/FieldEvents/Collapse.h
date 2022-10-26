@@ -10,6 +10,7 @@ public:
     ~Collapse() override = default;
 
     bool execute() override;
+
 };
 
 

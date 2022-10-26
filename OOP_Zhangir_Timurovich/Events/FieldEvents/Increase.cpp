@@ -10,7 +10,9 @@ bool Increase::execute() {
     if (field) {
         field->add_height(5);
         field->add_width(5);
+        notify();
         return true;
     }
     return false;
 }
+

@@ -13,6 +13,7 @@ bool Enemy::execute() {
             player->set_coins(player->get_coins() - 5);
             player->set_health(player->get_health() - (int) dmg(rng));
         }
+        notify();
         return true;
     }
     return false;
@@ -21,5 +22,6 @@ bool Enemy::execute() {
 Enemy::Enemy(Player *player) {
     this->player = player;
 }
+
 
 

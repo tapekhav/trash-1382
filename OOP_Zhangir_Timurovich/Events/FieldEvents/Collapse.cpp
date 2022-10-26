@@ -12,6 +12,7 @@ Collapse::Collapse(Field *field, Player* player){
 bool Collapse::execute() {
     if (field) {
         field->create_field(this->player);
+        notify();
         return true;
     }
     return false;

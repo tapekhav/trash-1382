@@ -113,6 +113,7 @@ bool Field::move_player(Player *player, int x, int y) {
         this->player_x = new_x;
         this->player_y = new_y;
         this->get_cell(new_x, new_y).set_player(true);
+        notify();
         Cell cl = this->field.at(new_y).at(new_x);
         Event *ev = cl.get_event();
         Event *wn = builder.create_WinEvent();

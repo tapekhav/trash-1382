@@ -4,7 +4,7 @@
 #include "../Events/Event.h"
 #include "../Logging/Subject.h"
 
-class Cell : public Subject {
+class Cell{
 public:
 
     explicit Cell(Event *event = nullptr);

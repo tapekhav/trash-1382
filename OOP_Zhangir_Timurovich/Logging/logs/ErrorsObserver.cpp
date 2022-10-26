@@ -7,3 +7,8 @@
 void ErrorsObserver::update() {
     return;
 }
+
+ErrorsObserver::ErrorsObserver(Subject *model){{
+        model->attach(this);
+    }
+}

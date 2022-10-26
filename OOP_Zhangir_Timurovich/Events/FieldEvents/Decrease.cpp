@@ -4,7 +4,7 @@
 
 #include "Decrease.h"
 
-Decrease::Decrease(Field *field, Player* player){
+Decrease::Decrease(Field *field, Player *player) {
     this->player = player;
     this->field = field;
 }
@@ -13,6 +13,7 @@ bool Decrease::execute() {
     if (field) {
         field->add_height(-5);
         field->add_width(-5);
+        notify();
         return true;
     }
     return false;

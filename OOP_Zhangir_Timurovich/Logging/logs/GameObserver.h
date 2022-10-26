@@ -7,9 +7,7 @@
 class GameObserver : public Observer {
 public:
 
-    GameObserver(Subject *model) {
-        model->attach(this);
-    }
+    GameObserver(Subject *model);
 
     void update() override;
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Cell.h"
+#include "../Logging/Subject.h"
 
 Cell::Cell(Event *event) {
     set_pass(true);
@@ -20,6 +21,9 @@ bool Cell::check_player() const {
 
 void Cell::set_event(Event *new_event) {
     this->event = new_event;
+    if (this->event) {
+        Observer *subject = new GameObserver(this->event);
+    }
 }
 
 Cell &Cell::operator=(Cell &&other)

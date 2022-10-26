@@ -10,5 +10,6 @@ public:
     ~Enemy() override = default;
 
     bool execute() override;
+
 };
 

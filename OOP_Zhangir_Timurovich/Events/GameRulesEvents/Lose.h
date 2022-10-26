@@ -10,6 +10,7 @@ public:
     ~Lose() override = default;
 
     bool execute() override;
+
 };
 
 

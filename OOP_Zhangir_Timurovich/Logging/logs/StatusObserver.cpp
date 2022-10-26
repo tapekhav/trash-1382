@@ -3,6 +3,11 @@
 //
 
 #include "StatusObserver.h"
-void StatusObserver::update(){
+
+void StatusObserver::update() {
     return;
+}
+
+StatusObserver::StatusObserver(Subject *model) {
+    model->attach(this);
 }

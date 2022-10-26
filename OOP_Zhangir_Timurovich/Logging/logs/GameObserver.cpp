@@ -4,6 +4,10 @@
 
 #include "GameObserver.h"
 
-void GameObserver::update(){
+void GameObserver::update() {
     return;
+}
+
+GameObserver::GameObserver(Subject *model) {
+    model->attach(this);
 }

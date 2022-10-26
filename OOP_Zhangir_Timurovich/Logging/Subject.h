@@ -17,7 +17,7 @@ public:
 
     void notify();
 
-private:
+protected:
     std::vector<Observer *> observers;
 };
 

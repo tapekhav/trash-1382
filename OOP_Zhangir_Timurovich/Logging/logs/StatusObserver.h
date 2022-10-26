@@ -10,9 +10,7 @@
 
 class StatusObserver : public Observer {
 public:
-    StatusObserver(Subject *model) {
-        model->attach(this);
-    }
+    StatusObserver(Subject *model);
 
     void update() override;
 
