@@ -28,6 +28,7 @@ void Player::DamagePlayer(int val) {
     mHealth = mHealth - val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth - val;
     Message* msg = new Message(EnumClass::LOG_HEALTH);
     msg->IncreaseData(&mHealth);
-    Notify(*msg);
+    Notify(msg);
     delete msg;
 }
+

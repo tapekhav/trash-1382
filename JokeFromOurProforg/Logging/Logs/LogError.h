@@ -8,13 +8,8 @@
 
 class LogError : public Observer {
 public:
-	LogError(Subject& subject);
-
-	void Update(Message const &msg) override;
-	~LogError() override;
-
-private:
-	Subject& mSubject;
+	LogError() {}
+	void Update(Message const *msg) override;
 };
 
 #endif //SURVIVE_LOGERROR_H

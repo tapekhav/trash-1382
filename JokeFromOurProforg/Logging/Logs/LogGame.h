@@ -8,12 +8,8 @@
 
 class LogGame : public Observer {
 public:
-	LogGame(Subject& subject);
-
-	void Update(Message const &msg) override;
-	~LogGame() override;
-private:
-	Subject& mSubject;
+	LogGame() {}
+	void Update(Message const *msg) override;
 };
 
 #endif //SURVIVE_LOGGAME_H

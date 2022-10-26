@@ -1,19 +1,16 @@
 #include "Logging/Logs/LogStatus.h"
 
-LogStatus::LogStatus(Subject& subject) : mSubject(subject) {
-	mSubject.Attach(this);
+void LogStatus::Update(Message const *msg) {
+	mMsg = msg;
 }
 
-void LogStatus::Update(Message const &msg) {
-	switch (msg.GetLog())
+std::ostream& operator<<(std::ostream& out, const LogStatus& logStatus)
+{
+	switch (logStatus.mMsg->GetLog())
 	{
-	case EnumClass::LOG_HUNGER:
-		std::cout << (int*)msg.GetData(0) << std::endl;
+	case EnumClass::LOG_HEALTH:
+		return out << "Health: " << *((int*)logStatus.mMsg->GetData(0));
 	default:
 		break;
 	}
-}
-
-LogStatus::~LogStatus() {
-	mSubject.Detach(this);
 }

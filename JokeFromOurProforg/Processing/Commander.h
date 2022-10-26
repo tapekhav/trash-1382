@@ -6,11 +6,12 @@
 #include "InputOutput/PlayerView.h"
 #include "Processing/Handle.h"
 #include "Event/EventManager.h"
+#include "Logging/Logs/LogStatus.h"
 #include "Enums.h"
 
 class Commander : public Handle {
 public:
-    Commander();
+    Commander(Observer* logStatus);
 
     void SetFieldSize(int width, int height);
 
@@ -32,6 +33,7 @@ private:
     Player* mPlayer;
     PlayerViewer* mStatus;
     EventManager* mManager;
+    Observer* mLogStatus;
 };
 
 #endif //SURVIVAL_COMMANDER_H

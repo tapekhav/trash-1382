@@ -65,6 +65,7 @@ void HandleMediator::PairMsg(std::pair<int, int>& couple) {
 bool HandleMediator::DoCmd() const {
 	mCommander->ShowField();
 	mCommandReader->Read();
+	system("cls");
 	switch (mApproval)
 	{
 	case 'd':
@@ -88,5 +89,6 @@ bool HandleMediator::DoCmd() const {
 	default:
 		mCommandReader->IncorrectInput();
 	}
+
 	return true;
 }

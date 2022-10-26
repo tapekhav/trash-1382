@@ -7,7 +7,8 @@ using namespace std;
 
 int main()
 {
-	Commander* commander = new Commander;
+	LogManager* manager = new LogManager;
+	Commander* commander = new Commander(manager->GetLogStatus());
 	CommandReader* commandReader = new CommandReader;
 	Game* game = new Game;
 	Mediator* mediator = new HandleMediator(commander, commandReader, game);
@@ -18,5 +19,6 @@ int main()
 	delete commander;
 	delete commandReader;
 	delete game;
+	delete manager;
 	return 0;
 }

@@ -1,7 +1,8 @@
 #include "Processing/Commander.h"
 
-Commander::Commander() {
+Commander::Commander(Observer* logStatus): mLogStatus(logStatus) {
     mPlayer = new Player;
+    mPlayer->Attach(mLogStatus);
     mView = new FieldViewer;
     mStatus = new PlayerViewer;
 }
@@ -42,7 +43,7 @@ void Commander::PlayerGo(EnumClass::Direction dir) {
 }
 
 void Commander::ShowField() {
-    system("cls");
+   
     mStatus->View(*mPlayer);
     mStatus->PrintStatus(mManager->GetStatus());
     mView->View(*mField);
@@ -69,6 +70,7 @@ void Commander::SetMove(int steps) {
 
 
 Commander::~Commander() {
+    mPlayer->Detach(mLogStatus);
     delete mPlayer;
     delete mView;
     delete mStatus;

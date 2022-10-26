@@ -8,12 +8,11 @@
 
 class LogStatus : public Observer {
 public:
-	LogStatus(Subject& subject);
+	LogStatus() {}
 
-	void Update(Message const &msg) override;
-	~LogStatus() override;
-private:
-	Subject& mSubject;
+	friend std::ostream& operator <<(std::ostream& out, const LogStatus& logStatus);
+
+	void Update(Message const *msg) override;
 };
 
 #endif //SURVIVE_LOGSTATUS_H
