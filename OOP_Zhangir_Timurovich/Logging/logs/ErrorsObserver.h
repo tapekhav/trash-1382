@@ -13,8 +13,6 @@ public:
     ErrorsObserver(Subject *model);
 
     void update(Message &msg) override;
-
-    ~ErrorsObserver() override = default;
 };
 
 

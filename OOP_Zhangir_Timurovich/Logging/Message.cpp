@@ -5,7 +5,19 @@
 #include "Message.h"
 
 
-Message::Message(LEVEL type, const std::string &message, LogOutInfo *info) {
+Message::Message(LEVEL type, std::string message, LogOutInfo *info) {
+    switch (type) {
+        case GAME:
+            this->pref = "[GAME]";
+            break;
+        case ERROR:
+            this->pref = "[ERROR]";
+            break;
+        case STATUS:
+            this->pref = "[STATUS]";
+            break;
+    }
+
     this->message = message;
     this->type = type;
     this->info = info;
@@ -13,6 +25,10 @@ Message::Message(LEVEL type, const std::string &message, LogOutInfo *info) {
 
 std::string Message::get_message() {
     return this->message;
+}
+
+std::string Message::get_pref() {
+    return this->pref;
 }
 
 LEVEL Message::getType() {
@@ -24,6 +40,7 @@ LogOutInfo *Message::get_info() {
 }
 
 std::ostream &operator<<(std::ostream &os, Message &message) {
+    os << message.get_pref() << ' ';
     os << message.get_message();
     os << std::endl;
     return os;

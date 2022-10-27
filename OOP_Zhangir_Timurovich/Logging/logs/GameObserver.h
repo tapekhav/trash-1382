@@ -11,7 +11,6 @@ public:
 
     void update(Message &msg) override;
 
-    ~GameObserver() override = default;
 
 };
 

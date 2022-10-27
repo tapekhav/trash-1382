@@ -1,0 +1,17 @@
+[STATUS] Game started
+[GAME] Player removed to x:2 y:1
+[STATUS] Game started
+[GAME] Player removed to x:2 y:1
+[GAME] Player removed to x:3 y:1
+[GAME] Player removed to x:4 y:1
+[STATUS] Game started
+[GAME] Player removed to x:2 y:1
+[GAME] Player removed to x:3 y:1
+[GAME] Player removed to x:4 y:1
+[GAME] Player removed to x:4 y:0
+[GAME] Player damage changed
+[GAME] Heal event happened
+[STATUS] Game over
+[GAME] Player removed to x:4 y:14
+[STATUS] Game started
+[GAME] Player removed to x:1 y:2

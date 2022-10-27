@@ -13,8 +13,6 @@ public:
     StatusObserver(Subject *model);
 
     void update(Message &msg) override;
-
-    ~StatusObserver() override = default;
 };
 
 

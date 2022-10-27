@@ -14,7 +14,7 @@ class LogOutInfo;
 
 class Message {
 public:
-    Message(LEVEL type, const std::string &message, LogOutInfo *info);
+    Message(LEVEL type, std::string message, LogOutInfo *info);
 
     LEVEL getType();
 
@@ -22,11 +22,14 @@ public:
 
     LogOutInfo *get_info();
 
+    std::string get_pref();
+
     friend std::ostream &operator<<(std::ostream &os, Message &message);
 
 private:
     LEVEL type;
     std::string message;
+    std::string pref;
     LogOutInfo *info;
 };
 

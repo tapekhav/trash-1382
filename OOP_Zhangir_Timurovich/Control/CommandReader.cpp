@@ -38,18 +38,15 @@ void CommandReader::set_output() {
     std::cout << "Output to: \n";
     std::cout << "0 - File\n";
     std::cout << "1 - Console\n";
-    std::cout << "2 - Everywhere\n";
     std::cin >> res;
     switch (res) {
         case '0':
             this->outputs.push_back(OUTPUT::FILEOUT);
             break;
-        case '1':
-            this->outputs.push_back(OUTPUT::CONSOLE);
-            break;
-        default:
+        case '1': {
             this->outputs.push_back(OUTPUT::FILEOUT);
             this->outputs.push_back(OUTPUT::CONSOLE);
+        }
             break;
     }
 }
@@ -61,37 +58,21 @@ void CommandReader::set_level() {
     std::cout << "0 - Game\n";
     std::cout << "1 - Status\n";
     std::cout << "2 - Errors\n";
-    std::cout << "3 - Game and errors\n";
-    std::cout << "4 - Status and errors\n";
-    std::cout << "5 - Status and Game\n";
-    std::cout << "6 - Everything\n";
     std::cin >> res;
     switch (res) {
         case '0':
             this->levels.push_back(LEVEL::GAME);
             break;
-        case '1':
-            this->levels.push_back(LEVEL::STATUS);
-            break;
-        case '2':
-            this->levels.push_back(LEVEL::ERROR);
-            break;
-        case '3':
+        case '1': {
             this->levels.push_back(LEVEL::GAME);
-            this->levels.push_back(LEVEL::ERROR);
-            break;
-        case '4':
             this->levels.push_back(LEVEL::STATUS);
-            this->levels.push_back(LEVEL::ERROR);
+        }
             break;
-        case '5':
-            this->levels.push_back(LEVEL::STATUS);
+        case '2': {
             this->levels.push_back(LEVEL::GAME);
-            break;
-        default:
             this->levels.push_back(LEVEL::STATUS);
-            this->levels.push_back(LEVEL::GAME);
             this->levels.push_back(LEVEL::ERROR);
+        }
             break;
     }
 }

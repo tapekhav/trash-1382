@@ -22,8 +22,6 @@ public:
 private:
     std::vector <OUTPUT> outputs;
     std::vector <LEVEL> levels;
-//    FileOut *file;
-//    ConsoleOut *console;
 };
 
 
