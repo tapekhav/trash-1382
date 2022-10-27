@@ -1,9 +1,9 @@
 #include "GetCoin.h"
 
-bool GetCoin::execute() {
+bool GetCoin::execute(LogOutInfo* info) {
     if (player) {
         player->set_coins(player->get_coins() + 1);
-        Message message(GAME, "Event happened");
+        Message message(GAME, "Coin event happened", info);
         notify(message);
         return true;
     }

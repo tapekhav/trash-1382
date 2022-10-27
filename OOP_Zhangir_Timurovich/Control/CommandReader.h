@@ -5,9 +5,10 @@
 #include <vector>
 #include "../Info/Structs.h"
 #include "../Info/LogOutInfo.h"
+#include "../Logging/Subject.h"
+#include "../Logging/Subject.h"
 
-
-class CommandReader {
+class CommandReader : public Subject {
 public:
 
     explicit CommandReader(int health = 100, int armour = 100, int damage = 100);
@@ -32,7 +33,7 @@ public:
         NOWHERE
     };
 
-    bool set_move();
+    bool set_move(LogOutInfo *info);
 
     MOVES get_move();
 

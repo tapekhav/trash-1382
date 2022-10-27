@@ -1,11 +1,10 @@
-#ifndef MAIN_CPP_LOGOUTINFO_H
-#define MAIN_CPP_LOGOUTINFO_H
+#pragma once
 
 #include "Structs.h"
 #include <vector>
 #include <string>
-#include "../Output/ConsoleOut.h"
-#include "../Output/FileOut.h"
+//#include "../Output/ConsoleOut.h"
+//#include "../Output/FileOut.h"
 
 class LogOutInfo {
 public:
@@ -15,13 +14,17 @@ public:
 
     std::vector <OUTPUT> get_outputs();
 
+    std::vector <LEVEL> set_levels(std::vector<LEVEL> levels);
+
+    std::vector <OUTPUT> set_outputs(std::vector<OUTPUT> outputs);
+
 
 private:
     std::vector <OUTPUT> outputs;
     std::vector <LEVEL> levels;
-    FileOut *file;
-    ConsoleOut *console;
+//    FileOut *file;
+//    ConsoleOut *console;
 };
 
 
-#endif //MAIN_CPP_LOGOUTINFO_H
+//#endif //MAIN_CPP_LOGOUTINFO_H

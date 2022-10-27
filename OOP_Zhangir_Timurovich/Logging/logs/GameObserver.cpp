@@ -7,7 +7,8 @@
 
 void GameObserver::update(Message &msg) {
     if(msg.getType() == GAME){
-        return;
+        Logger logger(msg.get_info());
+        logger.print(msg);
     }
 }
 

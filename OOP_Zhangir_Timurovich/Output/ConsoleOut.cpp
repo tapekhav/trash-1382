@@ -5,7 +5,6 @@
 #include "ConsoleOut.h"
 
 
-Output& ConsoleOut::operator<<(std::string message){
-    std::cout<<message<<'\n';
-    return *this;
+void ConsoleOut::print(Message& message) {
+    std::cout<<message;
 };

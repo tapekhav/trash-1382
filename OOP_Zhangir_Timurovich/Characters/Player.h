@@ -5,7 +5,8 @@
 
 class Player : public Subject {
 public:
-    explicit Player(int health = 100, int armour = 100, int damage = 10);
+    explicit Player(LogOutInfo *info = nullptr, int health = 100, int armour = 100, int damage =
+    10);
 
     ~Player() = default;
 
@@ -33,5 +34,6 @@ private:
     int coins;
     int damage;
     int max_health;
+    LogOutInfo* info;
 };
 

@@ -19,16 +19,24 @@
 #include "../Logging/Message.h"
 
 
-Field::Field(int width, int height) {
-    if (width >= 10 && width <= 40)
+Field::Field(LogOutInfo *info, int width, int height) {
+    if (width >= 10 && width <= 40) {
         this->width = width;
-    else if (width >= 40)
+
+    } else if (width > 40){
         this->width = 40;
-    else
+        Message message(ERROR, "Too big size", info);
+        notify(message);
+    }
+
+    else{
+        Message message(ERROR, "Too small size", info);
+        notify(message);
         this->width = 10;
+    }
     if (height >= 10 && height <= 40)
         this->height = height;
-    else if (height >= 40)
+    else if (height > 40)
         this->height = 40;
     else
         this->height = 10;
@@ -36,6 +44,7 @@ Field::Field(int width, int height) {
     this->player_y = 1;
     this->height_inc = 0;
     this->width_inc = 0;
+    this->info = info;
 }
 
 void Field::create_field(Player *player) {
@@ -75,11 +84,8 @@ std::vector<int> Field::get_size() const {
     return sizes;
 }
 
-Field::Field(Field &&other)
-
-noexcept {
-this->
-swap(other);
+Field::Field(Field &&other) {
+    this->swap(other);
 };
 
 void Field::swap(Field &other) {
@@ -114,8 +120,7 @@ bool Field::move_player(Player *player, int x, int y) {
         this->get_cell(new_x, new_y).set_player(true);
         std::string x_str = std::to_string(this->player_x);
         std::string y_str = std::to_string(this->player_y);
-        std::string msg = "Player removed to x: " + x_str + "y: " + y_str;
-        Message message(GAME, msg);
+        Message message(GAME, "Player removed to x:" + x_str + " y:" + y_str, info);
         notify(message);
         Cell cl = this->field.at(new_y).at(new_x);
         Event *ev = cl.get_event();
@@ -124,12 +129,15 @@ bool Field::move_player(Player *player, int x, int y) {
         auto *pl = dynamic_cast<PlayerEvent *> (ev);
         auto *fl = dynamic_cast<FieldEvent *> (ev);
         if (pl || fl) {
-            ev->execute();
-            if (pl && (wn->execute() || ls->execute())) {
+            ev->execute(info);
+            if (pl && (wn->execute(info) || ls->execute(info))) {
                 return false;
             }
         }
         update_player(prev_x, prev_y);
+    } else {
+        Message message(ERROR, "Impassible cell", info);
+        notify(message);
     }
     return true;
 }

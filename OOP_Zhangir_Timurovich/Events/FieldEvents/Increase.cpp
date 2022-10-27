@@ -6,11 +6,11 @@ Increase::Increase(Field *field, Player *player) {
 }
 
 
-bool Increase::execute() {
+bool Increase::execute(LogOutInfo* info) {
     if (field) {
         field->add_height(5);
         field->add_width(5);
-        Message message(GAME, "Event happened");
+        Message message(GAME, "Increase event happened", info);
         notify(message);
         return true;
     }

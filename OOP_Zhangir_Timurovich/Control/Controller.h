@@ -8,9 +8,10 @@
 #include "../Events/EventBuilder.h"
 #include "../Info/Structs.h"
 #include "../Info/LogOutInfo.h"
+#include "../Logging/Subject.h"
 
 
-class Controller {
+class Controller : public Subject {
 public:
     explicit Controller(LogOutInfo *info = nullptr, int width = 10, int height = 10, int
     health = 100, int armour = 100, int damage = 10);
@@ -20,6 +21,8 @@ public:
     bool move_player(CommandReader::MOVES move);
 
     void create_field();
+
+    LogOutInfo* get_info();
 
     ~Controller() = default;
 

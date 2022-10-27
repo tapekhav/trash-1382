@@ -6,11 +6,9 @@
 
 class Field : public Subject {
 public:
-    explicit Field(int width = 10, int height = 10);
+    explicit Field(LogOutInfo *info = nullptr, int width = 10, int height = 10);
 
-    Field(Field &&other)
-
-    noexcept;
+    Field(Field &&other);
 
     Field(const Field &other);
 
@@ -55,6 +53,7 @@ private:
     int width_inc{};
     int height_inc{};
     std::vector <std::vector<Cell>> field;
+    LogOutInfo *info;
 
     void swap(Field &other);
 

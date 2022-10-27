@@ -11,7 +11,10 @@
 
 
 class ConsoleOut : public Output {
-    Output &operator<<(std::string message) override;
+public:
+    void print(Message& message) override;
+
+    ConsoleOut() = default;
 };
 
 

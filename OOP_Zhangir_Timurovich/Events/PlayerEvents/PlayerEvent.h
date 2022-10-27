@@ -6,7 +6,7 @@
 class PlayerEvent : public Event {
 public:
 
-    virtual bool execute() = 0;
+    virtual bool execute(LogOutInfo *info) = 0;
 
     virtual ~PlayerEvent() = default;
 

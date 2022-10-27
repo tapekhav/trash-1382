@@ -8,7 +8,7 @@ public:
 
     ~Win() override = default;
 
-    bool execute() override;
+    bool execute(LogOutInfo* info) override;
 
 };
 

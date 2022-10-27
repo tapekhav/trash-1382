@@ -5,14 +5,16 @@
 #ifndef MAIN_CPP_OUTPUT_H
 #define MAIN_CPP_OUTPUT_H
 
-#include <string>
+class Message;
 
+#include <string>
+#include "../Logging/Message.h"
 
 class Output {
 public:
     virtual ~Output() = default;
 
-    virtual Output &operator<<(std::string message) = 0;
+    virtual void print(Message &message) = 0;
 };
 
 

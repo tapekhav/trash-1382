@@ -2,12 +2,13 @@
 #include "../Logging/Message.h"
 # include "../Info/Structs.h"
 
-Player::Player(int health, int armour, int damage) {
+Player::Player(LogOutInfo* info, int health, int armour, int damage) {
     this->health = health;
     this->max_health = health;
     this->armour = armour;
     this->damage = damage;
     this->coins = 0;
+    this->info = info;
 }
 
 int Player::get_health() const {
@@ -31,13 +32,13 @@ void Player::set_health(int arg) {
         this->health = 0;
     } else
         this->health = arg;
-    Message message(GAME, "Player health changed");
+    Message message(GAME, "Player health changed", this->info);
     notify(message);
 }
 
 void Player::set_armour(int arg) {
     this->armour = arg;
-    Message message(GAME, "Player armour changed");
+    Message message(GAME, "Player armour changed", this->info);
     notify(message);
 }
 
@@ -46,7 +47,7 @@ void Player::set_coins(int arg) {
         this->coins = 0;
     } else
         this->coins = arg;
-    Message message(GAME, "Player coins changed");
+    Message message(GAME, "Player coins changed", this->info);
     notify(message);
 }
 
@@ -55,7 +56,7 @@ void Player::set_damage(int arg) {
         this->damage = 0;
     } else
         this->damage = arg;
-    Message message(GAME, "Player damage changed");
+    Message message(GAME, "Player damage changed", this->info);
     notify(message);
 }
 

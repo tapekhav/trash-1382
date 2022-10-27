@@ -9,11 +9,11 @@ Decrease::Decrease(Field *field, Player *player) {
     this->field = field;
 }
 
-bool Decrease::execute() {
+bool Decrease::execute(LogOutInfo* info) {
     if (field) {
         field->add_height(-5);
         field->add_width(-5);
-        Message message(GAME, "Event happened");
+        Message message(GAME, "Decrease event happened", info);
         notify(message);
         return true;
     }

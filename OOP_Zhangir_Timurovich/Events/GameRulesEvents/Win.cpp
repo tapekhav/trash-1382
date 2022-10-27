@@ -1,9 +1,9 @@
 #include <iostream>
 #include "Win.h"
 
-bool Win::execute() {
+bool Win::execute(LogOutInfo* info) {
     if (player && player->get_coins() > 30) {
-        Message message(GAME, "Event happened");
+        Message message(GAME, "Win event happened", info);
         notify(message);
         return true;
     }

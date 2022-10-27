@@ -14,6 +14,5 @@ int main() {
                           10, 10);
     Mediator mediator(controller, reader);
     mediator.start_game();
-    std::cout << "GAME OVER\n";
 }
 

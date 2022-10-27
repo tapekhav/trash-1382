@@ -2,17 +2,18 @@
 #include "CommandReader.h"
 #include "../Logging/logs/GameObserver.h"
 #include "../Logging/logs/ErrorsObserver.h"
-#include "../Logging/logs/StatusObserver.h"
 
-Controller::Controller(LogOutInfo* info, int width, int height, int health, int armour, int
+
+Controller::Controller(LogOutInfo *info, int width, int height, int health, int armour, int
 damage) {
-    this->player = new Player(health, armour, damage);
-    this->field = new Field(width, height);
+    this->player = new Player(info, health, armour, damage);
+    this->field = new Field(info, width, height);
     this->field_view = FieldView(this->field);
     this->player_view = PlayerView(this->player);
     this->log_out_info = info;
-    Observer* observer = new GameObserver(this->player);
-    observer = new GameObserver(this->field);
+    new GameObserver(this->player);
+    new GameObserver(this->field);
+    new ErrorsObserver(this->field);
 }
 
 void Controller::show_field() {
@@ -21,6 +22,8 @@ void Controller::show_field() {
 }
 
 void Controller::create_field() {
+    Message message(STATUS, "Game started", log_out_info);
+    notify(message);
     this->field->create_field(player);
 }
 
@@ -44,7 +47,17 @@ bool Controller::move_player(CommandReader::MOVES move) {
         case CommandReader::MOVES::NOWHERE:
             return true;
     }
-    return field->move_player(player, x, y);
+
+    bool res = field->move_player(player, x, y);
+    if (!res) {
+        Message message(STATUS, "Game over", log_out_info);
+        notify(message);
+    }
+    return res;
+}
+
+LogOutInfo *Controller::get_info() {
+    return this->log_out_info;
 }
 
 

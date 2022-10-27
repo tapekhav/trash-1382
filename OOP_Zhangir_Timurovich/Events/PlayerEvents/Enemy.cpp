@@ -1,6 +1,6 @@
 #include "Enemy.h"
 
-bool Enemy::execute() {
+bool Enemy::execute(LogOutInfo* info) {
     if (player) {
         std::random_device dev;
         std::mt19937 rng(dev());
@@ -13,7 +13,7 @@ bool Enemy::execute() {
             player->set_coins(player->get_coins() - 5);
             player->set_health(player->get_health() - (int) dmg(rng));
         }
-        Message message(GAME, "Event happened");
+        Message message(GAME, "Enemy event happened", info);
         notify(message);
         return true;
     }

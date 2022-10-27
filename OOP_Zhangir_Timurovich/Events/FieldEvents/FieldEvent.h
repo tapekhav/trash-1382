@@ -10,7 +10,7 @@ public:
 
     virtual ~FieldEvent() = default;
 
-    virtual bool execute() = 0;
+    virtual bool execute(LogOutInfo* info) = 0;
 
 protected:
     Field* field{};

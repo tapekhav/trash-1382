@@ -7,8 +7,8 @@ void CommandReader::set_size() {
     int res;
     std::cin >> res;
     if (res) {
-        this->width = 10;
-        this->height = 10;
+        this->width = 11;
+        this->height = 11;
         return;
     }
     std::cout << "Width: ";
@@ -97,7 +97,7 @@ void CommandReader::set_level() {
 }
 
 
-bool CommandReader::set_move() {
+bool CommandReader::set_move(LogOutInfo *info) {
     char res;
     std::cout << "Move to: \n";
     std::cin >> res;
@@ -114,8 +114,11 @@ bool CommandReader::set_move() {
         case 'd':
             this->move = MOVES::RIGHT;
             break;
-        case 'q':
+        case 'q': {
+            Message message(STATUS, "Game over", info);
+            notify(message);
             return false;
+        }
         default:
             this->move = MOVES::NOWHERE;
             break;
@@ -129,11 +132,11 @@ CommandReader::MOVES CommandReader::get_move() {
 
 std::vector <LEVEL> get_levels();
 
-std::vector <OUTPUT> CommandReader::get_outputs(){
+std::vector <OUTPUT> CommandReader::get_outputs() {
     return this->outputs;
 }
 
-std::vector <LEVEL> CommandReader::get_levels(){
+std::vector <LEVEL> CommandReader::get_levels() {
     return this->levels;
 }
 

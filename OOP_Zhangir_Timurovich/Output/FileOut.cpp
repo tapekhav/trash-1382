@@ -4,15 +4,15 @@
 
 #include "FileOut.h"
 
-FileOut::FileOut(std::string filename){
-    file.open(filename);
+FileOut::FileOut(std::string name) {
+    file.open(name, std::ios_base::out | std::ios_base::app);
 };
 
-FileOut::~FileOut(){
+FileOut::~FileOut() {
     file.close();
 }
 
-Output& FileOut::operator <<(std::string message){
-    file<<message;
-    return *this;
+void FileOut::print(Message &message) {
+    if (file.is_open())
+        file << message;
 };

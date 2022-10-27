@@ -1,6 +1,7 @@
 #ifndef MAIN_CPP_OBSERVER_H
 #define MAIN_CPP_OBSERVER_H
 #include "Message.h"
+#include "../Logging/Logger.h"
 
 class Observer {
 public:

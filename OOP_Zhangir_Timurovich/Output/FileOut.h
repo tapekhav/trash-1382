@@ -5,17 +5,18 @@
 #ifndef MAIN_CPP_FILEOUT_H
 #define MAIN_CPP_FILEOUT_H
 
+
 #include "Output.h"
 #include <fstream>
 #include <string>
 
 class FileOut : public Output {
 public:
-    FileOut(std::string filename);
+    FileOut(std::string name);
 
     ~FileOut();
 
-    Output &operator<<(std::string message) override;
+    void print(Message &message) override;
 
 private:
     std::ofstream file;

@@ -6,7 +6,8 @@
 
 void StatusObserver::update(Message &msg) {
     if(msg.getType() == STATUS){
-        return;
+        Logger logger(msg.get_info());
+        logger.print(msg);
     }
 }
 
