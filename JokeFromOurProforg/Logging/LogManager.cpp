@@ -4,6 +4,7 @@ LogManager::LogManager() {
 	mLogStatus = new Observer;
 	mLogError = new Observer;
 	mLogGame = new Observer;
+	
 	std::string mString;
 
 	std::cout << "Plase, choose one or several log types." << std::endl;

@@ -69,7 +69,20 @@ public:
     enum Log {
         LOG_HUNGER,
         LOG_THIRST,
-        LOG_HEALTH
+        LOG_HEALTH,
+        LOG_TRIGGER_CELL,
+        LOG_CREATE_EVENT,
+        LOG_ACTIVATE_EVENT,
+        LOG_DESTROY_EVENT,
+        LOG_MOVE_PLAYER,
+        LOG_ERROR_WALL,
+        LOG_ERROR_FIELD_SIZE,
+        LOG_ERROR_INCORRECT_INPUT,
+        LOG_GAME_FIELD_SIZE,
+        LOG_GAME_DO_STEP,
+        LOG_GAME_WON,
+        LOG_GAME_LOSE,
+        LOG_GAME_EXIT
     };
 
 };

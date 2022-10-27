@@ -16,9 +16,9 @@ public:
     void SetManager(Manager* manager) { mManager = manager; }
 
     Event* GetEvent() const { return mEvent; }
-    void CheckEvent();
+    bool CheckEvent();
     void SetEvent(EnumClass::Events event);
-    void ActivateEvent();
+    bool ActivateEvent();
 
 private:
     bool mWall;

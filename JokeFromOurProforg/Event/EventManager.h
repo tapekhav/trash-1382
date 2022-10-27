@@ -13,13 +13,14 @@
 #include "Event/Manager.h"
 #include "Player/Player.h"
 #include "Field/Field.h"
+#include "Logging/Subject.h"
 #include "Enums.h"
 
 #include <iostream>
 #include <map>
 
 
-class EventManager : public Manager {
+class EventManager : public Manager{
 public:
 	EventManager(Player* player, Field* field) : isExit(false),
 		CaveCount(0), BushCount(0), mStatus(EnumClass::NONE),
@@ -56,6 +57,8 @@ public:
 private:
 	bool CheckBush();
 	bool CheckCave();
+	void CreateMessage(EnumClass::Log type, EnumClass::Events *event);
+
 	bool isExit;
 
 	EnumClass::Events mStatus;

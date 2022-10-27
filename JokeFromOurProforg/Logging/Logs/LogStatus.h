@@ -16,6 +16,8 @@ public:
 	std::ostream& Output(std::ostream& out) override;
 
 	~LogStatus() {}
+private:
+	std::string EventChoose(EnumClass::Events* event) const;
 };
 
 #endif //SURVIVE_LOGSTATUS_H

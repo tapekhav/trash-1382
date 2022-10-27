@@ -41,6 +41,12 @@ Event* EventManager::ChooseEvent() {
 	if (event == nullptr)
 		return event;
 	Tracker[event] = EnumClass::LIFE_TIME;
+
+	EnumClass::Events* status = new EnumClass::Events;
+	*status = event->GetStatus();
+	CreateMessage(EnumClass::LOG_CREATE_EVENT, status);
+	delete status;
+
 	return event;
 }
 
@@ -79,6 +85,12 @@ Event* EventManager::ChooseConcreteEvent(EnumClass::Events event) {
 		CaveCount++;
 	}
 	Tracker[res] = EnumClass::LIFE_TIME;
+
+	EnumClass::Events* status = new EnumClass::Events;
+	*status = res->GetStatus();
+	CreateMessage(EnumClass::LOG_CREATE_EVENT, status);
+	delete status;
+
 	return res;
 }
 
@@ -86,6 +98,7 @@ bool EventManager::UseEvent(Event* event) {
 	if (!event->Happen())
 		return false;
 	mStatus = event->GetStatus();
+	CreateMessage(EnumClass::LOG_ACTIVATE_EVENT, &mStatus);
 	DeleteEvent(event);
 	return true;
 }
@@ -112,6 +125,10 @@ void EventManager::DeleteEvent(Event* event) {
 		BushCount--;
 	else if (dynamic_cast<Cave*>(event) != nullptr)
 		CaveCount--;
+	EnumClass::Events* status = new EnumClass::Events;
+	*status = event->GetStatus();
+	CreateMessage(EnumClass::LOG_DESTROY_EVENT, status);
+	delete status;
 	delete event;
 }
 
@@ -119,4 +136,11 @@ EnumClass::Events EventManager::GetStatus() {
 	EnumClass::Events cur = mStatus;
 	mStatus = EnumClass::NONE;
 	return cur;
+}
+
+void EventManager::CreateMessage(EnumClass::Log type, EnumClass::Events *evnt) {
+	Message* msg = new Message(type);
+	msg->IncreaseData(evnt);
+	Notify(msg);
+	delete msg;
 }

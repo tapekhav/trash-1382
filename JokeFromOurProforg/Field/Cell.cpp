@@ -13,18 +13,29 @@ Cell& Cell::operator=(const Cell& other) {
     return *this;
 }
 
-void Cell::CheckEvent() {
-    if (mEvent == nullptr)
-        mEvent = mManager->ChooseEvent();
-    else if (mManager->CheckEvent(mEvent))
+bool Cell::CheckEvent() {
+    if (mEvent == nullptr) {
+        if(mEvent = mManager->ChooseEvent())
+            return true;
+    }
+    else if (mManager->CheckEvent(mEvent)) {
         mEvent = nullptr;
+        return true;
+    }
+    return false;
+
 }
 
-void Cell::ActivateEvent() {
+bool Cell::ActivateEvent() {
     if (mEvent != nullptr) {
-        if(mManager->UseEvent(mEvent))
+        if (mManager->UseEvent(mEvent)) {
             mEvent = nullptr;
+            return true;
+        }
+        else
+            return false;
     }
+    return false;
 }
 
 void Cell::SetEvent(EnumClass::Events event) {

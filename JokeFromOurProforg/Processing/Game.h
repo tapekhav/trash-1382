@@ -12,6 +12,8 @@ public:
 	void SetGameProgress(bool val) { mGameProgress = val; }
 	int GetMove() const { return mMove; }
 private:
+	void CreateMessage(EnumClass::Log type);
+
 	bool mGameProgress;
 	int mMove;
 };

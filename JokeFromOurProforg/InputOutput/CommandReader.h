@@ -21,7 +21,8 @@ public:
     void DefeatMsg() const;
 
 private:
-
+    void CreateMessage(EnumClass::Log type, char* value);
+    void CreateMessage(EnumClass::Log type, int* pos1, int* pos2);
     char mApproval;
     std::pair<int, int> mSize;
 };

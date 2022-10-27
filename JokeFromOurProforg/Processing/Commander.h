@@ -24,6 +24,7 @@ public:
     ~Commander();
 
 private:
+    void CreateMessage(EnumClass::Log type, int pos1, int pos2);
     void SpendEnergy(bool type);
 
     int mMove;

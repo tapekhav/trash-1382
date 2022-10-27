@@ -12,7 +12,6 @@ public:
 	void Update(Message const* msg) override;
 	std::ostream& Output(std::ostream& out) override;
 
-	~File();
 
 private:
 	std::ofstream file;

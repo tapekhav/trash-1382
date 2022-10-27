@@ -9,7 +9,9 @@ Commander::Commander(Observer* logStatus): mLogStatus(logStatus) {
 
 void Commander::SetFieldSize(int width, int height) {
     mField = new Field(width, height);
+    mField->Attach(mLogStatus);
     mManager = new EventManager(mPlayer, mField);
+    mManager->Attach(mLogStatus);
     mField->SetEventManager(mManager);
 }
 
@@ -22,18 +24,26 @@ void Commander::PlayerGo(EnumClass::Direction dir) {
     case EnumClass::RIGHT:
         if (!mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + 1) % mField->GetHeight()).IsWall())
             mField->SetPlayerPositionX((mField->GetPlayerPositionX() + 1) % mField->GetHeight());
+        else
+            CreateMessage(EnumClass::LOG_ERROR_WALL, (mField->GetPlayerPositionX() + 1) % mField->GetHeight(), mField->GetPlayerPositionY());
         break;
     case EnumClass::DOWN:
         if (!mField->GetCell((mField->GetPlayerPositionY() + 1) % mField->GetWidth(), mField->GetPlayerPositionX()).IsWall())
             mField->SetPlayerPositionY((mField->GetPlayerPositionY() + 1) % mField->GetWidth());
+        else
+            CreateMessage(EnumClass::LOG_ERROR_WALL, mField->GetPlayerPositionX(), (mField->GetPlayerPositionY() + 1) % mField->GetWidth());
         break;
     case EnumClass::LEFT:
         if (!mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + mField->GetHeight() - 1) % mField->GetHeight()).IsWall())
             mField->SetPlayerPositionX((mField->GetPlayerPositionX() + mField->GetHeight() - 1) % mField->GetHeight());
+        else
+            CreateMessage(EnumClass::LOG_ERROR_WALL, (mField->GetPlayerPositionX() + mField->GetHeight() - 1) % mField->GetHeight(), mField->GetPlayerPositionY());
         break;
     case EnumClass::UP:
         if (!mField->GetCell((mField->GetPlayerPositionY() + mField->GetWidth() - 1) % mField->GetWidth(), mField->GetPlayerPositionX()).IsWall())
             mField->SetPlayerPositionY((mField->GetPlayerPositionY() + mField->GetWidth() - 1) % mField->GetWidth());
+        else
+            CreateMessage(EnumClass::LOG_ERROR_WALL, mField->GetPlayerPositionX(), (mField->GetPlayerPositionY() + mField->GetWidth() - 1) % mField->GetWidth());
         break;
     default:
         break;
@@ -66,6 +76,14 @@ void Commander::SpendEnergy(bool type) {
 
 void Commander::SetMove(int steps) {
     mMove = steps;
+}
+
+void Commander::CreateMessage(EnumClass::Log type, int pos1, int pos2) {
+    Message* msg = new Message(type);
+    msg->IncreaseData(&pos1);
+    msg->IncreaseData(&pos2);
+    Notify(msg);
+    delete msg;
 }
 
 
