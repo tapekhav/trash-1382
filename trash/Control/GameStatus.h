@@ -11,9 +11,8 @@ public:
         WIN
     };
 
-    GameStatus();
-
-    void set_status(GameStatus::STATUS);
+    void set_status_off(GameStatus::STATUS);
+    void set_status_on();
     STATUS get_status() const;
 private:
     STATUS status;

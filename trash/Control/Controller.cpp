@@ -38,14 +38,18 @@ GameStatus *Controller::get_game_status() {
 
 void Controller::check_end_game() {
     if (player.get_health() <= 0)
-        game_status.set_status(GameStatus::LOSE);
+        game_status.set_status_off(GameStatus::LOSE);
 }
 
 void Controller::check_win_game() {
     if (player.get_keys() == 2)
-        game_status.set_status(GameStatus::WIN);
+        game_status.set_status_off(GameStatus::WIN);
 }
 
 GameStatus::STATUS Controller::get_status() const {
     return game_status.get_status();
+}
+
+void Controller::set_status_on() {
+    game_status.set_status_on();
 }

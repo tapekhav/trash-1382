@@ -45,7 +45,7 @@ void CommandReader::read_step() {
             break;
         default:
             step = Player::STOP;
-            notify(Message("Error", "step was entered incorrectly"));
+            notify(Message(Message::Error, "step was entered incorrectly"));
             break;
     }
 
@@ -101,7 +101,7 @@ char CommandReader::get_char() const {
 
 void CommandReader::check(int &arg) {
     if (arg < 10 || arg > 25) {
-        notify(Message("Error", "the value was entered incorrectly"));
+        notify(Message(Message::Error, "the value was entered incorrectly"));
         arg = 10;
     }
 }

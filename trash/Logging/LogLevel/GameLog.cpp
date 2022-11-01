@@ -1,7 +1,7 @@
 #include "GameLog.h"
 
 
-void GameLog::add_level(const std::string& level) {
+void GameLog::add_level(Message::Prefix level) {
     this->levels.push_back(level);
 }
 

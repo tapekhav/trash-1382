@@ -11,13 +11,13 @@ class Subject;
 class GameLog {
 public:
     void add_subject(Subject*);
-    void add_level(const std::string&);
+    void add_level(Message::Prefix);
     void set_loggers(std::vector<Logger*>&);
     void update(Message &);
 private:
     std::vector<Subject*> subjects;
     std::vector<Logger*> loggers;
-    std::vector<std::string> levels;
+    std::vector<Message::Prefix> levels;
 };
 
 #endif

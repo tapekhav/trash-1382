@@ -19,6 +19,7 @@ public:
 
     void check_win_game();
     void check_end_game();
+    void set_status_on();
     GameStatus::STATUS get_status() const;
 private:
     Player          player;

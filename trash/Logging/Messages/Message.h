@@ -2,20 +2,32 @@
 #define LABS_MESSAGE_H
 
 #include <string>
+#include <map>
 
 
 class Message {
 public:
-    explicit Message(const std::string& prefix, const std::string&, int num = -1);
+    enum Prefix {
+        Game,
+        GameStatus,
+        Error
+    };
+
+    explicit Message(Prefix, const std::string&, int num = -1);
     std::string get_msg();
-    std::string get_prefix() const;
+    Prefix get_prefix() const;
     friend std::ostream& operator<<(std::ostream&, Message&);
 
     void update();
 
 private:
-    std::string prefix;
-    std::string   info;
+    const std::map<Prefix, std::string> prefix_map = {
+            {Game, "Game: "},
+            {GameStatus, "GameStatus: "},
+            {Error, "Error: "}
+    };
+    Prefix prefix;
+    std::string info;
     int num;
 };
 

@@ -6,7 +6,6 @@
 
 class Mediator {
 public:
-    Mediator();
     ~Mediator();
 
     void start();

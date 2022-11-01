@@ -1,6 +1,5 @@
 #include "Mediator.h"
 
-Mediator::Mediator()  {}
 
 Mediator::~Mediator() {
     delete logging;
@@ -10,6 +9,7 @@ void Mediator::start() {
     auto vec = input.read_loggers();
     logging = new GameLog;
     init_logs(vec);
+    game.set_status_on();
     input.read_char();
 
     if (input.get_char() != 'y') {
@@ -37,21 +37,21 @@ void Mediator::init_logs(std::vector<Logger*>& loggers) {
     if (input.read_choice() == 'y') {
         logging->add_subject(game.get_player());
         logging->add_subject(game.get_field());
-        logging->add_level("Game");
+        logging->add_level(Message::Game);
         flag = 1;
     }
 
     std::cout << "Хотите ли вы отслеживать статус игры? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
     if (input.read_choice() == 'y') {
         logging->add_subject(game.get_game_status());
-        logging->add_level("Status");
+        logging->add_level(Message::GameStatus);
     }
 
     std::cout << "Хотите ли вы отслеживать ошибки? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
     if (input.read_choice() == 'y') {
         if (flag == 0) logging->add_subject(game.get_field());
         logging->add_subject(&input);
-        logging->add_level("Error");
+        logging->add_level(Message::Error);
     }
 
     logging->set_loggers(loggers);

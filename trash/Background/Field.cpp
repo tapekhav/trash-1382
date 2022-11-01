@@ -120,18 +120,18 @@ void Field::change_player_location(Player &player, Player::STEP s) {
         player_location = tmp;
     }
     else {
-        this->notify(Message("Error", "this cell is impassable"));
+        this->notify(Message(Message::Error, "this cell is impassable"));
         return;
     }
 
     if (field.at(player_location.second).at(player_location.first).get_event() != nullptr) {
-        this->notify(Message("Game", "event was played"));
+        this->notify(Message(Message::Game, "event was played"));
     }
 
     field.at(player_location.second).at(player_location.first).update();
 
     if (s != Player::EXIT) {
-        this->notify(Message("Game", "player change location"));
+        this->notify(Message(Message::Game, "player change location"));
     }
 }
 
