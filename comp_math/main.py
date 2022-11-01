@@ -1,20 +1,16 @@
 from modules.runge4 import Simulation
 
-print('F = ')
-F = int(input())
+F = int(input('F = '))
+# F = 10000000
 
-print('m0 = ')
-m0 = int(input())
+m0 = int(input('m0 = '))
+# m0 = 20000000
 
-m0 = 20000000
-print('mk = ')
+mk = int(input('mk = '))
+# mk = 500000
 
-mk = int(input())
-mk = 500000
+alpha = int(input('alpha = '))
+# alpha = 100000
 
-print('alpha = ')
-alpha = input()
-
-alpha = 100000
 A = Simulation(F, m0, mk, alpha)
 A.start()
