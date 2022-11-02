@@ -2,28 +2,34 @@
 
 void Game::StartGame(){
 	mMove = 0;
+
+	Message* msg = new GameDecorator(new Message("Set field size"));
+	Notify(msg);
+	delete msg;
+
 	mMediator->Notify(EnumClass::FIELD_SIZE);
-	CreateMessage(EnumClass::LOG_GAME_FIELD_SIZE);
+
 	while (mGameProgress && mMove < EnumClass::MOVE_COUNT) {
-		mMediator->Notify(EnumClass::DO_CMD);
-		mMove++;
-		Message* msg = new Message(EnumClass::LOG_GAME_DO_STEP);
-		msg->IncreaseData(&mMove);
+
+		Message* msg = new GameDecorator(new IntMessage(mMove, "Call a new command on the step"));
 		Notify(msg);
 		delete msg;
+
+		mMediator->Notify(EnumClass::DO_CMD);
+		mMove++;
 	}
 	if (mGameProgress) {
 		mMediator->Notify(EnumClass::VICTORY);
-		CreateMessage(EnumClass::LOG_GAME_WON);
-	}
-	else
-		CreateMessage(EnumClass::LOG_GAME_LOSE);
-	CreateMessage(EnumClass::LOG_GAME_EXIT);
-	mMediator->Notify(EnumClass::FINISH);
-}
 
-void Game::CreateMessage(EnumClass::Log type) {
-	Message* msg = new Message(type);
-	Notify(msg);
-	delete msg;
+		Message* msg = new GameDecorator(new Message("Set victory"));
+		Notify(msg);
+		delete msg;
+	}
+	else {
+		Message* msg = new GameDecorator(new Message("Set defeat"));
+		Notify(msg);
+		delete msg;
+	}
+
+	mMediator->Notify(EnumClass::FINISH);
 }

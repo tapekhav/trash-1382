@@ -2,9 +2,8 @@
 #define SURVIVE_HANDLE_H
 
 #include "Processing/Mediator.h"
-#include "Logging/Subject.h"
 
-class Handle : public Subject{
+class Handle {
 public:
 	Handle(Mediator* mediator = nullptr): mMediator(mediator) {}
 

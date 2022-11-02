@@ -8,7 +8,10 @@ class EarthQuakeFactory : public Factory {
 public:
 	EarthQuakeFactory(Field* field): mField(field){}
 
-	Event* CreateEvent() override { return new EarthQuakeCave(mField); }
+	Event* CreateEvent() override { Message* msg = new StatusDecorator(new Message("Created EarthQuakeCave"));
+									Notify(msg);
+									delete msg; 
+									return new EarthQuakeCave(mField); }
 private:
 	Field* mField;
 };

@@ -3,8 +3,10 @@
 
 #pragma once
 
+
+
 #include <iostream>
 
 // TODO: установите здесь ссылки на дополнительные заголовки, требующиеся для программы.
 #include "Processing/HandleMediator.h"
-#include "Logging/LogManager.h"
+#include "Logging/Logger.h"

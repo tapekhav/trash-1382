@@ -9,6 +9,13 @@ public:
 
 	bool Happen() override;
 	EnumClass::Events GetStatus() override;
+
+	~SaintWaterCave() {
+		Message* msg = new StatusDecorator(new Message("SaintWaterCave deleted"));
+		Notify(msg);
+		delete msg;
+	}
+
 private:
 	Player* mPlayer;
 };

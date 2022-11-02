@@ -4,7 +4,6 @@ Field::Field(int width, int height) : mPlayerPosition(height / 2, width / 2), mW
     mField = new Cell*[mWidth];
     for (int idy = 0; idy < mWidth; idy++)
         mField[idy] = new Cell[mHeight];
-    mField[mWidth / 2 + 1][mHeight / 2].SetWall(true);
 }
 
 Field& Field::operator=(Field const& other) {
@@ -58,32 +57,21 @@ void Field::SetEventManager(Manager *manager) {
 void Field::TriggerCells() {
     for (int idy = 0; idy < mWidth; idy++) {
         for (int idx = 0; idx < mHeight; idx++) {
-            if (idy == mPlayerPosition.yCoord && idx == mPlayerPosition.xCoord) {
-                if (mField[idy][idx].ActivateEvent())
-                    CreateMessage(EnumClass::LOG_TRIGGER_CELL, &idy, &idx);
+            if (idy == mPlayerPosition.yCoord && idx == mPlayerPosition.xCoord)
+                if (mField[idy][idx].ActivateEvent()) {
+                    Message* msg = new StatusDecorator(new IntIntMessage(idx, idy, "Cell activated the event on the position"));
+                    Notify(msg);
+                    delete msg;
+                }
+
+            if (mField[idy][idx].CheckEvent()) {
+                Message* msg = new StatusDecorator(new IntIntMessage(idx, idy, "Cell changed the state of the event on the position"));
+                Notify(msg);
+                delete msg;
             }
-            if (mField[idy][idx].CheckEvent()) 
-                CreateMessage(EnumClass::LOG_TRIGGER_CELL, &idy, &idx);
+
         }
     }
-}
-
-void Field::SetPlayerPositionX(int x) {
-    mPlayerPosition.xCoord = x;
-    CreateMessage(EnumClass::LOG_MOVE_PLAYER, &mPlayerPosition.yCoord, &mPlayerPosition.xCoord);
-}
-
-void Field::SetPlayerPositionY(int y) {
-    mPlayerPosition.yCoord = y;
-    CreateMessage(EnumClass::LOG_MOVE_PLAYER, &mPlayerPosition.yCoord, &mPlayerPosition.xCoord);
-}
-
-void Field::CreateMessage(EnumClass::Log type, int* pos1, int* pos2){
-    Message* msg = new Message(type);
-    msg->IncreaseData(pos1);
-    msg->IncreaseData(pos2);
-    Notify(msg);
-    delete msg;
 }
 
 Field::~Field() {

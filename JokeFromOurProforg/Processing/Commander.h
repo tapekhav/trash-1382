@@ -2,16 +2,24 @@
 #define SURVIVAL_COMMANDER_H
 
 #include "Field/Field.h"
+
 #include "InputOutput/FieldViewer.h"
 #include "InputOutput/PlayerView.h"
+
 #include "Processing/Handle.h"
+
 #include "Event/EventManager.h"
-#include "Logging/Logs/LogStatus.h"
+
+#include "Logging/Logger.h"
+#include "Logging/Subject.h"
+#include "Logging/Messages/ErrorDecorator.h"
+#include "Logging/Messages/IntIntMessage.h"
+
 #include "Enums.h"
 
-class Commander : public Handle {
+class Commander : public Handle, public Subject {
 public:
-    Commander(Observer* logStatus);
+    Commander(Logger* logger);
 
     void SetFieldSize(int width, int height);
 
@@ -24,7 +32,6 @@ public:
     ~Commander();
 
 private:
-    void CreateMessage(EnumClass::Log type, int pos1, int pos2);
     void SpendEnergy(bool type);
 
     int mMove;
@@ -34,7 +41,7 @@ private:
     Player* mPlayer;
     PlayerViewer* mStatus;
     EventManager* mManager;
-    Observer* mLogStatus;
+    Logger* mLogger;
 };
 
 #endif //SURVIVAL_COMMANDER_H

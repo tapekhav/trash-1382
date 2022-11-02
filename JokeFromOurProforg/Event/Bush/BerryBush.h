@@ -10,6 +10,12 @@ public:
 	bool Happen() override;
 
 	EnumClass::Events GetStatus() override;
+
+	~BerryBush() {
+		Message* msg = new StatusDecorator(new Message("BerryBush deleted"));
+		Notify(msg);
+		delete msg;
+	}
 };
 
 #endif //SURVIVE_BERRYBUSH_H

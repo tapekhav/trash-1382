@@ -3,8 +3,10 @@
 
 #include "Enums.h"
 #include "Logging/Subject.h"
+#include "Logging/Messages/IntMessage.h"
+#include "Logging/Messages/StatusDecorator.h"
 
-class Player : public Subject{
+class Player : public Subject {
 public:
     Player() :mHealth(EnumClass::HEALTH), mThirst(EnumClass::THIRST), mHunger(EnumClass::HUNGER) {};
     Player(const Player& obj);
@@ -17,16 +19,14 @@ public:
     int GetThirst() const { return mThirst; }
 
     void DamagePlayer(int val);
-    void HealPlayer(int val); 
+    void HealPlayer(int val);
+
     void SetThirst(int val);
     void LoseThirstUnit();
 
     void SetHunger(int val);
     void LoseHungerUnit();
-
 private:
-    void CreateMessage(EnumClass::Log type, int* data);
-
     int mThirst;
     int mHunger;
     int mHealth;

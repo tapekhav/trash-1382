@@ -7,7 +7,10 @@
 class BerryFactory : public Factory {
 public:
 	BerryFactory(Player *player) : mPlayer(player) { }
-	Event* CreateEvent() override { return new BerryBush(mPlayer); }
+	Event* CreateEvent() override { Message* msg = new StatusDecorator(new Message("Created BerryBush"));
+									Notify(msg);
+									delete msg; 
+									return new BerryBush(mPlayer); }
 private:
 	Player* mPlayer;
 };

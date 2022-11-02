@@ -2,9 +2,12 @@
 #define SURVIVAL_GAME_H
 
 #include "Processing/Handle.h"
+#include "Logging/Subject.h"
+#include "Logging/Messages/IntMessage.h"
+#include "Logging/Messages/GameDecorator.h"
 #include "Enums.h"
 
-class Game : public Handle {
+class Game : public Handle, public Subject {
 public:
 
 	void StartGame();
@@ -12,8 +15,6 @@ public:
 	void SetGameProgress(bool val) { mGameProgress = val; }
 	int GetMove() const { return mMove; }
 private:
-	void CreateMessage(EnumClass::Log type);
-
 	bool mGameProgress;
 	int mMove;
 };

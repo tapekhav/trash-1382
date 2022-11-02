@@ -11,6 +11,11 @@ public:
 
 	EnumClass::Events GetStatus() override;
 
+	~BearBush() {
+		Message* msg = new StatusDecorator(new Message("BearBush deleted"));
+		Notify(msg);
+		delete msg;
+	}
 };
 
 #endif //SURVIVE_BEARBUSH_H

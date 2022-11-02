@@ -10,29 +10,46 @@
 #include "Event/Factory/SaintWaterFactory.h"
 #include "Event/Factory/EarthQuakeFactory.h"
 
+#include "Logging/Logger.h"
+#include "Logging/Subject.h"
+
 #include "Event/Manager.h"
 #include "Player/Player.h"
 #include "Field/Field.h"
-#include "Logging/Subject.h"
 #include "Enums.h"
 
 #include <iostream>
 #include <map>
 
 
-class EventManager : public Manager{
+class EventManager : public Manager, public Subject {
 public:
-	EventManager(Player* player, Field* field) : isExit(false),
-		CaveCount(0), BushCount(0), mStatus(EnumClass::NONE),
+	EventManager(Player* player, Field* field, Logger* logger) : isExit(false),
+		CaveCount(0), BushCount(0), mStatus(EnumClass::NONE), mLogger(logger),
 		mPlayer(player), mField(field) {
 		berry = new BerryFactory(mPlayer);
+		berry->Attach(mLogger->GetStatusLogger());
+
 		wolf = new WolfFactory(mPlayer);
+		wolf->Attach(mLogger->GetStatusLogger());
+
 		bear = new BearFactory(mPlayer);
+		bear->Attach(mLogger->GetStatusLogger());
+
 		rabbit = new RabbitFactory(mPlayer);
+		rabbit->Attach(mLogger->GetStatusLogger());
+
 		water = new WaterFactory(mPlayer);
+		water->Attach(mLogger->GetStatusLogger());
+
 		teleport = new TeleportFactory(mField);
+		teleport->Attach(mLogger->GetStatusLogger());
+
 		saintWater = new SaintWaterFactory(mPlayer);
+		saintWater->Attach(mLogger->GetStatusLogger());
+
 		earthQuake = new EarthQuakeFactory(mField);
+		earthQuake->Attach(mLogger->GetStatusLogger());
 
 	}
 
@@ -57,8 +74,6 @@ public:
 private:
 	bool CheckBush();
 	bool CheckCave();
-	void CreateMessage(EnumClass::Log type, EnumClass::Events *event);
-
 	bool isExit;
 
 	EnumClass::Events mStatus;
@@ -72,6 +87,7 @@ private:
 
 	Field* mField;
 	Player* mPlayer;
+	Logger* mLogger;
 
 	BerryFactory* berry;
 	WolfFactory* wolf;

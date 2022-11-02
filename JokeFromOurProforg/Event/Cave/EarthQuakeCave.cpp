@@ -1,6 +1,11 @@
 #include "Event/Cave/EarthQuakeCave.h"
 
 bool EarthQuakeCave::Happen() {
+
+	Message* msg = new StatusDecorator(new Message("EarthQuakeCave happened"));
+	Notify(msg);
+	delete msg;
+
 	int pos = rand() % 3;
 	EnumClass::Events event = EnumClass::EARTHQUAKE;
 	

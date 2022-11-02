@@ -2,9 +2,8 @@
 #define SURVIVE_MANAGER_H
 
 #include "Event/Event.h"
-#include "Logging/Subject.h"
 
-class Manager : public Subject{
+class Manager {
 public:
 	virtual Event* ChooseEvent() = 0;
 	virtual Event* ChooseConcreteEvent(EnumClass::Events event) = 0;

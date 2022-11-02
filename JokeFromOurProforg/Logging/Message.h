@@ -3,22 +3,23 @@
 
 #include "Enums.h"
 
+#include <iostream>
+
 class Message {
 public:
-	Message(EnumClass::Log type) : mType(type), mData(nullptr), mCount(0) {}
+	Message() {}
+	Message(std::string string) : mString(string), mType(EnumClass::LOG_UNKNOWN) {}
 
-	void IncreaseData(void* data);
+	EnumClass::Log GetType() const { return mType; }
+	void SetType(EnumClass::Log type) { mType = type; }
 
-	int GetCount() const { return mCount; }
-	void* GetData(int idx) const { return mData[idx]; }
-	EnumClass::Log GetLog() const { return mType; }
+	friend std::ostream& operator <<(std::ostream& out, const Message& message) { return out << message.mString; }
 
-	~Message();
+	virtual void PrintMessage(std::ostream& out) const { out << *this; }
 
-private:
-	void** mData;
-	int mCount;
+protected:
 	EnumClass::Log mType;
+	std::string mString;
 };
 
 #endif //SURVIVE_MESSAGE_H

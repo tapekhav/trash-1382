@@ -10,6 +10,12 @@ public:
 	bool Happen() override;
 	EnumClass::Events GetStatus() override;
 
+	~EarthQuakeCave() {
+		Message* msg = new StatusDecorator(new Message("EarthQuakeCaves deleted"));
+		Notify(msg);
+		delete msg;
+	}
+
 private:
 	Field* mField;
 };

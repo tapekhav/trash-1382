@@ -1,21 +1,12 @@
 #ifndef SURVIVE_LOGERROR_H
 #define SURVIVE_LOGERROR_H
 
-#include "Logging/Observer.h"
-#include "Logging/Subject.h"
+#include "Logging/Logs/CommonLog.h"
 
-#include <iostream>
-
-class LogError : public Observer {
+class LogError : public CommonLog {
 public:
-	LogError() {}
-
-	void Update(Message const *msg) override;
-	std::ostream& Output(std::ostream& out) override;
-
-	friend std::ostream& operator <<(std::ostream& out, const LogError& logError);
-
-	~LogError() {}
+	LogError(std::vector<CommonSource*>& sources) : CommonLog(sources) {}
+	void Update(Message const* msg) override;
 };
 
 #endif //SURVIVE_LOGERROR_H

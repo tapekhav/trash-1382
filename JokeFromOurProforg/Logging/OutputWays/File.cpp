@@ -1,14 +1,13 @@
 #include "Logging/OutputWays/File.h"
 
-File::File(Observer* observer) : Decorator(observer) {}
-
-void File::Update(Message const* msg) {
-	Decorator::Update(msg);
-	file.open("C:\\Users\\win10\\source\\repos\\Survival\\log.txt", std::ofstream::app);
-	Output(file);
-	file.close();
+File::File() {
+	file.open("..\\..\\..\\..\\logs.txt", std::ofstream::out);
 }
 
-std::ostream& File::Output(std::ostream& out) {
-	return mObserver->Output(out);
+void File::PrintMsg(Message const* msg) {
+	msg->PrintMessage(file);
+}
+
+File::~File() {
+	file.close();
 }

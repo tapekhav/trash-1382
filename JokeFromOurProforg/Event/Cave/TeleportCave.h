@@ -9,6 +9,13 @@ public:
 
 	bool Happen() override;
 	EnumClass::Events GetStatus() override;
+
+	~TeleportCave() {
+		Message* msg = new StatusDecorator(new Message("TeleportCave deleted"));
+		Notify(msg);
+		delete msg;
+	}
+
 private:
 	Field* mField;
 };

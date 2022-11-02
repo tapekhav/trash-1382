@@ -10,7 +10,11 @@ void CommandReader::Start() {
 
 void CommandReader::IncorrectInput() {
     std::cout << "Incorrect command! Please, check the correct format of the enter!\n";
-    CreateMessage(EnumClass::LOG_ERROR_INCORRECT_INPUT, &mApproval);
+
+    Message* msg = new ErrorDecorator(new CharMessage(mApproval, "Incorrect input"));
+    Notify(msg);
+    delete msg;
+
     std::cin >> mApproval;
     mMediator->CharMsg(mApproval);
 }
@@ -35,7 +39,8 @@ void CommandReader::ReadWidthAndHeight() {
         std::cout << "This input is incorrect!\nEnter number: ";
         std::cin >> mSize.second;
     }
-    CreateMessage(EnumClass::LOG_ERROR_FIELD_SIZE, &mSize.first, &mSize.second);
+    
+    CreateMessage(mSize.first, mSize.second);
     std::cout << std::endl;
     mMediator->PairMsg(mSize);
 }
@@ -78,20 +83,11 @@ void CommandReader::VictoryMsg() const {
     std::cout << "You survived. You won." << std::endl;
 }
 
-void CommandReader::CreateMessage(EnumClass::Log type, char* val) {
-    Message* msg = new Message(type);
-    msg->IncreaseData(val);
-    Notify(msg);
-    delete msg;
-}
-
-void CommandReader::CreateMessage(EnumClass::Log type, int* pos1, int* pos2) {
-    if (EnumClass::MIN_SIZE <= *pos1 && *pos1 <= EnumClass::MAX_SIZE &&
-        EnumClass::MIN_SIZE <= *pos2 && *pos2 <= EnumClass::MAX_SIZE)
+void CommandReader::CreateMessage(int val1, int val2) {
+    if (val1 > 0 && val1 <= EnumClass::MAX_SIZE && val2 > 0 && val2 <= EnumClass::MAX_SIZE)
         return;
-    Message* msg = new Message(type);
-    msg->IncreaseData(pos1);
-    msg->IncreaseData(pos2);
+    system("cls");
+    Message* msg = new ErrorDecorator(new IntIntMessage(val1, val2, "Incorrect field size input"));
     Notify(msg);
     delete msg;
 }

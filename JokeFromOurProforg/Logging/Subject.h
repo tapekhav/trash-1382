@@ -8,10 +8,10 @@
 
 class Subject {
 public:
-
 	void Attach(Observer* observer);
 	void Detach(Observer* observer);
-	void Notify(Message const *msg);
+	void Notify(Message const* msg);
+
 private:
 	std::vector<Observer*> mObservers;
 };

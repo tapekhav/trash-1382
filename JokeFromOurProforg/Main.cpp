@@ -5,18 +5,19 @@
 
 using namespace std;
 
-int main()
-{
-	LogManager* manager = new LogManager;
-	Commander* commander = new Commander(manager->GetLogStatus());
-	commander->Attach(manager->GetLogError());
+int main(){
+	Logger* logs = new Logger;
+
+	Commander* commander = new Commander(logs);
+	commander->Attach(logs->GetErrorLogger());
+
 	CommandReader* commandReader = new CommandReader;
-	commandReader->Attach(manager->GetLogError());
+	commandReader->Attach(logs->GetErrorLogger());
+
 	Game* game = new Game;
-	game->Attach(manager->GetLogError());
-	game->Attach(manager->GetLogGame());
+	game->Attach(logs->GetGameLogger());
+
 	Mediator* mediator = new HandleMediator(commander, commandReader, game);
-	mediator->Attach(manager->GetLogError());
 
 	game->StartGame();
 
@@ -24,6 +25,6 @@ int main()
 	delete commander;
 	delete commandReader;
 	delete game;
-	delete manager;
+	delete logs;
 	return 0;
 }

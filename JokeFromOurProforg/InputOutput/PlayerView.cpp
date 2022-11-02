@@ -1,7 +1,7 @@
 #include "InputOutput/PlayerView.h"
 
 void PlayerViewer::View(Player player) const {
-	std::cout << "-----------------------------" << std::endl;
+	std::cout << "-----------------------" << std::endl;
 	std::cout << "Your hungry: ";
 	ViewProperty(EnumClass::HUNGER, player.GetHunger());
 	std::cout << "Your thirst: ";

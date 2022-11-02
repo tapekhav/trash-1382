@@ -1,20 +1,16 @@
 #ifndef SURVIVE_DECORATOR_H
 #define SURVIVE_DECORATOR_H
 
-#include "Logging/Observer.h"
-#include "Logging/Logs/LogError.h"
-#include "Logging/Logs/LogGame.h"
-#include "Logging/Logs/LogStatus.h"
+#include "Logging/Message.h"
 
-class Decorator : public Observer {
+class Decorator : public Message{
 public:
-	Decorator(Observer* observer);
-	
-	void Update(Message const* msg) override;
-	std::ostream& Output(std::ostream& out) override;
+	Decorator(Message* message) : mMessage(message) {}
 
+	void PrintMessage(std::ostream& out) const override { mMessage->PrintMessage(out); };
 protected:
-	Observer* mObserver;
+	Message* mMessage;
+
 };
 
 #endif //SURVIVE_DECORATOR_H

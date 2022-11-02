@@ -8,7 +8,10 @@ class RabbitFactory : public Factory {
 public:
 	RabbitFactory(Player* player) : mPlayer(player) {}
 
-	Event* CreateEvent() { return new RabbitBush(mPlayer); }
+	Event* CreateEvent() {	Message* msg = new StatusDecorator(new Message("Created RabbitBush"));
+							Notify(msg);
+							delete msg; 
+							return new RabbitBush(mPlayer); }
 
 private:
 	Player* mPlayer;

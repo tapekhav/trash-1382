@@ -1,23 +1,12 @@
 #ifndef SURVIVE_LOGSTATUS_H
 #define SURVIVE_LOGSTATUS_H
 
-#include "Logging/Observer.h"
-#include "Logging/Subject.h"
+#include "Logging/Logs/CommonLog.h"
 
-#include <iostream>
-
-class LogStatus : public Observer {
+class LogStatus : public CommonLog {
 public:
-	LogStatus() {}
-
-	friend std::ostream& operator <<(std::ostream& out, const LogStatus& logStatus);
-
-	void Update(Message const *msg) override;
-	std::ostream& Output(std::ostream& out) override;
-
-	~LogStatus() {}
-private:
-	std::string EventChoose(EnumClass::Events* event) const;
+	LogStatus(std::vector<CommonSource*>& sources) : CommonLog(sources) {}
+	void Update(Message const* msg) override;
 };
 
 #endif //SURVIVE_LOGSTATUS_H

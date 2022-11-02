@@ -8,7 +8,10 @@ class WaterFactory : public Factory {
 public:
 	WaterFactory(Player *player) : mPlayer(player) {}
 
-	Event* CreateEvent() override { return new WaterCave(mPlayer); }
+	Event* CreateEvent() override { Message* msg = new StatusDecorator(new Message("Created WaterCave"));
+									Notify(msg);
+									delete msg; 
+									return new WaterCave(mPlayer); }
 private:
 	Player* mPlayer;
 

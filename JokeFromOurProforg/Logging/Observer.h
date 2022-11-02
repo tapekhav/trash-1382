@@ -3,16 +3,10 @@
 
 #include "Logging/Message.h"
 
-#include <string>
-
 class Observer {
 public:
-	virtual void Update(Message const* msg) { return; }
-	virtual std::ostream& Output(std::ostream& out) { return out; };
-	virtual ~Observer() {};
-
-protected:
-	const Message* mMsg;
+	virtual void Update(Message const* msg) = 0;
+	virtual ~Observer() {}
 };
 
 #endif //SURVIVE_OBSERVER_H

@@ -8,7 +8,10 @@ class TeleportFactory : public Factory {
 public:
 	TeleportFactory(Field *field) : mField(field) {}
 
-	Event* CreateEvent() override { return new TeleportCave(mField); }
+	Event* CreateEvent() override { Message* msg = new StatusDecorator(new Message("Created TeleportCave"));
+									Notify(msg);
+									delete msg; 
+									return new TeleportCave(mField); }
 private:
 	Field* mField;
 };

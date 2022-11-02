@@ -4,11 +4,15 @@
 #include "Event/Factory/Factory.h"
 #include "Event/Bush/BearBush.h"
 
+
 class BearFactory : public Factory {
 public:
 	BearFactory(Player *player) : mPlayer(player) {}
 
-	Event* CreateEvent() override { return new BearBush(mPlayer); }
+	Event* CreateEvent() override { Message* msg = new StatusDecorator(new Message("Created BearBush"));
+									Notify(msg);
+									delete msg;
+									return new BearBush(mPlayer); }
 
 private:
 	Player* mPlayer;

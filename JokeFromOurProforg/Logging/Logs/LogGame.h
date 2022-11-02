@@ -1,20 +1,12 @@
 #ifndef SURVIVE_LOGGAME_H
 #define SURVIVE_LOGGAME_H
 
-#include "Logging/Observer.h"
-#include "Logging/Subject.h"
+#include "Logging/Logs/CommonLog.h"
 
-#include <iostream>
-
-class LogGame : public Observer {
+class LogGame : public CommonLog {
 public:
-	LogGame() {}
-	void Update(Message const *msg) override;
-
-	friend std::ostream& operator <<(std::ostream& out, const LogGame& logGame);
-	std::ostream& Output(std::ostream& out) override;
-
-	~LogGame() {}
+	LogGame(std::vector<CommonSource*>& sources) : CommonLog(sources) {}
+	void Update(Message const* msg) override;
 };
 
 #endif //SURVIVE_LOGGAME_H

@@ -10,6 +10,12 @@ public:
 	bool Happen() override;
 
 	EnumClass::Events GetStatus() override;
+
+	~WolfBush() {
+		Message* msg = new StatusDecorator(new Message("WolfBush deleted"));
+		Notify(msg);
+		delete msg;
+	}
 };
 
 #endif //SURVIVE_WOLFBUSH_H

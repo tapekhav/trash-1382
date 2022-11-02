@@ -6,9 +6,8 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 	{
 	case EnumClass::FIELD_SIZE:
 		mCommandReader->Start();
-		while (mApproval != 'Y' && mApproval != 'N') {
+		while (mApproval != 'Y' && mApproval != 'N')
 			mCommandReader->IncorrectInput();
-		}
 		if (mApproval == 'Y') {
 			mCommandReader->ReadWidthAndHeight();
 			if (mSize.first < EnumClass::MIN_SIZE) {
@@ -26,6 +25,7 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 			mCommander->SetFieldSize(mSize.first, mSize.second);
 		}
 		else {
+			system("cls");
 			mCommander->SetFieldSize(EnumClass::STANDARD_SIZE, EnumClass::STANDARD_SIZE);
 		}
 		mGame->SetGameProgress(true);
@@ -90,6 +90,5 @@ bool HandleMediator::DoCmd() const {
 	default:
 		mCommandReader->IncorrectInput();
 	}
-
 	return true;
 }

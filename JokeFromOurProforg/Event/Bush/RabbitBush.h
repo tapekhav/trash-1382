@@ -9,6 +9,12 @@ public:
 
 	bool Happen() override;
 	EnumClass::Events GetStatus() override;
+
+	~RabbitBush() {
+		Message* msg = new StatusDecorator(new Message("RabbitBush deleted"));
+		Notify(msg);
+		delete msg;
+	}
 };
 
 #endif //SURVIVE_RABBITBUSH_H

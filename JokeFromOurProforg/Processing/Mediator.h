@@ -2,11 +2,10 @@
 #define SURVIVAL_MEDIATOR_H
 
 #include "Enums.h"
-#include "Logging/Subject.h"
 
 #include <iostream>
 
-class Mediator : public Subject{
+class Mediator {
 public:
 	virtual void Notify(EnumClass::Action activity) = 0;
 	virtual void CharMsg(char &cmd) = 0;

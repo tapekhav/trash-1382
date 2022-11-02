@@ -24,40 +24,44 @@ Player::Player(Player&& obj) {
     obj.mHunger = 0;
 }
 
-void Player::DamagePlayer(int val) {
+void Player::DamagePlayer(int val) { 
     mHealth = mHealth - val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth - val;
-    CreateMessage(EnumClass::LOG_HEALTH, &mHealth);
-}
-
-void Player::HealPlayer(int val) { 
-    mHealth = mHealth + val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth + val;
-    CreateMessage(EnumClass::LOG_HEALTH, &mHealth);
-}
-
-void Player::SetHunger(int val) {
-    mHunger = mHunger + val > EnumClass::HUNGER ? EnumClass::HUNGER : mHunger + val;
-    CreateMessage(EnumClass::LOG_HUNGER, &mHunger);
-}
-
-void Player::LoseHungerUnit() {
-    mHunger = mHunger - 1 < 0 ? 0 : mHunger - 1;
-    CreateMessage(EnumClass::LOG_HUNGER, &mHunger);
-}
-
-void Player::SetThirst(int val) {
-    mThirst = mThirst + val > EnumClass::THIRST ? EnumClass::THIRST : mThirst + val;
-    CreateMessage(EnumClass::LOG_THIRST, &mThirst);
-}
-
-void Player::LoseThirstUnit() { 
-    mThirst = mThirst - 1 < 0 ? 0 : mThirst - 1;
-    CreateMessage(EnumClass::LOG_THIRST, &mThirst);
-}
-
-void Player::CreateMessage(EnumClass::Log type, int* data) {
-    Message* msg = new Message(type);
-    msg->IncreaseData(data);
+    Message* msg = new StatusDecorator(new IntMessage(mHealth, "Decrease health"));
     Notify(msg);
     delete msg;
 }
 
+void Player::HealPlayer(int val) {
+    mHealth = mHealth + val > EnumClass::HEALTH ? EnumClass::HEALTH : mHealth + val;
+    Message* msg = new StatusDecorator(new IntMessage(mHealth, "Increase health"));
+    Notify(msg);
+    delete msg;
+}
+
+void Player::LoseHungerUnit() {
+    mHunger = mHunger - 1 < 0 ? 0 : mHunger - 1;
+    Message* msg = new StatusDecorator(new IntMessage(mHunger, "Lose hunger unit"));
+    Notify(msg);
+    delete msg;
+}
+
+void Player::LoseThirstUnit() {
+    mThirst = mThirst - 1 < 0 ? 0 : mThirst - 1;
+    Message* msg = new StatusDecorator(new IntMessage(mThirst, "Lose thirsty unit"));
+    Notify(msg);
+    delete msg;
+}
+
+void Player::SetHunger(int val) {
+    mHunger = mHunger + val > EnumClass::HUNGER ? EnumClass::HUNGER : mHunger + val;
+    Message* msg = new StatusDecorator(new IntMessage(mHunger, "Increase hunger"));
+    Notify(msg);
+    delete msg;
+}
+
+void Player::SetThirst(int val) {
+    mThirst = mThirst + val > EnumClass::THIRST ? EnumClass::THIRST : mThirst + val; 
+    Message* msg = new StatusDecorator(new IntMessage(mThirst, "Increase thirsty"));
+    Notify(msg);
+    delete msg;
+}

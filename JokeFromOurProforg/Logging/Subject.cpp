@@ -8,8 +8,7 @@ void Subject::Detach(Observer* observer) {
 	std::remove(mObservers.begin(), mObservers.end(), observer);
 }
 
-void Subject::Notify(Message const *msg) {
-	for (auto elem : mObservers) {
+void Subject::Notify(Message const* msg) {
+	for (auto elem : mObservers)
 		elem->Update(msg);
-	}
 }

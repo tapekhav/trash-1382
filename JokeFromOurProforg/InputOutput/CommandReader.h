@@ -2,14 +2,20 @@
 #define SURVIVAL_COMMANDREADER_H
 
 #include "Processing/Handle.h"
+#include "Logging/Subject.h"
+#include "Logging/Messages/CharMessage.h"
+#include "Logging/Messages/IntIntMessage.h"
+#include "Logging/Messages/ErrorDecorator.h"
 
 #include <iostream>
 #include <string>
 
-class CommandReader : public Handle {
+class CommandReader : public Handle, public Subject {
 public:
     void Start();
     void Help(bool type) const;
+
+    void CreateMessage(int val1, int val2);
 
     void Read();
     void ReadWidthAndHeight();
@@ -21,8 +27,7 @@ public:
     void DefeatMsg() const;
 
 private:
-    void CreateMessage(EnumClass::Log type, char* value);
-    void CreateMessage(EnumClass::Log type, int* pos1, int* pos2);
+
     char mApproval;
     std::pair<int, int> mSize;
 };

@@ -15,25 +15,20 @@ Cell& Cell::operator=(const Cell& other) {
 
 bool Cell::CheckEvent() {
     if (mEvent == nullptr) {
-        if(mEvent = mManager->ChooseEvent())
-            return true;
+        mEvent = mManager->ChooseEvent();
+        return mEvent;
     }
     else if (mManager->CheckEvent(mEvent)) {
         mEvent = nullptr;
         return true;
     }
     return false;
-
 }
 
 bool Cell::ActivateEvent() {
     if (mEvent != nullptr) {
-        if (mManager->UseEvent(mEvent)) {
-            mEvent = nullptr;
-            return true;
-        }
-        else
-            return false;
+        if(mManager->UseEvent(mEvent))
+            return !(mEvent = nullptr);
     }
     return false;
 }
