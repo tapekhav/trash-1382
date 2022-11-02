@@ -3,7 +3,7 @@ from modules.runge4 import Simulation
 
 def main():
     F = int(input('F = '))
-    # F = 10000000
+    F = 10000000
 
     m0 = int(input('m0 = '))
     # m0 = 20000000
