@@ -1,0 +1,5 @@
+right: r
+left: z
+up: x
+down: w
+exit: c

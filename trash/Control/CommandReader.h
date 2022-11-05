@@ -5,12 +5,15 @@
 #include "../Characters/Player.h"
 #include "../Logging/Logger/FileLog.h"
 #include "../Logging/LogLevel/Subject.h"
+#include "ControlCommands/TerminalController.h"
+#include "Config/FileConfig.h"
 
 class CommandReader : public Subject {
 public:
     void read_step();
     void read_size();
     void read_char();
+    char read_config();
     char read_choice();
     std::vector<Logger*> read_loggers();
 
@@ -22,6 +25,7 @@ private:
     void check(int&);
     std::string read_file_name() const;
 
+    IConfig* config;
     char choice;
     int height;
     int width;

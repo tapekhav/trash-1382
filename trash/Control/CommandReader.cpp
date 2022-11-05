@@ -12,43 +12,19 @@ void CommandReader::read_size() {
 
 
 void CommandReader::read_step() {
-    char c;
-    const char key_left = 'a';
-    const char key_right = 'd';
-    const char key_up = 'w';
-    const char key_down = 's';
-    const char key_exit = 'e';
+    TerminalController read_char;
+    FileConfig config(read_file_name());
+    const auto settings = config.get_config();
 
-    std::cout << "Введите направление перемещения игрока(w, a, s, d). Для выхода напишите e: ";
-    std::cin >> c;
-    switch(c) {
-        case key_up:
-            step = Player::UP;
-            break;
-        case key_down:
-            step = Player::DOWN;
-            break;
-        case key_left:
-            step = Player::LEFT;
-            break;
-        case key_right:
-            step = Player::RIGHT;
-            break;
-        case key_exit:
-            step = Player::EXIT;
-            std::cout << "\033[1;31m  _____          __  __ ______    ______      ________ _____  \n"
-                         " / ____|   /\\   |  \\/  |  ____|  / __ \\ \\    / /  ____|  __ \\ \n"
-                         "| |  __   /  \\  | \\  / | |__    | |  | \\ \\  / /| |__  | |__) |\n"
-                         "| | |_ | / /\\ \\ | |\\/| |  __|   | |  | |\\ \\/ / |  __| |  _  / \n"
-                         "| |__| |/ ____ \\| |  | | |____  | |__| | \\  /  | |____| | \\ \\ \n"
-                         " \\_____/_/    \\_\\_|  |_|______|  \\____/   \\/   |______|_|  \\_\\\n\033[0m";
-            break;
-        default:
-            step = Player::STOP;
-            notify(Message(Message::Error, "step was entered incorrectly"));
-            break;
+    auto elem = settings.find(read_char.get_command());
+    if (elem != settings.end()) {
+        step = elem->second;
+        return;
     }
-
+    if (elem == settings.end()) {
+        step = Player::STEP::STOP;
+        notify(Message(Message::Error, "step was entered incorrectly"));
+    }
 }
 
 void CommandReader::read_char() {
@@ -112,4 +88,9 @@ std::string CommandReader::read_file_name() const {
     std::cin >> file_name;
 
     return file_name;
+}
+
+char CommandReader::read_config() {
+    std::cout << "Введите 'y', если хотите поставить стандартное управление (w, a, s, d, e): ";
+    return read_choice();
 }
