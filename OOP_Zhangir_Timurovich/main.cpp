@@ -3,9 +3,13 @@
 #include "Control/Controller.h"
 #include "Control/Mediator.h"
 #include "Info/LogOutInfo.h"
+#include "Output/FileOut.h"
+#include "Control/ControlConfig/FileConfig.h"
 
 int main() {
-    CommandReader reader;
+    ControlConfig* cfg = new FileConfig("cfg.txt");
+    cfg->read_config();
+    ConsoleReader reader(cfg);
     reader.set_size();
     reader.set_level();
     reader.set_output();

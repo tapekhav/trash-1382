@@ -1,54 +1,40 @@
-#pragma once
+//
+// Created by roman on 07.11.2022.
+//
 
-#include <string>
-#include <iostream>
+#ifndef MAIN_CPP_СOMMANDREADER_H
+#define MAIN_CPP_СOMMANDREADER_H
+
 #include <vector>
 #include "../Info/Structs.h"
-#include "../Info/LogOutInfo.h"
-#include "../Logging/Subject.h"
-#include "../Logging/Subject.h"
 
-class CommandReader : public Subject {
-public:
+class CommandReader {
+    virtual ~CommandReader() = default;
 
-    explicit CommandReader(int health = 100, int armour = 100, int damage = 100);
+    virtual void set_size() = 0;
 
-    ~CommandReader() = default;
+    virtual void set_output() = 0;
 
-    void set_size();
+    virtual set_level() = 0;
 
-    void set_output();
+    virtual [[nodiscard]] int get_width() const;
 
-    void set_level();
-
-    [[nodiscard]] int get_width() const;
-
-    [[nodiscard]] int get_height() const;
-
-    enum MOVES {
-        LEFT,
-        RIGHT,
-        UP,
-        DOWN,
-        NOWHERE
-    };
-
-    bool set_move(LogOutInfo *info);
-
-    MOVES get_move();
-
-    std::vector <LEVEL> get_levels();
-
-    std::vector <OUTPUT> get_outputs();
+    virtual [[nodiscard]] int get_height() const;
 
 
-private:
+    virtual MOVES read_move(LogOutInfo *info) = 0;
+
+    virtual std::vector <LEVEL> get_levels();
+
+    virtual std::vector <OUTPUT> get_outputs();
+
+protected:
     int width{};
     int height{};
-    int health;
-    int armour;
-    int damage;
-    MOVES move;
     std::vector <OUTPUT> outputs;
     std::vector <LEVEL> levels;
+    ControlConfig *control_config;
 };
+
+
+#endif //MAIN_CPP_СOMMANDREADER_H

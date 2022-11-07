@@ -1,12 +1,18 @@
-#ifndef MAIN_CPP_STRUCTS_H
-#define MAIN_CPP_STRUCTS_H
+#pragma once
 
 enum LEVEL {
-    GAME = 0, STATUS = 1, ERROR = 2
+    GAME, STATUS, ERROR
 };
 
 enum OUTPUT {
     CONSOLE, FILEOUT
 };
 
-#endif //MAIN_CPP_STRUCTS_H
+enum MOVES {
+    LEFT,
+    RIGHT,
+    UP,
+    DOWN,
+    NOWHERE,
+    EXIT
+};

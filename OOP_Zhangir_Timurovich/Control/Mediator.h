@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Controller.h"
-#include "CommandReader.h"
+#include "ConsoleReader.h"
 
 class Mediator {
 public:
-    Mediator(Controller& controller, CommandReader& reader);
+    Mediator(Controller& controller, ConsoleReader& reader);
 
     ~Mediator() = default;
 
@@ -13,6 +13,6 @@ public:
 
 private:
     Controller controller;
-    CommandReader reader;
+    ConsoleReader reader;
 };
 

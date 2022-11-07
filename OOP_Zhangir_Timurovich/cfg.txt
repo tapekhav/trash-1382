@@ -1,0 +1,5 @@
+right= d
+left= a
+up= w
+down= s
+exit= q

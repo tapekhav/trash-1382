@@ -4,7 +4,7 @@
 #include "../Characters/PlayerView.h"
 #include "../Background/Field.h"
 #include "../Background/FieldView.h"
-#include "CommandReader.h"
+#include "ConsoleReader.h"
 #include "../Events/EventBuilder.h"
 #include "../Info/Structs.h"
 #include "../Info/LogOutInfo.h"
@@ -18,7 +18,7 @@ public:
 
     void show_field();
 
-    bool move_player(CommandReader::MOVES move);
+    bool move_player(MOVES move);
 
     void create_field();
 

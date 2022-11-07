@@ -1,5 +1,5 @@
 #include "Controller.h"
-#include "CommandReader.h"
+#include "ConsoleReader.h"
 #include "../Logging/logs/GameObserver.h"
 #include "../Logging/logs/ErrorsObserver.h"
 
@@ -28,23 +28,23 @@ void Controller::create_field() {
 }
 
 
-bool Controller::move_player(CommandReader::MOVES move) {
+bool Controller::move_player(MOVES move) {
     int x = 0;
     int y = 0;
     switch (move) {
-        case CommandReader::MOVES::LEFT:
+        case MOVES::LEFT:
             x -= 1;
             break;
-        case CommandReader::MOVES::RIGHT:
+        case MOVES::RIGHT:
             x += 1;
             break;
-        case CommandReader::MOVES::UP:
+        case MOVES::UP:
             y -= 1;
             break;
-        case CommandReader::MOVES::DOWN:
+        case MOVES::DOWN:
             y += 1;
             break;
-        case CommandReader::MOVES::NOWHERE:
+        case MOVES::NOWHERE:
             return true;
     }
 

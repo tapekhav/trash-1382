@@ -13,7 +13,10 @@ void Subject::detach(Observer *observer) {
 }
 
 void Subject::notify(Message &message) {
-    for (auto elem: observers) {
-        elem->update(message);
+    for (auto elem : message.get_info()->get_levels()) {
+        if (elem == message.getType()) {
+            for (auto obs : observers)
+                obs->update(message);
+        }
     }
 }

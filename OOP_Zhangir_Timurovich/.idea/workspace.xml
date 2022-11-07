@@ -11,7 +11,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="" />
+    <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/CommandReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/CommandReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Mediator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/Mediator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Info/Structs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Info/Structs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logging/Subject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Logging/Subject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ебейшая бюрократия/1лаба.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Ебейшая бюрократия/1лаба.docx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +46,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="2FLml06BvssQdJ4usqSu2sEm7Pv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -102,6 +118,14 @@
       <workItem from="1666786279494" duration="18679000" />
       <workItem from="1666810388859" duration="14000" />
       <workItem from="1666810477084" duration="33048000" />
+      <workItem from="1666893897959" duration="1213000" />
+      <workItem from="1666981576084" duration="1415000" />
+      <workItem from="1667336025002" duration="2961000" />
+      <workItem from="1667387182815" duration="2539000" />
+      <workItem from="1667413871533" duration="26000" />
+      <workItem from="1667672816968" duration="8142000" />
+      <workItem from="1667752982629" duration="11735000" />
+      <workItem from="1667812881664" duration="6759000" />
     </task>
     <servers />
   </component>
