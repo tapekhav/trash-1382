@@ -5,7 +5,7 @@
 
 class Mediator {
 public:
-    Mediator(Controller& controller, ConsoleReader& reader);
+    Mediator(Controller& controller, CommandReader* reader);
 
     ~Mediator() = default;
 
@@ -13,6 +13,6 @@ public:
 
 private:
     Controller controller;
-    ConsoleReader reader;
+    CommandReader* reader;
 };
 

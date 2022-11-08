@@ -3,7 +3,7 @@
 //
 
 #include "GameObserver.h"
-#include "../../Info/Structs.h"
+#include "../../Info/Enums.h"
 
 void GameObserver::update(Message &msg) {
     if(msg.getType() == GAME){

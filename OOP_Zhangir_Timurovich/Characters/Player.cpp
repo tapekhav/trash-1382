@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "../Logging/Message.h"
-# include "../Info/Structs.h"
+# include "../Info/Enums.h"
 
 Player::Player(LogOutInfo* info, int health, int armour, int damage) {
     this->health = health;

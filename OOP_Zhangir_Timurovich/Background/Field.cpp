@@ -15,7 +15,7 @@
 #include "../Events/PlayerEvents/Heal.h"
 #include "../Events/GameRulesEvents/Win.h"
 #include "../Events/GameRulesEvents/Lose.h"
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "../Logging/Message.h"
 
 

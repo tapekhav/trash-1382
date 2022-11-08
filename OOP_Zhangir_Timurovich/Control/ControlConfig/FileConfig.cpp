@@ -27,19 +27,19 @@ void FileConfig::read_config() {
         std::istringstream stream(str);
         stream >> command >> button;
 
-        if (command == "right=" && button != '\0') {
+        if (command == "right=") {
             control[RIGHT] = button;
         }
-        if (command == "left=" && button != '\0') {
+        if (command == "left=") {
             control[LEFT] = button;
         }
-        if (command == "up=" && button != '\0') {
+        if (command == "up=") {
             control[UP] = button;
         }
-        if (command == "down=" && button != '\0') {
+        if (command == "down=") {
             control[DOWN] = button;
         }
-        if (command == "exit=" && button != '\0') {
+        if (command == "exit=") {
             control[EXIT] = button;
         }
     }

@@ -12,7 +12,7 @@ int CommandReader::get_height() const {
     return this->height;
 }
 
-std::vector <OUTPUT> CommandeReader::get_outputs() {
+std::vector <OUTPUT> CommandReader::get_outputs() {
     return this->outputs;
 }
 

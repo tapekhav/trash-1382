@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Structs.h"
+#include "Enums.h"
 #include <vector>
 #include <string>
 //#include "../Output/ConsoleOut.h"

@@ -18,13 +18,13 @@ void ConsoleReader::set_size() {
 }
 
 
-int ConsoleReader::get_width() const {
-    return this->width;
-}
-
-int ConsoleReader::get_height() const {
-    return this->height;
-}
+//int ConsoleReader::get_width() const {
+//    return this->width;
+//}
+//
+//int ConsoleReader::get_height() const {
+//    return this->height;
+//}
 
 ConsoleReader::ConsoleReader(ControlConfig* cfg) {
     this->control_config = cfg;
@@ -85,11 +85,11 @@ MOVES ConsoleReader::read_move(LogOutInfo *info) {
 }
 
 
-std::vector <OUTPUT> ConsoleReader::get_outputs() {
-    return this->outputs;
-}
-
-std::vector <LEVEL> ConsoleReader::get_levels() {
-    return this->levels;
-}
+//std::vector <OUTPUT> ConsoleReader::get_outputs() {
+//    return this->outputs;
+//}
+//
+//std::vector <LEVEL> ConsoleReader::get_levels() {
+//    return this->levels;
+//}
 

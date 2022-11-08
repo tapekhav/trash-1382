@@ -9,7 +9,7 @@ class LogOutInfo;
 
 #include <ostream>
 #include <string>
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "../Info/LogOutInfo.h"
 
 class Message {

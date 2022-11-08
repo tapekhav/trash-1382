@@ -6,7 +6,7 @@
 #define MAIN_CPP_CONTROLCONFIG_H
 
 #include <map>
-#include "../../Info/Structs.h"
+#include "../../Info/Enums.h"
 #include <vector>
 
 class ControlConfig {

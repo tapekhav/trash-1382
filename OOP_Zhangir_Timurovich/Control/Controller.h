@@ -6,7 +6,7 @@
 #include "../Background/FieldView.h"
 #include "ConsoleReader.h"
 #include "../Events/EventBuilder.h"
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "../Info/LogOutInfo.h"
 #include "../Logging/Subject.h"
 

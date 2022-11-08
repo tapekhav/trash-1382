@@ -3,42 +3,42 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "../Info/LogOutInfo.h"
 #include "../Logging/Subject.h"
-#include "../Logging/Subject.h"
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "ControlConfig/ControlConfig.h"
+#include "CommandReader.h"
 
-class ConsoleReader : public Subject {
+class ConsoleReader : public CommandReader {
 public:
 
     explicit ConsoleReader(ControlConfig *cfg = nullptr);
 
     ~ConsoleReader() override = default;
 
-    void set_size();
+    void set_size() override;
 
-    void set_output();
+    void set_output() override;
 
-    void set_level();
+    void set_level() override;
 
-    [[nodiscard]] int get_width() const;
-
-    [[nodiscard]] int get_height() const;
-
-
-    MOVES read_move(LogOutInfo *info);
-
-    std::vector <LEVEL> get_levels();
-
-    std::vector <OUTPUT> get_outputs();
+//    [[nodiscard]] int get_width() const;
+//
+//    [[nodiscard]] int get_height() const;
 
 
-private:
-    int width{};
-    int height{};
-    std::vector <OUTPUT> outputs;
-    std::vector <LEVEL> levels;
-    ControlConfig *control_config;
+    MOVES read_move(LogOutInfo *info) override;
+
+//    std::vector <LEVEL> get_levels();
+
+//    std::vector <OUTPUT> get_outputs();
+
+
+//private:
+//    int width{};
+//    int height{};
+//    std::vector <OUTPUT> outputs;
+//    std::vector <LEVEL> levels;
+//    ControlConfig *control_config;
 };

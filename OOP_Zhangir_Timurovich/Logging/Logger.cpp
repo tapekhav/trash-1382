@@ -3,7 +3,7 @@
 //
 
 #include "Logger.h"
-#include "../Info/Structs.h"
+#include "../Info/Enums.h"
 #include "../Output/FileOut.h"
 #include "../Output/ConsoleOut.h"
 
