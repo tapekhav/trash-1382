@@ -7,11 +7,11 @@
 #include <sstream>
 #include "IConfig.h"
 
-class FileConfig : public IConfig {
+class FileConfig final : public IConfig {
 public:
-    explicit FileConfig(const std::string&);
-    std::map<char, Player::STEP> get_config() override;
-    ~FileConfig() override;
+    explicit FileConfig(const std::string& file_name = "check.txt");
+    std::map<char, Player::STEP> get_config() final;
+    ~FileConfig() final;
 private:
     std::ifstream file;
 };

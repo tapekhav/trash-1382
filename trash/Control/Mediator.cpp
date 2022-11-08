@@ -1,31 +1,23 @@
 #include "Mediator.h"
 
 
+Mediator::Mediator()  : logging(new GameLog), config(new FileConfig), error_flag(0) {}
+
 Mediator::~Mediator() {
     delete logging;
+    delete config;
 }
 
 void Mediator::start() {
+    std::map<char, Player::STEP> settings;
     auto vec = input.read_loggers();
-    logging = new GameLog;
     init_logs(vec);
     game.set_status_on();
-    input.read_char();
 
-    if (input.get_char() != 'y') {
-        input.read_size();
-        game.set_field(input.get_width(), input.get_height());
-    } else {
-        game.set_field_standard();
-    }
+    settings = set_config();
+    set_field();
 
-    while(input.get_step() != Player::EXIT && game.get_status() == GameStatus::ON) {
-        input.read_step();
-        game.set_step(input.get_step());
-
-        game.check_win_game();
-        game.check_end_game();
-    }
+    play(settings);
 
     for (auto elem : vec)
         delete elem;
@@ -33,26 +25,57 @@ void Mediator::start() {
 
 void Mediator::init_logs(std::vector<Logger*>& loggers) {
     int flag = 0;
-    std::cout << "Хотите ли вы отслеживать изменения в игре? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
-    if (input.read_choice() == 'y') {
+    if (input.get_game_log() == 'y') {
         logging->add_subject(game.get_player());
         logging->add_subject(game.get_field());
         logging->add_level(Message::Game);
         flag = 1;
     }
 
-    std::cout << "Хотите ли вы отслеживать статус игры? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
-    if (input.read_choice() == 'y') {
+    if (input.get_status_log() == 'y') {
         logging->add_subject(game.get_game_status());
         logging->add_level(Message::GameStatus);
     }
 
-    std::cout << "Хотите ли вы отслеживать ошибки? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
-    if (input.read_choice() == 'y') {
+    if (input.get_error_log() == 'y') {
         if (flag == 0) logging->add_subject(game.get_field());
         logging->add_subject(&input);
         logging->add_level(Message::Error);
+        error_flag = 1;
     }
 
     logging->set_loggers(loggers);
+}
+
+void Mediator::play(const std::map<char, Player::STEP>& settings) {
+    while(input.get_step() != Player::EXIT && game.get_status() == GameStatus::ON) {
+        input.read_step(settings);
+        game.set_step(input.get_step());
+
+        game.check_win_game();
+        game.check_end_game();
+    }
+}
+
+void Mediator::set_field() {
+    if (input.read_char() == 'y') {
+        game.set_field_standard();
+    } else {
+        input.read_size();
+        game.set_field(input.get_width(), input.get_height());
+    }
+}
+
+std::map<char, Player::STEP> Mediator::set_config() {
+    std::map<char, Player::STEP> settings;
+    if (input.read_config() == 'y') {
+        settings = config->get_default();
+    } else {
+        delete config;
+        config = new FileConfig(input.read_file_name());
+        if (error_flag == 1) logging->add_subject(config);
+        settings = config->get_config();
+    }
+
+    return settings;
 }

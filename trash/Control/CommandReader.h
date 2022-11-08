@@ -10,23 +10,26 @@
 
 class CommandReader : public Subject {
 public:
-    void read_step();
+    CommandReader();
+    ~CommandReader();
+
+    void read_step(const std::map<char, Player::STEP>&);
     void read_size();
-    void read_char();
+    char read_char();
     char read_config();
-    char read_choice();
+    char get_game_log();
+    char get_error_log();
+    char get_status_log();
+    std::string read_file_name() const;
     std::vector<Logger*> read_loggers();
 
     int get_height() const;
     int get_width() const;
-    char get_char() const;
     Player::STEP get_step() const;
 private:
     void check(int&);
-    std::string read_file_name() const;
 
-    IConfig* config;
-    char choice;
+    IController* control;
     int height;
     int width;
     Player::STEP step;

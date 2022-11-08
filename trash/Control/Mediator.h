@@ -6,14 +6,22 @@
 
 class Mediator {
 public:
+    Mediator();
     ~Mediator();
 
     void start();
-    void init_logs(std::vector<Logger*>& loggers);
 private:
-    CommandReader    input;
-    Controller        game;
-    GameLog*       logging;
+    void init_logs(std::vector<Logger*>& loggers);
+    void play(const std::map<char, Player::STEP>&);
+
+    void set_field();
+    std::map<char, Player::STEP> set_config();
+
+    CommandReader input;
+    Controller     game;
+    GameLog*    logging;
+    IConfig*     config;
+    int      error_flag;
 };
 
 #endif //LABS_MEDIATOR_H

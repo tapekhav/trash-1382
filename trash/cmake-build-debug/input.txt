@@ -1,2 +1,57 @@
-Error: this cell is impassable
-Error: this cell is impassable
+GameStatus: game status is ON
+Error: step was entered incorrectly
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: event was played
+Game: player's count of keys was changed: 1
+Game: player change location
+Game: player change location
+Game: event was played
+Game: player's count of keys was changed: 2
+Game: player change location
+GameStatus: game status is OFF
+GameStatus: game status is ON
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+GameStatus: game status is ON
+Game: player change location
+Game: player change location
+GameStatus: game status is ON
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Error: step was entered incorrectly
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: player change location
+Game: event was played
+Game: player's count of keys was changed: 1
+Game: player change location
+Game: player change location
+Game: event was played
+Game: player's count of keys was changed: 2
+Game: player change location
+GameStatus: game status is OFF

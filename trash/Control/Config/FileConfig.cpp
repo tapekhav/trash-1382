@@ -10,6 +10,7 @@ FileConfig::~FileConfig() {
 
 std::map<char, Player::STEP> FileConfig::get_config() {
     if (!file.is_open()) {
+        notify(Message(Message::Error, "file is not open, the control is set by default."));
         return control_default;
     }
 
@@ -40,6 +41,8 @@ std::map<char, Player::STEP> FileConfig::get_config() {
 
     is_ok();
 
+
     return control;
 }
+
 

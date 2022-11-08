@@ -4,21 +4,16 @@
 #include "Player.h"
 #include <map>
 
-class IConfig {
+class IConfig : public Subject {
 public:
-    virtual ~IConfig() = default;
     virtual std::map<char, Player::STEP> get_config() = 0;
+    virtual ~IConfig() = default;
+
+    std::map<char, Player::STEP> get_default();
 protected:
     void is_ok();
-    bool check_repeats(const std::vector<char>&);
 
-    std::map<char, Player::STEP> control = {
-            {'\0', Player::STEP::UP},
-            {'\0', Player::STEP::DOWN},
-            {'\0', Player::STEP::LEFT},
-            {'\0', Player::STEP::RIGHT},
-            {'\0', Player::STEP::EXIT}
-    };
+    std::map<char, Player::STEP> control;
     const std::map<char, Player::STEP> control_default = {
             {'w', Player::STEP::UP},
             {'s', Player::STEP::DOWN},

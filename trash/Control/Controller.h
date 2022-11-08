@@ -1,6 +1,7 @@
 #ifndef LABS_CONTROLLER_H
 #define LABS_CONTROLLER_H
 
+#include "Config/FileConfig.h"
 #include "../Background/FieldView.h"
 #include "../Characters/PlayerView.h"
 #include "GameStatus.h"
@@ -13,8 +14,8 @@ public:
     void set_field_standard();
     void set_step(Player::STEP);
 
-    Player* get_player();
-    Field* get_field();
+    Player*     get_player();
+    Field*      get_field();
     GameStatus* get_game_status();
 
     void check_win_game();
