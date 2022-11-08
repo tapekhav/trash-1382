@@ -32,6 +32,7 @@ private:
     IController* control;
     int height;
     int width;
+    char choice;
     Player::STEP step;
 };
 

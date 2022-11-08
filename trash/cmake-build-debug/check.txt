@@ -2,4 +2,4 @@ right: r
 left: l
 up: u
 down: d
-exit: e
+exit: q

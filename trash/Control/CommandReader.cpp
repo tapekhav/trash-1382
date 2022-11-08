@@ -10,11 +10,13 @@ CommandReader::~CommandReader() {
 }
 
 void CommandReader::read_size() {
-    height = control->get_height();
-    check(height);
-
-    width = control->get_width();
+    std::cout << "Введите ширину: ";
+    std::cin >> width;
     check(width);
+
+    std::cout << "Введите высоту: ";
+    std::cin >> height;
+    check(height);
 }
 
 
@@ -31,26 +33,35 @@ void CommandReader::read_step(const std::map<char, Player::STEP>& config) {
 }
 
 char CommandReader::read_char() {
-    return control->get_char();
+    std::cout << "Введите 'y', если хотите оставить у поля стандартное значение(10, 10): ";
+    std::cin >> choice;
+    return choice;
 }
 
 char CommandReader::get_game_log() {
-    return control->get_game_log();
+    std::cout << "Хотите ли вы отслеживать изменения в игре? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
+    std::cin >> choice;
+    return choice;
 }
 
 char CommandReader::get_error_log() {
-    return control->get_error_log();
+    std::cout << "Хотите ли вы отслеживать ошибки? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
+    std::cin >> choice;
+    return choice;
 }
 
 char CommandReader::get_status_log() {
-    return control->get_status_log();
+    std::cout << "Хотите ли вы отслеживать статус игры? Если хотите введите 'y'. В противном случае он не будет логироваться. ";
+    std::cin >> choice;
+    return choice;
 }
 
 std::vector<Logger*> CommandReader::read_loggers() {
     int number;
     std::vector<Logger*> loggers;
 
-    number = control->get_logs();
+    std::cout << "Введите, куда будут выводиться логи (1 - в консоль, 2 - в файл, 3 - в консоль и в файл): ";
+    std::cin >> number;
 
     if (number == 1) {
         loggers.push_back(new ConsoleLog);
@@ -67,11 +78,16 @@ std::vector<Logger*> CommandReader::read_loggers() {
 }
 
 std::string CommandReader::read_file_name() const {
-    return control->get_file_name();
+    std::cout << "Введите имя файла: ";
+    std::string file_name;
+    std::cin >> file_name;
+    return file_name;
 }
 
 char CommandReader::read_config() {
-    return control->get_cfg();
+    std::cout << "Введите 'y', если хотите поставить стандартное управление (w, a, s, d, e): ";
+    std::cin >> choice;
+    return choice;
 }
 
 

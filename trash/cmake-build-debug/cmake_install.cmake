@@ -1,4 +1,4 @@
-# Install script for directory: /home/vladimir/Desktop/trash
+# Install script for directory: /home/vladimir/Desktop/c++/donttouch/trash-1382/trash
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vladimir/Desktop/trash/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
