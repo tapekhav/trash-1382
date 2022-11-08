@@ -20,26 +20,31 @@
 
 
 Field::Field(LogOutInfo *info, int width, int height) {
-    if (width >= 10 && width <= 40) {
+    if (width >= 10 && width <= 40)
         this->width = width;
-
-    } else if (width > 40){
+    if (width > 40) {
         this->width = 40;
-        Message message(ERROR, "Too big size", info);
+        Message message(ERROR, "Too big width", info);
         notify(message);
     }
-
-    else{
-        Message message(ERROR, "Too small size", info);
+    if (width < 10) {
+        Message message(ERROR, "Too small width", info);
         notify(message);
         this->width = 10;
     }
     if (height >= 10 && height <= 40)
         this->height = height;
-    else if (height > 40)
+    if (height > 40){
         this->height = 40;
-    else
+        Message message(ERROR, "Too big height", info);
+        notify(message);
+    }
+
+    if (height < 10){
         this->height = 10;
+        Message message(ERROR, "Too small height", info);
+        notify(message);
+    }
     this->player_x = 1;
     this->player_y = 1;
     this->height_inc = 0;

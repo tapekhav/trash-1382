@@ -9,27 +9,12 @@
 #include "ControlConfig/ControlConfig.h"
 #include "../Logging/Subject.h"
 
-class CommandReader : public Subject {
+class CommandReader {
 public:
 
     virtual ~CommandReader() = default;
 
-    virtual void set_size() = 0;
-
-    virtual void set_output() = 0;
-
-    virtual void set_level() = 0;
-
-    virtual int get_width() const;
-
-    virtual int get_height() const;
-
-
     virtual MOVES read_move(LogOutInfo *info) = 0;
-
-    virtual std::vector <LEVEL> get_levels();
-
-    virtual std::vector <OUTPUT> get_outputs();
 
 protected:
     int width{};

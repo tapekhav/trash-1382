@@ -5,17 +5,18 @@
 #include "Info/LogOutInfo.h"
 #include "Output/FileOut.h"
 #include "Control/ControlConfig/FileConfig.h"
+#include "Control/ConsoleSettings.h"
 
 int main() {
-//    system("canberra-gtk-play -f RickRol.wav");
     ControlConfig* cfg = new FileConfig("cfg.txt");
     cfg->read_config();
     CommandReader* reader = new ConsoleReader(cfg);
-    reader->set_size();
-    reader->set_level();
-    reader->set_output();
-    LogOutInfo* logout_info = new LogOutInfo(reader->get_outputs(), reader->get_levels());
-    Controller controller(logout_info, reader->get_width(), reader->get_height(), 15,
+    Settings* settings = new ConsoleSettings;
+    settings->set_level();
+    settings->set_output();
+    settings->set_size();
+    LogOutInfo* logout_info = new LogOutInfo(settings->get_outputs(), settings->get_levels());
+    Controller controller(logout_info, settings->get_width(), settings->get_height(), 15,
                           10, 10);
     Mediator mediator(controller, reader);
     mediator.start_game();

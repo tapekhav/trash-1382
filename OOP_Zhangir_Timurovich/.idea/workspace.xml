@@ -14,23 +14,11 @@
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/Player.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/CommandReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/CommandReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/CommandReader.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/CommandReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/CommandReader.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/ConsoleReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/ConsoleReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/Controller.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Controller.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/Mediator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/Mediator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Events/Event.h" beforeDir="false" afterPath="$PROJECT_DIR$/Events/Event.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Info/LogOutInfo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Info/LogOutInfo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Info/Structs.h" beforeDir="false" afterPath="$PROJECT_DIR$/Info/Enums.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logging/Logger.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Logging/Logger.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logging/Message.h" beforeDir="false" afterPath="$PROJECT_DIR$/Logging/Message.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logging/logs/GameObserver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Logging/logs/GameObserver.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kek" beforeDir="false" afterPath="$PROJECT_DIR$/kek" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
@@ -135,7 +123,7 @@
       <workItem from="1667672816968" duration="8142000" />
       <workItem from="1667752982629" duration="11735000" />
       <workItem from="1667812881664" duration="10351000" />
-      <workItem from="1667900657426" duration="327000" />
+      <workItem from="1667900657426" duration="8257000" />
     </task>
     <servers />
   </component>
