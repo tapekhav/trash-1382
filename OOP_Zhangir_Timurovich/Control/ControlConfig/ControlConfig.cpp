@@ -24,7 +24,6 @@ void ControlConfig::check_config() {
 }
 
 MOVES ControlConfig::get_key_config(char move) {
-    std::map<MOVES, char>::iterator it = control.begin();
     for (auto i: control) {
         if (i.second == move) {
             return i.first;

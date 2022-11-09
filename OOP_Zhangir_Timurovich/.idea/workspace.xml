@@ -12,16 +12,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/OOP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Background/Field.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Background/Field.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/CommandReader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/05c9af84-6a8f-42bf-b62c-57e3208b2b7e.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/e9127e6d-ed8c-4ace-a006-d67abe7c6745.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/read.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/v17/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/v17/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Control/CommandReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/CommandReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ConsoleReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ConsoleReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ConsoleReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/Mediator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/Mediator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CppProperties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/kek" beforeDir="false" afterPath="$PROJECT_DIR$/kek" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ебейшая диаграмма.drawio.html" beforeDir="false" afterPath="$PROJECT_DIR$/ебейшая диаграмма.drawio.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +87,9 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -123,7 +133,8 @@
       <workItem from="1667672816968" duration="8142000" />
       <workItem from="1667752982629" duration="11735000" />
       <workItem from="1667812881664" duration="10351000" />
-      <workItem from="1667900657426" duration="8257000" />
+      <workItem from="1667900657426" duration="8852000" />
+      <workItem from="1668023434316" duration="7398000" />
     </task>
     <servers />
   </component>

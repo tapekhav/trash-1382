@@ -17,10 +17,6 @@ public:
     virtual MOVES read_move(LogOutInfo *info) = 0;
 
 protected:
-    int width{};
-    int height{};
-    std::vector <OUTPUT> outputs;
-    std::vector <LEVEL> levels;
     ControlConfig *control_config;
 };
 

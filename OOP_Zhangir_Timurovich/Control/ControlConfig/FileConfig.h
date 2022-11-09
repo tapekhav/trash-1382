@@ -17,8 +17,6 @@ public:
 
     void read_config() override;
 
-//    MOVES get_key_config(char move) override;
-
     ~FileConfig() override;
 
 private:
