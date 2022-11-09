@@ -9,12 +9,12 @@ Mediator::~Mediator() {
 }
 
 void Mediator::start() {
-    std::map<char, Player::STEP> settings;
+    input.get_src();
+    std::map<char, Player::STEP> settings = set_config();
     auto vec = input.read_loggers();
     init_logs(vec);
     game.set_status_on();
 
-    settings = set_config();
     set_field();
 
     play(settings);

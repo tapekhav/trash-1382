@@ -1,10 +1,6 @@
 #include "CommandReader.h"
 
 
-CommandReader::CommandReader() {
-    control = new TerminalController;
-}
-
 CommandReader::~CommandReader() {
     delete control;
 }
@@ -32,6 +28,13 @@ void CommandReader::read_step(const std::map<char, Player::STEP>& config) {
 
 char CommandReader::read_char() {
     return control->get_char();
+}
+
+void CommandReader::get_src() {
+    char ch;
+    std::cout << "Откуда будет считываться управление? Любой символ - из консоли.";
+    std::cin >> ch;
+    if (ch) control = new TerminalController;
 }
 
 char CommandReader::get_game_log() {
