@@ -55,8 +55,6 @@ build CMakeFiles/trash_1382.dir/Background/Cell.cpp.o: CXX_COMPILER__trash_1382_
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Background
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Background/CellView.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background/CellView.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Background/CellView.cpp.o.d
@@ -64,8 +62,6 @@ build CMakeFiles/trash_1382.dir/Background/CellView.cpp.o: CXX_COMPILER__trash_1
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Background
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Background/Field.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background/Field.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Background/Field.cpp.o.d
@@ -73,8 +69,6 @@ build CMakeFiles/trash_1382.dir/Background/Field.cpp.o: CXX_COMPILER__trash_1382
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Background
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background/FIeldView.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o.d
@@ -82,8 +76,6 @@ build CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o: CXX_COMPILER__trash_
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Background
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Characters/Player.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters/Player.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Characters/Player.cpp.o.d
@@ -91,17 +83,6 @@ build CMakeFiles/trash_1382.dir/Characters/Player.cpp.o: CXX_COMPILER__trash_138
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Characters
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
-
-build CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters/PlayerView.cpp || cmake_object_order_depends_target_trash_1382
-  DEP_FILE = CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
-  OBJECT_DIR = CMakeFiles/trash_1382.dir
-  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Characters
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/CommandReader.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o.d
@@ -109,8 +90,6 @@ build CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o: CXX_COMPILER__trash
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/Controller.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/Controller.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/Controller.cpp.o.d
@@ -118,8 +97,6 @@ build CMakeFiles/trash_1382.dir/Control/Controller.cpp.o: CXX_COMPILER__trash_13
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/Mediator.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o.d
@@ -127,8 +104,6 @@ build CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o: CXX_COMPILER__trash_1382
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField/SetWalls.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o.d
@@ -136,8 +111,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o: CXX_COMPILER_
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangeField
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer/Box.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o.d
@@ -145,8 +118,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o: CXX_COMPILER__tra
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangePlayer
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer/Heal.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o.d
@@ -154,8 +125,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o: CXX_COMPILER__tr
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangePlayer
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer/Key.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o.d
@@ -163,8 +132,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o: CXX_COMPILER__tra
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangePlayer
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer/Trap.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o.d
@@ -172,8 +139,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o: CXX_COMPILER__tr
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangePlayer
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/main.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/main.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/main.cpp.o.d
@@ -181,8 +146,6 @@ build CMakeFiles/trash_1382.dir/main.cpp.o: CXX_COMPILER__trash_1382_Debug /home
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/EventCreator.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o.d
@@ -190,8 +153,6 @@ build CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o: CXX_COMPILER__trash_1
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField/DelWalls.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o.d
@@ -199,8 +160,6 @@ build CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o: CXX_COMPILER_
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Events/ChangeField
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/GameStatus.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o.d
@@ -208,8 +167,6 @@ build CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o: CXX_COMPILER__trash_13
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging/Logger/ConsoleLog.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o.d
@@ -217,8 +174,6 @@ build CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o: CXX_COMPILER__t
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Logger
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging/Logger/FileLog.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o.d
@@ -226,8 +181,6 @@ build CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o: CXX_COMPILER__tras
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Logger
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging/LogLevel/GameLog.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o.d
@@ -235,8 +188,6 @@ build CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o: CXX_COMPILER__tr
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/LogLevel
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging/Messages/Message.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o.d
@@ -244,8 +195,6 @@ build CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o: CXX_COMPILER__tr
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/Messages
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging/LogLevel/Subject.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o.d
@@ -253,8 +202,6 @@ build CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o: CXX_COMPILER__tr
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Logging/LogLevel
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/Config/FileConfig.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o.d
@@ -262,8 +209,6 @@ build CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o: CXX_COMPILER__t
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/Config
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/Config/IConfig.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o.d
@@ -271,8 +216,6 @@ build CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o: CXX_COMPILER__tras
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/Config
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 build CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/ControlCommands/TerminalController.cpp || cmake_object_order_depends_target_trash_1382
   DEP_FILE = CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o.d
@@ -280,8 +223,6 @@ build CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
   INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/ControlCommands
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
-  TARGET_PDB = trash_1382.pdb
 
 
 # =============================================================================
@@ -291,14 +232,13 @@ build CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
 #############################################
 # Link the executable trash_1382
 
-build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field.cpp.o CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Characters/PlayerView.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
+build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field.cpp.o CMakeFiles/trash_1382.dir/Background/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/trash_1382.dir/
   TARGET_FILE = trash_1382
-  TARGET_PDB = trash_1382.pdb
+  TARGET_PDB = trash_1382.dbg
 
 
 #############################################
@@ -344,14 +284,14 @@ build all: phony trash_1382
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCCompilerABI.c /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystem.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCCompiler.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCCompilerABI.c /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXCompiler.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCompilerIdDetection.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCXXCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompileFeatures.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompilerABI.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineCompilerId.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeDetermineSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeFindBinUtils.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseImplicitIncludeInfo.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseImplicitLinkInfo.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseLibraryArchitecture.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystem.cmake.in /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCXXCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeTestCompilerCommon.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ADSP-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ARMCC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/ARMClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/AppleClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Borland-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Cray-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GHS-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-FindBinUtils.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/HP-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IAR-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Intel-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/LCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/MSVC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/NVHPC-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/PGI-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/PathScale-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SCO-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/TI-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/Watcom-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XL-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/zOS-C-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Internal/FeatureTesting.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-Determine-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /snap/clion/209/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

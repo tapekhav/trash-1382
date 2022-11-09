@@ -22,8 +22,6 @@ add_executable(trash_1382
         Background/FieldView.h
         Characters/Player.cpp
         Characters/Player.h
-        Characters/PlayerView.cpp
-        Characters/PlayerView.h
         Control/CommandReader.cpp
         Control/CommandReader.h
         Control/Controller.cpp

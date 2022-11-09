@@ -3,7 +3,6 @@
 
 #include "Config/FileConfig.h"
 #include "../Background/FieldView.h"
-#include "../Characters/PlayerView.h"
 #include "GameStatus.h"
 
 class Controller {
