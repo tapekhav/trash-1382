@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram id="ombd-WoxeEANmr7rUE96" name="Страница 1">
+        <mxGraphModel dx="1975" dy="2918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="259" value="FacadePlayer" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=12;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-480" y="-2260" width="349.96" height="312" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="- player: Player*" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="26" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="841" value="-observer: Observer*" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="52" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="264" value="- field: Field*" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="78" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="840" value="- view: FieldView*" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="104" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="911" value="- reader: CommandReader*" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="259">
+                    <mxGeometry y="130" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="843" value="- game_step(): GameStatus" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="156" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" value="- move_player(Direction)" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="182" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="262" value="+ FacadePlayer(Player*, Field*, Observer*, CommandReader*)" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="208" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="842" value="+ game_start(): GameStatus" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="234" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="912" value="+ player_menu()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="259">
+                    <mxGeometry y="260" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="844" value="+ ~FacadePlayer()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="259" vertex="1">
+                    <mxGeometry y="286" width="349.96" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="838" value="CommandReader" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=12;fontColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="-60" y="-2090" width="240" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="839" value="+ get_command(): CommandOperand" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="838" vertex="1">
+                    <mxGeometry y="26" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="897" value="+ get_symbol(CommandOperand): std::string" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" parent="838" vertex="1">
+                    <mxGeometry y="52" width="240" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="904" value="CommandReaderKeyboard" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontSize=12;fontColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="-60" y="-1970" width="319" height="156" as="geometry"/>
+                </mxCell>
+                <mxCell id="910" value="- setting: std::vector&lt;std::pair&lt;CommandOperand, char&gt;&gt;" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="904">
+                    <mxGeometry y="26" width="319" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="909" value="+ CommandReaderKeyboard()" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="904">
+                    <mxGeometry y="52" width="319" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="908" value="+ CommandReaderKeyboard(std::string)" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="904">
+                    <mxGeometry y="78" width="319" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="905" value="+ get_command(): CommandOperand" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="904">
+                    <mxGeometry y="104" width="319" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="906" value="+ get_symbol(CommandOperand): std::string" style="text;strokeColor=#000000;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;fontColor=#000000;" vertex="1" parent="904">
+                    <mxGeometry y="130" width="319" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="916" value="" style="endArrow=none;startArrow=diamondThin;endFill=0;startFill=0;html=1;verticalAlign=bottom;labelBackgroundColor=none;strokeWidth=1;startSize=8;endSize=8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fillColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="911" target="838">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="-120" y="-2150" as="sourcePoint"/>
+                        <mxPoint x="40" y="-2150" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="918" value="" style="endArrow=block;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;fontFamily=Helvetica;fontSize=12;fontColor=#000000;strokeColor=#000000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="904" target="838">
+                    <mxGeometry width="160" relative="1" as="geometry">
+                        <mxPoint x="459.90000000000003" y="-2029" as="sourcePoint"/>
+                        <mxPoint x="349.90000000000003" y="-2073" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="100" y="-1980"/>
+                            <mxPoint x="200" y="-1980"/>
+                            <mxPoint x="200" y="-2070"/>
+                            <mxPoint x="180" y="-2070"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

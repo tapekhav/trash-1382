@@ -1,0 +1,1884 @@
+GAME STATUS:
+
+	Game is start. 
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is over. Player win.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffe3c27d270, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe3c27d1f0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe3c27d3d0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+GAME STATUS:
+
+	Game is start. 
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is over. Player win.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffe42be3cf0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe42be3c60, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe42be3e90, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (9:0)
+	Null Event 0x7ffe42be3e50 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (9:0) -> (8:0)
+	Null Event 0x7ffe42be3e50 triggered
+
+	Move From (8:0) -> (8:1)
+	Null Event 0x7ffe42be3e50 triggered
+
+	Player Changes:
+		hit_point - 101 -> 102
+		strength - 21 -> 22
+		endurance - 21 -> 22
+		dexterity - 21 -> 22
+		armor - 21 -> 22
+		coins - 205 -> 210
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffeb8120ee0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffeb8120e50, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffeb8121080, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7fff282b1e50, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff282b1dc0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff282b1ff0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc897b9cd0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc897b9c40, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc897b9e70, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+GAME STATUS:
+
+	Game is start. 
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+	Game restart.
+
+	Game is start. 
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+	Game interrupt.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc8f1b9700, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc8f1b9670, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc8f1b98a0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffc8f1b9860 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffc8f1b9860 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (0:2) -> (1:2)
+	Null Event 0x7ffc8f1b9860 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffd77e2eb10, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd77e2ea80, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd77e2ecb0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc19c5a930, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5a8a0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5aad0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffc19c5aa90 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffc19c5aa90 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:2) -> (9:2)
+	Null Event 0x7ffc19c5aa90 triggered
+
+	Move From (9:2) -> (8:2)
+	Null Event 0x7ffc19c5aa90 triggered
+
+	Move From (8:2) -> (7:2)
+	Null Event 0x7ffc19c5aa90 triggered
+
+	Move From (7:2) -> (6:2)
+	Null Event 0x7ffc19c5aa90 triggered
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:6, y:2
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc19c5a930, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5a8a0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5aad0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 101
+		strength - 21
+		endurance - 21
+		dexterity - 21
+		armor - 21
+		coins - 205
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:6, y:2
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc19c5a930, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5a8a0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc19c5aad0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 101
+		strength - 21
+		endurance - 21
+		dexterity - 21
+		armor - 21
+		coins - 205
+
+GAME STATUS:
+
+	Game interrupt.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc47b2fed0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc47b2fe40, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc47b30070, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffc47b30030 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffc47b30030 triggered
+
+	Move From (0:2) -> (1:2)
+	Null Event 0x7ffc47b30030 triggered
+
+	Move From (1:2) -> (2:3)
+	Null Event 0x7ffc47b30030 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (2:3) -> (2:4)
+	Null Event 0x7ffc47b30030 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffd7ab381c0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd7ab38130, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd7ab38360, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffd7ab38320 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffd7ab38320 triggered
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7ffd7ab38320 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffd0bb1ba80, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd0bb1b9f0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd0bb1bc20, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:3) -> (0:4)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:4) -> (0:5)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:5) -> (0:6)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:6) -> (1:7)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (1:7) -> (2:8)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (2:8) -> (3:9)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (3:9) -> (4:0)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (4:0) -> (5:1)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Player Changes:
+		hit_point - 101 -> 102
+		strength - 21 -> 22
+		endurance - 21 -> 22
+		dexterity - 21 -> 22
+		armor - 21 -> 22
+		coins - 205 -> 210
+
+	Move From (5:1) -> (6:2)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (6:2) -> (7:3)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (7:3) -> (8:4)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (8:4) -> (9:5)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (9:5) -> (0:6)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:6) -> (0:7)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:7) -> (0:8)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:8) -> (1:9)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (1:9) -> (2:0)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (2:0) -> (3:1)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (3:1) -> (4:2)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (4:2) -> (5:3)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (5:3) -> (6:4)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (6:4) -> (7:5)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (7:5) -> (7:6)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (7:6) -> (8:7)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (8:7) -> (9:8)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (9:8) -> (0:9)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (0:9) -> (1:0)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (1:0) -> (2:1)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (2:1) -> (3:2)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (3:2) -> (4:3)
+	Null Event 0x7ffd0bb1bbe0 triggered
+	Field Changes:
+		(9:0) - ( 1 -> 0)(9:1) - ( 1 -> 0)(9:2) - ( 1 -> 0)(9:3) - ( 1 -> 0)(9:4) - ( 1 -> 0)(9:5) - ( 1 -> 0)(9:6) - ( 1 -> 0)(9:7) - ( 1 -> 0)(9:8) - ( 1 -> 0)(9:9) - ( 1 -> 0)
+		(8:0) - ( 1 -> 0)(8:1) - ()(8:2) - ()(8:3) - ()(8:4) - ()(8:5) - ()(8:6) - ()(8:7) - ()(8:8) - ()(8:9) - ( 1 -> 0)
+		(7:0) - ( 1 -> 0)(7:1) - ()(7:2) - ()(7:3) - ()(7:4) - ()(7:5) - ()(7:6) - ()(7:7) - ()(7:8) - ()(7:9) - ( 1 -> 0)
+		(6:0) - ( 1 -> 0)(6:1) - ()(6:2) - ()(6:3) - ()(6:4) - ()(6:5) - ()(6:6) - ()(6:7) - ()(6:8) - ()(6:9) - ( 1 -> 0)
+		(5:0) - ( 1 -> 0)(5:1) - ()(5:2) - ()(5:3) - ()(5:4) - ()(5:5) - ()(5:6) - ()(5:7) - ()(5:8) - ()(5:9) - ( 1 -> 0)
+		(4:0) - ( 1 -> 0)(4:1) - ()(4:2) - ()(4:3) - ( 0x7ffd0bb1b9f0 -> 0)(4:4) - ()(4:5) - ()(4:6) - ()(4:7) - ()(4:8) - ()(4:9) - ( 1 -> 0)
+		(3:0) - ( 1 -> 0)(3:1) - ()(3:2) - ()(3:3) - ()(3:4) - ()(3:5) - ()(3:6) - ()(3:7) - ()(3:8) - ()(3:9) - ( 1 -> 0)
+		(2:0) - ( 1 -> 0)(2:1) - ()(2:2) - ()(2:3) - ()(2:4) - ()(2:5) - ()(2:6) - ()(2:7) - ()(2:8) - ()(2:9) - ( 1 -> 0)
+		(1:0) - ( 1 -> 0)(1:1) - ()(1:2) - ()(1:3) - ()(1:4) - ()(1:5) - ()(1:6) - ()(1:7) - ()(1:8) - ()(1:9) - ( 1 -> 0)
+		(0:0) - ( 1 -> 0)(0:1) - ( 1 -> 0)(0:2) - ( 1 -> 0)(0:3) - ( 1 -> 0)(0:4) - ( 1 -> 0)(0:5) - ( 1 -> 0)(0:6) - ( 1 -> 0)(0:7) - ( 1 -> 0)(0:8) - ( 1 -> 0)(0:9) - ( 1 -> 0)
+
+	Move From (4:3) -> (5:4)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (5:4) -> (6:5)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (6:5) -> (7:6)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (7:6) -> (8:7)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+	Move From (8:7) -> (8:8)
+	Null Event 0x7ffd0bb1bbe0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffc14e82cd0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc14e82c40, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffc14e82e70, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Move From (0:3) -> (1:4)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Move From (1:4) -> (2:5)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Move From (2:5) -> (2:6)
+	Null Event 0x7ffc14e82e30 triggered
+
+	Move From (2:6) -> (2:7)
+	Null Event 0x7ffc14e82e30 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffd69a5bf90, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd69a5bee0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffd69a5c0f0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (9:0)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (9:0) -> (9:9)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (9:9) -> (0:9)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (0:9) -> (9:8)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (9:8) -> (8:7)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (8:7) -> (7:6)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (7:6) -> (8:5)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (8:5) -> (8:6)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (8:6) -> (8:5)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (8:5) -> (8:4)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (8:4) -> (7:4)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (7:4) -> (6:5)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (6:5) -> (7:5)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Move From (7:5) -> (6:6)
+	Null Event 0x7ffd69a5c0b0 triggered
+
+	Player Changes:
+		hit_point - 101 -> -99899
+
+GAME STATUS:
+
+	Game is over. Player lose.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7fff4945afd0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff4945af20, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff4945b130, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (9:0)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (9:0) -> (8:0)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (8:0) -> (8:9)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (8:9) -> (7:9)
+	Null Event 0x7fff4945b0f0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (7:9) -> (7:8)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (7:8) -> (6:7)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (6:7) -> (7:6)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (7:6) -> (6:7)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (6:7) -> (7:7)
+	Null Event 0x7fff4945b0f0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (7:7) -> (8:8)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (8:8) -> (9:9)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (9:9) -> (0:0)
+	Null Event 0x7fff4945b0f0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (9:0)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Player Changes:
+		hit_point - 101 -> 102
+		strength - 21 -> 22
+		endurance - 21 -> 22
+		dexterity - 21 -> 22
+		armor - 21 -> 22
+		coins - 205 -> 210
+
+	Move From (9:0) -> (0:1)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (0:1) -> (1:2)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (1:2) -> (2:3)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (2:3) -> (3:4)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (3:4) -> (4:5)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (4:5) -> (5:6)
+	Null Event 0x7fff4945b0f0 triggered
+
+	Move From (5:6) -> (6:7)
+	Null Event 0x7fff4945b0f0 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffe6040af10, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe6040ae60, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe6040b070, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (9:0)
+	Null Event 0x7ffe6040b030 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7fff7804c870, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff7804c7c0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff7804c9d0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (9:9)
+	Null Event 0x7fff7804c990 triggered
+
+	Move From (9:9) -> (0:0)
+	Null Event 0x7fff7804c990 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (9:9)
+	Null Event 0x7fff7804c990 triggered
+
+	Move From (9:9) -> (8:8)
+	Null Event 0x7fff7804c990 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7fff6da595e0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff6da59530, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fff6da59740, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7fff6da59700 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7fff6da59700 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7fff6da59700 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:3) -> (1:2)
+	Null Event 0x7fff6da59700 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7fffc46d1760, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fffc46d16b0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7fffc46d18c0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7fffc46d1880 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7fffc46d1880 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7fffc46d1880 triggered
+
+ERROR:
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+	Try to step on not passable cell.
+
+GAME STRUCTS CHANGE:
+
+	Move From (0:3) -> (1:2)
+	Null Event 0x7fffc46d1880 triggered
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffcd9de8a90, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffcd9de89e0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffcd9de8bf0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Player Changes:
+		hit_point - 100 -> 101
+		strength - 20 -> 21
+		endurance - 20 -> 21
+		dexterity - 20 -> 21
+		armor - 20 -> 21
+		coins - 200 -> 205
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (0:2) -> (0:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (0:3) -> (1:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Player Changes:
+		hit_point - 101 -> 102
+		strength - 21 -> 22
+		endurance - 21 -> 22
+		dexterity - 21 -> 22
+		armor - 21 -> 22
+		coins - 205 -> 210
+
+	Move From (1:3) -> (2:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (2:3) -> (2:4)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Player Changes:
+		hit_point - 102 -> 103
+		strength - 22 -> 23
+		endurance - 22 -> 23
+		dexterity - 22 -> 23
+		armor - 22 -> 23
+		coins - 210 -> 215
+
+	Move From (2:4) -> (2:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (2:3) -> (1:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (1:3) -> (2:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (2:3) -> (1:4)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (1:4) -> (2:5)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (2:5) -> (1:4)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+	Move From (1:4) -> (2:3)
+	Null Event 0x7ffcd9de8bb0 triggered
+
+GAME STATUS:
+
+	Game restart.
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:2, y:3
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffcd9de8a90, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffcd9de89e0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffcd9de8bf0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 103
+		strength - 23
+		endurance - 23
+		dexterity - 23
+		armor - 23
+		coins - 215
+
+GAME STATUS:
+
+	Game interrupt.
+
+GAME STATUS:
+
+	Game is start. 
+
+GAME STRUCTS CHANGE:
+
+	Field:
+		width - 10
+		length - 10
+		coord - x:0, y:0
+		Map:
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0x7ffe12a1d130, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe12a1d080, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0x7ffe12a1d290, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 0) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+			(0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) (0, 1) 
+
+	Player:
+		hit_point - 100
+		strength - 20
+		endurance - 20
+		dexterity - 20
+		armor - 20
+		coins - 200
+
+	Move From (0:0) -> (0:1)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (0:1) -> (0:2)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (0:2) -> (1:2)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (1:2) -> (1:3)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (1:3) -> (1:2)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (1:2) -> (2:2)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (2:2) -> (1:2)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (1:2) -> (0:3)
+	Null Event 0x7ffe12a1d250 triggered
+
+	Move From (0:3) -> (1:4)
+	Null Event 0x7ffe12a1d250 triggered
+
+GAME STATUS:
+
+	Game interrupt.
+

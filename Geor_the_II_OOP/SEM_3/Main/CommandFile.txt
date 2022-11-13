@@ -1,0 +1,10 @@
+up=t
+up_right=y
+right=h
+down_right=b
+down=g
+down_left=v
+left=f
+up_left=r
+quit=z
+play=x
