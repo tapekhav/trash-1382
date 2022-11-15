@@ -121,7 +121,7 @@ class Simulation:
             self.rocket.M -= stage.m
             tk = self.t + stage.m / stage.alpha
             while self.t < tk:
-                self.runge4(fig, fig2, stage)
+                self.bogatsky(fig, fig2, stage)
                 if self.H < 0:
                     break
             if self.rocket.count != 1:
@@ -227,14 +227,32 @@ class Simulation:
         ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='black')
         ax2.plot((temp_t, self.t), (temp_v / 7800, self.rocket.v / 7800), color='black')
 
-    '''
-    2
-    5000000
-    500000
-    100000
-    10000
-    40000000
-    250000
-    50000
-    10000
-    '''
+    def bogatsky(self, ax, ax2, stage) -> None:
+        temp_H = self.H
+        temp_t = self.t
+        temp_v = self.rocket.v
+
+        k1 = self.func(self.H, stage)
+        k2 = self.func(self.H + self.const.h * 0.5 * k1, stage)
+        k3 = self.func(self.H + 3 * k2 * (self.const.h / 4), stage)
+        k4 = self.func(self.H + (self.const.h * k1 * 2 / 9) + (self.const.h * k2 / 3) +
+                       (self.const.h * k3 * 4 / 9), stage)
+
+        x1 = (k1 * self.const.h * 2 / 9) + (self.const.h * k2 / 3) + (self.const.h * k3 * 4 / 9)
+        x2 = (self.const.h / 24) * (7 * k1 + 6 * k2 + 8 * k3 + 3 * k4)
+
+        error = abs(x1 - x2)
+        if error < 0.0001 and self.const.h * 2 <= 0.2:
+            self.const.h *= 2
+        else:
+            self.const.h /= 1.5
+
+        self.rocket.v += (7 * k1 + 6 * k2 + 8 * k3 + 3 * k4) * self.const.h * (1 / 24)
+        self.H = self.H + self.const.h * self.rocket.v
+        self.t += self.const.h
+        stage.m -= stage.alpha * self.const.h
+        if stage.m <= 0 or self.H <= 0:
+            ax.scatter([self.t], [self.H / 1000], color='red')
+            ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
+        ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='black')
+        ax2.plot((temp_t, self.t), (temp_v / 7800, self.rocket.v / 7800), color='black')
