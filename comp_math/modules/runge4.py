@@ -145,7 +145,7 @@ class Simulation:
             self.bogatsky(fig, fig2, stage)
 
         #Проверка на достижение второй космической
-        self.check_second_space(fig2)
+        self.check_second_space(fig, fig2)
 
         #Время не закончилось, ракета за пределами атмосферы
         while self.t <= tk and self.H > 0:
@@ -161,11 +161,13 @@ class Simulation:
         ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
         ax.scatter([self.t], [self.H / 1000], color='red')
 
-    def check_second_space(self, ax2):
+    def check_second_space(self, ax, ax2):
         second_space = sqrt(2) * sqrt(self.const.G * self.const.M / (self.const.R + self.H))
         if self.rocket.v >= second_space:
+            ax.scatter([self.t], [self.H / 1000], color='blue')
             ax2.scatter([self.t], [self.rocket.v / 7800], color='blue')
         else:
+            ax.scatter([self.t], [self.H / 1000], color='black')
             ax2.scatter([self.t], [self.rocket.v / 7800], color='black')
 
     def acceleration_of_gravity(self, temp_H):
@@ -196,7 +198,7 @@ class Simulation:
         self.rocket.v += (k1 / 6 + k2 / 3 + k3 / 3 + k4 / 6) * self.const.h
         self.H = self.H + self.const.h * self.rocket.v
         self.t += self.const.h
-        if stage.m <= 0 or self.H <= 0:
+        if (stage.m <= 0 or self.H <= 0) and stage.F > 0:
             ax.scatter([self.t], [self.H / 1000], color='red')
             ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
         ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='black')
@@ -276,7 +278,7 @@ class Simulation:
         self.H = self.H + self.const.h * self.rocket.v
         self.t += self.const.h
         stage.m -= stage.alpha * self.const.h
-        if stage.m <= 0 or self.H <= 0:
+        if (stage.m <= 0 or self.H <= 0) and stage.F > 0:
             ax.scatter([self.t], [self.H / 1000], color='red')
             ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
         ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='black')
