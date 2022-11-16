@@ -25,6 +25,7 @@ class Simulation:
 
     def __init__(self, time_lim):
         self.time_lim = time_lim
+        self.atmosphere = True
 
     # init stage
     def stage(self, stage1_F, stage1_m, stage1_m0, stage1_alpha) -> None:
@@ -130,6 +131,7 @@ class Simulation:
             if self.rocket.count != 1:
                 self.rocket.M -= stage.m0
                 self.rocket.rocket_stages.pop(0)
+                self.draw_red_point(fig, fig2)
             self.rocket.count -= 1
 
         self.rocket.count = 1
@@ -138,7 +140,7 @@ class Simulation:
 
         tk = self.t + self.time_lim
 
-        #У ракеты топливо закончилось, ракета не достигла конца атмосферы
+        #У ракеты топливо кончилось, ракета не достигла конца атмосферы
         while self.H < 10**5 and self.H > 0 and self.t <= tk:
             self.bogatsky(fig, fig2, stage)
 
@@ -154,6 +156,10 @@ class Simulation:
 
         plt.tight_layout()
         plt.show()
+
+    def draw_red_point(self, ax, ax2):
+        ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
+        ax.scatter([self.t], [self.H / 1000], color='red')
 
     def check_second_space(self, ax2):
         second_space = sqrt(2) * sqrt(self.const.G * self.const.M / (self.const.R + self.H))
