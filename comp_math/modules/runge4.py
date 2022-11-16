@@ -121,7 +121,10 @@ class Simulation:
             self.rocket.M -= stage.m
             tk = self.t + stage.m / stage.alpha
             while self.t < tk:
-                self.bogatsky(fig, fig2, stage)
+                if self.H <= 10**5:
+                    self.bogatsky(fig, fig2, stage)
+                else:
+                    self.out_of_atmosphere(fig, fig2, stage)
                 if self.H < 0:
                     break
             if self.rocket.count != 1:
@@ -130,24 +133,39 @@ class Simulation:
             self.rocket.count -= 1
 
         self.rocket.count = 1
+        stage = self.rocket.rocket_stages[0]
+        stage.F = 0
+
         tk = self.t + self.time_lim
-        if self.rocket.v >= self.second_space():
-            while self.t <= tk:
-                self.const_v(fig, fig2)
-        else:
-            self.rocket.rocket_stages[0].F = 0
-            while self.t <= tk:
-                self.falling(fig, fig2, self.rocket.rocket_stages[0])
+
+        #У ракеты топливо закончилось, ракета не достигла конца атмосферы
+        while self.H < 10**5 and self.H > 0 and self.t <= tk:
+            self.bogatsky(fig, fig2, stage)
+
+        #Проверка на достижение второй космической
+        self.check_second_space(fig2)
+
+        #Время не закончилось, ракета за пределами атмосферы
+        while self.t <= tk and self.H > 0:
+            if self.H > 10**5:
+                self.out_of_atmosphere(fig, fig2, self.rocket.rocket_stages[0])
+            else:
+                self.bogatsky(fig, fig2, self.rocket.rocket_stages[0])
 
         plt.tight_layout()
         plt.show()
 
-    def second_space(self):
-        return sqrt(2) * sqrt(self.const.G * self.const.M / (self.const.R + self.H))
+    def check_second_space(self, ax2):
+        second_space = sqrt(2) * sqrt(self.const.G * self.const.M / (self.const.R + self.H))
+        if self.rocket.v >= second_space:
+            ax2.scatter([self.t], [self.rocket.v / 7800], color='blue')
+        else:
+            ax2.scatter([self.t], [self.rocket.v / 7800], color='black')
 
     def acceleration_of_gravity(self, temp_H):
         return self.const.G * self.const.M / (self.const.R + temp_H) ** 2
 
+    #В атмосфере
     def func(self, temp_H, stage):
         g = self.acceleration_of_gravity(temp_H)
         a = (stage.F - (self.rocket.M + stage.m) * g - self.const.c * self.rocket.s * self.rocket.count *
@@ -155,15 +173,13 @@ class Simulation:
                     self.rocket.M + stage.m)
         return a
 
-    def const_v(self, ax, ax2):
-        temp_H = self.H
-        temp_t = self.t
-        self.H = self.H + self.const.h * self.rocket.v
-        self.t += self.const.h
-        ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='0.1')
-        ax2.plot((temp_t, self.t), (self.rocket.v / 7800, self.rocket.v / 7800), color='0.1')
+    #За пределами атмосферы
+    def func2(self, temp_H, stage):
+        g = self.acceleration_of_gravity(temp_H)
+        a = (stage.F - (self.rocket.M + stage.m) * g )/ (self.rocket.M + stage.m)
+        return a
 
-    def falling(self, ax, ax2, stage):
+    def out_of_atmosphere(self, ax, ax2, stage):
         temp_H = self.H
         temp_t = self.t
         temp_v = self.rocket.v
@@ -174,8 +190,11 @@ class Simulation:
         self.rocket.v += (k1 / 6 + k2 / 3 + k3 / 3 + k4 / 6) * self.const.h
         self.H = self.H + self.const.h * self.rocket.v
         self.t += self.const.h
-        ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='0.1')
-        ax2.plot((temp_t, self.t), (temp_v / 7800, self.rocket.v / 7800), color='0.1')
+        if stage.m <= 0 or self.H <= 0:
+            ax.scatter([self.t], [self.H / 1000], color='red')
+            ax2.scatter([self.t], [self.rocket.v / 7800], color='red')
+        ax.plot((temp_t, self.t), (temp_H / 1000, self.H / 1000), color='black')
+        ax2.plot((temp_t, self.t), (temp_v / 7800, self.rocket.v / 7800), color='black')
 
     def runge4(self, ax, ax2, stage):
         temp_H = self.H
