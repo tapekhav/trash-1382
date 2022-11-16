@@ -183,10 +183,10 @@ class Simulation:
         temp_H = self.H
         temp_t = self.t
         temp_v = self.rocket.v
-        k1 = self.func(self.H, stage)
-        k2 = self.func(self.H + self.const.h * 0.5 * k1, stage)
-        k3 = self.func(self.H + self.const.h * 0.5 * k2, stage)
-        k4 = self.func(self.H + self.const.h * k3, stage)
+        k1 = self.func2(self.H, stage)
+        k2 = self.func2(self.H + self.const.h * 0.5 * k1, stage)
+        k3 = self.func2(self.H + self.const.h * 0.5 * k2, stage)
+        k4 = self.func2(self.H + self.const.h * k3, stage)
         self.rocket.v += (k1 / 6 + k2 / 3 + k3 / 3 + k4 / 6) * self.const.h
         self.H = self.H + self.const.h * self.rocket.v
         self.t += self.const.h
