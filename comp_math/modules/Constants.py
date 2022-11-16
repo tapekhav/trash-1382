@@ -7,3 +7,4 @@ class Constants:
     c = 0.45
     b = 0.00129
     s = 20
+    h_relative = 10 ** (-10)
