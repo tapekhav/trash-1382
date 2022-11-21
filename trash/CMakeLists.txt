@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 project(trash_1382)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 include_directories(Background)
 include_directories(Characters)
@@ -12,14 +12,14 @@ include_directories(Events/ChangeField)
 include_directories(Events/ChangePlayer)
 
 add_executable(trash_1382
-        Background/Cell.cpp
-        Background/Cell.h
-        Background/CellView.cpp
-        Background/CellView.h
-        Background/Field.cpp
-        Background/Field.h
-        Background/FIeldView.cpp
-        Background/FieldView.h
+        Background/Cell/Cell.cpp
+        Background/Cell/Cell.h
+        Background/Cell/CellView.cpp
+        Background/Cell/CellView.h
+        Background/Field/Field.cpp
+        Background/Field/Field.h
+        Background/Field/FIeldView.cpp
+        Background/Field/FieldView.h
         Characters/Player.cpp
         Characters/Player.h
         Control/CommandReader.cpp
@@ -40,4 +40,4 @@ add_executable(trash_1382
         Events/ChangePlayer/Key.h
         Events/ChangePlayer/Trap.cpp
         Events/ChangePlayer/Trap.h
-        Events/Event.h main.cpp Events/EventCreator.cpp Events/EventCreator.h Events/ChangeField/DelWalls.cpp Events/ChangeField/DelWalls.h Logging/Logger/Logger.h Control/GameStatus.cpp Control/GameStatus.h Logging/Messages/Message.h Logging/Logger/ConsoleLog.cpp Logging/Logger/ConsoleLog.h Logging/Logger/FileLog.cpp Logging/Logger/FileLog.h Logging/LogLevel/GameLog.cpp Logging/LogLevel/GameLog.h Logging/Messages/Message.cpp Logging/LogLevel/Subject.cpp Logging/LogLevel/Subject.h Control/Config/IConfig.h Control/Config/FileConfig.cpp Control/Config/FileConfig.h Control/Config/IConfig.cpp Control/ControlCommands/IController.h Control/ControlCommands/TerminalController.cpp Control/ControlCommands/TerminalController.h)
+        Events/Event.h main.cpp Events/EventCreator.cpp Events/EventCreator.h Events/ChangeField/DelWalls.cpp Events/ChangeField/DelWalls.h Logging/Logger/Logger.h Control/GameStatus.cpp Control/GameStatus.h Logging/Messages/Message.h Logging/Logger/ConsoleLog.cpp Logging/Logger/ConsoleLog.h Logging/Logger/FileLog.cpp Logging/Logger/FileLog.h Logging/LogLevel/GameLog.cpp Logging/LogLevel/GameLog.h Logging/Messages/Message.cpp Logging/LogLevel/Subject.cpp Logging/LogLevel/Subject.h Control/Config/IConfig.h Control/Config/FileConfig.cpp Control/Config/FileConfig.h Control/Config/IConfig.cpp Control/ControlCommands/IController.h Control/ControlCommands/TerminalController.cpp Control/ControlCommands/TerminalController.h Background/Field/FieldGenerator.h Control/Rules/RuleSpawnPlayer.h Control/Rules/RuleDelWalls.h Control/Rules/RuleSpawnWalls.h Control/Rules/RuleSpawnBox.h Control/Rules/RuleSpawnTrap.h)

@@ -2,11 +2,11 @@
 #define LABS_DELWALLS_H
 
 #include "EventField.h"
-#include "../../Background/Field.h"
+#include "Field/Field.h"
 
-class DelWalls final : public EventField {
+class RuleDelWalls final : public EventField {
 public:
-    explicit DelWalls(Field*);
+    explicit RuleDelWalls(Field*);
     void execute() final;
 };
 

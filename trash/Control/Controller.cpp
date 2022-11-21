@@ -1,31 +1,26 @@
 #include "Controller.h"
 
 
-Controller::Controller() : field(Field()), field_view(FieldView(&field)),
-                           player(Player()), game_status(GameStatus()) {}
+Controller::Controller() : field(Field()), field_view(FieldView(&field)), game_status(GameStatus()) {}
 
 
 void Controller::set_field(int width, int height) {
     field = Field(width, height);
-    field.make_field(player);
+    field.make_field();
     field_view = FieldView(&field);
     field_view.update();
 }
 
 void Controller::set_field_standard() {
-    field.make_field(player);
+    field.make_field();
     field_view.update();
 }
 
 void Controller::set_step(Player::STEP step) {
-    field.change_player_location(player, step);
+    field.change_player_location(step);
     if (step != Player::EXIT) {
         field_view.update();
     }
-}
-
-Player *Controller::get_player() {
-    return &player;
 }
 
 Field *Controller::get_field() {

@@ -2,7 +2,7 @@
 #define LABS_NEWLEVEL_H
 
 #include "EventField.h"
-#include "../../Background/Field.h"
+#include "Field/Field.h"
 
 class SetWalls final : public EventField {
 public:

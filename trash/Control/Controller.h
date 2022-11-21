@@ -2,7 +2,7 @@
 #define LABS_CONTROLLER_H
 
 #include "Config/FileConfig.h"
-#include "../Background/FieldView.h"
+#include "Field/FieldView.h"
 #include "GameStatus.h"
 
 class Controller {
@@ -22,7 +22,6 @@ public:
     void set_status_on();
     GameStatus::STATUS get_status() const;
 private:
-    Player          player;
     Field            field;
     FieldView   field_view;
     GameStatus game_status;

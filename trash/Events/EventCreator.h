@@ -1,7 +1,7 @@
 #ifndef LABS_EVENTCREATOR_H
 #define LABS_EVENTCREATOR_H
 
-#include "../Background/Field.h"
+#include "Field/Field.h"
 
 class EventCreator {
 public:

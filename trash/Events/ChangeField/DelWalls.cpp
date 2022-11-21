@@ -1,9 +1,9 @@
 #include "DelWalls.h"
 
-DelWalls::DelWalls(Field *field) {
+RuleDelWalls::RuleDelWalls(Field *field) {
     this->field = field;
 }
 
-void DelWalls::execute() {
+void RuleDelWalls::execute() {
     field->delete_walls();
 }
