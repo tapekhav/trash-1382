@@ -224,6 +224,27 @@ build CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/ControlCommands
 
+build CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/FirstLevel.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/LevelGenerator/GameLevels/FirstLevel.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/FirstLevel.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
+  OBJECT_DIR = CMakeFiles/trash_1382.dir
+  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels
+
+build CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/SecondLevel.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/LevelGenerator/GameLevels/SecondLevel.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/SecondLevel.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
+  OBJECT_DIR = CMakeFiles/trash_1382.dir
+  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels
+
+build CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/LevelContext.cpp.o: CXX_COMPILER__trash_1382_Debug /home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control/LevelGenerator/GameLevels/LevelContext.cpp || cmake_object_order_depends_target_trash_1382
+  DEP_FILE = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/LevelContext.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Background -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Characters -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Control -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Logging -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangeField -I/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/Events/ChangePlayer
+  OBJECT_DIR = CMakeFiles/trash_1382.dir
+  OBJECT_FILE_DIR = CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target trash_1382
@@ -232,7 +253,7 @@ build CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
 #############################################
 # Link the executable trash_1382
 
-build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/Cell/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field/Field.cpp.o CMakeFiles/trash_1382.dir/Background/Field/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o
+build trash_1382: CXX_EXECUTABLE_LINKER__trash_1382_Debug CMakeFiles/trash_1382.dir/Background/Cell/Cell.cpp.o CMakeFiles/trash_1382.dir/Background/Cell/CellView.cpp.o CMakeFiles/trash_1382.dir/Background/Field/Field.cpp.o CMakeFiles/trash_1382.dir/Background/Field/FIeldView.cpp.o CMakeFiles/trash_1382.dir/Characters/Player.cpp.o CMakeFiles/trash_1382.dir/Control/CommandReader.cpp.o CMakeFiles/trash_1382.dir/Control/Controller.cpp.o CMakeFiles/trash_1382.dir/Control/Mediator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/SetWalls.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Box.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Heal.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Key.cpp.o CMakeFiles/trash_1382.dir/Events/ChangePlayer/Trap.cpp.o CMakeFiles/trash_1382.dir/main.cpp.o CMakeFiles/trash_1382.dir/Events/EventCreator.cpp.o CMakeFiles/trash_1382.dir/Events/ChangeField/DelWalls.cpp.o CMakeFiles/trash_1382.dir/Control/GameStatus.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/ConsoleLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Logger/FileLog.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/GameLog.cpp.o CMakeFiles/trash_1382.dir/Logging/Messages/Message.cpp.o CMakeFiles/trash_1382.dir/Logging/LogLevel/Subject.cpp.o CMakeFiles/trash_1382.dir/Control/Config/FileConfig.cpp.o CMakeFiles/trash_1382.dir/Control/Config/IConfig.cpp.o CMakeFiles/trash_1382.dir/Control/ControlCommands/TerminalController.cpp.o CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/FirstLevel.cpp.o CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/SecondLevel.cpp.o CMakeFiles/trash_1382.dir/Control/LevelGenerator/GameLevels/LevelContext.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/trash_1382.dir
   POST_BUILD = :

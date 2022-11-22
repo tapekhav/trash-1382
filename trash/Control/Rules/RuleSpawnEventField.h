@@ -3,10 +3,10 @@
 
 #include "Field/Field.h"
 
-template<int magic_number, class EF>
+template<class EF, int magic_number>
 class RuleSpawnEventField {
+public:
     void operator()(Field &field) {
-        auto player = field.get_player();
         int flag = 0;
 
         for (int i = 1; i != field.get_height(); ++i) {

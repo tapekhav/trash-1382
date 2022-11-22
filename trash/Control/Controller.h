@@ -22,7 +22,7 @@ public:
     void set_status_on();
     GameStatus::STATUS get_status() const;
 private:
-    Field            field;
+    Field*           field;
     FieldView   field_view;
     GameStatus game_status;
 };

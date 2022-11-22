@@ -7,6 +7,7 @@
 
 template<int magic_number, int damage, int max_count>
 class RuleSpawnTrap {
+public:
     void operator()(Field& field) {
         auto player = field.get_player();
         int k = 0;

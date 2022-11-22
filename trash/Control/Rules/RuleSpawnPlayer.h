@@ -4,7 +4,7 @@
 #include <utility>
 #include <Field/Field.h>
 
-template<int x, int y>
+template<int x = 0, int y = 0>
 class RuleSpawnPlayer {
 public:
     void operator()(Field& field) {

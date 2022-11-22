@@ -64,23 +64,10 @@ void Field::set_player_location(int x, int y) {
     player_location.second = y;
 }
 
-void Field::make_field() {
-    EventCreator event_creator(player, this);
-    event_creator.set_events();
-    for(size_t i = 0; i != height; ++i) {
-        for(size_t j = 0; j != width; ++j) {
-            if (i == j + 1 && field.at(i).at(j).get_event() == nullptr)
-                field.at(i).at(j).set_pass(false);
-        }
-    }
-}
-
 void Field::generate_walls() {
     player_location = {0, 0};
-    for (size_t i = 0; i != height; ++i) {
-        for (size_t j = 1; j != width; ++j) {
-            if (dynamic_cast<Key*>(field.at(i).at(j).get_event()) != nullptr)
-                continue;
+    for (int i = 0; i != height - 1; ++i) {
+        for (int j = 1; j != width - 1; ++j) {
             std::mt19937 rng{std::random_device{}()};
             std::uniform_int_distribution<int> dist(1, 10);
             field.at(i).at(j).set_event(nullptr);

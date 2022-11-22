@@ -6,6 +6,7 @@
 
 template<int magic_number>
 class RuleSpawnKeys {
+public:
     void operator()(Field& field) {
         auto player = field.get_player();
 

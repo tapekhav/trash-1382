@@ -24,7 +24,6 @@ public:
 
     void generate_walls();
     void delete_walls();
-    void make_field();
 
     void change_player_location(Player::STEP);
     std::pair<int, int> get_player_location() const;

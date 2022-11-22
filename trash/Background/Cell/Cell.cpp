@@ -1,6 +1,9 @@
 #include "Cell.h"
 
-Cell::Cell() : pass(true), event(nullptr) {}
+Cell::Cell() {
+    pass = true;
+    event = nullptr;
+}
 
 void Cell::update() {
     if (event != nullptr)

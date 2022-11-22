@@ -1,34 +1,46 @@
 #include "Controller.h"
+#include "Field/FieldGenerator.h"
+#include "Rules/RuleSpawnEventField.h"
+#include "Rules/RuleSpawnEventPlayer.h"
+#include "Rules/RuleSpawnKeys.h"
+#include "Rules/RuleSpawnTrap.h"
+#include "Rules/RuleSpawnWalls.h"
+#include "Rules/RuleSpawnPlayer.h"
 
 
-Controller::Controller() : field(Field()), field_view(FieldView(&field)), game_status(GameStatus()) {}
-
+Controller::Controller() : field_view(nullptr), game_status(GameStatus()) {
+    FieldGenerator<RuleSpawnKeys<22>,
+                   RuleSpawnPlayer<5, 5>,
+                   RuleSpawnEventField<SetWalls, 4>,
+                   RuleSpawnWalls<11>,
+                   RuleSpawnTrap<1488, 228, 1>,
+                   RuleSpawnEventPlayer<Box, 1337>> gen;
+    field = gen.fill(10, 10);
+    field_view = FieldView(field);
+}
 
 void Controller::set_field(int width, int height) {
-    field = Field(width, height);
-    field.make_field();
-    field_view = FieldView(&field);
+    field_view = FieldView(field);
     field_view.update();
 }
 
 void Controller::set_field_standard() {
-    field.make_field();
     field_view.update();
 }
 
 void Controller::set_step(Player::STEP step) {
-    field.change_player_location(step);
+    field->change_player_location(step);
     if (step != Player::EXIT) {
         field_view.update();
     }
 }
 
 Player *Controller::get_player() {
-    return field.get_player();
+    return field->get_player();
 }
 
 Field *Controller::get_field() {
-    return &field;
+    return field;
 }
 
 GameStatus *Controller::get_game_status() {

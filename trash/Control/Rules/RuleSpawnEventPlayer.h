@@ -4,8 +4,9 @@
 
 #include "Field/Field.h"
 
-template<int magic_number, int max_count, class EP>
+template<class EP, int magic_number, int max_count = 1>
 class RuleSpawnEventPlayer {
+public:
     void operator()(Field& field) {
         auto player = field.get_player();
         int k = 0;
@@ -14,7 +15,7 @@ class RuleSpawnEventPlayer {
             for (int j = 0; j != field.get_width(); ++j) {
                 if (k == max_count) return;
                 if ((magic_number / i) % field.get_height() % 7 == 0
-                && (magic_number / j) % field.get_width() % 7 == 0 && field.get_cur_cell(j, i).get_event() == nullptr) {
+                && (magic_number / (j + 1)) % field.get_width() % 7 == 0 && field.get_cur_cell(j, i).get_event() == nullptr) {
                     field.get_cur_cell(j, i).set_event(new EP(player));
                     ++k;
                 }
