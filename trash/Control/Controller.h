@@ -4,6 +4,7 @@
 #include "Config/FileConfig.h"
 #include "Field/FieldView.h"
 #include "GameStatus.h"
+#include "Strategy/LevelContext.h"
 
 class Controller {
 public:
@@ -22,7 +23,9 @@ public:
     void set_status_on();
     GameStatus::STATUS get_status() const;
 private:
-    Field*           field;
+    void set_field_view();
+
+    LevelContext   context;
     FieldView   field_view;
     GameStatus game_status;
 };
