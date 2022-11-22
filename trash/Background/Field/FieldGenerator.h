@@ -12,8 +12,8 @@
 template<class... Rules>
 class FieldGenerator {
 public:
-    Field* fill(int width, int height) {
-        auto* field = new Field(width, height);
+    Field* fill() {
+        Field* field;
         (Rules()(*field),...);
 
         return field;
