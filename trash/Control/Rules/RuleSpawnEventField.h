@@ -9,8 +9,8 @@ public:
     void operator()(Field &field) {
         int flag = 0;
 
-        for (int i = 1; i != field.get_height(); ++i) {
-            for (int j = 0; j != field.get_width(); ++j) {
+        for (int i = 1; i != field.get_height() - 1; ++i) {
+            for (int j = 0; j != field.get_width() - 1; ++j) {
                 if (flag == 1) return;
                 if ((i * magic_number) % field.get_height() % 7 == 4
                 && (j * magic_number) % field.get_width() % 7 == 4) {

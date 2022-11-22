@@ -1,21 +1,17 @@
 #include "Controller.h"
 #include "Field/FieldGenerator.h"
-#include "Rules/RuleSpawnEventField.h"
-#include "Rules/RuleSpawnEventPlayer.h"
-#include "Rules/RuleSpawnKeys.h"
-#include "Rules/RuleSpawnTrap.h"
-#include "Rules/RuleSpawnWalls.h"
-#include "Rules/RuleSpawnPlayer.h"
 
 
 Controller::Controller() : field_view(nullptr), game_status(GameStatus()) {
     FieldGenerator<RuleSpawnKeys<22>,
-                   RuleSpawnPlayer<5, 5>,
-                   RuleSpawnEventField<SetWalls, 4>,
-                   RuleSpawnWalls<11>,
-                   RuleSpawnTrap<1488, 228, 1>,
-                   RuleSpawnEventPlayer<Box, 1337>> gen;
-    field = gen.fill(10, 10);
+            RuleSpawnPlayer<0, 0>,
+            RuleSpawnEventField<SetWalls, 13>,
+            RuleSpawnEventField<DelWalls, 12>,
+            RuleSpawnWalls<773>,
+            RuleSpawnTrap<88, 5, 10>,
+            RuleSpawnEventPlayer<Box, 51>,
+            RuleSpawnEventPlayer<Heal, 11>> gen;
+    field = gen.fill(25, 25);
     field_view = FieldView(field);
 }
 

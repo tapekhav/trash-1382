@@ -1,12 +1,12 @@
 #include "CellView.h"
 
 CellView::CellView(const Cell& c) {
-    if (c.get_event() != nullptr) {
-        cell = 'e';
-        return;
-    }
     if (!c.get_pass()) {
         cell = '/';
+        return;
+    }
+    if (c.get_event() != nullptr) {
+        cell = 'e';
         return;
     }
     cell = ' ';
