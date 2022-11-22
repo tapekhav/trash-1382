@@ -17,6 +17,8 @@ public:
     char get_error_log() final;
     char get_status_log() final;
     ~TerminalController() final = default;
+    int get_num_level() final;
+
 
     char read_char();
     int read_num();

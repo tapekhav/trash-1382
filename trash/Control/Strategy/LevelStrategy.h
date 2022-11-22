@@ -6,7 +6,7 @@
 
 class LevelStrategy {
 public:
-    virtual Field* generate_level(int, int) const = 0;
+    virtual Field* generate_level() = 0;
     virtual ~LevelStrategy() = default;
 };
 

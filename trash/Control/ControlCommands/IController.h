@@ -17,6 +17,8 @@ public:
     virtual char get_error_log() = 0;
     virtual char get_status_log() = 0;
 
+    virtual int get_num_level() = 0;
+
     virtual ~IController() = default;
 protected:
     char ch;

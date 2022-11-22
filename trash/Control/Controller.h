@@ -10,8 +10,6 @@ class Controller {
 public:
     Controller();
 
-    void set_field(int, int);
-    void set_field_standard();
     void set_step(Player::STEP);
 
     Player*     get_player();
@@ -22,8 +20,9 @@ public:
     void check_end_game();
     void set_status_on();
     GameStatus::STATUS get_status() const;
+
+    void set_level(int);
 private:
-    void set_field_view();
 
     LevelContext   context;
     FieldView   field_view;

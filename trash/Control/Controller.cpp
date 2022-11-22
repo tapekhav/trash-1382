@@ -1,22 +1,23 @@
 #include "Controller.h"
+#include "Strategy/GameLevels/FirstLevel.h"
+#include "Strategy/GameLevels/SecondLevel.h"
 
 
 Controller::Controller() : field_view(nullptr), game_status(GameStatus()), context() {}
 
-void Controller::set_field_view() {
+
+void Controller::set_level(int num) {
+    if (num == 1) {
+        context.set_strategy(std::make_unique<FirstLevel>());
+    } else {
+        context.set_strategy(std::make_unique<SecondLevel>());
+    }
+    context.set_level();
+
     field_view = FieldView(context.get_field());
     field_view.update();
 }
 
-void Controller::set_field(int width, int height) {
-    context.set_field_size(width, height);
-    set_field_view();
-}
-
-void Controller::set_field_standard() {
-    context.set_field_size();
-    set_field_view();
-}
 
 void Controller::set_step(Player::STEP step) {
     context.get_field()->change_player_location(step);

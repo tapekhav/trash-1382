@@ -1,7 +1,8 @@
 #include "FirstLevel.h"
 
-Field *FirstLevel::generate_level(int width, int height) {
-    FieldGenerator<RuleSpawnKeys<22>,
+Field *FirstLevel::generate_level() {
+    FieldGenerator<RuleFieldSize<15, 15>,
+                   RuleSpawnKeys<22>,
                    RuleSpawnPlayer<5, 5>,
                    RuleSpawnEventField<SetWalls, 4>,
                    RuleSpawnWalls<13>,
@@ -9,5 +10,5 @@ Field *FirstLevel::generate_level(int width, int height) {
                    RuleSpawnEventPlayer<Box, 66>,
                    RuleSpawnEventPlayer<Heal, 17>> gen;
 
-    return gen.fill(width, height);
+    return gen.fill();
 }

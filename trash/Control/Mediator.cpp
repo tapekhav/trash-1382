@@ -10,12 +10,12 @@ Mediator::~Mediator() {
 
 void Mediator::start() {
     input.get_src();
+    game.set_level(input.get_num_level());
     auto vec = input.read_loggers();
     init_logs(vec);
     game.set_status_on();
 
     std::map<char, Player::STEP> settings = set_config();
-    set_field();
 
     play(settings);
 
@@ -54,15 +54,6 @@ void Mediator::play(const std::map<char, Player::STEP>& settings) {
 
         game.check_win_game();
         game.check_end_game();
-    }
-}
-
-void Mediator::set_field() {
-    if (input.read_char() == 'y') {
-        game.set_field_standard();
-    } else {
-        input.read_size();
-        game.set_field(input.get_width(), input.get_height());
     }
 }
 

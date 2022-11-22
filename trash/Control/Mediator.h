@@ -14,7 +14,6 @@ private:
     void init_logs(std::vector<Logger*>& loggers);
     void play(const std::map<char, Player::STEP>&);
 
-    void set_field();
     std::map<char, Player::STEP> set_config();
 
     CommandReader input;

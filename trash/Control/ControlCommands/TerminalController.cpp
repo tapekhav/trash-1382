@@ -61,3 +61,9 @@ int TerminalController::read_num() {
     std::cin >> num;
     return num;
 }
+
+int TerminalController::get_num_level() {
+    std::cout << "Выберите уровень игры. Для того, чтобы выбрать первый уровень напишите цифры 1. "
+                 "Остальные введенные цифры поставят уровень 2. ";
+    return read_num();
+}

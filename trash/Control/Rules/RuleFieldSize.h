@@ -5,7 +5,9 @@
 
 template<int width = 10, int height = 10>
 class RuleFieldSize {
+public:
     void operator()(Field* field) {
+        delete field;
         field = new Field(width, height);
     }
 };

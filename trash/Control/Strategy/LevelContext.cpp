@@ -7,13 +7,9 @@ void LevelContext::set_strategy(std::unique_ptr<LevelStrategy> &&strategy) {
 }
 
 void LevelContext::set_level() {
-    field = level->generate_level(width, height);
+    field = level->generate_level();
 }
 
-void LevelContext::set_field_size(int width, int height) {
-    this->width = width;
-    this->height = height;
-}
 
 Field *LevelContext::get_field() {
     return field;

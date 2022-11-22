@@ -32,7 +32,7 @@ char CommandReader::read_char() {
 
 void CommandReader::get_src() {
     char ch;
-    std::cout << "Откуда будет считываться управление? Любой символ - из консоли.";
+    std::cout << "Откуда будет считываться управление? Любой символ - из консоли. ";
     std::cin >> ch;
     if (ch) control = new TerminalController;
 }
@@ -95,4 +95,8 @@ void CommandReader::check(int &arg) {
         notify(Message(Message::Error, "the value was entered incorrectly"));
         arg = 10;
     }
+}
+
+int CommandReader::get_num_level() {
+    return control->get_num_level();
 }

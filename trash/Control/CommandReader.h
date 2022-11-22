@@ -18,6 +18,8 @@ public:
     char read_config();
     void get_src();
 
+    int get_num_level();
+
     std::vector<Logger*> read_loggers();
     char get_game_log();
     char get_error_log();

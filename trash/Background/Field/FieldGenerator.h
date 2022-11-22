@@ -7,14 +7,15 @@
 #include "Rules/RuleSpawnTrap.h"
 #include "Rules/RuleSpawnWalls.h"
 #include "Rules/RuleSpawnPlayer.h"
+#include "Rules/RuleFieldSize.h"
 #include "Field.h"
 
 template<class... Rules>
 class FieldGenerator {
 public:
     Field* fill() {
-        Field* field;
-        (Rules()(*field),...);
+        auto* field = new Field;
+        (Rules()(field),...);
 
         return field;
     }

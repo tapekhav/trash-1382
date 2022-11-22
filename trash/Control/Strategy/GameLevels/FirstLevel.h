@@ -5,7 +5,7 @@
 
 class FirstLevel final : public LevelStrategy {
 public:
-    Field* generate_level(int, int);
+    Field* generate_level();
 };
 
 
