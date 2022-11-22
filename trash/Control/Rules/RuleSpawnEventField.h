@@ -1,10 +1,10 @@
-#ifndef LABS_RULESPAWNNEWWALLS_H
-#define LABS_RULESPAWNNEWWALLS_H
+#ifndef LABS_RULEDELWALLS_H
+#define LABS_RULEDELWALLS_H
 
 #include "Field/Field.h"
 
-template<int magic_number>
-class RuleSpawnNewWalls {
+template<int magic_number, class EF>
+class RuleSpawnEventField {
     void operator()(Field &field) {
         auto player = field.get_player();
         int flag = 0;
@@ -12,16 +12,15 @@ class RuleSpawnNewWalls {
         for (int i = 1; i != field.get_height(); ++i) {
             for (int j = 0; j != field.get_width(); ++j) {
                 if (flag == 1) return;
-                if ((i / magic_number) % field.get_height() % 5 == 1
-                    && (j / magic_number) % field.get_width() % 5 == 1) {
+                if ((i * magic_number) % field.get_height() % 7 == 4
+                && (j * magic_number) % field.get_width() % 7 == 4) {
                     field.get_cur_cell(j, i).set_pass(true);
-                    field.get_cur_cell(j, i).set_event(new SetWalls(&field));
+                    field.get_cur_cell(j, i).set_event(new EF(&field));
                     flag = 1;
                 }
             }
         }
     }
 };
-
 
 #endif
