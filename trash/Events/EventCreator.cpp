@@ -11,7 +11,7 @@ void EventCreator::set_events() {
     set_cell(new Heal(player), array);
     set_cell(new Trap(player, damage(rng)), array);
     set_cell(new SetWalls(field), array);
-    set_cell(new RuleDelWalls(field), array);
+    set_cell(new DelWalls(field), array);
 
     field->get_cur_cell(field->get_width() - 1, 0).set_event(new Key(player));
     field->get_cur_cell(0, field->get_height() - 1).set_event(new Key(player));

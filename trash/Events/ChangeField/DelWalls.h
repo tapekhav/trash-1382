@@ -4,9 +4,9 @@
 #include "EventField.h"
 #include "Field/Field.h"
 
-class RuleDelWalls final : public EventField {
+class DelWalls final : public EventField {
 public:
-    explicit RuleDelWalls(Field*);
+    explicit DelWalls(Field*);
     void execute() final;
 };
 
