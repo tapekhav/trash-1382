@@ -11,7 +11,7 @@ public:
         if (field->get_cur_cell(x, y).get_pass() && field->get_cur_cell(x, y).get_event() == nullptr)
             field->set_player_location(x, y);
         else
-            field->get_cur_cell(0, 0);
+            field->set_player_location(0, 0);
     }
 };
 
