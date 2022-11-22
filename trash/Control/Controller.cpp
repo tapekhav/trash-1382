@@ -23,6 +23,10 @@ void Controller::set_step(Player::STEP step) {
     }
 }
 
+Player *Controller::get_player() {
+    return field.get_player();
+}
+
 Field *Controller::get_field() {
     return &field;
 }
@@ -32,12 +36,12 @@ GameStatus *Controller::get_game_status() {
 }
 
 void Controller::check_end_game() {
-    if (player.get_health() <= 0)
+    if (get_player()->get_health() <= 0)
         game_status.set_status_off(GameStatus::LOSE);
 }
 
 void Controller::check_win_game() {
-    if (player.get_keys() == 2)
+    if (get_player()->get_keys() == 2)
         game_status.set_status_off(GameStatus::WIN);
 }
 

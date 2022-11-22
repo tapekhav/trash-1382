@@ -29,15 +29,15 @@ public:
     void change_player_location(Player::STEP);
     std::pair<int, int> get_player_location() const;
     void set_player_location(int, int);
-    void set_player(const Player&);
 
     int get_height() const;
     int get_width()  const;
     Cell& get_cur_cell(int, int);
+    Player* get_player();
 private:
     void swap(Field&);
 
-    Player player;
+    Player* player;
     std::vector<std::vector<Cell>> field;
     int height;
     int width;

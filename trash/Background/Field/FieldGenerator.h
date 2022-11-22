@@ -6,8 +6,8 @@
 template<class... Rules>
 class FieldGenerator {
 public:
-    Field fill() {
-        Field field;
+    Field fill(int width, int height) {
+        Field field(width, height);
         (Rules(field),...);
 
         return field;

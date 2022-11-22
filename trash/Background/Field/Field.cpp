@@ -1,6 +1,6 @@
 #include "Field.h"
 
-Field::Field(int width, int height) : width(width), height(height) {
+Field::Field(int width, int height) : width(width), height(height), player(new Player) {
     for (size_t i = 0; i != height; ++i) {
         field.emplace_back();
         for (size_t j = 0; j != width; ++j)
@@ -12,6 +12,8 @@ Field::~Field() {
     for (size_t i = 0; i != height; ++i)
         for (size_t j = 0; j != width; ++j)
             field.at(i).at(j).set_event(nullptr);
+
+    delete player;
 }
 
 Field::Field(const Field &other)
@@ -29,6 +31,7 @@ void Field::swap(Field &other) {
     std::swap(height, other.height);
     std::swap(field, other.field);
     std::swap(player_location, other.player_location);
+    std::swap(player, other.player);
 }
 
 Field& Field::operator=(const Field &other) {
@@ -61,12 +64,8 @@ void Field::set_player_location(int x, int y) {
     player_location.second = y;
 }
 
-void Field::set_player(const Player& player) {
-    this->player = player;
-}
-
 void Field::make_field() {
-    EventCreator event_creator(&player, this);
+    EventCreator event_creator(player, this);
     event_creator.set_events();
     for(size_t i = 0; i != height; ++i) {
         for(size_t j = 0; j != width; ++j) {
@@ -150,4 +149,8 @@ int Field::get_height() const {
 
 int Field::get_width() const {
     return width;
+}
+
+Player *Field::get_player() {
+    return player;
 }

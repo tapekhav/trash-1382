@@ -1,12 +1,10 @@
-#ifndef LABS_RULESPAWNTRAP_H
-#define LABS_RULESPAWNTRAP_H
+#ifndef LABS_RULESPAWNHEAL_H
+#define LABS_RULESPAWNHEAL_H
 
-#include <utility>
 #include "Field/Field.h"
-#include "../Characters/Player.h"
 
 template<int magic_number, int damage, int count>
-class RuleSpawnTrap {
+class RuleSpawnHeal {
     void operator()(Field& field) {
         auto player = field.get_player();
 
@@ -22,5 +20,6 @@ class RuleSpawnTrap {
         }
     }
 };
+
 
 #endif

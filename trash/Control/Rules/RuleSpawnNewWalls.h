@@ -1,0 +1,7 @@
+#ifndef LABS_RULESPAWNNEWWALLS_H
+#define LABS_RULESPAWNNEWWALLS_H
+
+
+
+
+#endif
