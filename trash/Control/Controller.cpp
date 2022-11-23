@@ -5,9 +5,13 @@
 
 Controller::Controller() : field_view(nullptr), game_status(GameStatus()), context() {}
 
+Controller::~Controller() {
+    delete context.get_field();
+}
 
-void Controller::set_level(int num) {
-    if (num == 1) {
+
+void Controller::set_level(char num) {
+    if (num == '1') {
         context.set_strategy(std::make_unique<FirstLevel>());
     } else {
         context.set_strategy(std::make_unique<SecondLevel>());

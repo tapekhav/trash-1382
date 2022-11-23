@@ -9,6 +9,7 @@
 class Controller {
 public:
     Controller();
+    ~Controller();
 
     void set_step(Player::STEP);
 
@@ -21,7 +22,7 @@ public:
     void set_status_on();
     GameStatus::STATUS get_status() const;
 
-    void set_level(int);
+    void set_level(char);
 private:
 
     LevelContext   context;

@@ -1,5 +1,5 @@
 right: r
-left: r
-up: r
-down: r
+left: l
+up: u
+down: d
 exit: q

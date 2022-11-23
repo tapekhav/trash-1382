@@ -50,18 +50,18 @@ char CommandReader::get_status_log() {
 }
 
 std::vector<Logger*> CommandReader::read_loggers() {
-    int number;
+    char number;
     std::vector<Logger*> loggers;
 
     number = control->get_logs();
 
-    if (number == 1) {
+    if (number == '1') {
         loggers.push_back(new ConsoleLog);
     }
-    if (number == 2) {
+    if (number == '2') {
         loggers.push_back(new FileLog(read_file_name()));
     }
-    if (number == 3) {
+    if (number == '3') {
         loggers.push_back(new ConsoleLog);
         loggers.push_back(new FileLog(read_file_name()));
     }
@@ -97,6 +97,6 @@ void CommandReader::check(int &arg) {
     }
 }
 
-int CommandReader::get_num_level() {
+char CommandReader::get_num_level() {
     return control->get_num_level();
 }

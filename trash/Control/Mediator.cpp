@@ -15,7 +15,7 @@ void Mediator::start() {
     init_logs(vec);
     game.set_status_on();
 
-    std::map<char, Player::STEP> settings = set_config();
+    auto settings = set_config();
 
     play(settings);
 

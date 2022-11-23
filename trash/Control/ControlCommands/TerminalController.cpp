@@ -32,9 +32,9 @@ std::string TerminalController::get_file_name() {
     return file_name;
 }
 
-int TerminalController::get_logs() {
+char TerminalController::get_logs() {
     std::cout << "Введите, куда будут выводиться логи (1 - в консоль, 2 - в файл, 3 - в консоль и в файл): ";
-    return read_num();
+    return read_char();
 }
 
 char TerminalController::get_game_log() {
@@ -62,8 +62,8 @@ int TerminalController::read_num() {
     return num;
 }
 
-int TerminalController::get_num_level() {
+char TerminalController::get_num_level() {
     std::cout << "Выберите уровень игры. Для того, чтобы выбрать первый уровень напишите цифры 1. "
-                 "Остальные введенные цифры поставят уровень 2. ";
-    return read_num();
+                 "Остальные введенные символы поставят уровень 2. ";
+    return read_char();
 }
