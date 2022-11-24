@@ -19,3 +19,7 @@ std::vector <OUTPUT> Settings::get_outputs() {
 std::vector <LEVEL> Settings::get_levels() {
     return this->levels;
 }
+
+COMPLEXITY Settings::get_complexity() const {
+    return this->complexity;
+}

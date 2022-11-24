@@ -16,3 +16,8 @@ enum MOVES {
     NOWHERE,
     EXIT
 };
+
+enum COMPLEXITY {
+    EASY = 1,
+    HARD = 2,
+};

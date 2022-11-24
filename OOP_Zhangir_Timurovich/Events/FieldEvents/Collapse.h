@@ -4,7 +4,7 @@
 
 class Collapse : public FieldEvent {
 public:
-    Collapse(Field *field, Player *player);
+    explicit Collapse(Field *field, Player* player);
 
 
     ~Collapse() override = default;

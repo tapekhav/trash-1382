@@ -29,8 +29,8 @@ protected:
     };
     const std::map<MOVES, char> control_default = {
             {MOVES::UP,    'w'},
-            {MOVES::DOWN,  'a'},
-            {MOVES::LEFT,  's'},
+            {MOVES::DOWN,  's'},
+            {MOVES::LEFT,  'a'},
             {MOVES::RIGHT, 'd'},
             {MOVES::EXIT,  'q'}
     };

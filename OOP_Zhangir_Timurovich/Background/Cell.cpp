@@ -29,17 +29,17 @@ void Cell::set_event(Event *new_event) {
 Cell &Cell::operator=(Cell &&other)
 
 noexcept {
-if (this != &other)
-this->
-swap(other);
-return *this;
+    if (this != &other)
+        this->
+                swap(other);
+    return *this;
 }
 
 Cell::Cell(Cell &&other)
 
 noexcept {
-this->
-swap(other);
+    this->
+            swap(other);
 }
 
 Cell::Cell(const Cell &other) {

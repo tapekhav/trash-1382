@@ -6,8 +6,8 @@
 
 void ErrorsObserver::update(Message &msg) {
     if(msg.getType() == ERROR){
-        Logger logger(msg.get_info());
-        logger.print(msg);
+//        Logger logger(msg.get_info());
+        LOG.print(msg);
     }
 }
 

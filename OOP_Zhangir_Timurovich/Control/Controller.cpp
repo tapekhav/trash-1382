@@ -2,18 +2,34 @@
 #include "ConsoleReader.h"
 #include "../Logging/logs/GameObserver.h"
 #include "../Logging/logs/ErrorsObserver.h"
+#include "../Background/FieldGeneration/FieldGenerator.h"
+#include "../Background/FieldGeneration/Rules/CoinSetRule.h"
+#include "../Background/FieldGeneration/Rules/CollapseSetRule.h"
+#include "../Background/FieldGeneration/Rules/EnemySpawnRule.h"
+#include "../Background/FieldGeneration/Rules/FieldCreaseRule.h"
+#include "../Background/FieldGeneration/Rules/HealSetRule.h"
+#include "../Background/FieldGeneration/Rules/PlayerSpawnRule.h"
+#include "../Background/FieldGeneration/Rules/WallSetRule.h"
+#include "../Info/Enums.h"
+//FieldGenerator<coin(EASY), clp(EASY), enemy(EASY), crease(EASY), plr(EASY), wall(EASY)>
+//        generator;
+#define coin(level)  CoinSetRule<level>
+#define clp(level)  CollapseSetRule<level>
+#define enemy(level)  EnemySpawnRule<level>
+#define crease(level)  FieldCreaseRule<level>
+#define plr(level)  PlayerSpawnRule<level>
+#define wall(level)  WallSetRule<level>
+#define heal(level)  HealSetRule<level>
 
-
-Controller::Controller(LogOutInfo *info, int width, int height, int health, int armour, int
-damage) {
+Controller::Controller(LogOutInfo *info, COMPLEXITY comp, int width, int height, int
+health, int armour, int damage) {
     this->player = new Player(info, health, armour, damage);
-    this->field = new Field(info, width, height);
-    this->field_view = FieldView(this->field);
     this->player_view = PlayerView(this->player);
     this->log_out_info = info;
     new GameObserver(this->player);
-    new GameObserver(this->field);
-    new ErrorsObserver(this->field);
+    this->height = height;
+    this->width = width;
+    this->complexity = comp;
 }
 
 void Controller::show_field() {
@@ -24,7 +40,19 @@ void Controller::show_field() {
 void Controller::create_field() {
     Message message(STATUS, "Game started", log_out_info);
     notify(message);
-    this->field->create_field(player);
+    if (complexity == EASY) {
+        FieldGenerator<coin(EASY), clp(EASY), enemy(EASY),
+                crease(EASY), plr(EASY), wall(EASY), heal(EASY) > generator;
+        this->field = generator.fill(this->log_out_info, this->player, width, height);
+    } else {
+        FieldGenerator<coin(HARD), clp(HARD), enemy(HARD),
+                crease(HARD), plr(HARD), wall(HARD), heal(HARD) > generator;
+        this->field = generator.fill(this->log_out_info, this->player, width, height);
+    }
+
+    this->field_view = FieldView(this->field);
+    new GameObserver(this->field);
+    new ErrorsObserver(this->field);
 }
 
 
@@ -59,5 +87,6 @@ bool Controller::move_player(MOVES move) {
 LogOutInfo *Controller::get_info() {
     return this->log_out_info;
 }
+
 
 

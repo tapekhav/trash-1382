@@ -34,6 +34,8 @@ public:
 
     Event *create_LoseEvent();
 
+    Field *get_field();
+
 private:
     Field *field;
     Player *player;

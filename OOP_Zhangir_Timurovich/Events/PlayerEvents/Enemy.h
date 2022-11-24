@@ -5,7 +5,7 @@
 
 class Enemy : public PlayerEvent {
 public:
-    Enemy(Player* player);
+    explicit Enemy(Player* player);
 
     ~Enemy() override = default;
 

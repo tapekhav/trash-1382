@@ -6,7 +6,8 @@
 
 class Field : public Subject {
 public:
-    explicit Field(LogOutInfo *info = nullptr, int width = 10, int height = 10);
+    explicit Field(LogOutInfo *info = nullptr, int width = 10, int
+    height = 10);
 
     Field(Field &&other);
 
@@ -14,7 +15,7 @@ public:
 
     ~Field() = default;
 
-    void create_field(Player *player);
+    void create_field(Player *game_player);
 
     [[nodiscard]] std::vector<int> get_size() const;
 
@@ -45,6 +46,10 @@ public:
 
     int get_height() const;
 
+    void set_player_loc(int x, int y);
+
+
+
 private:
     int width{};
     int height{};
@@ -52,16 +57,16 @@ private:
     int player_y{};
     int width_inc{};
     int height_inc{};
-    std::vector <std::vector<Cell>> field;
+    std::vector<std::vector<Cell>> field;
     LogOutInfo *info;
+
+    void update_events(Player *game_player);
 
     void swap(Field &other);
 
     void update_height();
 
     void update_width();
-
-    void update_events(Player *player);
 
     [[nodiscard]] int get_new_x(int x) const;
 
@@ -70,5 +75,4 @@ private:
     void update_player(int prev_x, int prev_y);
 
     void update_coords();
-
 };

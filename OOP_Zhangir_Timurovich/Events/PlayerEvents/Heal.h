@@ -5,7 +5,7 @@
 
 class Heal : public PlayerEvent {
 public:
-    Heal(Player* player);
+    explicit Heal(Player* player);
 
     ~Heal() override = default;
 

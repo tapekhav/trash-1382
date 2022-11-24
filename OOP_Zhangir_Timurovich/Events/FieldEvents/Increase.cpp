@@ -1,6 +1,6 @@
 #include "Increase.h"
 
-Increase::Increase(Field *field, Player *player) {
+Increase::Increase(Field *field, Player* player) {
     this->player = player;
     this->field = field;
 }

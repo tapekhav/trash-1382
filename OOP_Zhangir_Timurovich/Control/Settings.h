@@ -17,19 +17,24 @@ public:
 
     virtual void set_level() = 0;
 
-    virtual int get_width() const;
+    virtual void set_complexity() = 0;
 
-    virtual int get_height() const;
+    [[nodiscard]] virtual int get_width() const;
 
-    virtual std::vector <LEVEL> get_levels();
+    [[nodiscard]] virtual int get_height() const;
 
-    virtual std::vector <OUTPUT> get_outputs();
+    [[nodiscard]] virtual COMPLEXITY get_complexity() const;
+
+    virtual std::vector<LEVEL> get_levels();
+
+    virtual std::vector<OUTPUT> get_outputs();
 
 protected:
     int width{};
     int height{};
-    std::vector <OUTPUT> outputs;
-    std::vector <LEVEL> levels;
+    COMPLEXITY complexity;
+    std::vector<OUTPUT> outputs;
+    std::vector<LEVEL> levels;
 };
 
 

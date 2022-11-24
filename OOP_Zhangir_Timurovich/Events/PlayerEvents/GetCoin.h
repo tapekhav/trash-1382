@@ -4,7 +4,7 @@
 
 class GetCoin : public PlayerEvent {
 public:
-    GetCoin(Player *player);
+    explicit GetCoin(Player *player);
 
     ~GetCoin() override = default;
 

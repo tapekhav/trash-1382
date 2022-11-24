@@ -42,22 +42,22 @@ Event *EventBuilder::create_CoinEvent() {
 };
 
 Event *EventBuilder::create_EnemyEvent() {
-    Enemy *ev = new Enemy(player);
+    auto *ev = new Enemy(player);
     return ev;
 };
 
 Event *EventBuilder::create_IncreaseEvent() {
-    Increase *ev = new Increase(field, player);
+    auto *ev = new Increase(field, player);
     return ev;
 };
 
 Event *EventBuilder::create_DecreaseEvent() {
-    Decrease *ev = new Decrease(field, player);
+    auto *ev = new Decrease(field, player);
     return ev;
 };
 
 Event *EventBuilder::create_CollapseEvent() {
-    Collapse *ev = new Collapse(field, player);
+    auto *ev = new Collapse(field, player);
     return ev;
 };
 
@@ -69,5 +69,9 @@ Event *EventBuilder::create_WinEvent() {
 Event *EventBuilder::create_LoseEvent() {
     Lose *ev = new Lose(player);
     return ev;
+}
+
+Field *EventBuilder::get_field() {
+    return this->field;
 };
 

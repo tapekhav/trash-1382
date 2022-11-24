@@ -2,37 +2,16 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="Project" targetName="OOP_Zhangir_Timurovich" />
+      <config projectName="OOP_roma" targetName="OOP_roma" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/OOP.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/05c9af84-6a8f-42bf-b62c-57e3208b2b7e.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/e9127e6d-ed8c-4ace-a006-d67abe7c6745.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/FileContentIndex/read.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/v17/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/OOP_Zhangir_Timurovich/v17/Browse.VC.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/ProjectSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/CommandReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/CommandReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/ControlConfig.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.h" beforeDir="false" afterPath="$PROJECT_DIR$/Control/ControlConfig/FileConfig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CppProperties.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kek" beforeDir="false" afterPath="$PROJECT_DIR$/kek" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ебейшая диаграмма.drawio.html" beforeDir="false" afterPath="$PROJECT_DIR$/ебейшая диаграмма.drawio.html" afterDir="false" />
-    </list>
+    <list default="true" id="c481f261-a9fb-495d-993a-21e2d3c73674" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,21 +20,8 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="2FLml06BvssQdJ4usqSu2sEm7Pv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="2HtjTYxF9vJrV2veA5PQKQnz65V" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -69,89 +35,37 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/tracror" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\roman\OneDrive\Рабочий стол\OOP\Ебейшая бюрократия" />
-      <recent name="C:\Users\roman\OneDrive\Рабочий стол\OOP\Info" />
-      <recent name="C:\Users\roman\OneDrive\Документы\GitHub\course-work\OOP_Zhangir_Timurovich\CellTypes" />
-      <recent name="C:\Users\roman\OneDrive\Документы\GitHub\course-work\OOP_Zhangir_Timurovich\Background" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
-    <configuration name="OOP" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration name="OOP_roma" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_roma" TARGET_NAME="OOP_roma" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_roma" RUN_TARGET_NAME="OOP_roma">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="19518a43-511f-48fa-a19d-f0b39ce64b5a" name="Changes" comment="" />
-      <created>1664279885532</created>
+      <changelist id="c481f261-a9fb-495d-993a-21e2d3c73674" name="Changes" comment="" />
+      <created>1669111282998</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1664279885532</updated>
-      <workItem from="1664279886970" duration="1258000" />
-      <workItem from="1664289842141" duration="1064000" />
-      <workItem from="1664378141897" duration="18945000" />
-      <workItem from="1664440886284" duration="480000" />
-      <workItem from="1664442239090" duration="3095000" />
-      <workItem from="1665139302386" duration="8018000" />
-      <workItem from="1665172571986" duration="39000" />
-      <workItem from="1665403059491" duration="22639000" />
-      <workItem from="1665486753845" duration="6767000" />
-      <workItem from="1665494090485" duration="32754000" />
-      <workItem from="1665576282906" duration="25188000" />
-      <workItem from="1665608932159" duration="949000" />
-      <workItem from="1665650491472" duration="1970000" />
-      <workItem from="1666002561438" duration="5248000" />
-      <workItem from="1666041165190" duration="13832000" />
-      <workItem from="1666085633736" duration="14169000" />
-      <workItem from="1666255246812" duration="1109000" />
-      <workItem from="1666297408508" duration="640000" />
-      <workItem from="1666653643846" duration="641000" />
-      <workItem from="1666698981016" duration="11363000" />
-      <workItem from="1666727100231" duration="14171000" />
-      <workItem from="1666786279494" duration="18679000" />
-      <workItem from="1666810388859" duration="14000" />
-      <workItem from="1666810477084" duration="33048000" />
-      <workItem from="1666893897959" duration="1213000" />
-      <workItem from="1666981576084" duration="1415000" />
-      <workItem from="1667336025002" duration="2961000" />
-      <workItem from="1667387182815" duration="2539000" />
-      <workItem from="1667413871533" duration="26000" />
-      <workItem from="1667672816968" duration="8142000" />
-      <workItem from="1667752982629" duration="11735000" />
-      <workItem from="1667812881664" duration="10351000" />
-      <workItem from="1667900657426" duration="8852000" />
-      <workItem from="1668023434316" duration="7398000" />
+      <updated>1669111282998</updated>
+      <workItem from="1669111287649" duration="1657000" />
+      <workItem from="1669112974354" duration="22418000" />
+      <workItem from="1669193455124" duration="2542000" />
+      <workItem from="1669207965737" duration="9044000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

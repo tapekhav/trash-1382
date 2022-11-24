@@ -1,0 +1,3 @@
+C:/Users/roman/CLionProjects/OOP_roma/cmake-build-debug/CMakeFiles/OOP_roma.dir
+C:/Users/roman/CLionProjects/OOP_roma/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/roman/CLionProjects/OOP_roma/cmake-build-debug/CMakeFiles/rebuild_cache.dir

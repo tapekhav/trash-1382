@@ -14,6 +14,8 @@ public:
     void set_output() override;
 
     void set_level() override;
+
+    void set_complexity() override;
 };
 
 

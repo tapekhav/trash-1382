@@ -4,7 +4,6 @@
 
 void Mediator::start_game() {
     new StatusObserver(&(this->controller));
-//    new StatusObserver(this->reader);
     bool res = true;
     MOVES mv = NOWHERE;
     controller.create_field();

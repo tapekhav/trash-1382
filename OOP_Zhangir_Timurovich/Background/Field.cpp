@@ -20,30 +20,35 @@
 
 
 Field::Field(LogOutInfo *info, int width, int height) {
+    LOG.setLogOutInfo(info);
     if (width >= 10 && width <= 40)
         this->width = width;
     if (width > 40) {
         this->width = 40;
         Message message(ERROR, "Too big width", info);
         notify(message);
+//        LOG.print(message);
     }
     if (width < 10) {
         Message message(ERROR, "Too small width", info);
         notify(message);
+//        LOG.print(message);
         this->width = 10;
     }
     if (height >= 10 && height <= 40)
         this->height = height;
-    if (height > 40){
+    if (height > 40) {
         this->height = 40;
         Message message(ERROR, "Too big height", info);
         notify(message);
+//        LOG.print(message);
     }
 
-    if (height < 10){
+    if (height < 10) {
         this->height = 10;
         Message message(ERROR, "Too small height", info);
         notify(message);
+//        LOG.print(message);
     }
     this->player_x = 1;
     this->player_y = 1;
@@ -52,20 +57,24 @@ Field::Field(LogOutInfo *info, int width, int height) {
     this->info = info;
 }
 
-void Field::create_field(Player *player) {
+void Field::create_field(Player *game_player) {
     update_height();
     update_width();
-    this->field = std::vector < std::vector < Cell >> (height, std::vector<Cell>(width));
+    bool flag = false;
+    if (!field.empty())
+        flag = true;
+    this->field = std::vector<std::vector<Cell >>(height, std::vector<Cell>(width));
     for (int y = 0; y < this->height; y++) {
         for (int x = 0; x < this->width; x++) {
             this->field.at(y).at(x) = Cell();
         }
     }
-    update_events(player);
+    if (flag)
+        update_events(game_player);
 }
 
-void Field::update_events(Player *player) {
-    EventBuilder builder(this, player);
+void Field::update_events(Player *game_player) {
+    EventBuilder builder(this, game_player);
     builder.update_events();
 }
 
@@ -74,7 +83,7 @@ Field::Field(const Field &other) {
     this->height = other.height;
     this->player_x = other.player_x;
     this->player_y = other.player_y;
-    std::vector <std::vector<Cell>> map(this->height, std::vector<Cell>(this->width));
+    std::vector<std::vector<Cell>> map(this->height, std::vector<Cell>(this->width));
     for (int y = 0; y < other.height; y++) {
         for (int x = 0; x < other.width; x++) {
             map[y][x] = other.field[y][x];
@@ -127,6 +136,7 @@ bool Field::move_player(Player *player, int x, int y) {
         std::string y_str = std::to_string(this->player_y);
         Message message(GAME, "Player removed to x:" + x_str + " y:" + y_str, info);
         notify(message);
+//        LOG.print(message);
         Cell cl = this->field.at(new_y).at(new_x);
         Event *ev = cl.get_event();
         Event *wn = builder.create_WinEvent();
@@ -143,6 +153,7 @@ bool Field::move_player(Player *player, int x, int y) {
     } else {
         Message message(ERROR, "Impassible cell", info);
         notify(message);
+//        LOG.print(message);
     }
     return true;
 }
@@ -246,5 +257,10 @@ void Field::update_coords() {
 
 void Field::set_cell(int x, int y, Cell cell) {
     field.at(y).at(x) = cell;
+}
+
+void Field::set_player_loc(int x, int y) {
+    this->player_x = x;
+    this->player_y = y;
 }
 

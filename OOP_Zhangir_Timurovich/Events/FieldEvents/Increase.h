@@ -4,7 +4,7 @@
 
 class Increase : public FieldEvent {
 public:
-    Increase(Field* field, Player* player);
+    explicit Increase(Field* field, Player* player);
 
     ~Increase() override = default;
 

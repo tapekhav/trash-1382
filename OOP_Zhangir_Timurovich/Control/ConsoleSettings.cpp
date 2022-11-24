@@ -63,3 +63,15 @@ void ConsoleSettings::set_size() {
     std::cout << "Height: ";
     std::cin >> this->height;
 }
+
+void ConsoleSettings::set_complexity() {
+    char res;
+    std::cout << "Complexity: \n";
+    std::cout << "0 - Easy\n";
+    std::cout << "1 - Hard\n";
+    std::cin >> res;
+    if (res == '1')
+        this->complexity = HARD;
+    else
+        this->complexity = EASY;
+}

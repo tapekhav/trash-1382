@@ -34,12 +34,14 @@ void Player::set_health(int arg) {
         this->health = arg;
     Message message(GAME, "Player health changed", this->info);
     notify(message);
+//    LOG.print(message);
 }
 
 void Player::set_armour(int arg) {
     this->armour = arg;
     Message message(GAME, "Player armour changed", this->info);
     notify(message);
+//    LOG.print(message);
 }
 
 void Player::set_coins(int arg) {
@@ -49,6 +51,7 @@ void Player::set_coins(int arg) {
         this->coins = arg;
     Message message(GAME, "Player coins changed", this->info);
     notify(message);
+//    LOG.print(message);
 }
 
 void Player::set_damage(int arg) {
@@ -58,6 +61,7 @@ void Player::set_damage(int arg) {
         this->damage = arg;
     Message message(GAME, "Player damage changed", this->info);
     notify(message);
+//    LOG.print(message);
 }
 
 bool Player::is_max_health() const {

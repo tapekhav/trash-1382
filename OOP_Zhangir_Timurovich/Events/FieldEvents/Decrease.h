@@ -4,7 +4,7 @@
 
 class Decrease : public FieldEvent {
 public:
-    Decrease(Field *field, Player *player);
+    explicit Decrease(Field *field, Player* player);
 
     ~Decrease() override = default;
 

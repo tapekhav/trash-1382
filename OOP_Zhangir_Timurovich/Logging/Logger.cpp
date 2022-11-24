@@ -13,7 +13,8 @@ void Logger::print(Message &msg) {
     }
 }
 
-Logger::Logger(LogOutInfo *info) {
+
+void Logger::setLogOutInfo(LogOutInfo *info) {
     for (auto elem: info->get_outputs()) {
         switch (elem) {
             case FILEOUT:
@@ -24,4 +25,9 @@ Logger::Logger(LogOutInfo *info) {
                 break;
         }
     }
+}
+
+Logger &Logger::getInstance() {
+    static Logger logger;
+    return logger;
 }
