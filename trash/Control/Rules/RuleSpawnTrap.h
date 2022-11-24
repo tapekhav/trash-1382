@@ -18,6 +18,7 @@ public:
                 if ((i * magic_number) % field->get_height() == j + 1
                     && field->get_cur_cell(j, i).get_event() == nullptr) {
                     field->get_cur_cell(j, i).set_event(new Trap(player, damage));
+                    field->get_cur_cell(j, i).set_pass(true);
                     ++k;
                 }
             }

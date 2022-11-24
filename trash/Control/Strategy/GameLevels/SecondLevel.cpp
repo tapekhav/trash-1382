@@ -3,7 +3,7 @@
 Field *SecondLevel::generate_level() {
     FieldGenerator<RuleFieldSize<>,
                    RuleSpawnKeys<22>,
-                   RuleSpawnPlayer<0, 0>,
+                   RuleSpawnPlayer<>,
                    RuleSpawnEventField<SetWalls, 13>,
                    RuleSpawnEventField<DelWalls, 12>,
                    RuleSpawnWalls<773>,

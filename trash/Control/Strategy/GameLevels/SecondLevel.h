@@ -5,7 +5,7 @@
 
 class SecondLevel final : public LevelStrategy {
 public:
-    Field* generate_level();
+    Field* generate_level() final;
 };
 
 

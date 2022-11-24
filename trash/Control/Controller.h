@@ -24,7 +24,6 @@ public:
 
     void set_level(char);
 private:
-
     LevelContext   context;
     FieldView   field_view;
     GameStatus game_status;

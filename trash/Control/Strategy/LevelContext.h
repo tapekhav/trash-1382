@@ -15,7 +15,6 @@ public:
     Field* get_field();
 private:
     Field* field;
-
     std::unique_ptr<LevelStrategy> level;
 };
 
