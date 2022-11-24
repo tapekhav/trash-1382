@@ -10,5 +10,6 @@ void Subject::Detach(Observer* observer) {
 
 void Subject::Notify(Message const* msg) {
 	for (auto elem : mObservers)
-		elem->Update(msg);
+		if(elem)
+			elem->Update(msg);
 }

@@ -5,46 +5,33 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 	switch (activity)
 	{
 	case EnumClass::FIELD_SIZE:
-		mCommandReader->Start();
-		while (mApproval != 'Y' && mApproval != 'N')
-			mCommandReader->IncorrectInput();
-		if (mApproval == 'Y') {
-			mCommandReader->ReadWidthAndHeight();
-			if (mSize.first < EnumClass::MIN_SIZE) {
-				mSize.first = EnumClass::MIN_SIZE;
-			}
-			else if (mSize.first > EnumClass::MAX_SIZE) {
-				mSize.first = EnumClass::MAX_SIZE;
-			}
-			if (mSize.second < EnumClass::MIN_SIZE) {
-				mSize.second = EnumClass::MIN_SIZE;
-			}
-			else if (mSize.second > EnumClass::MAX_SIZE) {
-				mSize.second = EnumClass::MAX_SIZE;
-			}
-			mCommander->SetFieldSize(mSize.first, mSize.second);
-		}
-		else {
-			system("cls");
-			mCommander->SetFieldSize(EnumClass::STANDARD_SIZE, EnumClass::STANDARD_SIZE);
-		}
-		mGame->SetGameProgress(true);
-		break;
+		mCommander->SetFieldSize(mInputCenter->GetFieldSize());
+		
 	case EnumClass::DO_CMD:
-		while (!DoCmd()) {
-			mCommandReader->Help(false);
-			mCommandReader->IncorrectInput();
+		mCommander->ShowField();
+		switch (mInputCenter->GetCommand())
+		{
+		case EnumClass::RIGHT:
+			mCommander->PlayerGo(EnumClass::RIGHT);
+			break;
+		case EnumClass::UP:
+			mCommander->PlayerGo(EnumClass::UP);
+			break;
+		case EnumClass::LEFT:
+			mCommander->PlayerGo(EnumClass::LEFT);
+			break;
+		case EnumClass::DOWN:
+			mCommander->PlayerGo(EnumClass::DOWN);
+			break;
+		case EnumClass::QUIT:
+			mGame->SetGameProgress(false);
+			break;
 		}
-		break;
-	case EnumClass::FINISH:
-		mCommandReader->GoodBye();
 		break;
 	case EnumClass::DEFEAT:
-		mCommandReader->DefeatMsg();
 		mGame->SetGameProgress(false);
 		break;
 	case EnumClass::VICTORY:
-		mCommandReader->VictoryMsg();
 		mGame->SetGameProgress(false);
 		break;
 	case EnumClass::MOVE_COUNT:
@@ -53,42 +40,4 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 	}
 	
 
-}
-
-void HandleMediator::CharMsg(char& cmd) {
-	mApproval = cmd;
-}
-
-void HandleMediator::PairMsg(std::pair<int, int>& couple) {
-	mSize = couple;
-}
-
-bool HandleMediator::DoCmd() const {
-	mCommander->ShowField();
-	mCommandReader->Read();
-	system("cls");
-	switch (mApproval)
-	{
-	case 'd':
-		mCommander->PlayerGo(EnumClass::RIGHT);
-		break;
-	case 'w':
-		mCommander->PlayerGo(EnumClass::UP);
-		break;
-	case 'a':
-		mCommander->PlayerGo(EnumClass::LEFT);
-		break;
-	case 's':
-		mCommander->PlayerGo(EnumClass::DOWN);
-		break;
-	case 'q':
-		mGame->SetGameProgress(false);
-		break;
-	case 'h':
-		mCommandReader->Help(true);
-		break;
-	default:
-		mCommandReader->IncorrectInput();
-	}
-	return true;
 }

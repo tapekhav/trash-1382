@@ -21,9 +21,9 @@ class Commander : public Handle, public Subject {
 public:
     Commander(Logger* logger);
 
-    void SetFieldSize(int width, int height);
+    void SetFieldSize(std::pair<int,int> fieldSize);
 
-    void PlayerGo(EnumClass::Direction dir);
+    void PlayerGo(EnumClass::Commands dir);
 
     void ShowField();
 

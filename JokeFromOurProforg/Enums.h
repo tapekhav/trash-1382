@@ -9,11 +9,16 @@ public:
         MAX_SIZE = 20
     };
 
-    enum Direction {
+    enum Commands {
+        UNKNOWN,
         RIGHT,
         UP,
         LEFT,
-        DOWN
+        DOWN,
+        QUIT,
+        YES,
+        NO,
+        COUNT_CMD = 8
     };
 
     enum FieldObj {

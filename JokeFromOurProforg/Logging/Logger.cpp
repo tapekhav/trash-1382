@@ -59,4 +59,6 @@ Logger::Logger() : mStatus(nullptr), mError(nullptr), mGame(nullptr) {
 
 Logger::~Logger() {
 	delete mStatus;
+	delete mGame;
+	delete mError;
 }

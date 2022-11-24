@@ -2,33 +2,26 @@
 #define SURVIVAL_HANDLE_MEDIATOR_H
 
 #include "Processing/Mediator.h"
-#include "InputOutput/CommandReader.h"
+#include "InputOutput/InputCenter.h"
 #include "Processing/Commander.h"
 #include "Processing/Game.h"
 #include "Enums.h"
 
 class HandleMediator : public Mediator {
 public:
-	HandleMediator(Commander *commander, CommandReader *commandReader, Game *game): mCommander(commander), 
-															mCommandReader(commandReader), mGame(game) {
+	HandleMediator(Commander *commander, InputCenter *inputCenter, Game *game): mCommander(commander), 
+															mInputCenter(inputCenter), mGame(game) {
 		mCommander->SetMediator(this);
-		mCommandReader->SetMediator(this);
+		mInputCenter->SetMediator(this);
 		mGame->SetMediator(this);
 
 	}
 
 	void Notify(EnumClass::Action activity) override;
-	void CharMsg(char &cmd) override;
-	void PairMsg(std::pair<int, int>& couple) override;
-
-	bool DoCmd() const;
 private:
 	Commander* mCommander;
-	CommandReader* mCommandReader;
+	InputCenter* mInputCenter;
 	Game* mGame;
-
-	char mApproval;
-	std::pair <int, int> mSize;
 };
 
 #endif //SURVIVAL_HANDLE_MEDIATOR_H

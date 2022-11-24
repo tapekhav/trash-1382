@@ -8,7 +8,7 @@ public:
 	IntMessage(int val, std::string comment);
 
 	friend std::ostream& operator <<(std::ostream& out, const IntMessage& intMessage);
-	virtual void PrintMessage(std::ostream& out) const override { out << *this; }
+	void PrintMessage(std::ostream& out) const override { out << *this; }
 private:
 	int mVal;
 };

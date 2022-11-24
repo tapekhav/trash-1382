@@ -11,19 +11,19 @@ int main(){
 	Commander* commander = new Commander(logs);
 	commander->Attach(logs->GetErrorLogger());
 
-	CommandReader* commandReader = new CommandReader;
-	commandReader->Attach(logs->GetErrorLogger());
+	InputCenter* inputCenter = new InputCenter;
+	inputCenter->Attach(logs->GetErrorLogger());
 
 	Game* game = new Game;
 	game->Attach(logs->GetGameLogger());
 
-	Mediator* mediator = new HandleMediator(commander, commandReader, game);
+	Mediator* mediator = new HandleMediator(commander, inputCenter, game);
 
 	game->StartGame();
 
 	delete mediator;
 	delete commander;
-	delete commandReader;
+	delete inputCenter;
 	delete game;
 	delete logs;
 	return 0;

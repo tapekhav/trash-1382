@@ -7,15 +7,15 @@ Commander::Commander(Logger* logger) : mLogger(logger) {
     mStatus = new PlayerViewer;
 }
 
-void Commander::SetFieldSize(int width, int height) {
-    mField = new Field(width, height);
+void Commander::SetFieldSize(std::pair<int,int> fieldSize) {
+    mField = new Field(fieldSize.first, fieldSize.second);
     mField->Attach(mLogger->GetStatusLogger());
     mManager = new EventManager(mPlayer, mField, mLogger);
     mManager->Attach(mLogger->GetStatusLogger());
     mField->SetEventManager(mManager);
 }
 
-void Commander::PlayerGo(EnumClass::Direction dir) {
+void Commander::PlayerGo(EnumClass::Commands dir) {
     mMediator->Notify(EnumClass::MOVE_COUNT);
     srand(time(0));
 
