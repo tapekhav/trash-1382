@@ -1,0 +1,3 @@
+/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/CMakeFiles/LabochkaOOP.dir
+/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/corvussharp/CLionProjects/LabochkaOOP/cmake-build-debug/CMakeFiles/rebuild_cache.dir

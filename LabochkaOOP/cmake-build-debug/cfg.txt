@@ -1,0 +1,5 @@
+UP= v
+DOWN= s
+LEFT= a
+RIGHT= d
+EXIT= e
