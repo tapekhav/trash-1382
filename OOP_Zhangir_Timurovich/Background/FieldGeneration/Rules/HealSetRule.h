@@ -14,16 +14,16 @@
 template<COMPLEXITY comp>
 class HealSetRule {
 public:
-    void operator()(EventBuilder& builder) {
+    void operator()(EventBuilder &builder) {
         Field *field = builder.get_field();
         int height = field->get_height();
         int width = field->get_width();
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                if ((x - y) % (4 / comp) == 0 && x % 2 == 0 && y % (4 / comp) == 0) {
-                    field->get_cell(x, y).set_event(builder.create_HealEvent());
-                    field->get_cell(x, y).set_pass(true);
-                }
+                Cell &cell = field->get_cell(x, y);
+                if ((x - y) % (4 / comp) == 0 && x % 2 == 0 && y % (4 / comp) == 0 && cell.get_pass() &&
+                    field->get_player_x() != x && field->get_player_y() != y && !cell.get_event())
+                    cell.set_event(builder.create_HealEvent());
             }
         }
     }

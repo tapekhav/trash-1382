@@ -40,15 +40,16 @@ void Controller::show_field() {
 void Controller::create_field() {
     Message message(STATUS, "Game started", log_out_info);
     notify(message);
-    if (complexity == EASY) {
-        FieldGenerator<coin(EASY), clp(EASY), enemy(EASY),
-                crease(EASY), plr(EASY), wall(EASY), heal(EASY) > generator;
-        this->field = generator.fill(this->log_out_info, this->player, width, height);
-    } else {
-        FieldGenerator<coin(HARD), clp(HARD), enemy(HARD),
-                crease(HARD), plr(HARD), wall(HARD), heal(HARD) > generator;
-        this->field = generator.fill(this->log_out_info, this->player, width, height);
-    }
+    IFieldGenerator *generator;
+
+    if (complexity == HARD)
+        generator = new FieldGenerator<coin(HARD), clp(HARD), enemy(HARD),
+                crease(HARD), plr(HARD), wall(HARD), heal(HARD) >;
+    else
+        generator = new FieldGenerator<coin(EASY), clp(EASY), enemy(EASY),
+                crease(EASY), plr(EASY), wall(EASY), heal(EASY) >;
+
+    this->field = generator->fill(this->log_out_info, this->player, width, height);
 
     this->field_view = FieldView(this->field);
     new GameObserver(this->field);

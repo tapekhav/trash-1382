@@ -101,6 +101,9 @@
 		<Unit filename="C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/FieldGenerator.h">
 			<Option target="OOP_roma"/>
 		</Unit>
+		<Unit filename="C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/IFieldGenerator.h">
+			<Option target="OOP_roma"/>
+		</Unit>
 		<Unit filename="C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/Rules/CoinSetRule.h">
 			<Option target="OOP_roma"/>
 		</Unit>

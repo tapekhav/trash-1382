@@ -15,19 +15,19 @@
 template<COMPLEXITY comp>
 class FieldCreaseRule {
 public:
-    void operator()(EventBuilder& builder) {
+    void operator()(EventBuilder &builder) {
         Field *field = builder.get_field();
         int height = field->get_height();
         int width = field->get_width();
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
-                if (x == 1 && (y == height / 2 || y == height / (2 * comp))) {
-                    field->get_cell(x, y).set_event(builder.create_IncreaseEvent());
-                    field->get_cell(x, y).set_pass(true);
-                }
-                if (x == (width - 1) && (y == (height / 2) || y == height / (2 * comp))) {
-                    field->get_cell(x, y).set_event(builder.create_DecreaseEvent());
-                    field->get_cell(x, y).set_pass(true);
+                Cell &cell = field->get_cell(x, y);
+                if (cell.get_pass() && field->get_player_x() != x
+                    && field->get_player_y() != y && !cell.get_event()) {
+                    if (x == 1 && (y == height / 2 || y == height / (2 * comp)))
+                        cell.set_event(builder.create_IncreaseEvent());
+                    if (x == (width - 1) && (y == (height / 2) || y == height / (2 * comp)))
+                        cell.set_event(builder.create_DecreaseEvent());
                 }
             }
         }

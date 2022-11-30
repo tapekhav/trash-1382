@@ -145,6 +145,7 @@ CMakeFiles/OOP_roma.dir/Control/Controller.cpp.obj: \
  ../Background/CellView.h \
  ../Background/Field.h \
  ../Background/FieldGeneration/FieldGenerator.h \
+ ../Background/FieldGeneration/IFieldGenerator.h \
  ../Background/FieldGeneration/Rules/CoinSetRule.h \
  ../Background/FieldGeneration/Rules/CollapseSetRule.h \
  ../Background/FieldGeneration/Rules/EnemySpawnRule.h \

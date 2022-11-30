@@ -35,9 +35,15 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OOP_roma" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OOP_roma" TARGET_NAME="OOP_roma" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OOP_roma" RUN_TARGET_NAME="OOP_roma">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -60,7 +66,11 @@
       <workItem from="1669111287649" duration="1657000" />
       <workItem from="1669112974354" duration="22418000" />
       <workItem from="1669193455124" duration="2542000" />
-      <workItem from="1669207965737" duration="9044000" />
+      <workItem from="1669207965737" duration="9251000" />
+      <workItem from="1669279524633" duration="3133000" />
+      <workItem from="1669639528920" duration="1368000" />
+      <workItem from="1669640983484" duration="4992000" />
+      <workItem from="1669811376474" duration="8791000" />
     </task>
     <servers />
   </component>

@@ -12,12 +12,26 @@
 template<COMPLEXITY comp>
 class PlayerSpawnRule {
 public:
-    void operator()(EventBuilder& builder) {
+    void operator()(EventBuilder &builder) {
         Field *field = builder.get_field();
-        int cur_x = field->get_width() - field->get_width() / comp + 1;
-        int cur_y = field->get_height() - field->get_height() / comp + 1;
-        field->get_cell(cur_x, cur_y).set_event(nullptr);
-        field->get_cell(cur_x, cur_y).set_pass(true);
+        std::random_device dev;
+        std::mt19937 rng(dev());
+        std::vector<std::vector<int>> free_cells;
+        for (int y = 0; y < comp * field->get_height() / 2; y++) {
+            for (int x = 0; x < comp * field->get_width() / 2; x++) {
+                Cell &cell = field->get_cell(x, y);
+                if (cell.get_pass() && !cell.get_event()) {
+                    std::vector<int> pair;
+                    pair.push_back(x);
+                    pair.push_back(y);
+                    free_cells.push_back(pair);
+                }
+            }
+        }
+        std::uniform_int_distribution<std::mt19937::result_type> spawn(0, free_cells.size()-1);
+        std::vector<int> spawn_pair = free_cells.at(spawn(rng));
+        int cur_x = spawn_pair.at(0);
+        int cur_y = spawn_pair.at(1);
         field->set_player_loc(cur_x, cur_y);
     }
 };

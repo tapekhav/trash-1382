@@ -12,9 +12,9 @@ public:
     void set_player(bool arg);
 
 
-    bool get_pass() const;
+    [[nodiscard]] bool get_pass() const;
 
-    Event *get_event() const;
+    [[nodiscard]] Event *get_event() const;
 
     void set_pass(bool pass);
 
@@ -40,7 +40,6 @@ private:
     bool player_loc{};
     Event *event{};
     bool pass{};
-
     void swap(Cell &other);
 
 };

@@ -16,7 +16,7 @@ int main() {
     settings->set_output();
     settings->set_size();
     settings->set_complexity();
-    LogOutInfo *logout_info = new LogOutInfo(settings->get_outputs(), settings->get_levels());
+    auto *logout_info = new LogOutInfo(settings->get_outputs(), settings->get_levels());
     Controller controller(logout_info, settings->get_complexity(), settings->get_width(),
                           settings->get_height(), 15, 10, 10);
     Mediator mediator(controller, reader);

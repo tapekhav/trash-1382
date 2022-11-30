@@ -145,6 +145,7 @@ CMakeFiles/OOP_roma.dir/Control/Controller.cpp.obj
  C:/Users/roman/CLionProjects/OOP_roma/Background/CellView.h
  C:/Users/roman/CLionProjects/OOP_roma/Background/Field.h
  C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/FieldGenerator.h
+ C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/IFieldGenerator.h
  C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/Rules/CoinSetRule.h
  C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/Rules/CollapseSetRule.h
  C:/Users/roman/CLionProjects/OOP_roma/Background/FieldGeneration/Rules/EnemySpawnRule.h

@@ -32,7 +32,7 @@ public:
 protected:
     int width{};
     int height{};
-    COMPLEXITY complexity;
+    COMPLEXITY complexity = EASY;
     std::vector<OUTPUT> outputs;
     std::vector<LEVEL> levels;
 };

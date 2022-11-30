@@ -37,4 +37,4 @@ add_executable(OOP_roma main.cpp Background/Cell.cpp Background/Cell.h Backgroun
         Logging/logs/StatusObserver.cpp Logging/logs/StatusObserver.h
         Output/ConsoleOut.cpp Output/ConsoleOut.h
         Output/FileOut.cpp Output/FileOut.h Output/Output.h
-        )
+        Background/FieldGeneration/IFieldGenerator.h)

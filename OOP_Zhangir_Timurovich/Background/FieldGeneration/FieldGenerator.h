@@ -3,17 +3,17 @@
 //
 #pragma once
 
-#include "../Field.h"
-#include "Rules/WallSetRule.h"
-#include "Rules/HealSetRule.h"
-
-#include "../../Events/EventBuilder.h"
+//#include "../Field.h"
+//#include "Rules/WallSetRule.h"
+//#include "Rules/HealSetRule.h"
+//
+//#include "../../Events/EventBuilder.h"
+#include "IFieldGenerator.h"
 
 template<class... Rules>
-class FieldGenerator {
+class FieldGenerator : public IFieldGenerator {
 public:
-    Field *fill(LogOutInfo *info = nullptr, Player *player = nullptr, int width = 10, int
-    height = 10) {
+    Field *fill(LogOutInfo *info, Player *player, int width, int height) override {
         auto field = new Field(info, width, height);
         EventBuilder builder(field, player);
         field->create_field(player);
