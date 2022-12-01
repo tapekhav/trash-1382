@@ -7,12 +7,12 @@ Commander::Commander(Logger* logger) : mLogger(logger) {
     mStatus = new PlayerViewer;
 }
 
-void Commander::SetFieldSize(std::pair<int,int> fieldSize) {
-    mField = new Field(fieldSize.first, fieldSize.second);
+void Commander::SetLevel(int num) {
+    mLevel = new LevelManager(num, mPlayer, mLogger);
+    mField = mLevel->GetField();
     mField->Attach(mLogger->GetStatusLogger());
-    mManager = new EventManager(mPlayer, mField, mLogger);
+    mManager = dynamic_cast<EventManager*>(mField->GetManager());
     mManager->Attach(mLogger->GetStatusLogger());
-    mField->SetEventManager(mManager);
 }
 
 void Commander::PlayerGo(EnumClass::Commands dir) {

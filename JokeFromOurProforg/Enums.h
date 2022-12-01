@@ -56,7 +56,7 @@ public:
         SAINT_WATER_CAVE = 5,
         PROBABILITY = 100,
         BOUND = 2,
-        LIFE_TIME = 7
+        LIFE_TIME = 10
     };
 
     enum Events {

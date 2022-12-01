@@ -11,7 +11,7 @@ class InputCenter : public Handle, public Subject {
 public:
 	InputCenter();
 
-	std::pair<int, int> GetFieldSize() const;
+	int GetLevel() const;
 	EnumClass::Commands GetCommand() const;
 
 	~InputCenter();

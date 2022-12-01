@@ -17,7 +17,7 @@ public:
 
     Event* GetEvent() const { return mEvent; }
     bool CheckEvent();
-    void SetEvent(EnumClass::Events event);
+    void SetEvent(Event* event);
     bool ActivateEvent();
 
 private:

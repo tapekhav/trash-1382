@@ -5,7 +5,7 @@ void HandleMediator::Notify(EnumClass::Action activity) {
 	switch (activity)
 	{
 	case EnumClass::FIELD_SIZE:
-		mCommander->SetFieldSize(mInputCenter->GetFieldSize());
+		mCommander->SetLevel(mInputCenter->GetLevel());
 		
 	case EnumClass::DO_CMD:
 		mCommander->ShowField();

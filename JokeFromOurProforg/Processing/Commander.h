@@ -1,8 +1,6 @@
 #ifndef SURVIVAL_COMMANDER_H
 #define SURVIVAL_COMMANDER_H
 
-#include "Field/Field.h"
-
 #include "InputOutput/FieldViewer.h"
 #include "InputOutput/PlayerView.h"
 
@@ -14,6 +12,7 @@
 #include "Logging/Subject.h"
 #include "Logging/Messages/ErrorDecorator.h"
 #include "Logging/Messages/IntIntMessage.h"
+#include "Field/LevelManager.h"
 
 #include "Enums.h"
 
@@ -21,7 +20,7 @@ class Commander : public Handle, public Subject {
 public:
     Commander(Logger* logger);
 
-    void SetFieldSize(std::pair<int,int> fieldSize);
+    void SetLevel(int num);
 
     void PlayerGo(EnumClass::Commands dir);
 
@@ -42,6 +41,8 @@ private:
     PlayerViewer* mStatus;
     EventManager* mManager;
     Logger* mLogger;
+    LevelManager* mLevel;
+
 };
 
 #endif //SURVIVAL_COMMANDER_H

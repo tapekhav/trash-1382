@@ -7,24 +7,25 @@ bool EarthQuakeCave::Happen() {
 	delete msg;
 
 	int pos = rand() % 3;
-	EnumClass::Events event = EnumClass::EARTHQUAKE;
+	Factory* factory;
 	
 	switch (pos) {
 	case 0:
-		event = EnumClass::WATER;
+		factory = new WaterFactory(mPlayer);
 		break;
 	case 1:
-		event = EnumClass::SAINT_WATER;
+		factory = new SaintWaterFactory(mPlayer);
 		break;
 	case 2:
-		event = EnumClass::TELEPORT;
+		factory = new TeleportFactory(mField);
 		break;
 	}
 
-	mField->GetCell((mField->GetPlayerPositionY() + 1) % mField->GetWidth(), mField->GetPlayerPositionX()).SetEvent(event);
-	mField->GetCell((mField->GetPlayerPositionY() + mField->GetWidth() - 1) % mField->GetWidth(), mField->GetPlayerPositionX()).SetEvent(event);
-	mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + 1) % mField->GetHeight()).SetEvent(event);
-	mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + mField->GetHeight() - 1) % mField->GetHeight()).SetEvent(event);
+	mField->GetCell((mField->GetPlayerPositionY() + 1) % mField->GetWidth(), mField->GetPlayerPositionX()).SetEvent(factory->CreateEvent());
+	mField->GetCell((mField->GetPlayerPositionY() + mField->GetWidth() - 1) % mField->GetWidth(), mField->GetPlayerPositionX()).SetEvent(factory->CreateEvent());
+	mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + 1) % mField->GetHeight()).SetEvent(factory->CreateEvent());
+	mField->GetCell(mField->GetPlayerPositionY(), (mField->GetPlayerPositionX() + mField->GetHeight() - 1) % mField->GetHeight()).SetEvent(factory->CreateEvent());
+	delete factory;
 	return true;
 }
 

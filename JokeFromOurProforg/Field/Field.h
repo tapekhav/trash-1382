@@ -33,6 +33,7 @@ public:
     int GetPlayerPositionX() const { return mPlayerPosition.xCoord; }
     int GetPlayerPositionY() const { return mPlayerPosition.yCoord; }
     Cell& GetCell(int idy, int idx) const;
+    Manager* GetManager() const { return mManager; }
 
     void SetEventManager(Manager* manager);
     void TriggerCells();
@@ -44,6 +45,7 @@ private:
     Cell** mField;
     int mWidth, mHeight;
     Position mPlayerPosition;
+    Manager* mManager;
 };
 
 #endif //SURVIVAL_FIELD_H

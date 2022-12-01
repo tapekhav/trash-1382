@@ -1,7 +1,7 @@
 #include "InputOutput/Communicator.h"
 
 void Communicator::Greeting() const {
-	std::cout << "Do you want to enter a size of map yourself? [Y/N]\n";
+	std::cout << "Which level do you want to choose? Enter 1 or 2\n";
 }
 
 void Communicator::SetFieldSize() const {

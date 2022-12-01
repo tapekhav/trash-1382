@@ -6,7 +6,7 @@
 class Manager {
 public:
 	virtual Event* ChooseEvent() = 0;
-	virtual Event* ChooseConcreteEvent(EnumClass::Events event) = 0;
+	virtual void ChooseConcreteEvent(Event* event) = 0;
 	virtual bool CheckEvent(Event* event) = 0;
 	virtual bool UseEvent(Event* event) = 0;
 

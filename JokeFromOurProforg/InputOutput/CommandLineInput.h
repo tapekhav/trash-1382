@@ -8,7 +8,7 @@
 class CommandLineInput : public InputData {
 public:
 	char GetCommand() const override;
-	std::pair<int, int> GetFieldSize() const override;
+	int GetLevel() const override;
 };
 
 #endif //SURVIVE_COMMANDLINEINPUT_H

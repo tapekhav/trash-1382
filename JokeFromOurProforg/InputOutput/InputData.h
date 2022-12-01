@@ -6,7 +6,7 @@
 class InputData {
 public:
 	virtual char GetCommand() const = 0;
-	virtual std::pair<int, int> GetFieldSize() const = 0;
+	virtual int GetLevel() const = 0;
 };
 
 #endif //SURVIVE_INPUTDATA_H

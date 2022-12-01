@@ -6,8 +6,8 @@ char CommandLineInput::GetCommand() const {
 	return cmd;
 }
 
-std::pair<int, int> CommandLineInput::GetFieldSize() const {
-	std::pair<int, int> size;
-	std::cin >> size.first >> size.second;
-	return size;
+int CommandLineInput::GetLevel() const {
+	int num;
+	std::cin >> num;
+	return num;
 }

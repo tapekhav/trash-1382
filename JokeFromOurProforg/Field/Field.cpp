@@ -49,6 +49,7 @@ Cell& Field::GetCell(int idy, int idx) const {
 }
 
 void Field::SetEventManager(Manager *manager) {
+    mManager = manager;
     for (int idy = 0; idy < mWidth; idy++)
         for (int idx = 0; idx < mHeight; idx++)
             mField[idy][idx].SetManager(manager);

@@ -33,7 +33,9 @@ bool Cell::ActivateEvent() {
     return false;
 }
 
-void Cell::SetEvent(EnumClass::Events event) {
-    if (mEvent == nullptr)
-        mEvent = mManager->ChooseConcreteEvent(event);
+void Cell::SetEvent(Event* event) {
+    if (mEvent == nullptr) {
+        mManager->ChooseConcreteEvent(event);
+        mEvent = event;
+    }
 }

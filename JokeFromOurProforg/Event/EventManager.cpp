@@ -45,42 +45,12 @@ Event* EventManager::ChooseEvent() {
 	return event;
 }
 
-Event* EventManager::ChooseConcreteEvent(EnumClass::Events event) {
-	Event* res = nullptr;
-	if (event == EnumClass::SAINT_WATER) {
-		res = saintWater->CreateEvent();
+void EventManager::ChooseConcreteEvent(Event* event) {
+	if (dynamic_cast<Cave*>(event))
 		CaveCount++;
-	}
-	if (event == EnumClass::WATER) {
-		res = water->CreateEvent();
-		CaveCount++;
-	}
-	if (event == EnumClass::BEAR) {
-		res = bear->CreateEvent();
+	else
 		BushCount++;
-	}
-	if (event == EnumClass::BERRY) {
-		res = berry->CreateEvent();
-		BushCount++;
-	}
-	if (event == EnumClass::WOLF) {
-		res = wolf->CreateEvent();
-		BushCount++;
-	}
-	if (event == EnumClass::RABBIT) {
-		res = wolf->CreateEvent();
-		BushCount++;
-	}
-	if (event == EnumClass::TELEPORT) {
-		res = teleport->CreateEvent();
-		CaveCount++;
-	}
-	if (event == EnumClass::EARTHQUAKE) {
-		res = earthQuake->CreateEvent();
-		CaveCount++;
-	}
-	Tracker[res] = EnumClass::LIFE_TIME;
-	return res;
+	Tracker[event] = EnumClass::LIFE_TIME;
 }
 
 bool EventManager::UseEvent(Event* event) {

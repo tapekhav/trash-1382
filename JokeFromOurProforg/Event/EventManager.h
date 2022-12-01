@@ -48,13 +48,13 @@ public:
 		saintWater = new SaintWaterFactory(mPlayer);
 		saintWater->Attach(mLogger->GetStatusLogger());
 
-		earthQuake = new EarthQuakeFactory(mField);
+		earthQuake = new EarthQuakeFactory(mField, mPlayer);
 		earthQuake->Attach(mLogger->GetStatusLogger());
 
 	}
 
 	Event* ChooseEvent() override;
-	Event* ChooseConcreteEvent(EnumClass::Events event) override;
+	void ChooseConcreteEvent(Event* event) override;
 	bool UseEvent(Event* event) override;
 	bool CheckEvent(Event* event) override;
 
