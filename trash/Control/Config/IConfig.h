@@ -19,6 +19,8 @@ protected:
             {'s', Player::STEP::DOWN},
             {'a', Player::STEP::LEFT},
             {'d', Player::STEP::RIGHT},
+            {'z', Player::STEP::SAVE},
+            {'x', Player::STEP::LOAD},
             {'e', Player::STEP::EXIT}
     };
 };

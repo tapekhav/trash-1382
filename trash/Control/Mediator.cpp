@@ -48,7 +48,14 @@ void Mediator::init_logs(std::vector<Logger*>& loggers) {
 }
 
 void Mediator::play(const std::map<char, Player::STEP>& settings) {
+    Caretaker zxc("save.txt");
+    int k = 0;
     while(input.get_step() != Player::EXIT && game.get_status() == GameStatus::ON) {
+        if (k == 5) {
+            zxc.save(game.get_player()->save());
+            return;
+        }
+        k++;
         input.read_step(settings);
         game.set_step(input.get_step());
 

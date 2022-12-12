@@ -22,9 +22,9 @@ public:
 
 private:
     const std::map<Prefix, std::string> prefix_map = {
-            {Game, "Game: "},
-            {GameStatus, "GameStatus: "},
-            {Error, "Error: "}
+            {Game, "[Game] "},
+            {GameStatus, "[GameStatus] "},
+            {Error, "[Error] "}
     };
     Prefix prefix;
     std::string info;

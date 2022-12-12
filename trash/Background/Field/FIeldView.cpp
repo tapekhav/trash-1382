@@ -15,11 +15,28 @@ void FieldView::update() {
         std::cout << "|";
         for (int j = 0; j != field->get_width(); ++j) {
             if (field->get_player_location().first == j && field->get_player_location().second == i)
-                std::cout << "p  ";
+                std::cout << "p";
             else
-                std::cout << CellView(field->get_cur_cell(j, i)).get_cell() << "  ";
+                std::cout << CellView(field->get_cur_cell(j, i)).get_cell();
+            std::cout << "  ";
         }
         std::cout << " |\n";
     }
     print_border();
+}
+
+std::string FieldView::field_str() {
+    std::string s;
+    for (int i = 0; i != field->get_height(); ++i) {
+        for (int j = 0; j != field->get_width(); ++j) {
+            if (field->get_player_location().first == j && field->get_player_location().second == i)
+                s += "p";
+            else
+                s += CellView(field->get_cur_cell(j, i)).get_cell();
+            //s += "  ";
+        }
+        s += "\n";
+    }
+
+    return s;
 }

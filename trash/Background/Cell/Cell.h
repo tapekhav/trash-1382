@@ -22,6 +22,8 @@ public:
     void set_event(Event*);
     void update();
     Event* get_event() const;
+
+    size_t hash_func() const;
 private:
     bool pass;
     Event* event;

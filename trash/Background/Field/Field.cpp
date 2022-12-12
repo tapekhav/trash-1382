@@ -1,4 +1,5 @@
 #include "Field.h"
+#include "FieldView.h"
 
 Field::Field(int width, int height) : width(width), height(height), player(new Player) {
     for (size_t i = 0; i != height; ++i) {
@@ -17,7 +18,8 @@ Field::~Field() {
 }
 
 Field::Field(const Field &other)
-    : width(other.width), height(other.height), player_location(other.player_location) {
+    : width(other.width), height(other.height),
+    player_location(other.player_location), player(new Player(*other.player)) {
     for(size_t i = 0; i != height; ++i) {
         field.emplace_back();
         for(size_t j = 0; j != width; ++j) {
@@ -141,3 +143,42 @@ int Field::get_width() const {
 Player *Field::get_player() {
     return player;
 }
+
+void Field::set_state(const std::vector<std::vector<Cell>>& cells, int w, int h, std::pair<int, int> pos) {
+    field = cells;
+    width = w;
+    height = h;
+    player_location = pos;
+}
+
+Memento *Field::save() {
+    std::string s("Field: " + std::to_string(hash_func(field, width, height, player_location)) + '\n');
+    s += std::to_string(width) + " " + std::to_string(height) + " " +
+            std::to_string(player_location.first) + " " + std::to_string(player_location.second) + '\n';
+
+    FieldView view(this);
+    s += view.field_str();
+
+    return new Memento(s);
+}
+
+void Field::restore(Memento *) {
+    //TODO restore
+}
+
+size_t Field::hash_func(const std::vector<std::vector<Cell>> &cells, int w, int h, std::pair<int, int> coord) {
+    size_t result_hash = 0;
+
+    size_t hash_w = std::hash<int>()(w) << 5;
+    size_t hash_h = std::hash<int>()(h) * 4;
+    std::pair<size_t, size_t> hash_coord = {std::hash<int>()(coord.first) << 1, std::hash<int>()(coord.second) << 4};
+
+    for (const auto& i : cells) {
+        for (const auto& j : i) {
+            result_hash += j.hash_func();
+        }
+    }
+
+    return result_hash + hash_w + hash_h + hash_coord.first + hash_coord.second;
+}
+

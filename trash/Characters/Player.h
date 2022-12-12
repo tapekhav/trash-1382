@@ -3,18 +3,22 @@
 
 #include <algorithm>
 #include "../Logging/LogLevel/Subject.h"
+#include "../../Save/Memento/Originator.h"
 
-class Player : public Subject {
+class Player : public Subject, public Originator {
 public:
     enum STEP {
         UP,
         DOWN,
         LEFT,
         RIGHT,
+        SAVE,
+        LOAD,
         STOP,
         EXIT
     };
     explicit Player(int lvl = 1);
+    Player(const Player&);
 
     int get_health() const;
     int get_lvl()    const;
@@ -25,7 +29,12 @@ public:
     void set_xp(int);
     void add_lvl();
     void add_key();
+
+    void restore(Memento*) final;
+    Memento* save() final;
 private:
+    size_t hash_func(int, int, int, int);
+
     int health;
     int xp;
     int lvl;

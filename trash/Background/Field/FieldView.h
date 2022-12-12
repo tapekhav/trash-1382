@@ -8,6 +8,8 @@ class FieldView {
 public:
     explicit FieldView(Field*);
     void update();
+
+    std::string field_str();
 private:
     void print_border() const;
 

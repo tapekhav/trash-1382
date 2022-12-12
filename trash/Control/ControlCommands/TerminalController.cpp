@@ -21,7 +21,7 @@ int TerminalController::get_height() {
 }
 
 char TerminalController::get_cfg() {
-    std::cout << "Введите 'y', если хотите поставить стандартное управление (w, a, s, d, e): ";
+    std::cout << "Введите 'y', если хотите поставить стандартное управление (w, a, s, d, z, x, e): ";
     return read_char();
 }
 

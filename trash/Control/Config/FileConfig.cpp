@@ -37,6 +37,12 @@ std::map<char, Player::STEP> FileConfig::get_config() {
         if (command == "exit:" && button != '\0') {
             control[button] = Player::STEP::EXIT;
         }
+        if (command == "save:" && button != '\0') {
+            control[button] = Player::STEP::SAVE;
+        }
+        if (command == "load:" && button != '\0') {
+            control[button] = Player::STEP::LOAD;
+        }
     }
 
     is_ok();

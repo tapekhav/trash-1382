@@ -7,13 +7,15 @@ class Cell;
 #include <algorithm>
 #include <vector>
 #include <random>
+
 #include "Cell/Cell.h"
 #include "Player.h"
 #include "LogLevel/GameLog.h"
 #include "Logger/ConsoleLog.h"
-#include "EventCreator.h"
+#include "../../Save/Memento/Originator.h"
 
-class Field : public Subject {
+
+class Field : public Subject, public Originator {
 public:
     explicit Field(int width = 10, int height = 10);
     ~Field();
@@ -33,8 +35,14 @@ public:
     int get_width()  const;
     Cell& get_cur_cell(int, int);
     Player* get_player();
+
+    Memento* save() final;
+    void restore(Memento*) final;
 private:
+    size_t hash_func(const std::vector<std::vector<Cell>>&, int, int, std::pair<int, int>);
+    void set_state(const std::vector<std::vector<Cell>>&, int, int, std::pair<int, int>);
     void swap(Field&);
+
 
     Player* player;
     std::vector<std::vector<Cell>> field;
@@ -42,5 +50,6 @@ private:
     int width;
     std::pair<int, int> player_location;
 };
+
 
 #endif

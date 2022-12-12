@@ -27,3 +27,7 @@ bool Cell::get_pass() const {
 Event *Cell::get_event() const {
     return event;
 }
+
+size_t Cell::hash_func() const {
+    return std::hash<bool>()(pass) << 3 xor std::hash<Event*>()(event) << 3;
+}
