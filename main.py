@@ -57,6 +57,9 @@ class NumericalMethod:
         if self._left > self._right:
             raise ValueError("Неверные значения интервалов")
 
+    def solve_equation(self):
+        pass
+
 
 # Newton's method
 class Newton(NumericalMethod):
@@ -82,9 +85,6 @@ class Newton(NumericalMethod):
 class Bisection(NumericalMethod):
     def __init__(self, equation, eps=0.001, left=None, right=None):
         super().__init__(equation, eps, left, right)
-
-    def get_eps(self) -> float:
-        return self._eps
 
     def solve_equation(self) -> float:
         super()._checks()
