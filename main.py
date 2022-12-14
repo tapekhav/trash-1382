@@ -67,6 +67,8 @@ class Newton(NumericalMethod):
         super().__init__(equation, eps, left, right)
 
     def solve_equation(self) -> float:
+        super()._checks()
+
         prev_value = self._right
         cur_value = self._left
 
