@@ -82,3 +82,4 @@ class ChainMethod:
                 res += f'{i}\n'
 
         return res
+
