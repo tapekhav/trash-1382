@@ -1,0 +1,7 @@
+right: r
+left: l
+up: u
+down: d
+save: z
+load: x
+exit: q

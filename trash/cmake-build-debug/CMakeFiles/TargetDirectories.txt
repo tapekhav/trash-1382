@@ -1,0 +1,3 @@
+/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/cmake-build-debug/CMakeFiles/trash_1382.dir
+/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/vladimir/Desktop/c++/donttouch/trash-1382/trash/cmake-build-debug/CMakeFiles/rebuild_cache.dir
