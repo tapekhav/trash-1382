@@ -22,4 +22,3 @@ class DoubleHashing:
         return ((key << 12) % 1_000_000_007 % (self.__size * 1234)
                 % 1_000_000_007) % 1_000_000_007
 
-
