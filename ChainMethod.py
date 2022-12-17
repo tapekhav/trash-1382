@@ -1,3 +1,6 @@
+import time
+
+
 class Node:
     def __init__(self, key, data, next):
         self.key = key
@@ -19,20 +22,25 @@ class ChainMethod:
     def __init__(self, size=20):
         self.__size = size
         self.__table = [None] * self.__size
+        self.__k = 0
+
+    def __cast_obj(self, obj) -> int:
+        res = list(map(str, list(obj)))
+        s = ''.join(res)
+        res = sum(list(map(ord, s)))
+
+        return res
 
     def __hash_func(self, key) -> int:
-        key = list(map(str, list(key)))
-        s = ''.join(key)
-        key = sum(list(map(ord, s)))
-
-        return (key << 5) % self.__size
+        return key % self.__size
 
     def insert(self, key, value) -> None:
-        hash_key = self.__hash_func(key)
-        self.__table[hash_key] = Node(key, value, self.__table[hash_key])
-
-        if self.__size - self.__table.count(None) > 2/3 * self.__size:
-            self.increase_size(self.__size//2)
+        if self.__k < 2/3:
+            hash_key = self.__hash_func(key)
+            self.__table[hash_key] = Node(key, value, self.__table[hash_key])
+            self.__k += 1 / self.__size
+        else:
+            self.increase_size(self.__size // 2)
 
     def __setitem__(self, key, value):
         self.insert(key, value)
@@ -70,16 +78,16 @@ class ChainMethod:
             prev = cur
             cur = cur.next
 
-    def increase_size(self, add_size):
+    def increase_size(self, add_size: int) -> None:
         self.__table += [None] * add_size
         self.__size += add_size
+        self.__k = 0
 
     def __str__(self):
         res = ''
 
-        for i in self.__table:
-            if i is not None:
-                res += f'{i}\n'
+        for i in range(len(self.__table)):
+            if self.__table[i] is not None:
+                res += f'{i}: {self.__table[i]}\n'
 
         return res
-
