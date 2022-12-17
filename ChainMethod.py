@@ -1,6 +1,3 @@
-import time
-
-
 class Node:
     def __init__(self, key, data, next):
         self.key = key
