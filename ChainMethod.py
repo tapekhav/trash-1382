@@ -21,13 +21,6 @@ class ChainMethod:
         self.__table = [None] * self.__size
         self.__k = 0
 
-    def __cast_obj(self, obj) -> int:
-        res = list(map(str, list(obj)))
-        s = ''.join(res)
-        res = sum(list(map(ord, s)))
-
-        return res
-
     def __hash_func(self, key) -> int:
         return key % self.__size
 

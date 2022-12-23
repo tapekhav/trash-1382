@@ -7,13 +7,6 @@ class DoubleHashing:
     def get_size(self):
         return self.__size
 
-    def __cast_obj(self, obj) -> int:
-        res = list(map(str, list(obj)))
-        s = ''.join(res)
-        res = sum(list(map(ord, s)))
-
-        return res
-
     def __hash_func1(self, key) -> int:
         return key % self.__size
 

@@ -2,19 +2,18 @@ import time
 from ChainMethod import ChainMethod
 from DoubleHashing import DoubleHashing
 
-
-# TODO think about casting in all classes
+# TODO do main with testing classes
 def main():
-    obj = ChainMethod(10000)
+    obj = ChainMethod(10000000)
     start_time = time.time()
-    for i in range(10000):
+    for i in range(10000000):
         obj.insert(i, i + 1)
 
     print("--- %s seconds ---" % (time.time() - start_time))
 
-    obj = DoubleHashing(10000)
+    obj = DoubleHashing(10000000)
     start_time = time.time()
-    for i in range(10000):
+    for i in range(10000000):
         obj.insert(i, i + 1)
 
     print("--- %s seconds ---" % (time.time() - start_time))
