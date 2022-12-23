@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+from ChainMethod import ChainMethod
+from DoubleHashing import DoubleHashing
 from enum import Enum
 from random import randint
 import time
@@ -9,14 +11,17 @@ class Case(Enum):
     WORST = 3
 
 class TestMethod:
-    def __init__(self, HashMethod, type_of_case=Case.BEST, count_of_elements=10000):
-        self._arr_of_elements = [randint(1, 10000) for _ in range(count_of_elements)]
+    def __init__(self, count_of_elements=10000):
+        self._table = None
+        self._arr_of_random_elements = [randint(1, 10000) for _ in range(count_of_elements)]
+        self._arr_of_elements = [int(i) for i in range(count_of_elements)]
         self._count_of_elements = count_of_elements
 
+    def choose_case(self, HashMethod, type_of_case: Case):
         switch = {
             Case.WORST: HashMethod(1),
-            Case.MEDIUM: HashMethod(count_of_elements//2),
-            Case.BEST: HashMethod(count_of_elements),
+            Case.MEDIUM: HashMethod(self._count_of_elements // 2),
+            Case.BEST: HashMethod(self._count_of_elements),
         }
 
         self._table = switch[type_of_case]
@@ -30,12 +35,12 @@ class TestMethod:
 
     def draw_graph(self, color: str, data: list):
         plt.scatter(self._arr_of_elements, data, s=5, color=[color])
-    def check_insertion(self) -> list:
+    def check_insertion(self, arr: list) -> list:
         result = list()
 
+        start_time = time.time_ns()
         for i in range(self._count_of_elements):
-            start_time = time.time_ns()
-            self._table[i] = self._arr_of_elements[i]
+            self._table[i] = arr[i]
             end_time = time.time_ns()
 
             result.append(end_time - start_time)
@@ -45,8 +50,8 @@ class TestMethod:
     def check_finding(self) -> list:
         result = list()
 
+        start_time = time.time_ns()
         for i in range(self._count_of_elements):
-            start_time = time.time_ns()
             self._table[i]
             end_time = time.time_ns()
 
@@ -57,8 +62,8 @@ class TestMethod:
     def check_removing(self) -> list:
         result = list()
 
+        start_time = time.time_ns()
         for i in range(self._count_of_elements):
-            start_time = time.time_ns()
             self._table.remove(i)
             end_time = time.time_ns()
 
@@ -68,3 +73,11 @@ class TestMethod:
 
     def start(self):
         pass
+
+
+def main():
+    pass
+
+
+if __name__ == '__main__':
+    main()

@@ -45,10 +45,10 @@ class DoubleHashing:
             i = (i1 + k * i2) % self.__size
             k += 1
 
-        return
+        return None
 
     def __getitem__(self, item):
-        self.find(item)
+        return self.find(item)
 
     def remove(self, key, k=0) -> None:
         if k < self.__size:
