@@ -73,10 +73,12 @@ class DoubleHashing:
         i = i1
         k = 0
 
-        while self.__table[i][0] != key:
+        while self.__table[i] is not None and self.__table[i][0] != key:
             i = (i1 + k * i2) % self.__size
             k += 1
-        self.__table[i] = 'deleted'
+
+        if self.__table[i] is not None:
+            self.__table[i] = 'deleted'
 
     def increase_size(self, add_size) -> None:
         self.__size += add_size

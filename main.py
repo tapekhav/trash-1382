@@ -4,7 +4,6 @@ from TestMethod import TestMethod, Case
 import sys
 sys.setrecursionlimit(15000)
 
-# TODO do main with testing classes
 def main():
     table_chain = TestMethod(ChainMethod, 10000)
     table_double_hashing = TestMethod(DoubleHashing, 10000)
