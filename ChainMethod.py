@@ -20,13 +20,22 @@ class ChainMethod:
         self.__size = size
         self.__table = [None] * self.__size
         self.__k = 0
+        self.__func = self.__hash_func
 
+    def set_worst_case(self) -> None:
+        self.__func = self.__worst_case
+
+    def set_normal_func(self) -> None:
+        self.__func = self.__hash_func
+
+    def __worst_case(self, key) -> int:
+        return 0
     def __hash_func(self, key) -> int:
         return key % self.__size
 
     def insert(self, key, value) -> None:
         if self.__k < 2/3:
-            hash_key = self.__hash_func(key)
+            hash_key = self.__func(key)
             self.__table[hash_key] = Node(key, value, self.__table[hash_key])
             self.__k += 1 / self.__size
         else:
@@ -36,7 +45,7 @@ class ChainMethod:
         self.insert(key, value)
 
     def find(self, key):
-        hash_key = self.__hash_func(key)
+        hash_key = self.__func(key)
         elem = self.__table[hash_key]
 
         while elem is not None:
@@ -49,7 +58,7 @@ class ChainMethod:
         return self.find(key)
 
     def remove(self, key):
-        hash_key = self.__hash_func(key)
+        hash_key = self.__func(key)
         cur = self.__table[hash_key]
 
         if cur is None:
