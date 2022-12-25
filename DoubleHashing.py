@@ -18,19 +18,19 @@ class DoubleHashing:
         self.__func1 = self.__hash_func1
         self.__func2 = self.__hash_func2
 
-    def __hash_func1(self, key) -> int:
+    def __hash_func1(self, key: int) -> int:
         return key % self.__size
 
-    def __hash_func2(self, key) -> int:
+    def __hash_func2(self, key: int) -> int:
         return 11 - (key % 11)
 
-    def __worst_case1(self, key) -> int:
+    def __worst_case1(self, key: int) -> int:
         return 0
 
-    def __worst_case2(self, key) -> int:
+    def __worst_case2(self, key: int) -> int:
         return 1
 
-    def insert(self, key, data, i=0) -> None:
+    def insert(self, key: int, data, i=0) -> None:
         if i < self.__size and self.__k < 2 / 3:
             idx = (self.__func1(key) + i * self.__func2(key)) % self.__size
             if self.__table[idx] and self.__table[idx] != 'deleted':
@@ -46,7 +46,7 @@ class DoubleHashing:
             self.increase_size(self.__size // 2)
             self.insert(key, data)
 
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: int, value):
         self.insert(key, value)
 
     def find(self, key):
@@ -64,10 +64,10 @@ class DoubleHashing:
 
         return None
 
-    def __getitem__(self, item):
+    def __getitem__(self, item: int):
         return self.find(item)
 
-    def remove(self, key) -> None:
+    def remove(self, key: int) -> None:
         i1 = self.__func1(key)
         i2 = self.__func2(key)
         i = i1
@@ -80,7 +80,7 @@ class DoubleHashing:
         if self.__table[i] is not None:
             self.__table[i] = 'deleted'
 
-    def increase_size(self, add_size) -> None:
+    def increase_size(self, add_size: int) -> None:
         self.__size += add_size
         self.__table += [None] * add_size
         self.__k = 0

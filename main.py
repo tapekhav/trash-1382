@@ -15,6 +15,13 @@ def main():
     table_chain.start('Метод цепочек(лучший случай)')
     table_double_hashing.start('Двойное хэширование(лучший случай)')
 
+    # Средний случай
+    table_chain.choose_case(Case.MEDIUM)
+    table_double_hashing.choose_case(Case.MEDIUM)
+
+    table_chain.start('Метод цепочек(средний случай)')
+    table_double_hashing.start('Двойное хэширование(средний случай)')
+
     # Худший случай
     table_chain.choose_case(Case.WORST)
     table_double_hashing.choose_case(Case.WORST)
@@ -22,12 +29,10 @@ def main():
     table_chain.start('Метод цепочек(худший случай)')
     table_double_hashing.start('Двойное хэширование(худший случай)')
 
-    # Средний случай
-    table_chain.choose_case(Case.MEDIUM)
-    table_double_hashing.choose_case(Case.MEDIUM)
+    # Сравнение вставки в худшем случае
+    table_chain.choose_case(Case.WORST)
 
-    table_chain.start('Метод цепочек(средний случай)')
-    table_double_hashing.start('Двойное хэширование(средний случай)')
+    table_chain.compare_structures()
 
 
 if __name__ == '__main__':
